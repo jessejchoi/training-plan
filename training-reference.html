@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jakarta Runner &mdash; Training Reference</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --ink:#1a1612;--paper:#f5f0e8;--cream:#ede7d9;
+  --amber:#c8873a;--amber-light:#e8a85a;--sage:#5a7a5a;
+  --muted:#7a7060;--rule:#d4c9b4;
+  --str:#2a4a6a;--str-light:#4a7aaa;--str-bg:#eef3f8;
+  --run-rest:#ededea;--run-easy:#eaf3de;--run-rec:#EEEDFE;
+  --run-intv:#faeeda;--run-thr:#fef0e0;--run-lng:#e6f1fb;--run-race:#fcebeb;
+}
+html{scroll-behavior:smooth;}
+body{background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.6;min-height:100vh;}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:999;opacity:0.4;}
+
+/* MODE BAR */
+.mode-bar{display:flex;align-items:center;justify-content:center;gap:4px;padding:13px 40px;background:var(--ink);position:sticky;top:0;z-index:200;}
+.mode-btn{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;padding:7px 20px;border-radius:20px;border:1px solid #444;background:transparent;color:#888;cursor:pointer;transition:all .25s;text-transform:uppercase;}
+.mode-btn.active-run{background:#3d7a3d;border-color:#3d7a3d;color:white;}
+.mode-btn.active-mob{background:var(--amber);border-color:var(--amber);color:white;}
+.mode-btn.active-str{background:var(--str-light);border-color:var(--str-light);color:white;}
+.mode-divider{font-family:'DM Mono',monospace;font-size:10px;color:#444;padding:0 4px;}
+
+/* HEADER */
+header{padding:48px 40px 32px;border-bottom:1px solid var(--rule);position:relative;overflow:hidden;}
+header::after{font-family:'DM Serif Display',serif;font-size:clamp(58px,11vw,135px);color:transparent;-webkit-text-stroke:1px var(--rule);pointer-events:none;white-space:nowrap;opacity:.4;position:absolute;right:-10px;top:50%;transform:translateY(-50%);}
+body.runs header::after{content:'TRAINING';}
+body.mobility header::after{content:'MOBILITY';}
+body.strength header::after{content:'STRENGTH';}
+.header-tag{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:12px;}
+body.runs .header-tag{color:#3d7a3d;}
+body.mobility .header-tag{color:var(--amber);}
+body.strength .header-tag{color:var(--str-light);}
+h1{font-family:'DM Serif Display',serif;font-size:clamp(28px,4.5vw,54px);line-height:1.05;font-weight:400;max-width:680px;}
+h1 em{font-style:italic;}
+body.runs h1 em{color:#3d7a3d;}
+body.mobility h1 em{color:var(--amber);}
+body.strength h1 em{color:var(--str-light);}
+.header-sub{margin-top:14px;color:var(--muted);font-size:14px;max-width:520px;}
+
+/* NAV */
+.nav-strip{display:flex;flex-wrap:wrap;gap:8px;padding:12px 40px;border-bottom:1px solid var(--rule);background:var(--cream);position:sticky;top:46px;z-index:100;}
+.nav-pill{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.08em;padding:4px 12px;border-radius:20px;border:1px solid var(--rule);background:transparent;color:var(--muted);cursor:pointer;text-decoration:none;transition:all .2s;display:none;}
+body.runs .nav-run{display:inline-block;}
+body.mobility .nav-mob{display:inline-block;}
+body.strength .nav-str{display:inline-block;}
+body.runs .nav-pill:hover,body.runs .nav-pill.active{background:#3d7a3d;border-color:#3d7a3d;color:white;}
+body.mobility .nav-pill:hover,body.mobility .nav-pill.active{background:var(--amber);border-color:var(--amber);color:white;}
+body.strength .nav-pill:hover,body.strength .nav-pill.active{background:var(--str);border-color:var(--str);color:white;}
+
+/* PANELS */
+#runs-content,#mobility-content,#strength-content{display:none;}
+body.runs #runs-content{display:block;}
+body.mobility #mobility-content{display:block;}
+body.strength #strength-content{display:block;}
+
+/* LAYOUT */
+main{max-width:1300px;margin:0 auto;padding:0 16px 80px;}
+.section{padding-top:48px;animation:fadeUp .4s ease both;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+.section-header{display:flex;align-items:baseline;gap:16px;margin-bottom:20px;padding-bottom:13px;border-bottom:1px solid var(--rule);}
+.section-number{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;}
+body.runs .section-number{color:#3d7a3d;}
+body.mobility .section-number{color:var(--amber);}
+body.strength .section-number{color:var(--str-light);}
+h2{font-family:'DM Serif Display',serif;font-size:23px;font-weight:400;}
+.section-meta{margin-left:auto;font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);white-space:nowrap;}
+.section-intro{color:var(--muted);font-size:14px;margin-bottom:20px;max-width:680px;line-height:1.7;}
+
+/* CALLOUTS */
+.callout{border-left:3px solid;padding:11px 16px;border-radius:0 4px 4px 0;margin:16px 0;font-size:13.5px;line-height:1.65;}
+body.runs .callout{border-color:#3d7a3d;background:#f0f7f0;color:#2a4a2a;}
+body.mobility .callout{border-color:var(--amber);background:#fdf8f0;color:#5a5040;}
+body.strength .callout{border-color:var(--str-light);background:#f0f4f8;color:#3a4858;}
+.callout strong{font-weight:500;color:var(--ink);}
+
+/* RUN TABLE */
+.legend{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0 16px;}
+.li{display:flex;align-items:center;gap:5px;font-size:11.5px;color:var(--muted);}
+.ld{width:11px;height:11px;border-radius:2px;flex-shrink:0;}
+.wrap{overflow-x:auto;padding-bottom:8px;}
+table{border-collapse:collapse;font-size:11px;font-family:'DM Sans',Arial,sans-serif;width:100%;min-width:1060px;}
+thead th{background:var(--cream);padding:8px 7px;text-align:left;font-weight:600;font-size:10.5px;color:var(--muted);border-bottom:1px solid var(--rule);white-space:nowrap;}
+td{padding:5px 5px;border-bottom:.5px solid #d3d1c7;vertical-align:top;}
+.ph td{background:var(--ink);color:#c8c0b0;font-family:'DM Mono',monospace;font-weight:500;font-size:9.5px;padding:7px 10px;text-transform:uppercase;letter-spacing:.08em;}
+.s{border-radius:4px;padding:5px 7px;display:block;line-height:1.65;font-size:10.5px;}
+.rest{background:var(--run-rest);color:#5f5e5a;}
+.easy{background:var(--run-easy);color:#3b6d11;}
+.rec{background:var(--run-rec);color:#3C3489;}
+.intv{background:var(--run-intv);color:#854f0b;}
+.thr{background:var(--run-thr);color:#7a4a1a;}
+.lng{background:var(--run-lng);color:#0c447c;}
+.race{background:var(--run-race);color:#a32d2d;font-weight:600;}
+.wk{font-weight:700;font-size:13px;color:var(--ink);white-space:nowrap;}
+.dt{color:var(--muted);font-size:10px;white-space:nowrap;margin-top:2px;}
+.tkm{font-weight:600;font-size:13px;color:var(--ink);white-space:nowrap;}
+.plan-note{font-size:11.5px;color:var(--muted);margin-top:18px;line-height:1.8;padding:13px 17px;background:var(--cream);border-radius:4px;}
+
+/* EXERCISE CARDS */
+.exercise-grid{display:flex;flex-direction:column;gap:2px;}
+.exercise{background:white;border:1px solid var(--rule);border-radius:4px;overflow:hidden;transition:border-color .2s;}
+body.mobility .exercise:hover{border-color:var(--amber-light);}
+body.strength .exercise:hover{border-color:var(--str-light);}
+.exercise-header{display:grid;grid-template-columns:26px 1fr auto auto;align-items:center;gap:10px;padding:12px 15px;cursor:pointer;user-select:none;}
+.exercise-num{font-family:'DM Mono',monospace;font-size:11px;}
+body.mobility .exercise-num{color:var(--amber);}
+body.strength .exercise-num{color:var(--str-light);}
+.exercise-name{font-size:14px;font-weight:500;}
+.exercise-dose{font-family:'DM Mono',monospace;font-size:11px;padding:3px 8px;border-radius:3px;white-space:nowrap;}
+body.mobility .exercise-dose{color:var(--sage);background:#eef4ee;}
+body.strength .exercise-dose{color:var(--str);background:var(--str-bg);}
+.yt-link{display:inline-flex;align-items:center;gap:5px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.05em;color:#cc2200;text-decoration:none;padding:3px 9px;border-radius:3px;border:1px solid #f0d0cc;background:#fff8f7;transition:all .15s;white-space:nowrap;}
+.yt-link:hover{background:#cc2200;color:white;border-color:#cc2200;}
+.yt-icon{width:11px;height:8px;flex-shrink:0;}
+.exercise-body{display:none;padding:12px 16px 15px 52px;font-size:13.5px;line-height:1.7;color:#4a4438;border-top:1px solid var(--rule);}
+.exercise.open .exercise-body{display:block;}
+.focus{margin-top:10px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.04em;}
+body.mobility .focus{color:var(--amber);}
+body.strength .focus{color:var(--str-light);}
+.workout-label{display:inline-block;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:2px 8px;border-radius:2px;margin-bottom:16px;}
+.workout-a{background:#fff3e0;color:#9a5a00;border:1px solid #f0d090;}
+.workout-b{background:#e8f0f8;color:#1a4a7a;border:1px solid #b0cce0;}
+.sets-row{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap;}
+.sets-chip{font-family:'DM Mono',monospace;font-size:11px;padding:3px 9px;border-radius:3px;background:var(--str-bg);color:var(--str);border:1px solid #c0d4e8;}
+.timing-block{background:var(--ink);color:var(--paper);border-radius:6px;padding:24px 26px;margin-top:36px;}
+.timing-block h3{font-family:'DM Serif Display',serif;font-size:19px;font-weight:400;margin-bottom:16px;}
+body.mobility .timing-block h3{color:var(--amber-light);}
+body.strength .timing-block h3{color:#7ab0d8;}
+.timing-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:14px;}
+.timing-item{border-left:2px solid;padding-left:12px;}
+body.mobility .timing-item{border-color:var(--amber);}
+body.strength .timing-item{border-color:var(--str-light);}
+.timing-day{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px;}
+body.mobility .timing-day{color:var(--amber-light);}
+body.strength .timing-day{color:#7ab0d8;}
+.timing-desc{font-size:13px;color:#c8c0b0;line-height:1.5;}
+footer{text-align:center;padding:36px;font-family:'DM Mono',monospace;font-size:11px;color:var(--rule);border-top:1px solid var(--rule);letter-spacing:.05em;}
+@media(max-width:640px){
+  header,.nav-strip,main{padding-left:20px;padding-right:20px;}
+  header::after{display:none;}
+  .exercise-body{padding-left:20px;}
+  .exercise-header{grid-template-columns:24px 1fr;}
+  .exercise-dose,.yt-link{display:none;}
+  .exercise.open .exercise-body .yt-link{display:inline-flex;margin-top:10px;}
+}
+</style>
+</head>
+<body class="runs">
+
+<div class="mode-bar">
+  <button class="mode-btn active-run" onclick="setMode('runs')" id="btn-run">Run Plan</button>
+  <span class="mode-divider">/</span>
+  <button class="mode-btn" onclick="setMode('mobility')" id="btn-mob">Mobility</button>
+  <span class="mode-divider">/</span>
+  <button class="mode-btn" onclick="setMode('strength')" id="btn-str">Strength</button>
+</div>
+
+<header>
+  <div class="header-tag" id="header-tag">Runner's Reference &middot; Jakarta Training</div>
+  <h1 id="header-title">17-Week 10K<br><em>Training Plan</em></h1>
+  <p class="header-sub" id="header-sub">Target: Sub 45:00 &middot; Pocari Sweat Lombok 10K &middot; July 12, 2026 &middot; Goal pace: 4:30/km</p>
+</header>
+
+<nav class="nav-strip">
+  <a class="nav-pill nav-run" href="#phase1">Phase 1</a>
+  <a class="nav-pill nav-run" href="#phase2">Phase 2</a>
+  <a class="nav-pill nav-run" href="#phase3">Phase 3</a>
+  <a class="nav-pill nav-run" href="#raceweek">Race Week</a>
+  <a class="nav-pill nav-mob" href="#pre-run">Pre-Run</a>
+  <a class="nav-pill nav-mob" href="#post-run">Post-Run</a>
+  <a class="nav-pill nav-mob" href="#daily">Daily</a>
+  <a class="nav-pill nav-mob" href="#hip">Hip Focus</a>
+  <a class="nav-pill nav-mob" href="#mob-timing">Timing</a>
+  <a class="nav-pill nav-str" href="#str-principles">Principles</a>
+  <a class="nav-pill nav-str" href="#workout-a">Workout A</a>
+  <a class="nav-pill nav-str" href="#workout-b">Workout B</a>
+  <a class="nav-pill nav-str" href="#str-timing">Timing</a>
+</nav>
+
+<main>
+
+<!-- ==================== RUNS ==================== -->
+<div id="runs-content">
+<div class="section" style="padding-top:32px;" id="phase1">
+<div class="legend">
+  <span class="li"><span class="ld" style="background:var(--run-rest);border:.5px solid #b4b2a9"></span>Rest</span>
+  <span class="li"><span class="ld" style="background:var(--run-easy)"></span>Easy</span>
+  <span class="li"><span class="ld" style="background:var(--run-rec)"></span>Recovery</span>
+  <span class="li"><span class="ld" style="background:var(--run-lng)"></span>Long run</span>
+  <span class="li"><span class="ld" style="background:var(--run-intv)"></span>Intervals</span>
+  <span class="li"><span class="ld" style="background:var(--run-thr)"></span>Threshold</span>
+  <span class="li"><span class="ld" style="background:var(--run-race)"></span>Race</span>
+</div>
+<div class="wrap">
+<table>
+<thead><tr>
+  <th style="min-width:100px">Wk &amp; Dates</th><th style="min-width:46px">~km</th>
+  <th style="min-width:44px">Mon</th><th style="min-width:188px">Tue &mdash; Intervals</th>
+  <th style="min-width:115px">Wed &mdash; Recovery</th><th style="min-width:188px">Thu &mdash; Threshold</th>
+  <th style="min-width:110px">Fri &mdash; Recovery</th><th style="min-width:118px">Sat &mdash; Easy</th>
+  <th style="min-width:172px">Sun &mdash; Long Run</th>
+</tr></thead>
+<tbody>
+<tr class="ph"><td colspan="9">Phase 1 &mdash; Aerobic Base &middot; Weeks 1&ndash;6 &middot; Mar 16 &ndash; Apr 26</td></tr>
+<tr>
+<td><div class="wk">1</div><div class="dt">Mar 16&ndash;22</div></td><td class="tkm">44km</td>
+<td><span class="s rest">Rest</span></td>
+<td><span class="s intv">WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 6&times;100m strides, relaxed fast, walk-back rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 5km total<br>Injury return &mdash; neuromuscular only</span></td>
+<td><span class="s rec">Recovery<br>5km, HR cap 140&ndash;145 bpm<br>Low Z2 only</span></td>
+<td><span class="s thr">WU: 1.5km @ 6:40<br>Session: 4&times;6min @ 5:12/km, 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 8km total<br>Cruise intervals &mdash; low fatigue entry</span></td>
+<td><span class="s rec">Recovery<br>5km, HR cap 140&ndash;145 bpm</span></td>
+<td><span class="s easy">Easy<br>5km @ 6:25<br>(HR upper Z2 ceiling)</span></td>
+<td><span class="s lng">14km easy<br>@ Z2 HR (&asymp;6:25)<br>Conservative &mdash; injury return</span></td>
+</tr>
+<tr>
+<td><div class="wk">2</div><div class="dt">Mar 23&ndash;29</div></td><td class="tkm">49km</td>
+<td><span class="s rest">Rest</span></td>
+<td><span class="s intv">WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 8&times;60s hill reps, hard effort uphill, walk back down<br>CD: 1.5km @ 6:40<br><br>&asymp; 5.6km total<br>Hill reps &mdash; posterior chain loading, injury-safe intensity</span></td>
+<td><span class="s rec">Recovery<br>6km, HR cap 140&ndash;145 bpm</span></td>
+<td><span class="s thr">WU: 1.5km @ 6:40<br>Session: 4&times;7min @ 5:10/km, 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 9km total</span></td>
+<td><span class="s rec">Recovery<br>6km, HR cap 140&ndash;145 bpm</span></td>
+<td><span class="s easy">Easy<br>7km @ 6:25<br>(HR upper Z2 ceiling)</span></td>
+<td><span class="s lng">16km easy<br>@ Z2 HR (&asymp;6:25)</span></td>
+</tr>
+<tr>
+<td><div class="wk">3</div><div class="dt">Mar 30&ndash;Apr 5</div></td><td class="tkm">52km</td>
+<td><span class="s rest">Rest</span></td>
+<td><span class="s intv">WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 10&times;60s hill reps, hard effort uphill, walk back down<br>CD: 1.5km @ 6:40<br><br>&asymp; 6km total<br>Hill reps &mdash; building posterior chain strength</span></td>
+<td><span class="s rec">Recovery<br>6km @ 6:50</span></td>
+<td><span class="s thr">WU: 1.5km @ 6:40<br>Session: 22min continuous @ 5:08/km (~4.3km)<br>CD: 1.5km @ 6:40<br><br>&asymp; 8km total<br>First continuous threshold</span></td>
+<td><span class="s rec">Recovery<br>6km, HR cap 140&ndash;145 bpm</span></td>
+<td><span class="s easy">Easy<br>8km @ 6:25<br>(HR upper Z2 ceiling)</span></td>
+<td><span class="s lng">18km easy<br>@ Z2 HR (&asymp;6:25)</span></td>
+</tr>
+<tr>
+<td><div class="wk">4 &darr;</div><div class="dt">Apr 6&ndash;12</div></td><td class="tkm">46km</td>
+<td><span class="s rest">Rest</span></td>
+<td><span class="s intv">WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 8&times;90s hill reps, hard effort uphill, walk back down<br>CD: 1.5km @ 6:40<br><br>&asymp; 6.4km total<br>Cutback &mdash; fewer reps, longer effort on hills</span></td>
+<td><span class="s rec">Recovery<br>5km @ 6:50</span></td>
+<td><span class="s thr">WU: 1.5km @ 6:40<br>Session: 4&times;7min @ 5:05/km, 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 9km total<br>Cutback &mdash; back to cruise intervals</span></td>
+<td><span class="s rec">Recovery<br>5km, HR cap 140&ndash;145 bpm</span></td>
+<td><span class="s easy">Easy<br>6km @ 6:25<br>(HR upper Z2 ceiling)</span></td>
+<td><span class="s lng">15km easy<br>@ Z2 HR (&asymp;6:25)<br>Cutback week</span></td>
+</tr>
+<tr>
+<td><div class="wk">5</div><div class="dt">Apr 13&ndash;19</div></td><td class="tkm">54km</td>
+<td><span class="s rest">Rest</span></td>
+<td><span class="s intv">WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 10&times;90s hill reps, hard effort uphill, walk back down<br>CD: 1.5km @ 6:40<br><br>&asymp; 7km total<br>Hill reps peak &mdash; first flat structured reps next week</span></td>
+<td><span class="s rec">Recovery<br>6km @ 6:50</span></td>
+<td><span class="s thr">WU: 1.5km @ 6:40<br>Session: 26min continuous @ 5:02/km (~5.2km)<br>CD: 1.5km @ 6:40<br><br>&asymp; 9km total</span></td>
+<td><span class="s rec">Recovery<br>6km, HR cap 140&ndash;145 bpm</span></td>
+<td><span class="s easy">Easy<br>8km @ 6:25<br>(HR upper Z2 ceiling)</span></td>
+<td><span class="s lng">18km easy<br>@ Z2 HR (&asymp;6:25)</span></td>
+</tr>
+<tr>
+<td><div class="wk">6</div><div class="dt">Apr 20&ndash;26</div></td><td class="tkm">60km</td>
+<td><span class="s rest">Rest</span></td>
+<td><span class="s intv">WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 8&times;800m @ 4:28/km, 2.5min walk/jog rest (target 155&ndash;160 bpm before next rep)<br>CD: 1.5km @ 6:40<br><br>&asymp; 10km total<br>Phase 1 peak &mdash; first flat structured session after hill block</span></td>
+<td><span class="s rec">Recovery<br>6km @ 6:50</span></td>
+<td><span class="s thr">WU: 1.5km @ 6:40<br>Session: 30min continuous @ 5:00/km (6km)<br>CD: 1.5km @ 6:40<br><br>&asymp; 9km total<br>Phase 1 threshold peak</span></td>
+<td><span class="s rec">Recovery<br>6km, HR cap 140&ndash;145 bpm</span></td>
+<td><span class="s easy">Easy<br>9km @ 6:25<br>(HR upper Z2 ceiling)</span></td>
+<td><span class="s lng">20km easy<br>@ Z2 HR (&asymp;6:25)<br>Phase 1 long run peak</span></td>
+</tr>
+
+<tr class="ph" id="phase2"><td colspan="9">Phase 2 &mdash; Race-Specific Build &middot; Weeks 7&ndash;13 &middot; Apr 27 &ndash; Jun 14</td></tr>
+<tr>
+<td><div class="wk">7</div><div class="dt">Apr 27&ndash;May 3</div></td><td class="tkm">57km</td>
+<td><span class="s rest">Rest</span></td>
+<td><span class="s intv">WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 5&times;1km @ 4:32/km, 2.5min walk/jog rest (target 155&ndash;160 bpm)<br>CD: 1.5km @ 6:40<br><br>&asymp; 10km total<br>Phase 2 opens &mdash; immediately extending rep length from 800m</span></td>
+<td><span class="s rec">Recovery<br>6km @ 6:50</span></td>
+<td><span class="s thr">WU: 1.5km @ 6:40<br>Session: 32min continuous @ 4:58/km (~6.4km)<br>CD: 1.5km @ 6:40<br><br>&asymp; 9km total<br>Threshold breaks sub-5:00</span></td>
+<td><span class="s rec">Recovery<br>6km, HR cap 140&ndash;145 bpm</span></td>
+<td><span class="s easy">Easy 8km @ 6:25<br>+ 4&times;100m strides<br>(HR upper Z2 ceiling)</span></td>
+<td><span class="s lng">18km easy<br>@ Z2 HR (&asymp;6:25)<br>Slight pullback &mdash; harder sessions need room</span></td>
+</tr>
+<tr>
+<td><div class="wk">8</div><div class="dt">May 4&ndash;10</div></td><td class="tkm">61km</td>
+<td><span class="s rest">Rest</span></td>
+<td><span class="s intv">WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 6&times;1km @ 4:28/km, 2.5min walk/jog rest (target 155&ndash;160 bpm)<br>CD: 1.5km @ 6:40<br><br>&asymp; 11km total<br>+1 rep, pace pushes to race pace</span></td>
+<td><span class="s rec">Recovery<br>6km @ 6:50</span></td>
+<td><span class="s thr">WU: 1.5km @ 6:40<br>Session: 35min continuous @ 4:55/km (~7.1km)<br>CD: 1.5km @ 6:40<br><br>&asymp; 10km total</span></td>
+<td><span class="s rec">Recovery<br>6km, HR cap 140&ndash;145 bpm</span></td>
+<td><span class="s easy">Easy 9km @ 6:25<br>+ 4&times;100m strides<br>(HR upper Z2 ceiling)</span></td>
+<td><span class="s lng">19km easy<br>@ Z2 HR (&asymp;6:25)</span></td>
+</tr>
+<tr>
+<td><div class="wk">9 &darr;</div><div class="dt">May 11&ndash;17</div></td><td class="tkm">52km</td>
+<td><span class="s rest">Rest</span></td>
+<td><span class="s intv">WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 5&times;1km @ 4:28/km, 2.5min walk/jog rest (target 155&ndash;160 bpm)<br>CD: 1.5km @ 6:40<br><br>&asymp; 11km total<br>Cutback &mdash; longer rep, pace backs off slightly</span></td>
+<td><span class="s rec">Recovery<br>5km @ 6:50</span></td>
+<td><span class="s thr">WU: 1.5km @ 6:40<br>Session: 5&times;7min @ 4:52/km, 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 10km total<br>Cutback &mdash; cruise intervals, faster pace</span></td>
+<td><span class="s rec">Recovery<br>5km, HR cap 140&ndash;145 bpm</span></td>
+<td><span class="s easy">Easy 7km @ 6:25<br>+ 4&times;100m strides<br>(HR upper Z2 ceiling)</span></td>
+<td><span class="s lng">16km total<br>First 14.5km @ Z2 HR (&asymp;6:25)<br>Last 1.5km @ 4:30/km<br>First race-pace exposure &mdash; conservative</span></td>
+</tr>
+<tr>
+<td><div class="wk">10</div><div class="dt">May 18&ndash;24</div></td><td class="tkm">61km</td>
+<td><span class="s rest">Rest</span></td>
+<td><span class="s intv">WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 6&times;1km @ 4:25/km, 2.5min walk/jog rest (target 155&ndash;160 bpm)<br>CD: 1.5km @ 6:40<br><br>&asymp; 13km total<br>+1 rep, back to pushing pace</span></td>
+<td><span class="s rec">Recovery<br>6km @ 6:50</span></td>
+<td><span class="s thr">WU: 1.5km @ 6:40<br>Session: 37min continuous @ 4:50/km (~7.7km)<br>CD: 1.5km @ 6:40<br><br>&asymp; 11km total</span></td>
+<td><span class="s rec">Recovery<br>6km, HR cap 140&ndash;145 bpm</span></td>
+<td><span class="s easy">Easy 9km @ 6:25<br>+ 4&times;100m strides<br>(HR upper Z2 ceiling)</span></td>
+<td><span class="s lng">19km total<br>First 17km @ Z2 HR (&asymp;6:25)<br>Last 2km @ 4:30/km</span></td>
+</tr>
+<tr>
+<td><div class="wk">11</div><div class="dt">May 25&ndash;31</div></td><td class="tkm">62km</td>
+<td><span class="s rest">Rest</span></td>
+<td><span class="s intv">WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 5&times;1.2km @ 4:25/km, 2.5min walk/jog rest (target 155&ndash;160 bpm)<br>CD: 1.5km @ 6:40<br><br>&asymp; 13km total<br>Bridge to longer reps &mdash; same pace, longer effort</span></td>
+<td><span class="s rec">Recovery<br>6km @ 6:50</span></td>
+<td><span class="s thr">WU: 1.5km @ 6:40<br>Session: 37min continuous @ 4:50/km (~7.7km)<br>CD: 1.5km @ 6:40<br><br>&asymp; 11km total<br>Continuous threshold peak &mdash; split format begins next week</span></td>
+<td><span class="s rec">Recovery<br>6km, HR cap 140&ndash;145 bpm</span></td>
+<td><span class="s easy">Easy 9km @ 6:25<br>+ 4&times;100m strides<br>(HR upper Z2 ceiling)</span></td>
+<td><span class="s lng">20km total<br>First 18km @ Z2 HR (&asymp;6:25)<br>Last 2km @ 4:30/km</span></td>
+</tr>
+<tr>
+<td><div class="wk">12</div><div class="dt">Jun 1&ndash;7</div></td><td class="tkm">58km</td>
+<td><span class="s rest">Rest</span></td>
+<td><span class="s intv">WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 4&times;1.5km @ 4:23/km, 3min walk/jog rest (target 150&ndash;155 bpm)<br>CD: 1.5km @ 6:40<br><br>&asymp; 13km total<br>Longer reps, fractionally faster</span></td>
+<td><span class="s rec">Recovery<br>6km @ 6:50</span></td>
+<td><span class="s thr">WU: 1.5km @ 6:40<br>Session: 2&times;18min @ 4:47/km, 4min walk rest (~3.8km each)<br>CD: 1.5km @ 6:40<br><br>&asymp; 11km total<br>Format shifts to split &mdash; expect this to feel more manageable than last week, that is intentional. Adaptation is now in pace quality, not duration</span></td>
+<td><span class="s rec">Recovery<br>6km, HR cap 140&ndash;145 bpm</span></td>
+<td><span class="s easy">Easy 7km @ 6:25<br>+ 4&times;100m strides<br>(HR upper Z2 ceiling)</span></td>
+<td><span class="s lng">19km total<br>First 16km @ Z2 HR (&asymp;6:25)<br>Last 3km @ 4:30/km</span></td>
+</tr>
+<tr>
+<td><div class="wk">13</div><div class="dt">Jun 8&ndash;14</div></td><td class="tkm">58km</td>
+<td><span class="s rest">Rest</span></td>
+<td><span class="s intv">WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 3&times;2km @ 4:22/km, 3min walk/jog rest (target 150&ndash;155 bpm)<br>CD: 1.5km @ 6:40<br><br>&asymp; 13km total<br>Longest rep distance &mdash; generous rest to maintain quality</span></td>
+<td><span class="s rec">Recovery<br>5km @ 6:50</span></td>
+<td><span class="s thr">WU: 1.5km @ 6:40<br>Session: 2&times;17min @ 4:45/km, 4&ndash;5min walk rest (~3.6km each)<br>CD: 1.5km @ 6:40<br><br>&asymp; 10km total<br>Phase 2 threshold peak &mdash; reduced to protect Thursday quality</span></td>
+<td><span class="s rec">Recovery<br>5km, HR cap 140&ndash;145 bpm</span></td>
+<td><span class="s easy">Easy 7km @ 6:25<br>+ 4&times;100m strides<br>(HR upper Z2 ceiling)</span></td>
+<td><span class="s lng">20km total<br>First 17km @ Z2 HR (&asymp;6:25)<br>Last 3km @ 4:30/km</span></td>
+</tr>
+
+<tr class="ph" id="phase3"><td colspan="9">Phase 3 &mdash; Peak &amp; Consolidation &middot; Weeks 14&ndash;16 &middot; Jun 15 &ndash; Jul 5</td></tr>
+<tr>
+<td><div class="wk">14</div><div class="dt">Jun 15&ndash;21</div></td><td class="tkm">57km</td>
+<td><span class="s rest">Rest</span></td>
+<td><span class="s intv">WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 4&times;1.5km @ 4:20/km, 3min walk/jog rest (target 150&ndash;155 bpm)<br>CD: 1.5km @ 6:40<br><br>&asymp; 13km total<br>Peak week &mdash; rep length back, pace hardest so far</span></td>
+<td><span class="s rec">Recovery<br>5km @ 6:50</span></td>
+<td><span class="s thr">WU: 1.5km @ 6:40<br>Session: 2&times;14min @ 4:43/km, 3min walk rest (~2.9km each)<br>CD: 1.5km @ 6:40<br><br>&asymp; 9km total<br>Fastest threshold pace of plan &mdash; reduced reps to protect peak week quality</span></td>
+<td><span class="s rec">Recovery<br>5km, HR cap 140&ndash;145 bpm</span></td>
+<td><span class="s easy">Easy 7km @ 6:25<br>+ 4&times;100m strides<br>(HR upper Z2 ceiling)</span></td>
+<td><span class="s lng">20km total<br>First 16km @ Z2 HR (&asymp;6:25)<br>Last 4km @ 4:30/km<br>Peak race-pace long run</span></td>
+</tr>
+<tr>
+<td><div class="wk">15</div><div class="dt">Jun 22&ndash;28</div></td><td class="tkm">55km</td>
+<td><span class="s rest">Rest</span></td>
+<td><span class="s intv">WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 5&times;1km @ 4:17/km, 2.5min walk/jog rest (target 155&ndash;160 bpm)<br>CD: 1.5km @ 6:40<br><br>&asymp; 12km total<br>Sharpening &mdash; shorter reps, fastest pace of plan</span></td>
+<td><span class="s rec">Recovery<br>5km @ 6:50</span></td>
+<td><span class="s thr">WU: 1.5km @ 6:40<br>Session: 2&times;18min @ 4:45/km, 4min walk rest (~3.8km each)<br>CD: 1.5km @ 6:40<br><br>&asymp; 11km total<br>Slight pull-back from Week 14 intensity</span></td>
+<td><span class="s rec">Recovery<br>5km, HR cap 140&ndash;145 bpm</span></td>
+<td><span class="s easy">Easy 7km @ 6:25<br>+ 4&times;100m strides<br>(HR upper Z2 ceiling)</span></td>
+<td><span class="s lng">18km easy<br>@ Z2 HR (&asymp;6:25)<br>Taper begins &mdash; no race pace, freshness only</span></td>
+</tr>
+<tr>
+<td><div class="wk">16 &darr;</div><div class="dt">Jun 29&ndash;Jul 5</div></td><td class="tkm">44km</td>
+<td><span class="s rest">Rest</span></td>
+<td><span class="s intv">WU: 1.5km @ 6:35 + 4&times;100m strides<br>Session: 5&times;800m @ 4:20/km, 90s jog rest (target 155&ndash;160 bpm)<br>CD: 1.5km @ 6:40<br><br>&asymp; 10km total<br>Volume drops &mdash; intensity stays honest</span></td>
+<td><span class="s rec">Recovery<br>5km @ 6:50</span></td>
+<td><span class="s thr">WU: 1.5km @ 6:40<br>Session: 20min continuous @ 4:50/km (~4.1km)<br>CD: 1.5km @ 6:40<br><br>&asymp; 7km total<br>Short taper maintenance</span></td>
+<td><span class="s rec">Recovery<br>5km, HR cap 140&ndash;145 bpm</span></td>
+<td><span class="s easy">Easy 5km @ 6:25<br>+ 4&times;100m strides</span></td>
+<td><span class="s lng">14km easy<br>@ Z2 HR (&asymp;6:25)<br>No race pace &mdash; freshness only</span></td>
+</tr>
+
+<tr class="ph" id="raceweek"><td colspan="9">Race Week &middot; Week 17 &middot; Jul 6&ndash;12</td></tr>
+<tr>
+<td><div class="wk">17</div><div class="dt">Jul 6&ndash;12</div></td><td class="tkm">~30km + race</td>
+<td><span class="s rest">Rest</span></td>
+<td><span class="s intv">WU: 1.5km @ 6:35 + 4&times;100m strides<br>Session: 4&times;400m @ 4:12/km, 3min full rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 4.5km total<br>Sharpener only &mdash; do not push</span></td>
+<td><span class="s easy">Easy<br>7km @ 6:25</span></td>
+<td><span class="s easy">Easy 5km @ 6:25<br>+ 4&times;100m strides</span></td>
+<td><span class="s rest">Rest</span></td>
+<td><span class="s easy">Easy jog<br>3km @ very easy<br>Shake out only</span></td>
+<td><span class="s race">RACE DAY<br>Pocari Sweat Lombok 10K<br><br>Target: Sub 45:00<br>Pace: 4:30/km<br><br>Go get it.</span></td>
+</tr>
+</tbody></table>
+</div>
+<div class="callout" style="margin-top:16px;"><strong>Strength integration:</strong> Workout A (heavy bilateral lower body) follows Tuesday intervals. Workout B (single-leg and control) follows Friday easy run. Never before running on the same day. Deload strength every 4th week alongside running cutback weeks. Drop to Workout B only in the final 2 weeks before race. Skip strength entirely from Wednesday of race week onward.</div>
+<p class="plan-note">&darr; = cutback week &nbsp;&middot;&nbsp; WU = warm-up, CD = cool-down &nbsp;&middot;&nbsp; <strong>Recovery runs:</strong> HR cap 140&ndash;145 bpm &mdash; whatever pace that requires in Jakarta heat is correct &nbsp;&middot;&nbsp; <strong>Easy runs:</strong> upper Z2 HR ceiling (~155&ndash;160 bpm) overrides pace always &nbsp;&middot;&nbsp; <strong>Interval rest:</strong> prescribed times are minimums &mdash; target 155&ndash;160 bpm before starting next rep &nbsp;&middot;&nbsp; <strong>Threshold rest:</strong> walk recovery, target ~150&ndash;155 bpm before next rep &nbsp;&middot;&nbsp; <strong>Strength:</strong> Workout A after Tuesday intervals, Workout B after Friday easy run &nbsp;&middot;&nbsp; Week 17: rest day moves to Friday, not Monday</p>
+</div>
+</div><!-- /runs-content -->
+
+<!-- ==================== MOBILITY ==================== -->
+<div id="mobility-content">
+
+<section class="section" id="pre-run">
+<div class="section-header"><span class="section-number">01</span><h2>Pre-Run Activation</h2><span class="section-meta">~8&ndash;10 min &middot; Dynamic only</span></div>
+<p class="section-intro">Dynamic only &mdash; no static holds before running. Goal is to wake up the posterior chain, open the hips, and prime neuromuscular patterns.</p>
+<div class="exercise-grid">
+      <div class="exercise open">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">01</span><span class="exercise-name">Leg Swings &mdash; Sagittal</span>
+          <span class="exercise-dose">10 reps / side</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=leg+swings+sagittal+running+warmup" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Stand on one leg, hold a wall lightly. Swing the free leg forward and back through full range &mdash; ballistic, momentum-driven. Start small, build to full ROM over the first few reps.<div class="focus">&#8599;&nbsp;Hip flexor opening &middot; Hamstring dynamic stretch</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">02</span><span class="exercise-name">Leg Swings &mdash; Frontal</span>
+          <span class="exercise-dose">10 reps / side</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=lateral+leg+swings+hip+warmup+runner" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Same stance, swing leg side to side across the body. Cross midline on the inward swing. Targets hip abductors/adductors and deep rotators needed for lateral hip stability during stance phase.<div class="focus">&#8599;&nbsp;Hip rotator mobility &middot; Adductor opening</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">03</span><span class="exercise-name">Hip Circles (Hurdle Walk)</span>
+          <span class="exercise-dose">8 reps / side</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=hurdle+walk+hip+circles+running+drills" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Walking forward, draw a large circle with each knee &mdash; up, out, back behind you like stepping over a hurdle. Alternate legs each step. Hits the full hip circumduction range.<div class="focus">&#8599;&nbsp;Full hip circumduction &middot; Glute med activation</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">04</span><span class="exercise-name">Walking Lunge + Rotation</span>
+          <span class="exercise-dose">8 reps / side</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=walking+lunge+torso+rotation+running+warmup" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Step into a lunge, drop the back knee. At the bottom, rotate torso toward front leg &mdash; reach inside arm toward sky. Hold 1&ndash;2 sec, step through.<div class="focus">&#8599;&nbsp;Hip flexor &middot; Thoracic rotation &middot; Ankle dorsiflexion</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">05</span><span class="exercise-name">Ankle Circles + Toe/Heel Walk</span>
+          <span class="exercise-dose">10 circles + 15m each</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=ankle+circles+toe+heel+walk+warmup+runner" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Draw full circles with each ankle, both directions. Then walk 15m on toes, 15m on heels. Primes full ankle range and calf complex before any foot-strike loading.<div class="focus">&#8599;&nbsp;Ankle ROM &middot; Calf/shin activation</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">06</span><span class="exercise-name">High Knees (Slow, Exaggerated)</span>
+          <span class="exercise-dose">20m</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=slow+high+knees+running+drill+hip+flexion" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Not a conditioning drill &mdash; slow and deliberate. Drive one knee to hip height, dorsiflexed foot, step down controlled. Reinforces hip flexion pattern needed at interval pace.<div class="focus">&#8599;&nbsp;Hip flexion ROM &middot; Stride pattern priming</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">07</span><span class="exercise-name">Glute Bridge Hold</span>
+          <span class="exercise-dose">2 &times; 10 sec hold</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=glute+bridge+isometric+hold+activation+runner" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Lie on back, feet flat, drive hips up and hold. Squeeze glutes hard &mdash; don't rely on lower back. Two 10-second holds wakes up the posterior chain without fatiguing it.<div class="focus">&#8599;&nbsp;Glute activation &middot; Hip extension prep</div></div>
+      </div></div></section>
+<section class="section" id="post-run">
+<div class="section-header"><span class="section-number">02</span><h2>Post-Run Flexibility</h2><span class="section-meta">~12&ndash;15 min &middot; Static + PNF</span></div>
+<p class="section-intro">Primary flexibility window. Tissues are warm. Hold everything long &mdash; 45&ndash;60 seconds minimum. Breathe into each stretch.</p>
+<div class="callout"><strong>Jakarta heat note:</strong> You're well warmed up after any outdoor run. Don't rush this &mdash; use the cooldown window before the AC hits you. Tissues cool faster than you think indoors.</div>
+<div class="exercise-grid">
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">01</span><span class="exercise-name">Standing Quad Stretch</span>
+          <span class="exercise-dose">60 sec / side</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=standing+quad+stretch+runner+technique" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Pull heel to glute. Keep pelvis neutral &mdash; don't let the stretching hip drift forward. For deeper stretch, gently extend the hip backward.<div class="focus">&#8599;&nbsp;Rectus femoris length &middot; Hip flexor secondary</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">02</span><span class="exercise-name">Low Lunge / Couch Stretch</span>
+          <span class="exercise-dose">60 sec / side</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=couch+stretch+hip+flexor+runner" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Kneeling lunge, back knee on ground, front foot forward. Tuck pelvis under slightly and lean forward. Couch stretch variant (back foot elevated on wall) dramatically increases intensity.<div class="focus">&#8599;&nbsp;Iliopsoas &middot; Hip flexor complex &middot; Key for toe-off mechanics</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">03</span><span class="exercise-name">Seated Hamstring Stretch</span>
+          <span class="exercise-dose">60 sec / side</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=seated+hamstring+stretch+hip+hinge+runner" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">One leg extended, other bent. Hinge at the hip, spine long, chest toward shin. The stretch comes from hip flexion, not spinal rounding.<div class="focus">&#8599;&nbsp;Hamstring length &middot; Prevents posterior pelvic tilt at speed</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">04</span><span class="exercise-name">Figure-4 / Piriformis Stretch</span>
+          <span class="exercise-dose">90 sec / side</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=figure+four+piriformis+stretch+supine" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Lie on back. Cross one ankle over opposite knee. Pull uncrossed leg toward you, or press the crossed knee away. Given your piriformis history, give this one extra time.<div class="focus">&#8599;&nbsp;Piriformis &middot; Deep external rotators &middot; Glute med</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">05</span><span class="exercise-name">Calf Stretch &mdash; Gastrocnemius</span>
+          <span class="exercise-dose">60 sec / side</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=gastrocnemius+calf+stretch+wall+straight+leg+runner" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Against a wall, back leg straight, heel pressed flat. Lean forward. Straight knee targets gastrocnemius &mdash; the main calf muscle that crosses the knee.<div class="focus">&#8599;&nbsp;Gastrocnemius length &middot; Achilles load reduction</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">06</span><span class="exercise-name">Calf Stretch &mdash; Soleus</span>
+          <span class="exercise-dose">60 sec / side</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=soleus+stretch+bent+knee+wall+runner" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Same position, bend the back knee slightly. Shifts stretch into soleus and distal Achilles. The soleus works hardest at slower speeds and in late stance phase.<div class="focus">&#8599;&nbsp;Soleus &middot; Achilles complex &middot; Ankle dorsiflexion</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">07</span><span class="exercise-name">Adductor / Groin Stretch</span>
+          <span class="exercise-dose">60 sec / side</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=adductor+groin+stretch+runner+seated+butterfly" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Wide-legged seated or standing. Shift weight to one side, bending that knee while other stays straight. Or: seated butterfly, press knees toward ground with elbows.<div class="focus">&#8599;&nbsp;Adductor length &middot; Pelvic stability in stance</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">08</span><span class="exercise-name">Thoracic Rotation Stretch</span>
+          <span class="exercise-dose">8 reps / side</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=thoracic+rotation+stretch+seated+runner" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Seated, one hand behind head, other on knee. Rotate torso, driving elbow toward ceiling. Hold 2 sec at end range. Thoracic mobility directly enables arm swing and counter-rotation.<div class="focus">&#8599;&nbsp;Thoracic rotation &middot; Running economy via arm swing</div></div>
+      </div></div></section>
+<section class="section" id="daily">
+<div class="section-header"><span class="section-number">03</span><h2>Daily Standalone Session</h2><span class="section-meta">~15&ndash;20 min &middot; Morning or evening</span></div>
+<p class="section-intro">Do this on its own on easy days. Accumulates the mobility gains that single post-run windows can't fully address.</p>
+<div class="exercise-grid">
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">01</span><span class="exercise-name">90/90 Hip Stretch</span>
+          <span class="exercise-dose">90 sec / side</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=90+90+hip+stretch+runner+mobility+tutorial" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Sit on the ground with both hips at 90&deg; &mdash; one leg in front (external rotation), one behind (internal rotation). Sit tall, pelvis level. Lean forward over the front shin for deeper stretch. Highest-ROI hip mobility exercise for runners.<div class="focus">&#8599;&nbsp;External AND internal hip rotation &middot; Piriformis &middot; Glute med</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">02</span><span class="exercise-name">World's Greatest Stretch</span>
+          <span class="exercise-dose">5 reps / side (slow)</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=world's+greatest+stretch+runner+hip+thoracic" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">From lunge, place same-side hand inside front foot. Rotate inside arm toward sky. Return, do elbow-to-ground. One rep hits: hip flexors, adductors, thoracic rotation, and hamstrings.<div class="focus">&#8599;&nbsp;Multi-joint mobility &middot; Best all-in-one runner's movement</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">03</span><span class="exercise-name">Deep Squat Hold</span>
+          <span class="exercise-dose">2 &times; 60 sec</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=deep+squat+hold+ankle+dorsiflexion+mobility+runner" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Feet shoulder-width, toes slightly out. Squat as deep as possible, heels on ground. Hold a door frame for support if needed. Targets ankle dorsiflexion, hip flexion depth, and posterior chain length.<div class="focus">&#8599;&nbsp;Ankle dorsiflexion &middot; Hip flexion depth &middot; Posterior chain</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">04</span><span class="exercise-name">Cat-Cow + Thread the Needle</span>
+          <span class="exercise-dose">10 reps each</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=thread+the+needle+thoracic+mobility+cat+cow" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">On all fours: cat-cow 10 reps. Then thread the needle &mdash; slide one arm underneath, rotating thoracic spine, press shoulder toward floor. Hold 2 sec. Switch.<div class="focus">&#8599;&nbsp;Thoracic + lumbar mobility &middot; Anti-kyphosis</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">05</span><span class="exercise-name">Supine Hip Flexor (Contract-Relax)</span>
+          <span class="exercise-dose">3 &times; 15 sec / side</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=supine+hip+flexor+PNF+contract+relax+edge+of+bed" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Lie at the edge of a bed. Drop one leg off, gravity stretches the hip flexor. Hold 10 sec, contract against gravity for 5 sec, relax 15 sec. PNF technique doubles the stretch gain vs. passive alone.<div class="focus">&#8599;&nbsp;Iliopsoas &middot; Key for stride extension</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">06</span><span class="exercise-name">Cossack Squat</span>
+          <span class="exercise-dose">8 reps / side</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=cossack+squat+adductor+mobility+tutorial" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Wide stance, feet forward. Shift weight to one side, bending that knee deeply while the other stays straight. Sit into the bent side, heel flat. Return through center.<div class="focus">&#8599;&nbsp;Adductor &middot; Hip internal rotation &middot; Ankle mobility</div></div>
+      </div></div></section>
+<section class="section" id="hip">
+<div class="section-header"><span class="section-number">04</span><h2>Hip Focus Protocol</h2><span class="section-meta">~10 min &middot; 2&ndash;3&times; per week</span></div>
+<p class="section-intro">Given your piriformis history and hip extension deficit in your stride, these get priority. Do this after easy runs or as part of the standalone session. Not pre-run.</p>
+<div class="callout"><strong>Stride note:</strong> Your form issue &mdash; stride window too far forward, insufficient hip extension at toe-off &mdash; is almost certainly related to hip flexor tightness restricting hip extension range. These exercises directly address it.</div>
+<div class="exercise-grid">
+      <div class="exercise open">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">01</span><span class="exercise-name">Pigeon Pose (Extended)</span>
+          <span class="exercise-dose">2 min / side</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=pigeon+pose+piriformis+runner+extended" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">From downward dog, bring one shin forward. Square hips to ground. Walk hands forward, torso comes down. Two full minutes per side. Breathe.<div class="focus">&#8599;&nbsp;Piriformis &middot; Glute med &middot; Deep external hip rotators</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">02</span><span class="exercise-name">Hip Internal Rotation Stretch</span>
+          <span class="exercise-dose">90 sec / side</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=hip+internal+rotation+stretch+supine+windshield+wiper" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Lie on back, knees bent. Let both knees fall to one side (windshield wiper). Hold where you feel the outer hip of the top leg stretching. Most runners are biased toward external rotation &mdash; this balances it.<div class="focus">&#8599;&nbsp;Hip internal rotation &middot; Piriformis balance &middot; Glute med</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">03</span><span class="exercise-name">Prone Hip Extension Stretch</span>
+          <span class="exercise-dose">60 sec / side</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=prone+hip+extension+stretch+hip+flexor+end+range" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Lie face down. Bend one knee, let that leg rotate outward so the knee drops toward ground. Gently press hip into floor. Stretches hip flexors in their lengthened end range &mdash; the exact position restricted in your toe-off.<div class="focus">&#8599;&nbsp;Hip flexor end-range &middot; Directly addresses stride extension deficit</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">04</span><span class="exercise-name">Glute Med Side-Lying Stretch</span>
+          <span class="exercise-dose">90 sec / side</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=glute+medius+TFL+side+lying+stretch" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Lie on side, legs stacked. Cross top knee over and place that foot flat on floor in front. Rotate top hip forward until you feel a stretch in the outer hip/glute. Lengthens glute med and TFL.<div class="focus">&#8599;&nbsp;Glute med &middot; TFL &middot; Lateral hip stability</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">05</span><span class="exercise-name">Hip Flexor PAILs / RAILs</span>
+          <span class="exercise-dose">2 min / side (full cycle)</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=hip+flexor+PAILs+RAILs+FRC+lunge+mobility" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Low lunge: hold 1 minute passively. Press front foot into floor (~20% effort) for 10 seconds. Then push back knee into floor for 10 seconds. Release and relax 30 seconds. Most efficient method for gaining permanent hip flexor length.<div class="focus">&#8599;&nbsp;Progressive hip flexor gain &middot; Best ROI for stride extension</div></div>
+      </div></div></section>
+<section class="section" id="mob-timing">
+<div class="section-header"><span class="section-number">05</span><h2>Weekly Integration</h2><span class="section-meta">How it fits your training week</span></div>
+<p class="section-intro">Mobility works through accumulated volume over weeks. Make pre- and post-run routine automatic on every run day &mdash; add the standalone session 2&ndash;3&times; per week for cumulative gains.</p>
+<div class="timing-block"><h3>Weekly Schedule</h3><div class="timing-grid">
+<div class="timing-item"><div class="timing-day">Tuesday &mdash; Intervals</div><div class="timing-desc">Pre-run activation &rarr; Run &rarr; Post-run flexibility. Skip standalone &mdash; recovery is priority.</div></div>
+<div class="timing-item"><div class="timing-day">Wednesday &mdash; Easy</div><div class="timing-desc">Pre-run &rarr; Run &rarr; Post-run + Standalone + Hip protocol. Best full mobility day.</div></div>
+<div class="timing-item"><div class="timing-day">Thursday &mdash; Threshold</div><div class="timing-desc">Pre-run &rarr; Run &rarr; Post-run flexibility. Same as Tuesday.</div></div>
+<div class="timing-item"><div class="timing-day">Friday &mdash; Easy</div><div class="timing-desc">Pre-run &rarr; Run &rarr; Post-run. Add hip focus if feeling tight.</div></div>
+<div class="timing-item"><div class="timing-day">Saturday &mdash; Easy / Off</div><div class="timing-desc">Standalone + hip protocol (even without a run). Low-load, high-benefit.</div></div>
+<div class="timing-item"><div class="timing-day">Sunday &mdash; Long Run</div><div class="timing-desc">Pre-run &rarr; Run &rarr; Extended post-run (15&ndash;20 min). Longest hold durations.</div></div>
+<div class="timing-item"><div class="timing-day">Monday &mdash; Rest</div><div class="timing-desc">Optional 10-min standalone if stiff. Otherwise full rest.</div></div>
+</div></div>
+<div class="callout" style="margin-top:24px;"><strong>Progression:</strong> Weeks 1&ndash;3, build the habit. From week 4, add PNF contract-relax to your tightest areas. Measurable ROM gains typically appear after 6&ndash;8 consistent weeks.</div>
+</section>
+</div><!-- /mobility-content -->
+
+<!-- ==================== STRENGTH ==================== -->
+<div id="strength-content">
+<section class="section" id="str-principles">
+<div class="section-header"><span class="section-number">01</span><h2>Training Principles</h2><span class="section-meta">Runner-specific strength</span></div>
+<p class="section-intro">Strength training for distance runners isn't bodybuilding. The goal is force production, single-leg stability, and injury resilience &mdash; everything below directly supports your running mechanics.</p>
+<div class="callout"><strong>Structure:</strong> Two sessions per week. Workout A (Tuesday, after intervals) is heavy bilateral compound work. Workout B (Friday, after easy run) is single-leg dominant at lower loads. Hard days cluster together to protect recovery days.</div>
+<div class="callout"><strong>Piriformis caution:</strong> Single-leg stabilizer-dependent exercises (RDLs, split squats) need extra care when performed after hard runs. If your hip is fatigued or achy, reduce load or skip the unilateral work that session.</div>
+<div class="callout"><strong>Loading intent:</strong> Workout A &mdash; heavy, 3&ndash;4 sets, ~4&ndash;6 reps (strength zone). Workout B &mdash; moderate, 3 sets, ~8&ndash;10 reps (strength-endurance, single-leg control priority). Deload every 4th week: reduce volume by ~40%.</div>
+</section>
+
+<section class="section" id="workout-a">
+<div class="section-header"><span class="section-number">02</span><h2>Workout A &mdash; Lower Compound</h2><span class="section-meta">Tuesday &middot; After intervals &middot; ~35 min</span></div>
+<p class="section-intro">Heavy bilateral work while the nervous system is primed. Focus on posterior chain dominance &mdash; glutes and hamstrings are the engine of your running stride.</p>
+<div class="workout-label workout-a">Workout A &middot; Tuesday</div>
+<div class="exercise-grid">
+      <div class="exercise open">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">01</span><span class="exercise-name">Barbell Back Squat</span>
+          <span class="exercise-dose">4 &times; 4&ndash;6 reps</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=barbell+back+squat+technique+form+tutorial" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Primary bilateral lower-body compound. Aim for slightly above parallel depth minimum. Drive through the full foot. Hard brace before each rep &mdash; intra-abdominal pressure is your spinal protection.<div class="sets-row"><span class="sets-chip">4 sets</span><span class="sets-chip">4&ndash;6 reps</span><span class="sets-chip">2&ndash;3 min rest</span></div><div class="focus">&#8599;&nbsp;Quad &middot; Glute max &middot; Lower-body force production</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">02</span><span class="exercise-name">Romanian Deadlift (Bilateral)</span>
+          <span class="exercise-dose">4 &times; 5&ndash;6 reps</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=romanian+deadlift+RDL+hamstring+technique+barbell" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Cornerstone posterior chain exercise for runners. Hinge at the hip, maintain neutral spine, feel the hamstring stretch before driving back up. Bar stays close to the body throughout.<div class="sets-row"><span class="sets-chip">4 sets</span><span class="sets-chip">5&ndash;6 reps</span><span class="sets-chip">2&ndash;3 min rest</span></div><div class="focus">&#8599;&nbsp;Hamstring &middot; Glute max &middot; Spinal erectors</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">03</span><span class="exercise-name">Leg Press</span>
+          <span class="exercise-dose">3 &times; 6&ndash;8 reps</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=leg+press+technique+quad+runner+strength" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Sub: goblet squat with 3-second eccentric if no leg press. Higher foot placement increases glute/hamstring involvement. Don't lock out the knees at the top.<div class="sets-row"><span class="sets-chip">3 sets</span><span class="sets-chip">6&ndash;8 reps</span><span class="sets-chip">90 sec rest</span></div><div class="focus">&#8599;&nbsp;Quad strength &middot; Knee extension power &middot; Running economy</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">04</span><span class="exercise-name">Nordic Hamstring Curl</span>
+          <span class="exercise-dose">3 &times; 4&ndash;6 reps</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=nordic+hamstring+curl+eccentric+tutorial+runner" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Kneel with feet anchored. Lower toward ground by slowly extending at the knee, controlling the fall. Push up with hands to return. Start with 3&ndash;4 reps if new to these &mdash; they're deceptively hard.<div class="sets-row"><span class="sets-chip">3 sets</span><span class="sets-chip">4&ndash;6 reps</span><span class="sets-chip">2 min rest</span></div><div class="focus">&#8599;&nbsp;Hamstring eccentric strength &middot; Injury resilience</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">05</span><span class="exercise-name">Calf Raises &mdash; Heavy (Straight Leg)</span>
+          <span class="exercise-dose">4 &times; 8 reps + 3sec eccentric</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=heavy+calf+raise+eccentric+standing+runner" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Standing, weighted. Slow 3-second eccentric, pause at bottom, full range concentric. Calf strength is massively undertrained in distance runners and directly impacts running economy. Load this heavier than feels natural.<div class="sets-row"><span class="sets-chip">4 sets</span><span class="sets-chip">8 reps</span><span class="sets-chip">90 sec rest</span></div><div class="focus">&#8599;&nbsp;Gastrocnemius strength &middot; Achilles resilience &middot; Push-off power</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">06</span><span class="exercise-name">Plank Variations</span>
+          <span class="exercise-dose">3 &times; 30&ndash;45 sec each</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=plank+side+plank+RKC+progressions+core+runner" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Rotate through: forearm plank, side plank (each side), RKC plank. Side plank targets obliques and glute med &mdash; the lateral stability chain that prevents trunk sway while running.<div class="sets-row"><span class="sets-chip">3 &times; each variation</span><span class="sets-chip">30&ndash;45 sec hold</span><span class="sets-chip">45 sec rest</span></div><div class="focus">&#8599;&nbsp;Anti-rotation core &middot; Lateral stability &middot; Running posture</div></div>
+      </div></div></section>
+<section class="section" id="workout-b">
+<div class="section-header"><span class="section-number">03</span><h2>Workout B &mdash; Single-Leg &amp; Control</h2><span class="section-meta">Friday &middot; After easy run &middot; ~30 min</span></div>
+<p class="section-intro">Single-leg dominant, moderate loads. Goal is hip stability, glute med strength, and unilateral force production &mdash; the mechanics that actually transfer to running. Pelvis control matters more than load here.</p>
+<div class="workout-label workout-b">Workout B &middot; Friday</div>
+<div class="exercise-grid">
+      <div class="exercise open">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">01</span><span class="exercise-name">Bulgarian Split Squat</span>
+          <span class="exercise-dose">3 &times; 8&ndash;10 reps / side</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=bulgarian+split+squat+dumbbell+technique+runner" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Rear foot elevated on bench. Dumbbells in hand. Lower until front thigh is parallel to ground &mdash; front shin roughly vertical. The single-leg demand makes this the closest strength exercise to running mechanics. Front knee tracks over foot, not caving inward.<div class="sets-row"><span class="sets-chip">3 sets / side</span><span class="sets-chip">8&ndash;10 reps</span><span class="sets-chip">90 sec rest</span></div><div class="focus">&#8599;&nbsp;Unilateral quad &middot; Glute max &middot; Hip stability &middot; Running transfer</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">02</span><span class="exercise-name">Single-Leg RDL (Supported)</span>
+          <span class="exercise-dose">3 &times; 8&ndash;10 reps / side</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=single+leg+RDL+supported+fingertip+wall+hamstring+runner" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Light fingertip contact on wall &mdash; correct form, not a crutch. Goal is hamstring and glute loading with a level pelvis. Hinge at the hip, spine neutral. Dumbbell in opposite hand. Keep the pelvis square &mdash; don't let the raised hip rotate open.<div class="sets-row"><span class="sets-chip">3 sets / side</span><span class="sets-chip">8&ndash;10 reps</span><span class="sets-chip">90 sec rest</span></div><div class="focus">&#8599;&nbsp;Unilateral hamstring/glute &middot; Pelvic control &middot; Hip hinge pattern</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">03</span><span class="exercise-name">Step-Up (Lateral + Forward)</span>
+          <span class="exercise-dose">3 &times; 10 reps / side</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=lateral+step+up+glute+medius+runner+strength" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Box ~20&ndash;30cm high. Do 5 lateral step-ups then 5 forward step-ups per side. The lateral variant directly loads the glute medius &mdash; responsible for preventing hip drop during running. Drive through the heel of the elevated foot. No momentum.<div class="sets-row"><span class="sets-chip">3 sets / side</span><span class="sets-chip">5 lateral + 5 forward</span><span class="sets-chip">60 sec rest</span></div><div class="focus">&#8599;&nbsp;Glute med &middot; Hip abductor &middot; Prevents hip drop in stance</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">04</span><span class="exercise-name">Single-Leg Calf Raise (Eccentric)</span>
+          <span class="exercise-dose">3 &times; 10&ndash;12 reps / side</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=single+leg+eccentric+calf+raise+Achilles+runner+step" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Stand on one foot on edge of a step, heel hanging off. Rise with both feet, shift to one, lower slowly over 3&ndash;4 seconds. Gold standard for Achilles tendon health and calf resilience.<div class="sets-row"><span class="sets-chip">3 sets / side</span><span class="sets-chip">10&ndash;12 reps</span><span class="sets-chip">90 sec rest</span></div><div class="focus">&#8599;&nbsp;Soleus &middot; Achilles loading &middot; Unilateral push-off power</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">05</span><span class="exercise-name">Banded Clamshell + Hip Abduction</span>
+          <span class="exercise-dose">3 &times; 15 reps / side</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=banded+clamshell+hip+abduction+glute+med+runner" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Resistance band around thighs. Side-lying: 10 clamshells (rotate knee open, feet together) then 5 straight leg raises. Targets the glute medius in isolation &mdash; maintaining hip height during every stride's single-leg stance phase.<div class="sets-row"><span class="sets-chip">3 sets / side</span><span class="sets-chip">10 clams + 5 abductions</span><span class="sets-chip">60 sec rest</span></div><div class="focus">&#8599;&nbsp;Glute med isolation &middot; Hip stability &middot; Piriformis support</div></div>
+      </div>
+      <div class="exercise">
+        <div class="exercise-header" onclick="toggle(this)">
+          <span class="exercise-num">06</span><span class="exercise-name">Dead Bug</span>
+          <span class="exercise-dose">3 &times; 8 reps / side</span>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=dead+bug+exercise+core+stability+runner+tutorial" target="_blank" onclick="event.stopPropagation()"><svg class="yt-icon" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5S23.2.6 22.4.8C21.5 0 20.5 0 20.5 0H3.5S2.5 0 1.6.8C.8.6.5 2.5.5 2.5S0 4.7 0 6.9v2.2C0 11.3.5 13.5.5 13.5s.3 1.9 1.1 1.7C2.5 16 3.5 16 3.5 16h17s1 0 1.9-.8c.8.2 1.1-1.7 1.1-1.7S24 11.3 24 9.1V6.9c0-2.2-.5-4.4-.5-4.4zM9.5 11.5v-6l6.5 3-6.5 3z"/></svg>Watch</a>
+        </div>
+        <div class="exercise-body">Lie on back, arms vertical, knees at 90&deg; in air. Press lower back firmly into the floor &mdash; maintain this throughout. Slowly lower opposite arm and leg toward floor, return. Trains the deep core stability needed to hold form in the final kilometers of a race.<div class="sets-row"><span class="sets-chip">3 sets / side</span><span class="sets-chip">8 slow reps</span><span class="sets-chip">60 sec rest</span></div><div class="focus">&#8599;&nbsp;Deep core &middot; Anti-extension stability &middot; Late-race posture</div></div>
+      </div></div></section>
+<section class="section" id="str-timing">
+<div class="section-header"><span class="section-number">04</span><h2>Weekly Integration</h2><span class="section-meta">Fitting strength into your run week</span></div>
+<p class="section-intro">Strength always comes after running on the same day &mdash; never before. Hard days cluster together so that Wednesday, Saturday, Sunday, and Monday can be recovery-oriented.</p>
+<div class="timing-block"><h3>Weekly Structure</h3><div class="timing-grid">
+<div class="timing-item"><div class="timing-day">Tuesday</div><div class="timing-desc">Interval run &rarr; Workout A. ~35 min after the run.</div></div>
+<div class="timing-item"><div class="timing-day">Wednesday</div><div class="timing-desc">Easy run only. No strength. Full mobility session instead.</div></div>
+<div class="timing-item"><div class="timing-day">Thursday</div><div class="timing-desc">Threshold run only. No strength &mdash; let the threshold adaptation land.</div></div>
+<div class="timing-item"><div class="timing-day">Friday</div><div class="timing-desc">Easy run &rarr; Workout B. Lighter loads; watch the hip on tired legs.</div></div>
+<div class="timing-item"><div class="timing-day">Saturday</div><div class="timing-desc">Easy run or off. Mobility only. No strength.</div></div>
+<div class="timing-item"><div class="timing-day">Sunday</div><div class="timing-desc">Long run only. No strength.</div></div>
+<div class="timing-item"><div class="timing-day">Monday</div><div class="timing-desc">Full rest. Light mobility only if needed.</div></div>
+</div></div>
+<div class="callout" style="margin-top:24px;"><strong>Deload protocol:</strong> Every 4th week, reduce sets by 1 and weight by ~30&ndash;40%. Do not skip deload weeks in the 8 weeks before a race.</div>
+<div class="callout"><strong>Race taper:</strong> Final 2 weeks before target race &mdash; drop to 1 session/week (Workout B only, reduced). Race week &mdash; skip strength entirely from Wednesday onward.</div>
+</section>
+</div><!-- /strength-content -->
+
+</main>
+<footer>Jakarta Runner &middot; Training Reference &middot; 10K July 2026 &middot; HM October 2026</footer>
+
+<script>
+const hd = {
+  runs:     {tag:"Runner's Reference · Jakarta Training", title:"17-Week 10K<br><em>Training Plan</em>",      sub:"Target: Sub 45:00 · Pocari Sweat Lombok 10K · July 12, 2026 · Goal pace: 4:30/km"},
+  mobility: {tag:"Runner's Reference · Jakarta Training", title:"Full Mobility<br><em>Regimen</em>",           sub:"A structured daily mobility system built around heat training, hip mechanics, and injury resilience."},
+  strength: {tag:"Runner's Strength · Jakarta Training",  title:"Lower-Body<br><em>Strength Program</em>",    sub:"Two sessions per week, runner-specific. Posterior chain dominant, single-leg focused, injury-aware."}
+};
+function setMode(m){
+  document.body.className=m;
+  ['run','mob','str'].forEach(id=>document.getElementById('btn-'+id).className='mode-btn');
+  const map={runs:'run',mobility:'mob',strength:'str'};
+  document.getElementById('btn-'+map[m]).className='mode-btn active-'+map[m];
+  const d=hd[m];
+  document.getElementById('header-tag').textContent=d.tag;
+  document.getElementById('header-title').innerHTML=d.title;
+  document.getElementById('header-sub').textContent=d.sub;
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function toggle(h){h.closest('.exercise').classList.toggle('open');}
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      document.querySelectorAll('.nav-pill').forEach(p=>p.classList.remove('active'));
+      const a=document.querySelector('.nav-pill[href="#'+e.target.id+'"]');
+      if(a) a.classList.add('active');
+    }
+  });
+},{threshold:0.2});
+document.querySelectorAll('section[id],tr.ph[id],div[id]').forEach(s=>{try{obs.observe(s);}catch(e){}});
+</script>
+</body>
+</html>
