@@ -48,6 +48,13 @@ body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans
 .mode-divider{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--border2);padding:0 4px;}
 .theme-btn{margin-left:auto;font-size:15px;width:30px;height:30px;border-radius:3px;border:1px solid var(--border2);background:transparent;color:var(--muted);cursor:pointer;transition:all .2s;line-height:1;display:flex;align-items:center;justify-content:center;}
 .theme-btn:hover{border-color:var(--text);color:var(--text);}
+@media(max-width:640px){
+  .mode-bar{padding:12px 16px;}
+  .theme-btn{width:48px;}
+  #btn-run .full{display:none;}
+  #btn-run .short{display:inline;}
+}
+@media(min-width:641px){#btn-run .short{display:none;}}
 
 /* HEADER */
 header{padding:48px 40px 36px;border-bottom:1px solid var(--border);position:relative;overflow:hidden;}
@@ -185,7 +192,7 @@ footer{text-align:center;padding:36px;font-family:'JetBrains Mono',monospace;fon
 <body class="runs">
 
 <div class="mode-bar">
-  <button class="mode-btn active-run" onclick="setMode('runs')" id="btn-run">Run Plan</button>
+  <button class="mode-btn active-run" onclick="setMode('runs')" id="btn-run"><span class="full">Run Plan</span><span class="short">Run</span></button>
   <span class="mode-divider">/</span>
   <button class="mode-btn" onclick="setMode('mobility')" id="btn-mob">Mobility</button>
   <span class="mode-divider">/</span>

@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "git -C ~/Documents/Coding/training-plan add -A && git -C ~/Documents/Coding/training-plan diff --cached --quiet || git -C ~/Documents/Coding/training-plan commit -m 'Auto-commit' && git -C ~/Documents/Coding/training-plan push 2>/dev/null || true",
+            "statusMessage": "Pushing to GitHub..."
+          }
+        ]
+      }
+    ]
+  }
+}
