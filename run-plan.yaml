@@ -414,8 +414,13 @@ blocks:
     is aspirational &nbsp;&middot;&nbsp; <strong>Threshold rest:</strong> walk recovery,
     target ~150&ndash;155 bpm before next rep &nbsp;&middot;&nbsp; <strong>Heat protocol:</strong>
     if ambient temp &gt;30&deg;C, add 10&ndash;15s/km to all pace references &mdash;
-    HR zones do not change &nbsp;&middot;&nbsp; <strong>Strength:</strong> Workout
-    A after Tuesday intervals, Workout B after Friday easy run &nbsp;&middot;&nbsp;
+    HR zones do not change &nbsp;&middot;&nbsp; <strong>Goal calibration:</strong>
+    2&ndash;3 weeks out, upgrade the race target only if goal-pace work feels controlled
+    and repeatable. If a benchmark session like 3&times;2km or 2&times;3km at 10K
+    pace feels smooth with good form and recovery, sub-48 is safe; if the same work
+    is controlled at ~4:45/km, consider ~47:30; only push below 47 if multiple race-specific
+    sessions support it &nbsp;&middot;&nbsp; <strong>Strength:</strong> Workout A
+    after Tuesday intervals, Workout B after Friday easy run &nbsp;&middot;&nbsp;
     Week 13: rest day moves to Friday, not Monday"
 - kind: sectioned-run-table
   section_id: hm-recovery
