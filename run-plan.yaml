@@ -430,7 +430,7 @@ blocks:
     weeks:
     - week_html: '14'
       dates_html: Jul 13&ndash;19
-      total_km_html: "~26km"
+      total_km_html: "~28km"
       days:
       - type: rest
         content_html: Rest
@@ -443,10 +443,10 @@ blocks:
       - type: rest
         content_html: Rest or cross-train<br>30min easy bike/pool
       - type: easy
-        content_html: Easy 5km @ Z2 HR<br>Keep this relaxed &mdash; no extra pop work
-          yet.
+        content_html: Easy 5km @ Z2 HR<br>+ 4&times;100m relaxed strides if legs feel
+          normal again.
       - type: lng
-        content_html: Easy 10km @ Z2 HR<br>First longer run post-race &mdash; check
+        content_html: Easy 12km @ Z2 HR<br>First longer run post-race &mdash; check
           how legs feel.
   - id: 
     title_html: HM Reset &amp; Rebuild &middot; Weeks 15&ndash;16 &middot; Jul 20 &ndash; Aug
@@ -463,10 +463,9 @@ blocks:
       - type: rec
         content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
       - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 22min @ 5:08&ndash;5:10/km (HR
-          165&ndash;170)<br>CD: 1.5km @ 6:40<br><br>&asymp; 7.5km total<br>Threshold
-          reintroduction &mdash;
-          ease in.'
+        content_html: 'WU: 1.5km @ 6:40<br>Session: 2&times;10min @ 5:00&ndash;5:05/km
+          (HR 165&ndash;170), 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 8km
+          total<br>Threshold reintroduction &mdash; gentle but purposeful.'
       - type: rec
         content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
       - type: easy
@@ -476,7 +475,7 @@ blocks:
         content_html: 14km easy @ Z2 HR<br>Rebuild volume gently.
     - week_html: '16'
       dates_html: Jul 27&ndash;Aug 2
-      total_km_html: "~48km"
+      total_km_html: "~46km"
       days:
       - type: rest
         content_html: Rest
@@ -485,8 +484,9 @@ blocks:
       - type: rec
         content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
       - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 26min @ 5:05&ndash;5:08/km (HR
-          165&ndash;170)<br>CD: 1.5km @ 6:40<br><br>&asymp; 8km total'
+        content_html: 'WU: 1.5km @ 6:40<br>Session: 3&times;8min @ 4:55&ndash;5:00/km
+          (HR 165&ndash;170), 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 8.5km
+          total<br>Still foundation work &mdash; no HM-specific stress yet.'
       - type: rec
         content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
       - type: easy
@@ -499,19 +499,20 @@ blocks:
     weeks:
     - week_html: '17'
       dates_html: Aug 3&ndash;9
-      total_km_html: "~55km"
+      total_km_html: "~52km"
       days:
       - type: rest
         content_html: Rest
       - type: intv
-        content_html: 'WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 4&times;1.5km
-          @ 5:00/km, 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 10km total<br>HM-specific
-          work begins &mdash; controlled, not pressing yet.'
+        content_html: 'WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 3&times;2km
+          @ 4:58/km, 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 10.5km total<br>First
+          true HM-specific session &mdash; exact goal pace, manageable volume.'
       - type: rec
         content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
       - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 28min continuous @ 5:00&ndash;5:03/km
-          (HR 165&ndash;172)<br>CD: 1.5km @ 6:40<br><br>&asymp; 8.5km total'
+        content_html: 'WU: 1.5km @ 6:40<br>Session: 25min continuous @ 4:52&ndash;4:58/km
+          (HR 165&ndash;172)<br>CD: 1.5km @ 6:40<br><br>&asymp; 8.5km total<br>Threshold
+          stays faster than HM pace.'
       - type: rec
         content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
       - type: easy
@@ -526,15 +527,15 @@ blocks:
       - type: rest
         content_html: Rest
       - type: intv
-        content_html: 'WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 3&times;2km
-          @ 4:58/km, 3min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 10.5km total<br>First
-          longer reps exactly at goal pace.'
+        content_html: 'WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 2&times;3km
+          @ 4:58/km, 3min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 10.5km total<br>Longer
+          HM reps &mdash; slower than threshold, but more substantial.'
       - type: rec
         content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
       - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 2&times;18min @ 4:58&ndash;5:00/km
-          (HR 165&ndash;172), 3min walk/jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp;
-          10km total<br>Bigger threshold load in a durable format.'
+        content_html: 'WU: 1.5km @ 6:40<br>Session: 3&times;10min @ 4:50&ndash;4:55/km
+          (HR 165&ndash;172), 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 10km
+          total<br>Threshold is still the faster, ceiling-raising day.'
       - type: rec
         content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
       - type: easy
@@ -567,7 +568,7 @@ blocks:
           and time-on-feet. Finish feeling controlled.'
     - week_html: 20 &darr;
       dates_html: Aug 24&ndash;30
-      total_km_html: "~50km"
+      total_km_html: "~48km"
       days:
       - type: rest
         content_html: Rest
@@ -578,9 +579,9 @@ blocks:
       - type: rec
         content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
       - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 24min @ 4:58&ndash;5:00/km (HR
-          165&ndash;172)<br>CD: 1.5km @ 6:40<br><br>&asymp; 8km total<br>Specific
-          threshold &mdash; enough support without compounding race fatigue.'
+        content_html: 'WU: 1.5km @ 6:40<br>Session: 20min @ 4:52&ndash;4:58/km (HR
+          165&ndash;172)<br>CD: 1.5km @ 6:40<br><br>&asymp; 7.5km total<br>Shorter
+          threshold re-entry after the race.'
       - type: rec
         content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
       - type: easy
@@ -595,7 +596,7 @@ blocks:
     weeks:
     - week_html: '21'
       dates_html: Aug 31&ndash;Sep 6
-      total_km_html: "~62km"
+      total_km_html: "~60km"
       days:
       - type: rest
         content_html: Rest
@@ -606,16 +607,17 @@ blocks:
       - type: rec
         content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
       - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 2&times;20min @ 4:55&ndash;4:58/km
+        content_html: 'WU: 1.5km @ 6:40<br>Session: 2&times;15min @ 4:50&ndash;4:55/km
           (HR 165&ndash;172), 3min walk/jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp;
-          11km total'
+          9km total<br>Threshold now supports, rather than matches, the HM work.'
       - type: rec
         content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
       - type: easy
         content_html: Easy 8km @ Z2 HR<br>+ 8&times;10s hill sprints (treadmill 8&ndash;10%,
           max effort, 2min full walk rest)
       - type: lng
-        content_html: 24km total<br>18km easy @ Z2 HR<br>Last 6km @ 4:58/km (HM pace)
+        content_html: 22km easy @ Z2 HR<br>Hold the long run steady this week so Thursday
+          can be the main specific session.
     - week_html: '22'
       dates_html: Sep 7&ndash;13
       total_km_html: "~64km"
@@ -629,32 +631,32 @@ blocks:
       - type: rec
         content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
       - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 35min continuous @ 4:55&ndash;4:58/km
-          (HR 165&ndash;172)<br>CD: 1.5km @ 6:40<br><br>&asymp; 10km total<br>Threshold
-          peak &mdash; specific, strong, but not reckless.'
+        content_html: 'WU: 1.5km @ 6:40<br>Session: 28min continuous @ 4:50&ndash;4:55/km
+          (HR 165&ndash;172)<br>CD: 1.5km @ 6:40<br><br>&asymp; 8.5km total<br>Threshold
+          stays faster, but no longer carries the bigger load.'
       - type: rec
         content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
       - type: easy
         content_html: Easy 7km @ Z2 HR<br>+ 8&times;10s hill sprints (treadmill 8&ndash;10%,
           max effort, 2min full walk rest)
       - type: lng
-        content_html: 26km total<br>18km easy @ Z2 HR<br>Last 8km building from ~5:10
-          to 4:58/km<br>Longest sustained specific finish of plan.
+        content_html: 24km total<br>18km easy @ Z2 HR<br>Last 6km building from ~5:10
+          to 4:58/km<br>Specific finish, but Thursday remains the biggest session.
     - week_html: '23'
       dates_html: Sep 14&ndash;20
-      total_km_html: "~66km"
+      total_km_html: "~68km"
       days:
       - type: rest
         content_html: Rest
       - type: intv
-        content_html: 'WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 4&times;2km
-          @ 4:52&ndash;4:55/km, 3min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 12.5km
-          total<br>Fast-but-controlled HM support work.'
+        content_html: 'WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 3&times;3km
+          @ 4:58/km, 3min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 13km total<br>Return
+          to big race-pace volume under cumulative fatigue.'
       - type: rec
         content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
       - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 3&times;15min @ 4:55&ndash;4:58/km
-          (HR 165&ndash;172), 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 11km
+        content_html: 'WU: 1.5km @ 6:40<br>Session: 2&times;15min @ 4:50&ndash;4:55/km
+          (HR 165&ndash;172), 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 9km
           total'
       - type: rec
         content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
@@ -662,8 +664,8 @@ blocks:
         content_html: Easy 8km @ Z2 HR<br>+ 8&times;10s hill sprints (treadmill 8&ndash;10%,
           max effort, 2min full walk rest)
       - type: lng
-        content_html: 28km progression<br>18km easy, 6km @ ~5:10, last 4km @ 4:58/km<br>Peak
-          long run &mdash; HM race simulation without overreaching.
+        content_html: 24km total<br>18km easy, last 6km @ 4:58/km<br>Peak long run
+          &mdash; simpler and more specific than a full progression.
     - week_html: 24 &darr;
       dates_html: Sep 21&ndash;27
       total_km_html: "~52km"
@@ -671,21 +673,22 @@ blocks:
       - type: rest
         content_html: Rest
       - type: intv
-        content_html: 'WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 3&times;1.5km
-          @ 4:55/km, 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 9km total<br>Cutback
-          &mdash; maintain rhythm, reduce cost.'
+        content_html: 'WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 4&times;2km
+          @ 4:55&ndash;4:58/km, 2.5min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp;
+          12km total<br>Last substantial HM-specific session before freshening.'
       - type: rec
         content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
       - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 22min @ 4:58/km (HR 165&ndash;172)<br>CD:
-          1.5km @ 6:40<br><br>&asymp; 7.5km total<br>Cutback threshold.'
+        content_html: 'WU: 1.5km @ 6:40<br>Session: 20min @ 4:52&ndash;4:55/km (HR
+          165&ndash;172)<br>CD: 1.5km @ 6:40<br><br>&asymp; 7.5km total<br>Cutback
+          threshold.'
       - type: rec
         content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
       - type: easy
         content_html: Easy 6km @ Z2 HR<br>+ 6&times;10s hill sprints (treadmill 8&ndash;10%,
           max effort, 2min full walk rest)
       - type: lng
-        content_html: 22km easy @ Z2 HR<br>Cutback long run &mdash; no HM pace.
+        content_html: 18km easy @ Z2 HR<br>Cutback long run &mdash; save the legs.
   - id: hm-freshen
     title_html: HM Freshen &middot; Week 25 &middot; Sep 28 &ndash; Oct 4
     weeks:
