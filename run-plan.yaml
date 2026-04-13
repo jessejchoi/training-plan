@@ -28,7 +28,7 @@ blocks:
     weeks:
     - week_html: R1
       dates_html: Mar 30&ndash;Apr 5
-      total_km_html: "~22km"
+      total_km_html: "~20km"
       days:
       - type: rest
         content_html: Rest
@@ -371,7 +371,7 @@ blocks:
         content_html: 12km easy<br>@ Z2 HR<br>No quality finish &mdash; freshness first.
     - week_html: '13'
       dates_html: Jul 6&ndash;12
-      total_km_html: "~19km + race"
+      total_km_html: "~17km + race"
       days:
       - type: rest
         content_html: Rest
@@ -430,7 +430,7 @@ blocks:
     weeks:
     - week_html: '14'
       dates_html: Jul 13&ndash;19
-      total_km_html: "~28km"
+      total_km_html: "~27km"
       days:
       - type: rest
         content_html: Rest
@@ -454,7 +454,7 @@ blocks:
     weeks:
     - week_html: '15'
       dates_html: Jul 20&ndash;26
-      total_km_html: "~42km"
+      total_km_html: "~45km"
       days:
       - type: rest
         content_html: Rest
@@ -475,7 +475,7 @@ blocks:
         content_html: 14km easy @ Z2 HR<br>Rebuild volume gently.
     - week_html: '16'
       dates_html: Jul 27&ndash;Aug 2
-      total_km_html: "~46km"
+      total_km_html: "~50km"
       days:
       - type: rest
         content_html: Rest
@@ -499,7 +499,7 @@ blocks:
     weeks:
     - week_html: '17'
       dates_html: Aug 3&ndash;9
-      total_km_html: "~52km"
+      total_km_html: "~57km"
       days:
       - type: rest
         content_html: Rest
@@ -522,7 +522,7 @@ blocks:
         content_html: 18km easy @ Z2 HR
     - week_html: '18'
       dates_html: Aug 10&ndash;16
-      total_km_html: "~58km"
+      total_km_html: "~61km"
       days:
       - type: rest
         content_html: Rest
@@ -546,7 +546,7 @@ blocks:
           (~5:30&ndash;5:10 descending)<br>Progress, but keep the lid on.
     - week_html: '19'
       dates_html: Aug 17&ndash;23
-      total_km_html: "~43km + race"
+      total_km_html: "~25km + race"
       days:
       - type: rest
         content_html: Rest
@@ -596,7 +596,7 @@ blocks:
     weeks:
     - week_html: '21'
       dates_html: Aug 31&ndash;Sep 6
-      total_km_html: "~60km"
+      total_km_html: "~64km"
       days:
       - type: rest
         content_html: Rest
@@ -668,7 +668,7 @@ blocks:
           &mdash; simpler and more specific than a full progression.
     - week_html: 24 &darr;
       dates_html: Sep 21&ndash;27
-      total_km_html: "~52km"
+      total_km_html: "~54km"
       days:
       - type: rest
         content_html: Rest
@@ -694,7 +694,7 @@ blocks:
     weeks:
     - week_html: 25 &darr;
       dates_html: Sep 28&ndash;Oct 4
-      total_km_html: "~46km"
+      total_km_html: "~48km"
       days:
       - type: rest
         content_html: Rest
@@ -721,7 +721,7 @@ blocks:
     weeks:
     - week_html: 26 &darr;
       dates_html: Oct 5&ndash;11
-      total_km_html: "~32km"
+      total_km_html: "~37km"
       days:
       - type: rest
         content_html: Rest
@@ -745,7 +745,7 @@ blocks:
     weeks:
     - week_html: '27'
       dates_html: Oct 12&ndash;18
-      total_km_html: "~24km"
+      total_km_html: "~21km"
       days:
       - type: rest
         content_html: Rest
@@ -768,7 +768,7 @@ blocks:
     weeks:
     - week_html: '28'
       dates_html: Oct 19&ndash;25
-      total_km_html: "~15km + race"
+      total_km_html: "~17km + race"
       days:
       - type: rest
         content_html: Rest
