@@ -617,8 +617,8 @@ blocks:
         content_html: Easy 8km @ Z2 HR<br>+ 8&times;10s hill sprints (treadmill 8&ndash;10%,
           max effort, 2min full walk rest)
       - type: lng
-        content_html: 22km easy @ Z2 HR<br>Hold the long run steady this week so Thursday
-          can be the main specific session.
+        content_html: 22km easy @ Z2 HR<br>Keep the long run steady this week while
+          Tuesday carries the main HM-specific load and Thursday adds faster support.
     - week_html: '22'
       dates_html: Sep 7&ndash;13
       total_km_html: "~64km"
@@ -641,8 +641,9 @@ blocks:
         content_html: Easy 7km @ Z2 HR<br>+ 8&times;10s hill sprints (treadmill 8&ndash;10%,
           max effort, 2min full walk rest)
       - type: lng
-        content_html: 24km total<br>18km easy @ Z2 HR<br>Last 6km building from ~5:10
-          to 4:58/km<br>Specific finish, but Thursday remains the biggest session.
+        content_html: '24km total<br>18km easy @ Z2 HR<br>Last 6km build: 2km around
+          5:10/km, 2km around 5:05/km, final 2km at 4:58/km<br>Specific finish; biggest
+          overall week of the block.'
     - week_html: '23'
       dates_html: Sep 14&ndash;20
       total_km_html: "~68km"
@@ -658,7 +659,7 @@ blocks:
       - type: thr
         content_html: 'WU: 1.5km @ 6:40<br>Session: 2&times;15min @ 4:50&ndash;4:55/km
           (HR 165&ndash;172), 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 9km
-          total'
+          total<br>Slightly more manageable than Wk 22 so the long run can stay specific.'
       - type: rec
         content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
       - type: easy
