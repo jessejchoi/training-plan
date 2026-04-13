@@ -416,7 +416,7 @@ blocks:
     after Tuesday intervals, Workout B after Friday easy run &nbsp;&middot;&nbsp;
     Week 13: rest day moves to Friday, not Monday"
 - kind: sectioned-run-table
-  section_id: hm-recovery
+  section_id: hm-reset
   section_number_html: HM
   title_html: Half Marathon Build &middot; Weeks 14&ndash;28 &middot; Jul 13 &ndash;
     Oct 25
@@ -449,7 +449,7 @@ blocks:
         content_html: Easy 10km @ Z2 HR<br>First longer run post-race &mdash; check
           how legs feel.
   - id: 
-    title_html: HM Rebuild &middot; Weeks 15&ndash;16 &middot; Jul 20 &ndash; Aug
+    title_html: HM Reset &amp; Rebuild &middot; Weeks 15&ndash;16 &middot; Jul 20 &ndash; Aug
       2
     weeks:
     - week_html: '15'
@@ -494,8 +494,8 @@ blocks:
           max effort, 2min full walk rest)
       - type: lng
         content_html: 16km easy @ Z2 HR
-  - id: hm-build1
-    title_html: HM Build Phase 1 &middot; Weeks 17&ndash;20 &middot; Aug 3&ndash;30
+  - id: hm-specific1
+    title_html: HM Specific Build 1 &middot; Weeks 17&ndash;20 &middot; Aug 3&ndash;30
     weeks:
     - week_html: '17'
       dates_html: Aug 3&ndash;9
@@ -591,8 +591,8 @@ blocks:
       - type: lng
         content_html: 22km easy @ Z2 HR<br>Absorb the last three weeks without turning
           Sunday into another workout.
-  - id: hm-build2
-    title_html: HM Build Phase 2 &middot; Weeks 21&ndash;24 &middot; Aug 31 &ndash;
+  - id: hm-specific2
+    title_html: HM Specific Build 2 &middot; Weeks 21&ndash;24 &middot; Aug 31 &ndash;
       Sep 27
     weeks:
     - week_html: '21'
@@ -688,8 +688,8 @@ blocks:
           max effort, 2min full walk rest)
       - type: lng
         content_html: 22km easy @ Z2 HR<br>Cutback long run &mdash; no HM pace.
-  - id: hm-taper
-    title_html: HM Taper &middot; Weeks 25&ndash;26 &middot; Sep 28 &ndash; Oct 11
+  - id: hm-early-taper
+    title_html: HM Early Taper &middot; Weeks 25&ndash;26 &middot; Sep 28 &ndash; Oct 11
     weeks:
     - week_html: 25 &darr;
       dates_html: Sep 28&ndash;Oct 4
@@ -735,9 +735,8 @@ blocks:
       - type: lng
         content_html: 12km easy @ Z2 HR<br>Final long run &mdash; very easy, trust
           the training.
-  - id: hm-raceweek
-    title_html: HM Race Week &middot; Week 27 &middot; Oct 12&ndash;18 &middot; Then
-      race Oct 25
+  - id: hm-final-prep
+    title_html: HM Final Prep &middot; Week 27 &middot; Oct 12&ndash;18
     weeks:
     - week_html: '27'
       dates_html: Oct 12&ndash;18
@@ -759,8 +758,8 @@ blocks:
         content_html: Easy jog<br>4km @ very easy
       - type: rest
         content_html: Rest
-  - id: 
-    title_html: Race Week &middot; Week 28 &middot; Oct 19&ndash;25
+  - id: hm-raceweek
+    title_html: HM Race Week &middot; Week 28 &middot; Oct 19&ndash;25
     weeks:
     - week_html: '28'
       dates_html: Oct 19&ndash;25
