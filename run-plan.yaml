@@ -120,8 +120,7 @@ blocks:
         content_html: Easy 8km @ Z2 HR<br>+ 8&times;10s hill sprints (treadmill 8&ndash;10%,
           max effort, 2min full walk rest)
       - type: lng
-        content_html: 18km easy<br>@ Z2 HR<br>Strong aerobic long run before the first
-          specific week.
+        content_html: 18km easy<br>@ Z2 HR
     - week_html: '3'
       dates_html: Apr 27&ndash;May 3
       total_km_html: "~58km"
