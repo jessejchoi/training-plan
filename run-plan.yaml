@@ -688,24 +688,25 @@ blocks:
           max effort, 2min full walk rest)
       - type: lng
         content_html: 22km easy @ Z2 HR<br>Cutback long run &mdash; no HM pace.
-  - id: hm-early-taper
-    title_html: HM Early Taper &middot; Weeks 25&ndash;26 &middot; Sep 28 &ndash; Oct 11
+  - id: hm-freshen
+    title_html: HM Freshen &middot; Week 25 &middot; Sep 28 &ndash; Oct 4
     weeks:
     - week_html: 25 &darr;
       dates_html: Sep 28&ndash;Oct 4
-      total_km_html: "~42km"
+      total_km_html: "~46km"
       days:
       - type: rest
         content_html: Rest
       - type: intv
         content_html: 'WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 4&times;1km
-          @ 4:50&ndash;4:52/km, 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 8.5km
-          total<br>Volume drops &mdash; intensity stays honest.'
+          @ 4:50/km, 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 8.5km total<br>Freshen
+          week &mdash; modest volume reduction, keep the engine switched on.'
       - type: rec
         content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
       - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 20min @ 4:58/km (HR 165&ndash;172)<br>CD:
-          1.5km @ 6:40<br><br>&asymp; 7km total<br>Taper maintenance.'
+        content_html: 'WU: 1.5km @ 6:40<br>Session: 24min @ 4:58/km (HR 165&ndash;172)<br>CD:
+          1.5km @ 6:40<br><br>&asymp; 8km total<br>Specific maintenance &mdash; not
+          yet full taper.'
       - type: rec
         content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
       - type: easy
@@ -714,6 +715,9 @@ blocks:
       - type: lng
         content_html: 16km total<br>First 12km easy @ Z2 HR<br>Last 4km @ 4:58/km
           (HM pace)<br>Last HM-pace long run.
+  - id: hm-taper
+    title_html: HM Taper &middot; Week 26 &middot; Oct 5 &ndash; Oct 11
+    weeks:
     - week_html: 26 &darr;
       dates_html: Oct 5&ndash;11
       total_km_html: "~32km"
