@@ -545,52 +545,50 @@ blocks:
           (~5:30&ndash;5:10 descending)<br>Progress, but keep the lid on.
     - week_html: '19'
       dates_html: Aug 17&ndash;23
-      total_km_html: "~52km"
+      total_km_html: "~43km + race"
       days:
       - type: rest
         content_html: Rest
-      - type: intv
-        content_html: 'WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 5&times;1km
-          @ 4:52&ndash;4:55/km, 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 10km
-          total<br>Checkpoint week &mdash; quicker than HM pace, but still controlled.'
-      - type: rec
-        content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
-      - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 24min @ 5:00&ndash;5:03/km (HR
-          165&ndash;172)<br>CD: 1.5km @ 6:40<br><br>&asymp; 7.5km total<br>Cutback
-          threshold &mdash; maintain quality, keep the week absorbable.'
+      - type: easy
+        content_html: Easy 7km @ Z2 HR<br>+ 4&times;100m strides
       - type: rec
         content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
       - type: easy
-        content_html: Easy 6km @ Z2 HR<br>+ 6&times;10s hill sprints (treadmill 8&ndash;10%,
-          max effort, 2min full walk rest)
-      - type: lng
-        content_html: 18km total<br>First 12km easy @ Z2 HR<br>Last 6km @ 4:58/km
-          (HM pace)<br>Controlled checkpoint &mdash; lower cost than a full trial.
+        content_html: Easy 6km @ Z2 HR<br>+ 4&times;100m strides
+      - type: rec
+        content_html: Recovery<br>4km, HR cap 140&ndash;145 bpm
+      - type: easy
+        content_html: Easy jog<br>3km @ very easy<br>Shake out only.
+      - type: race
+        content_html: 'BALI HALF MARATHON<br>Run as a controlled long session, not
+          an A-race.<br><br>Plan A: first 10&ndash;12km easy, then build to HM goal
+          pace (4:58/km) only if you feel smooth.<br>Plan B: run the whole race steady
+          around 5:10&ndash;5:20/km.<br><br>Goals: fueling practice, pacing practice,
+          and time-on-feet. Finish feeling controlled.'
     - week_html: 20 &darr;
       dates_html: Aug 24&ndash;30
-      total_km_html: "~54km"
+      total_km_html: "~50km"
       days:
       - type: rest
         content_html: Rest
       - type: intv
-        content_html: 'WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 2&times;3km
-          @ 4:58/km, 4min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 10.5km total<br>Back
-          to long HM-specific reps before the final build.'
+        content_html: 'WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 3&times;1.5km
+          @ 4:58/km, 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 9km total<br>Post-race
+          week &mdash; back to HM pace, but at lower cost.'
       - type: rec
         content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
       - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 30min @ 4:58&ndash;5:00/km (HR
-          165&ndash;172)<br>CD: 1.5km @ 6:40<br><br>&asymp; 9km total<br>Specific
-          threshold &mdash; right on top of goal pace feel.'
+        content_html: 'WU: 1.5km @ 6:40<br>Session: 24min @ 4:58&ndash;5:00/km (HR
+          165&ndash;172)<br>CD: 1.5km @ 6:40<br><br>&asymp; 8km total<br>Specific
+          threshold &mdash; enough support without compounding race fatigue.'
       - type: rec
         content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
       - type: easy
         content_html: Easy 6km @ Z2 HR<br>+ 6&times;10s hill sprints (treadmill 8&ndash;10%,
           max effort, 2min full walk rest)
       - type: lng
-        content_html: 22km easy @ Z2 HR<br>Absorb the last three weeks without turning
-          Sunday into another workout.
+        content_html: 18km easy @ Z2 HR<br>Absorb the Aug 23 race and reset before
+          the peak-specific block.
   - id: hm-peak
     title_html: HM Peak Specific &middot; Weeks 21&ndash;24 &middot; Aug 31 &ndash;
       Sep 27
