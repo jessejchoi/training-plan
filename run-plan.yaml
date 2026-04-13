@@ -494,8 +494,8 @@ blocks:
           max effort, 2min full walk rest)
       - type: lng
         content_html: 16km easy @ Z2 HR
-  - id: hm-specific1
-    title_html: HM Specific Build 1 &middot; Weeks 17&ndash;20 &middot; Aug 3&ndash;30
+  - id: hm-foundation
+    title_html: HM Specific Foundation &middot; Weeks 17&ndash;20 &middot; Aug 3&ndash;30
     weeks:
     - week_html: '17'
       dates_html: Aug 3&ndash;9
@@ -591,8 +591,8 @@ blocks:
       - type: lng
         content_html: 22km easy @ Z2 HR<br>Absorb the last three weeks without turning
           Sunday into another workout.
-  - id: hm-specific2
-    title_html: HM Specific Build 2 &middot; Weeks 21&ndash;24 &middot; Aug 31 &ndash;
+  - id: hm-peak
+    title_html: HM Peak Specific &middot; Weeks 21&ndash;24 &middot; Aug 31 &ndash;
       Sep 27
     weeks:
     - week_html: '21'
