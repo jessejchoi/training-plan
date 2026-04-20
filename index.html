@@ -1000,7 +1000,17 @@ function App() {
         <div style={{padding:'16px 18px 60px'}}>
           {isWide ? (
             <div style={{display:'grid',gridTemplateColumns:'320px 1fr',gap:24,alignItems:'start'}}>
-              <div style={{position:'sticky',top:58,alignSelf:'start',display:'flex',flexDirection:'column',gap:20}}>
+              <div style={{
+                position:'sticky',
+                top:58,
+                alignSelf:'start',
+                display:'flex',
+                flexDirection:'column',
+                gap:20,
+                maxHeight:'calc(100vh - 70px)',
+                overflowY:'auto',
+                paddingRight:4,
+              }}>
                 <DayDetailCard selectedKey={selectedKey} completed={completed} setCompleted={setCompleted} onGoToToday={() => setSelectedKey(TODAY_KEY)}/>
                 <Countdowns/>
                 <VolumeChart/>
