@@ -42,6 +42,218 @@ const { WEEKS, PHASES, DAY_TYPES, DAY_ABBR, TODAY_WEEK_ID, TODAY_DAY_INDEX,
 
 const TODAY_KEY = `${TODAY_WEEK_ID}-${TODAY_DAY_INDEX}`;
 const GLYPH = { rest:'·', easy:'E', rec:'R', intv:'I', thr:'T', lng:'L', race:'★' };
+const DAY_CONTENT_HTML = {
+  "R1-0": "Rest",
+  "R1-1": "Easy 5km @ Z2 HR<br>Stop immediately if pain &gt;3/10. Walk home if needed.",
+  "R1-2": "Rest",
+  "R1-3": "Easy 5km @ Z2 HR<br>Same rule &mdash; 3/10 is the ceiling.",
+  "R1-4": "Rest",
+  "R1-5": "Easy 5km @ Z2 HR",
+  "R1-6": "Easy 5km @ Z2 HR<br>Optional &mdash; only if fully pain-free all week.",
+  "R2-0": "Rest",
+  "R2-1": "Easy 6km @ Z2 HR<br>+ 4&times;100m strides (walk back, relaxed, no effort)",
+  "R2-2": "Rest or cross-train<br>30min easy bike/pool",
+  "R2-3": "WU: 1.5km @ 6:40<br>Session: 15min @ comfortably hard effort (HR 165&ndash;170, expect ~5:30&ndash;5:40 in heat)<br>CD: 1.5km @ 6:40<br><br>&asymp; 6km total<br>Gentle threshold intro &mdash; HR governs, ignore pace.",
+  "R2-4": "Recovery<br>5km, HR cap 140&ndash;145 bpm",
+  "R2-5": "Easy 7km @ Z2 HR",
+  "R2-6": "Long run &mdash; Easy 12km @ Z2 HR<br>Monitor throughout &mdash; back off if anything feels off.",
+  "1-0": "Rest",
+  "1-1": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 8&times;400m @ 4:45/km, 75s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 7.5km total<br>Flat interval entry &mdash; short and fast, neuromuscular without grade. Step up to 800m next week.",
+  "1-2": "Recovery<br>6km, HR cap 140&ndash;145 bpm",
+  "1-3": "WU: 1.5km @ 6:40<br>Session: 22min continuous @ 5:20/km or HR 165&ndash;170 (&asymp;4.2km)<br>CD: 1.5km @ 6:40<br><br>&asymp; 7km total<br>First continuous threshold &mdash; HR override if ceiling hit before pace.",
+  "1-4": "Cross-train or recovery 5km<br>If legs heavy from Tue+Thu, take the bike.",
+  "1-5": "Easy 8km @ Z2 HR<br>+ 8&times;10s hill sprints (treadmill 8&ndash;10%, max effort, 2min full walk rest)",
+  "1-6": "16km easy<br>@ Z2 HR",
+  "2-0": "Rest",
+  "2-1": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 6&times;800m @ 4:50/km, 90s jog rest (target 155&ndash;160 bpm)<br>CD: 1.5km @ 6:40<br><br>&asymp; 10km total<br>HR override: if HR &gt;170 before rep ends, slow down.",
+  "2-2": "Recovery<br>6km, HR cap 140&ndash;145 bpm",
+  "2-3": "WU: 1.5km @ 6:40<br>Session: 26min continuous @ 5:15/km (HR 165&ndash;170) (&asymp;5km)<br>CD: 1.5km @ 6:40<br><br>&asymp; 8km total<br>Continue the aerobic build &mdash; smoother and longer than Wk 1.",
+  "2-4": "Cross-train or recovery 5km<br>If legs heavy from Tue+Thu, take the bike.",
+  "2-5": "Easy 8km @ Z2 HR<br>+ 8&times;10s hill sprints (treadmill 8&ndash;10%, max effort, 2min full walk rest)",
+  "2-6": "18km easy<br>@ Z2 HR",
+  "3-0": "Rest",
+  "3-1": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 5&times;1km @ 4:45&ndash;4:48/km, 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 10km total<br>First fully specific 10K session &mdash; controlled, not maximal.",
+  "3-2": "Recovery<br>6km, HR cap 140&ndash;145 bpm",
+  "3-3": "WU: 1.5km @ 6:40<br>Session: 30min continuous @ 5:10/km (HR 165&ndash;172) (&asymp;5.8km)<br>CD: 1.5km @ 6:40<br><br>&asymp; 8.8km total<br>Smooth progression from Wk 2 before the first cutback.",
+  "3-4": "Recovery<br>6km, HR cap 140&ndash;145 bpm",
+  "3-5": "Easy 8km @ Z2 HR<br>+ 4&times;100m strides<br>+ 8&times;10s hill sprints (treadmill 8&ndash;10%, max effort, 2min full walk rest)",
+  "3-6": "19km easy<br>@ Z2 HR",
+  "4-0": "Rest",
+  "4-1": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 4&times;1.2km @ 4:48&ndash;4:50/km, 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 9.5km total<br>Cutback &mdash; keep race rhythm, reduce total load.",
+  "4-2": "Recovery<br>5km, HR cap 140&ndash;145 bpm",
+  "4-3": "WU: 1.5km @ 6:40<br>Session: 4&times;6min @ 5:08/km (HR 165&ndash;172), 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 8km total<br>Cutback &mdash; broken threshold, lower volume, same discipline.",
+  "4-4": "Recovery<br>5km, HR cap 140&ndash;145 bpm",
+  "4-5": "Easy 6km @ Z2 HR<br>+ 4&times;100m strides<br>+ 6&times;10s hill sprints (treadmill 8&ndash;10%, max effort, 2min full walk rest)",
+  "4-6": "16km easy<br>@ Z2 HR<br>Cutback week.",
+  "5-0": "Rest",
+  "5-1": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 4&times;1.5km @ 4:46&ndash;4:48/km, 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 10.5km total<br>First substantial specific workout &mdash; race pace with controlled density.",
+  "5-2": "Recovery<br>5km, HR cap 140&ndash;145 bpm",
+  "5-3": "WU: 1.5km @ 6:40<br>Session: 2&times;15min @ 5:08/km (HR 165&ndash;172), 3min walk/jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 9km total<br>Threshold load rises, but in a more repeatable format.",
+  "5-4": "Recovery<br>6km, HR cap 140&ndash;145 bpm",
+  "5-5": "Easy 7km @ Z2 HR<br>+ 4&times;100m strides<br>+ 8&times;10s hill sprints (treadmill 8&ndash;10%, max effort, 2min full walk rest)",
+  "5-6": "18km progression long<br>10km @ Z2, 5km steady (~5:45&ndash;5:35), last 3km moderate (~5:25&ndash;5:15)<br>No hard finish &mdash; aerobic strength, not a fourth workout.",
+  "6-0": "Rest",
+  "6-1": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 3&times;2km @ 4:48/km, 3min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 10.5km total<br>First truly long specific reps of the block &mdash; key economy session.",
+  "6-2": "Recovery<br>5km, HR cap 140&ndash;145 bpm",
+  "6-3": "WU: 1.5km @ 6:40<br>Session: 2&times;15min @ 5:05&ndash;5:08/km (HR 165&ndash;172), 3min walk/jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 9km total<br>Strong threshold load without turning the week into overload.",
+  "6-4": "Recovery<br>5km, HR cap 140&ndash;145 bpm",
+  "6-5": "Easy 7km @ Z2 HR<br>+ 6&times;10s hill sprints (treadmill 8&ndash;10%, max effort, 2min full walk rest)",
+  "6-6": "18km easy<br>@ Z2 HR<br>Let Tuesday and Thursday be the work.",
+  "7-0": "Rest",
+  "7-1": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 2&times;3km @ 4:48/km, 4min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 10.5km total<br>Long specific reps &mdash; this is the benchmark-style session for race economy.",
+  "7-2": "Recovery<br>5km, HR cap 140&ndash;145 bpm",
+  "7-3": "WU: 1.5km @ 6:40<br>Session: 25min continuous @ 5:05/km (HR 165&ndash;172) (&asymp;4.9km)<br>CD: 1.5km @ 6:40<br><br>&asymp; 7.8km total<br>Consolidation threshold &mdash; enough support without competing with Tuesday.",
+  "7-4": "Recovery<br>5km, HR cap 140&ndash;145 bpm",
+  "7-5": "Easy 7km @ Z2 HR<br>+ 8&times;10s hill sprints (treadmill 8&ndash;10%, max effort, 2min full walk rest)",
+  "7-6": "19km easy<br>@ Z2 HR<br>Full aerobic support week.",
+  "8-0": "Rest",
+  "8-1": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 4&times;1km @ 4:45&ndash;4:48/km, 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 8.5km total<br>Cutback &mdash; touch race pace, keep the legs alive.",
+  "8-2": "Recovery<br>5km, HR cap 140&ndash;145 bpm",
+  "8-3": "WU: 1.5km @ 6:40<br>Session: 20min @ 5:05/km (HR 165&ndash;172) (&asymp;4km)<br>CD: 1.5km @ 6:40<br><br>&asymp; 7km total<br>Cutback &mdash; volume pullback, not pace pullback.",
+  "8-4": "Recovery<br>5km, HR cap 140&ndash;145 bpm",
+  "8-5": "Easy 6km @ Z2 HR<br>+ 6&times;10s hill sprints (treadmill 8&ndash;10%, max effort, 2min full walk rest)",
+  "8-6": "16km easy<br>@ Z2 HR<br>Cutback &mdash; no race pace, freshness before peak.",
+  "9-0": "Rest",
+  "9-1": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 3&times;2km @ 4:45&ndash;4:48/km, 3min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 10.5km total<br>One of the key race-specific sessions &mdash; hard, controlled, repeatable.",
+  "9-2": "Recovery<br>5km, HR cap 140&ndash;145 bpm",
+  "9-3": "WU: 1.5km @ 6:40<br>Session: 3&times;10min @ 5:00&ndash;5:03/km (HR 165&ndash;172), 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 9.5km total<br>Peak threshold support &mdash; quicker, but still aerobic.",
+  "9-4": "Recovery<br>5km, HR cap 140&ndash;145 bpm",
+  "9-5": "Easy 7km @ Z2 HR<br>+ 4&times;100m strides<br>+ 8&times;10s hill sprints (treadmill 8&ndash;10%, max effort, 2min full walk rest)",
+  "9-6": "18km total<br>12km easy, 4km moderate (~5:25&ndash;5:10), last 2km building toward 10K effort<br>Specific, but not a race in training.",
+  "10-0": "Rest",
+  "10-1": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 6&times;1km @ 4:40&ndash;4:43/km, 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 11.5km total<br>Sharpening &mdash; faster than goal pace, but with enough recovery to stay smooth.",
+  "10-2": "Recovery<br>5km, HR cap 140&ndash;145 bpm",
+  "10-3": "WU: 1.5km @ 6:40<br>Session: 2&times;12min @ 5:00&ndash;5:03/km (HR 165&ndash;172), 3min walk/jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 8km total<br>Threshold support without blunting the sharpening effect.",
+  "10-4": "Recovery<br>5km, HR cap 140&ndash;145 bpm",
+  "10-5": "Easy 6km @ Z2 HR<br>+ 4&times;100m strides<br>+ 6&times;10s hill sprints (treadmill 8&ndash;10%, max effort, 2min full walk rest)",
+  "10-6": "16km easy<br>@ Z2 HR",
+  "11-0": "Rest",
+  "11-1": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 5&times;1km @ 4:42&ndash;4:45/km, 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 10km total<br>Consolidation sharpener &mdash; a touch slower, still crisp.",
+  "11-2": "Recovery<br>5km, HR cap 140&ndash;145 bpm",
+  "11-3": "WU: 1.5km @ 6:40<br>Session: 22min continuous @ 5:02/km (HR 165&ndash;172) (&asymp;4.4km)<br>CD: 1.5km @ 6:40<br><br>&asymp; 7.5km total<br>Reinforce threshold without carrying extra fatigue into taper.",
+  "11-4": "Recovery<br>5km, HR cap 140&ndash;145 bpm",
+  "11-5": "Easy 6km @ Z2 HR<br>+ 4&times;100m strides<br>+ 8&times;10s hill sprints (treadmill 8&ndash;10%, max effort, 2min full walk rest)",
+  "11-6": "15km easy<br>@ Z2 HR<br>Volume reduction begins &mdash; no quality finish.",
+  "12-0": "Rest",
+  "12-1": "WU: 1.5km @ 6:35 + 4&times;100m strides<br>Session: 4&times;800m @ 4:42&ndash;4:45/km, 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 7km total<br>Real taper week &mdash; enough speed, much less load.",
+  "12-2": "Recovery<br>5km, HR cap 140&ndash;145 bpm",
+  "12-3": "WU: 1.5km @ 6:40<br>Session: 18min controlled @ ~5:08/km (HR 162&ndash;168)<br>CD: 1.5km @ 6:40<br><br>&asymp; 6km total<br>Taper maintenance &mdash; stay aerobic, stay fresh.",
+  "12-4": "Recovery<br>4km, HR cap 140&ndash;145 bpm",
+  "12-5": "Easy 5km @ Z2 HR<br>+ 4&times;100m strides",
+  "12-6": "12km easy<br>@ Z2 HR<br>No quality finish &mdash; freshness first.",
+  "13-0": "Rest",
+  "13-1": "WU: 1.5km @ 6:35 + 4&times;100m strides<br>Session: 4&times;400m @ 4:35/km, 3min full rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 5km total<br>Sharpener only &mdash; do not push.",
+  "13-2": "Easy<br>5km @ Z2 HR",
+  "13-3": "Easy 4km @ Z2 HR<br>+ 4&times;100m strides",
+  "13-4": "Rest",
+  "13-5": "Easy jog<br>3km @ very easy<br>Shake out only.",
+  "13-6": "RACE DAY<br>Pocari Sweat Lombok 10K<br><br>Target: Sub 48:00<br>Pace: 4:48/km<br><br>Stepping stone &mdash; race hard, recover smart. HM build begins next week.",
+  "14-0": "Rest",
+  "14-1": "Easy 5km @ Z2 HR<br>Assess post-race soreness.",
+  "14-2": "Rest",
+  "14-3": "Easy 5km @ Z2 HR",
+  "14-4": "Rest or cross-train<br>30min easy bike/pool",
+  "14-5": "Easy 5km @ Z2 HR<br>+ 4&times;100m relaxed strides if legs feel normal again.",
+  "14-6": "Easy 12km @ Z2 HR<br>First longer run post-race &mdash; check how legs feel.",
+  "15-0": "Rest",
+  "15-1": "Easy 7km @ Z2 HR<br>+ 4&times;100m strides",
+  "15-2": "Recovery<br>5km, HR cap 140&ndash;145 bpm",
+  "15-3": "WU: 1.5km @ 6:40<br>Session: 2&times;10min @ 5:00&ndash;5:05/km (HR 165&ndash;170), 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 8km total<br>Threshold reintroduction &mdash; gentle but purposeful.",
+  "15-4": "Recovery<br>5km, HR cap 140&ndash;145 bpm",
+  "15-5": "Easy 6km @ Z2 HR<br>+ 8&times;10s hill sprints (treadmill 8&ndash;10%, max effort, 2min full walk rest)",
+  "15-6": "14km easy @ Z2 HR<br>Rebuild volume gently.",
+  "16-0": "Rest",
+  "16-1": "Easy 8km @ Z2 HR<br>+ 4&times;100m strides",
+  "16-2": "Recovery<br>5km, HR cap 140&ndash;145 bpm",
+  "16-3": "WU: 1.5km @ 6:40<br>Session: 3&times;8min @ 4:55&ndash;5:00/km (HR 165&ndash;170), 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 8.5km total<br>Still foundation work &mdash; no HM-specific stress yet.",
+  "16-4": "Recovery<br>5km, HR cap 140&ndash;145 bpm",
+  "16-5": "Easy 7km @ Z2 HR<br>+ 8&times;10s hill sprints (treadmill 8&ndash;10%, max effort, 2min full walk rest)",
+  "16-6": "16km easy @ Z2 HR",
+  "17-0": "Rest",
+  "17-1": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 3&times;2km @ 4:58/km, 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 10.5km total<br>First true HM-specific session &mdash; exact goal pace, manageable volume.",
+  "17-2": "Recovery<br>6km, HR cap 140&ndash;145 bpm",
+  "17-3": "WU: 1.5km @ 6:40<br>Session: 25min continuous @ 4:52&ndash;4:58/km (HR 165&ndash;172)<br>CD: 1.5km @ 6:40<br><br>&asymp; 8.5km total<br>Threshold stays faster than HM pace.",
+  "17-4": "Recovery<br>6km, HR cap 140&ndash;145 bpm",
+  "17-5": "Easy 8km @ Z2 HR<br>+ 8&times;10s hill sprints (treadmill 8&ndash;10%, max effort, 2min full walk rest)",
+  "17-6": "18km easy @ Z2 HR",
+  "18-0": "Rest",
+  "18-1": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 2&times;3km @ 4:58/km, 3min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 10.5km total<br>Longer HM reps &mdash; slower than threshold, but more substantial.",
+  "18-2": "Recovery<br>6km, HR cap 140&ndash;145 bpm",
+  "18-3": "WU: 1.5km @ 6:40<br>Session: 3&times;10min @ 4:50&ndash;4:55/km (HR 165&ndash;172), 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 10km total<br>Threshold is still the faster, ceiling-raising day.",
+  "18-4": "Recovery<br>6km, HR cap 140&ndash;145 bpm",
+  "18-5": "Easy 8km @ Z2 HR<br>+ 8&times;10s hill sprints (treadmill 8&ndash;10%, max effort, 2min full walk rest)",
+  "18-6": "20km progression<br>First 14km easy, last 6km steady/moderate (~5:30&ndash;5:10 descending)<br>Progress, but keep the lid on.",
+  "19-0": "Rest",
+  "19-1": "Easy 7km @ Z2 HR<br>+ 4&times;100m strides",
+  "19-2": "Recovery<br>5km, HR cap 140&ndash;145 bpm",
+  "19-3": "Easy 6km @ Z2 HR<br>+ 4&times;100m strides",
+  "19-4": "Recovery<br>4km, HR cap 140&ndash;145 bpm",
+  "19-5": "Easy jog<br>3km @ very easy<br>Shake out only.",
+  "19-6": "BALI HALF MARATHON<br>Run as a controlled long session, not an A-race.<br><br>Plan A: first 10&ndash;12km easy, then build to HM goal pace (4:58/km) only if you feel smooth.<br>Plan B: run the whole race steady around 5:10&ndash;5:20/km.<br><br>Goals: fueling practice, pacing practice, and time-on-feet. Finish feeling controlled.",
+  "20-0": "Rest",
+  "20-1": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 3&times;1.5km @ 4:58/km, 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 9km total<br>Post-race week &mdash; back to HM pace, but at lower cost.",
+  "20-2": "Recovery<br>5km, HR cap 140&ndash;145 bpm",
+  "20-3": "WU: 1.5km @ 6:40<br>Session: 20min @ 4:52&ndash;4:58/km (HR 165&ndash;172)<br>CD: 1.5km @ 6:40<br><br>&asymp; 7.5km total<br>Shorter threshold re-entry after the race.",
+  "20-4": "Recovery<br>5km, HR cap 140&ndash;145 bpm",
+  "20-5": "Easy 6km @ Z2 HR<br>+ 6&times;10s hill sprints (treadmill 8&ndash;10%, max effort, 2min full walk rest)",
+  "20-6": "18km easy @ Z2 HR<br>Absorb the Aug 23 race and reset before the peak-specific block.",
+  "21-0": "Rest",
+  "21-1": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 3&times;3km @ 4:58/km, 3min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 13km total<br>Big HM-specific volume &mdash; settle in and make goal pace feel routine.",
+  "21-2": "Recovery<br>6km, HR cap 140&ndash;145 bpm",
+  "21-3": "WU: 1.5km @ 6:40<br>Session: 2&times;15min @ 4:50&ndash;4:55/km (HR 165&ndash;172), 3min walk/jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 9km total<br>Threshold now supports, rather than matches, the HM work.",
+  "21-4": "Recovery<br>6km, HR cap 140&ndash;145 bpm",
+  "21-5": "Easy 8km @ Z2 HR<br>+ 8&times;10s hill sprints (treadmill 8&ndash;10%, max effort, 2min full walk rest)",
+  "21-6": "22km easy @ Z2 HR<br>Keep the long run steady this week while Tuesday carries the main HM-specific load and Thursday adds faster support.",
+  "22-0": "Rest",
+  "22-1": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 2&times;4km @ 4:58/km, 4min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 12.5km total<br>Longest continuous HM-specific reps of plan.",
+  "22-2": "Recovery<br>6km, HR cap 140&ndash;145 bpm",
+  "22-3": "WU: 1.5km @ 6:40<br>Session: 28min continuous @ 4:50&ndash;4:55/km (HR 165&ndash;172)<br>CD: 1.5km @ 6:40<br><br>&asymp; 8.5km total<br>Threshold stays faster, but no longer carries the bigger load.",
+  "22-4": "Recovery<br>6km, HR cap 140&ndash;145 bpm",
+  "22-5": "Easy 7km @ Z2 HR<br>+ 8&times;10s hill sprints (treadmill 8&ndash;10%, max effort, 2min full walk rest)",
+  "22-6": "24km total<br>18km easy @ Z2 HR<br>Last 6km build: 2km around 5:10/km, 2km around 5:05/km, final 2km at 4:58/km<br>Specific finish; biggest overall week of the block.",
+  "23-0": "Rest",
+  "23-1": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 3&times;3km @ 4:58/km, 3min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 13km total<br>Return to big race-pace volume under cumulative fatigue.",
+  "23-2": "Recovery<br>6km, HR cap 140&ndash;145 bpm",
+  "23-3": "WU: 1.5km @ 6:40<br>Session: 2&times;15min @ 4:50&ndash;4:55/km (HR 165&ndash;172), 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 9km total<br>Slightly more manageable than Wk 22 so the long run can stay specific.",
+  "23-4": "Recovery<br>6km, HR cap 140&ndash;145 bpm",
+  "23-5": "Easy 8km @ Z2 HR<br>+ 8&times;10s hill sprints (treadmill 8&ndash;10%, max effort, 2min full walk rest)",
+  "23-6": "24km total<br>18km easy, last 6km @ 4:58/km<br>Key long run &mdash; simple, specific, and late enough to matter.",
+  "24-0": "Rest",
+  "24-1": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 4&times;2km @ 4:55&ndash;4:58/km, 2.5min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 12km total<br>Final substantial HM-specific session before freshening.",
+  "24-2": "Recovery<br>5km, HR cap 140&ndash;145 bpm",
+  "24-3": "WU: 1.5km @ 6:40<br>Session: 20min @ 4:52&ndash;4:55/km (HR 165&ndash;172)<br>CD: 1.5km @ 6:40<br><br>&asymp; 7.5km total<br>Cutback threshold.",
+  "24-4": "Recovery<br>5km, HR cap 140&ndash;145 bpm",
+  "24-5": "Easy 6km @ Z2 HR<br>+ 6&times;10s hill sprints (treadmill 8&ndash;10%, max effort, 2min full walk rest)",
+  "24-6": "18km easy @ Z2 HR<br>Cutback long run &mdash; save the legs.",
+  "25-0": "Rest",
+  "25-1": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 4&times;1km @ 4:50/km, 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 8.5km total<br>Freshen week &mdash; modest volume reduction, keep the engine switched on.",
+  "25-2": "Recovery<br>5km, HR cap 140&ndash;145 bpm",
+  "25-3": "WU: 1.5km @ 6:40<br>Session: 24min @ 4:58/km (HR 165&ndash;172)<br>CD: 1.5km @ 6:40<br><br>&asymp; 8km total<br>Specific maintenance &mdash; not yet full taper.",
+  "25-4": "Recovery<br>5km, HR cap 140&ndash;145 bpm",
+  "25-5": "Easy 5km @ Z2 HR<br>+ 4&times;100m strides<br>+ 6&times;10s hill sprints (treadmill 8&ndash;10%, max effort, 2min full walk rest)",
+  "25-6": "16km total<br>First 12km easy @ Z2 HR<br>Last 4km @ 4:58/km (HM pace)<br>Last HM-pace long run.",
+  "26-0": "Rest",
+  "26-1": "WU: 1.5km @ 6:35 + 4&times;100m strides<br>Session: 4&times;800m @ 4:48&ndash;4:50/km, 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 7km total<br>Sharpener only.",
+  "26-2": "Recovery<br>5km, HR cap 140&ndash;145 bpm",
+  "26-3": "Easy 5km @ Z2 HR<br>+ 4&times;100m strides",
+  "26-4": "Easy 4km @ Z2 HR",
+  "26-5": "Easy 4km @ Z2 HR",
+  "26-6": "12km easy @ Z2 HR<br>Final long run &mdash; very easy, trust the training.",
+  "27-0": "Rest",
+  "27-1": "WU: 1.5km @ 6:35 + 4&times;100m strides<br>Session: 3&times;1km @ 4:55/km, 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 7km total<br>Keep legs turning over.",
+  "27-2": "Recovery<br>5km, HR cap 140&ndash;145 bpm",
+  "27-3": "Easy 5km @ Z2 HR<br>+ 4&times;100m strides",
+  "27-4": "Rest",
+  "27-5": "Easy jog<br>4km @ very easy",
+  "27-6": "Rest",
+  "28-0": "Rest",
+  "28-1": "WU: 1.5km @ 6:35 + 4&times;100m strides<br>Session: 4&times;400m @ 4:40/km, 3min full rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 5km total<br>Sharpener only &mdash; do not push.",
+  "28-2": "Easy 5km @ Z2 HR",
+  "28-3": "Easy 4km @ Z2 HR<br>+ 4&times;100m strides",
+  "28-4": "Rest",
+  "28-5": "Easy jog<br>3km @ very easy<br>Shake out only.",
+  "28-6": "RACE DAY<br>Half Marathon<br><br>Target: Sub 1:45:00<br>Pace: 4:58/km<br><br>The main event."
+};
 
 const useLocal = (key, init) => {
   const [v, setV] = React.useState(() => {
@@ -61,8 +273,42 @@ function getSessionByKey(key) {
   return { key, week, day, dayIndex, meta: DAY_TYPES[day.t] };
 }
 
-function splitDetail(detail) {
-  return String(detail || '').split(' · ').filter(Boolean);
+function decodeHtml(html) {
+  if (!html) return '';
+  const el = document.createElement('textarea');
+  el.innerHTML = html;
+  return el.value;
+}
+
+function parseDayContent(html) {
+  const groups = String(html || '')
+    .split('<br><br>')
+    .map(group => group.split('<br>').map(line => decodeHtml(line).trim()).filter(Boolean))
+    .filter(group => group.length);
+
+  if (!groups.length) return { structured: [], extra: [], note: '' };
+
+  const firstGroup = groups[0];
+  const structured = [];
+  const extra = [];
+
+  firstGroup.forEach(line => {
+    if (line.startsWith('WU:')) structured.push({ label: 'WU', text: line.replace(/^WU:\s*/, '') });
+    else if (line.startsWith('Session:')) structured.push({ label: 'MAIN', text: line.replace(/^Session:\s*/, '') });
+    else if (line.startsWith('CD:')) structured.push({ label: 'CD', text: line.replace(/^CD:\s*/, '') });
+    else extra.push(line);
+  });
+
+  const remaining = groups.slice(1);
+  const noteGroup = remaining.length ? remaining[remaining.length - 1] : [];
+  const extraGroups = remaining.length > 1 ? remaining.slice(0, -1) : [];
+  extraGroups.flat().forEach(line => extra.push(line));
+
+  return {
+    structured,
+    extra,
+    note: noteGroup.join(' '),
+  };
 }
 
 function cardButtonStyle(color, ghost) {
@@ -148,12 +394,6 @@ const MOBILITY_TIMING = [
   ['Monday — Rest', 'Optional short standalone session if you feel stiff. Otherwise leave it alone.'],
 ];
 
-const STRENGTH_PRINCIPLES = [
-  'Two sessions per week. Workout A sits after Tuesday intervals and handles the heavier bilateral work. Workout B sits after Friday easy running and stays more single-leg and controlled.',
-  'If the piriformis or lateral hip is irritated after a hard run, scale the unilateral loading first rather than forcing the full session.',
-  'Deload every fourth week by trimming sets and load. Do not try to carry full gym volume deep into race-specific blocks.',
-];
-
 const STRENGTH_A = [
   { name:'Barbell Back Squat', dose:'4 × 4–6 reps', detail:'Primary bilateral lower-body lift. Brace hard before each rep, drive through the full foot, and keep depth consistent rather than chasing range that breaks position.', focus:'Quad · Glute max · Force production' },
   { name:'Romanian Deadlift', dose:'4 × 5–6 reps', detail:'Hinge at the hip with a neutral spine and let the hamstrings load before returning. Keep the bar close and avoid turning the movement into a squat.', focus:'Hamstring · Glute max · Posterior chain strength' },
@@ -235,7 +475,8 @@ function DayDetailCard({ selectedKey, completed, setCompleted, onGoToToday }) {
   const session = getSessionByKey(selectedKey) || getSessionByKey(TODAY_KEY);
   const isToday = session.key === TODAY_KEY;
   const done = !!completed[session.key];
-  const lines = splitDetail(session.day.l || session.day.s);
+  const detailHtml = DAY_CONTENT_HTML[session.key] || session.day.l || session.day.s;
+  const { structured, extra, note } = parseDayContent(detailHtml);
   const label = isToday ? 'TODAY' : 'SELECTED';
   const title = session.day.t === 'rest' ? 'Rest Day' : session.day.s;
 
@@ -277,40 +518,33 @@ function DayDetailCard({ selectedKey, completed, setCompleted, onGoToToday }) {
         {session.week.dates}
       </div>
 
-      <div style={{
-        display:'grid',
-        gridTemplateColumns:'repeat(2, minmax(0, 1fr))',
-        gap:1,
-        background:'var(--border)',
-        marginBottom:12,
-      }}>
-        <div style={{background:session.meta.bg,padding:'8px 10px'}}>
-          <div style={{fontFamily:'var(--mono)',fontSize:8.5,color:'var(--muted2)',letterSpacing:1.2}}>DAY</div>
-          <div style={{fontFamily:'var(--mono)',fontSize:13,fontWeight:600,color:session.meta.color,marginTop:2}}>
-            {DAY_ABBR[session.dayIndex]}
-          </div>
-        </div>
-        <div style={{background:session.meta.bg,padding:'8px 10px'}}>
-          <div style={{fontFamily:'var(--mono)',fontSize:8.5,color:'var(--muted2)',letterSpacing:1.2}}>STATUS</div>
-          <div style={{fontFamily:'var(--mono)',fontSize:13,fontWeight:600,color:done ? session.meta.color : 'var(--text)',marginTop:2}}>
-            {done ? 'DONE' : 'PENDING'}
-          </div>
-        </div>
-      </div>
-
       <div style={{display:'flex',flexDirection:'column',gap:6,marginBottom:14}}>
-        {lines.map((line, index) => (
-          <div key={index} style={{
-            fontSize:13,
-            color:index === 0 ? 'var(--text)' : 'var(--muted)',
-            lineHeight:1.55,
-          }}>{line}</div>
+        {structured.map(item => (
+          <div key={item.label} style={{display:'flex',gap:8,alignItems:'baseline',fontSize:13,color:'var(--muted)',lineHeight:1.55}}>
+            <span style={{fontFamily:'var(--mono)',fontSize:10,letterSpacing:1.1,color:session.meta.color,minWidth:34}}>{item.label}:</span>
+            <span>{item.text}</span>
+          </div>
         ))}
+        {extra.map((line, index) => (
+          <div key={index} style={{fontSize:13,color:'var(--muted)',lineHeight:1.55}}>{line}</div>
+        ))}
+        {note ? (
+          <div style={{
+            marginTop:4,
+            padding:'9px 10px',
+            background:'var(--bg)',
+            border:'1px solid var(--border)',
+            borderRadius:4,
+            fontSize:12.5,
+            color:'var(--text)',
+            lineHeight:1.55,
+          }}>{note}</div>
+        ) : null}
       </div>
 
       <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>
         <button onClick={() => setCompleted({ ...completed, [session.key]: !done })} style={cardButtonStyle(session.meta.color, done)}>
-          {done ? '✓ DONE · TAP TO UNDO' : 'MARK COMPLETE'}
+          {done ? '✓ DONE' : 'MARK COMPLETE'}
         </button>
         {!isToday ? (
           <button onClick={onGoToToday} style={cardButtonStyle(session.meta.color, true)}>
@@ -445,7 +679,7 @@ function VolumeChart() {
               height:barHeight,
               background:color,
               borderRadius:'1px 1px 0 0',
-              opacity:isToday ? 1 : past ? 0.85 : 0.5,
+              opacity:isToday ? 1 : past ? 0.45 : 0.88,
               position:'relative',
             }}>
               {w.race ? <div style={{
@@ -605,11 +839,11 @@ function ExerciseCard({ item, accent, openByDefault }) {
   );
 }
 
-function ContentSection({ label, meta, intro, accent, items, note }) {
+function ContentSection({ label, meta, intro, accent, items, note, showIntro = true }) {
   return (
     <div style={{paddingTop:26}}>
       <SectionHead label={label} meta={meta}/>
-      <p style={{fontSize:13,color:'var(--muted)',lineHeight:1.7,maxWidth:760,marginBottom:14}}>{intro}</p>
+      {showIntro ? <p style={{fontSize:13,color:'var(--muted)',lineHeight:1.7,maxWidth:760,marginBottom:14}}>{intro}</p> : null}
       {note ? (
         <div style={{
           marginBottom:14,
@@ -629,11 +863,11 @@ function ContentSection({ label, meta, intro, accent, items, note }) {
   );
 }
 
-function TimingSection({ label, meta, intro, accent, rows, footnote }) {
+function TimingSection({ label, meta, intro, accent, rows, footnote, showIntro = true }) {
   return (
     <div style={{paddingTop:26}}>
       <SectionHead label={label} meta={meta}/>
-      <p style={{fontSize:13,color:'var(--muted)',lineHeight:1.7,maxWidth:760,marginBottom:14}}>{intro}</p>
+      {showIntro ? <p style={{fontSize:13,color:'var(--muted)',lineHeight:1.7,maxWidth:760,marginBottom:14}}>{intro}</p> : null}
       <div style={{
         background:'var(--surf)',
         border:'1px solid var(--border)',
@@ -676,14 +910,15 @@ function MobilityView() {
           Pre-run activation, post-run flexibility, a standalone session, and a hip-focused reset. This restores the actual guidance instead of the empty redesign placeholders.
         </p>
       </div>
-      {MOBILITY_SECTIONS.map(section => <ContentSection key={section.label} {...section}/>)}
+      {MOBILITY_SECTIONS.map(section => <ContentSection key={section.label} {...section} meta={null} showIntro={false}/>)}
       <TimingSection
         label="WEEKLY INTEGRATION"
-        meta="how it fits your training week"
+        meta={null}
         intro="Make the pre- and post-run work automatic on run days, then add the standalone and hip-focus work where the week has room for it."
         accent="var(--mob)"
         rows={MOBILITY_TIMING}
         footnote="Progression: build consistency first. After a few steady weeks, add longer holds or a light contract-relax emphasis to the tightest positions."
+        showIntro={false}
       />
     </div>
   );
@@ -699,23 +934,6 @@ function StrengthView() {
         <p style={{fontSize:13,color:'var(--muted)',lineHeight:1.7,maxWidth:760}}>
           Two runner-specific gym sessions each week: one heavier bilateral day and one lower-load single-leg control day, both slotted around the run schedule.
         </p>
-      </div>
-
-      <div style={{paddingTop:26}}>
-        <SectionHead label="TRAINING PRINCIPLES" meta="runner-specific strength"/>
-        <div style={{display:'grid',gap:10}}>
-          {STRENGTH_PRINCIPLES.map((text, index) => (
-            <div key={index} style={{
-              padding:'11px 14px',
-              background:'var(--surf)',
-              borderLeft:'3px solid var(--str)',
-              borderRadius:'0 4px 4px 0',
-              fontSize:13,
-              color:'var(--text)',
-              lineHeight:1.65,
-            }}>{text}</div>
-          ))}
-        </div>
       </div>
 
       <ContentSection
@@ -767,7 +985,7 @@ function App() {
       <ModeBar mode={mode} setMode={setMode}/>
 
       <header style={{padding:'22px 18px 16px',borderBottom:'1px solid var(--border)'}}>
-        <div style={{fontFamily:'var(--mono)',fontSize:10,letterSpacing:1.8,color:'var(--run)',marginBottom:8}}>
+        <div style={{fontFamily:'var(--mono)',fontSize:10,letterSpacing:1.8,color:mode === 'mob' ? 'var(--mob)' : mode === 'str' ? 'var(--str)' : 'var(--run)',marginBottom:8}}>
           JAKARTA RUNNER · J. CHOI · APR 2026
         </div>
         <h1 style={{
