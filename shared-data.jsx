@@ -1,9 +1,5 @@
 // Shared plan data and tokens
 // Distilled from the original run-plan.yaml
-// "Today" is simulated as Week 2 (Apr 20-26, 2026) for design preview
-
-const TODAY_WEEK_ID = '2';
-const TODAY_DAY_INDEX = 1; // 0=Mon, 1=Tue, 2=Wed...
 
 // Design tokens — evolved Sports Data Terminal
 const T = {
@@ -21,6 +17,9 @@ const T = {
   run: '#4eff91',
   runBg: '#0e1f14',
   runDim: '#1a4a2e',
+  intv: '#f1de58',
+  intvBg: '#211d08',
+  intvDim: '#5b5214',
   mob: '#ffa94d',
   mobBg: '#1e1408',
   mobDim: '#4a3010',
@@ -42,7 +41,7 @@ const DAY_TYPES = {
   rest: { label: 'REST', color: T.dim, bg: T.surf2 },
   easy: { label: 'EASY', color: T.run, bg: T.runBg },
   rec:  { label: 'RECOVERY', color: T.rec, bg: T.recBg },
-  intv: { label: 'INTERVAL', color: T.mob, bg: T.mobBg },
+  intv: { label: 'INTERVAL', color: T.intv, bg: T.intvBg },
   thr:  { label: 'THRESHOLD', color: T.thr, bg: T.mobBg },
   lng:  { label: 'LONG', color: T.str, bg: T.strBg },
   race: { label: 'RACE', color: T.race, bg: T.raceBg },
@@ -210,6 +209,39 @@ const WEEKS = [
   ]},
 ];
 
+// Date helpers
+function zonedDateParts(timeZone) {
+  const parts = new Intl.DateTimeFormat('en-CA', {
+    timeZone,
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).formatToParts(new Date());
+  const map = Object.fromEntries(parts.map(p => [p.type, p.value]));
+  return {
+    year: Number(map.year),
+    month: Number(map.month),
+    day: Number(map.day),
+  };
+}
+
+function utcDateFromParts(parts) {
+  return Date.UTC(parts.year, parts.month - 1, parts.day);
+}
+
+function diffWholeDays(fromUtc, toUtc) {
+  return Math.floor((toUtc - fromUtc) / 86400000);
+}
+
+const JAKARTA_TODAY = zonedDateParts('Asia/Jakarta');
+const PLAN_START = { year: 2026, month: 3, day: 30 };
+const planStartUtc = utcDateFromParts(PLAN_START);
+const todayUtc = utcDateFromParts(JAKARTA_TODAY);
+const planDayOffset = diffWholeDays(planStartUtc, todayUtc);
+const clampedDayOffset = Math.max(0, Math.min(planDayOffset, (WEEKS.length * 7) - 1));
+const TODAY_WEEK_ID = WEEKS[Math.floor(clampedDayOffset / 7)].id;
+const TODAY_DAY_INDEX = clampedDayOffset % 7;
+
 // Today's-week reference
 function getWeek(id) { return WEEKS.find(w => w.id === id); }
 function getTodayWeek() { return getWeek(TODAY_WEEK_ID); }
@@ -218,9 +250,8 @@ function getTodayDay() {
   return w.days[TODAY_DAY_INDEX];
 }
 
-// Race countdown — Lombok 10K is Jul 12, 2026. Today = Apr 21, 2026.
-const DAYS_TO_10K = 82;
-const DAYS_TO_HM = 187;
+const DAYS_TO_10K = Math.max(0, diffWholeDays(todayUtc, utcDateFromParts({ year: 2026, month: 7, day: 12 })));
+const DAYS_TO_HM = Math.max(0, diffWholeDays(todayUtc, utcDateFromParts({ year: 2026, month: 10, day: 25 })));
 
 Object.assign(window, {
   T, DAY_TYPES, DAY_ABBR, PHASES, WEEKS,
