@@ -669,17 +669,17 @@ function VolumeChart() {
           const isToday = w.id === TODAY_WEEK_ID;
           const past = index < todayIdx;
           const barHeight = Math.max(2, (w.km / maxKm) * height);
-          let color = 'var(--dim)';
+          let color = 'var(--muted2)';
           if (w.race) color = 'var(--race)';
           else if (isToday) color = 'var(--run)';
-          else if (past) color = 'var(--muted)';
+          else if (past) color = 'var(--dim)';
           return (
             <div key={w.id} title={`Wk ${w.id}: ${w.km}km`} style={{
               flex:1,
               height:barHeight,
               background:color,
               borderRadius:'1px 1px 0 0',
-              opacity:isToday ? 1 : past ? 0.45 : 0.88,
+              opacity:isToday ? 1 : past ? 0.95 : 0.8,
               position:'relative',
             }}>
               {w.race ? <div style={{
@@ -906,9 +906,6 @@ function MobilityView() {
         <div style={{fontFamily:'var(--serif)',fontSize:30,fontWeight:300,color:'var(--text)',marginBottom:6}}>
           Full Mobility <em style={{fontStyle:'italic',color:'var(--mob)'}}>Regimen</em>
         </div>
-        <p style={{fontSize:13,color:'var(--muted)',lineHeight:1.7,maxWidth:760}}>
-          Pre-run activation, post-run flexibility, a standalone session, and a hip-focused reset. This restores the actual guidance instead of the empty redesign placeholders.
-        </p>
       </div>
       {MOBILITY_SECTIONS.map(section => <ContentSection key={section.label} {...section} meta={null} showIntro={false}/>)}
       <TimingSection
@@ -931,9 +928,6 @@ function StrengthView() {
         <div style={{fontFamily:'var(--serif)',fontSize:30,fontWeight:300,color:'var(--text)',marginBottom:6}}>
           Lower-Body <em style={{fontStyle:'italic',color:'var(--str)'}}>Strength</em>
         </div>
-        <p style={{fontSize:13,color:'var(--muted)',lineHeight:1.7,maxWidth:760}}>
-          Two runner-specific gym sessions each week: one heavier bilateral day and one lower-load single-leg control day, both slotted around the run schedule.
-        </p>
       </div>
 
       <ContentSection
@@ -995,7 +989,7 @@ function App() {
           letterSpacing:'-0.02em',
           lineHeight:1.02,
         }}>
-          10K → <em style={{fontStyle:'italic',color:'var(--run)'}}>Half Marathon</em>
+          10K → <em style={{fontStyle:'italic',color:mode === 'mob' ? 'var(--mob)' : mode === 'str' ? 'var(--str)' : 'var(--run)'}}>Half Marathon</em>
         </h1>
       </header>
 
