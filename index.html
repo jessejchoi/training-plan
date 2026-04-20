@@ -582,7 +582,17 @@ function Countdowns() {
             marginTop:4,
           }}>{r.n}<span style={{fontSize:11,color:'var(--muted)',marginLeft:4}}>days</span></div>
           <div style={{fontFamily:'var(--mono)',fontSize:9.5,color:'var(--muted)',marginTop:4}}>
-            {r.date} · {r.tgt}
+            {r.date}
+          </div>
+          <div style={{
+            fontFamily:'var(--mono)',
+            fontSize:12,
+            fontWeight:700,
+            letterSpacing:1.1,
+            color:r.c,
+            marginTop:6,
+          }}>
+            {r.tgt}
           </div>
         </div>
       ))}
@@ -660,7 +670,7 @@ function PhaseTimeline() {
 function VolumeChart() {
   const todayIdx = WEEKS.findIndex(w => w.id === TODAY_WEEK_ID);
   const maxKm = 68;
-  const height = 80;
+  const height = 120;
   return (
     <div>
       <SectionHead label="WEEKLY VOLUME" meta="peak 68km · avg 47km"/>
