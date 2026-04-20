@@ -669,7 +669,7 @@ function VolumeChart() {
           const isToday = w.id === TODAY_WEEK_ID;
           const past = index < todayIdx;
           const barHeight = Math.max(2, (w.km / maxKm) * height);
-          let color = 'var(--muted2)';
+          let color = 'var(--muted)';
           if (w.race) color = 'var(--race)';
           else if (isToday) color = 'var(--run)';
           else if (past) color = 'var(--dim)';
@@ -679,7 +679,7 @@ function VolumeChart() {
               height:barHeight,
               background:color,
               borderRadius:'1px 1px 0 0',
-              opacity:isToday ? 1 : past ? 0.95 : 0.8,
+              opacity:1,
               position:'relative',
             }}>
               {w.race ? <div style={{
