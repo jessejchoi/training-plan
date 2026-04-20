@@ -671,26 +671,44 @@ function VolumeChart() {
   const todayIdx = WEEKS.findIndex(w => w.id === TODAY_WEEK_ID);
   const maxKm = 68;
   const height = 120;
+  const [activeWeekId, setActiveWeekId] = React.useState(TODAY_WEEK_ID);
+  const activeWeek = WEEKS.find(w => w.id === activeWeekId) || getTodayWeek();
   return (
     <div>
-      <SectionHead label="WEEKLY VOLUME" meta="peak 68km · avg 47km"/>
+      <SectionHead
+        label="WEEKLY VOLUME"
+        meta={`Wk ${activeWeek.id} · ${activeWeek.km}km · ${activeWeek.dates}`}
+      />
       <div style={{display:'flex',alignItems:'flex-end',gap:2,height,marginBottom:6}}>
         {WEEKS.map((w, index) => {
           const isToday = w.id === TODAY_WEEK_ID;
           const past = index < todayIdx;
+          const isActive = w.id === activeWeekId;
           const barHeight = Math.max(2, (w.km / maxKm) * height);
           let color = 'var(--muted)';
           if (w.race) color = 'var(--race)';
           else if (isToday) color = 'var(--run)';
           else if (past) color = 'var(--dim)';
           return (
-            <div key={w.id} title={`Wk ${w.id}: ${w.km}km`} style={{
+            <button
+              key={w.id}
+              type="button"
+              title={`Wk ${w.id}: ${w.km}km`}
+              onMouseEnter={() => setActiveWeekId(w.id)}
+              onFocus={() => setActiveWeekId(w.id)}
+              onTouchStart={() => setActiveWeekId(w.id)}
+              style={{
               flex:1,
               height:barHeight,
               background:color,
               borderRadius:'1px 1px 0 0',
               opacity:1,
               position:'relative',
+              minWidth:0,
+              padding:0,
+              alignSelf:'flex-end',
+              outline:isActive ? `1px solid ${w.race ? 'var(--race)' : isToday ? 'var(--run)' : 'var(--text)'}` : 'none',
+              outlineOffset:1,
             }}>
               {w.race ? <div style={{
                 position:'absolute',
@@ -700,7 +718,7 @@ function VolumeChart() {
                 fontSize:9,
                 color:'var(--race)',
               }}>★</div> : null}
-            </div>
+            </button>
           );
         })}
       </div>
