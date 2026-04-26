@@ -378,14 +378,14 @@ blocks:
       dates_html: Jul 6&ndash;12
       total_km_html: "~17km + race"
       days:
-      - type: rest
-        content_html: Rest
+      - type: easy
+        content_html: Easy<br>5km @ Z2 HR
       - type: intv
         content_html: 'WU: 1.5km @ 6:35 + 4&times;100m strides<br>Session: 4&times;400m
           @ 4:35/km, 3min full rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 5km total<br>Sharpener
           only &mdash; do not push.'
-      - type: easy
-        content_html: Easy<br>5km @ Z2 HR
+      - type: rest
+        content_html: Rest
       - type: easy
         content_html: Easy 4km @ Z2 HR<br>+ 4&times;100m strides
       - type: rest
@@ -554,12 +554,12 @@ blocks:
       dates_html: Aug 17&ndash;23
       total_km_html: "~25km + race"
       days:
-      - type: rest
-        content_html: Rest
-      - type: easy
-        content_html: Easy 7km @ Z2 HR<br>+ 4&times;100m strides
       - type: rec
         content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
+      - type: easy
+        content_html: Easy 7km @ Z2 HR<br>+ 4&times;100m strides
+      - type: rest
+        content_html: Rest
       - type: easy
         content_html: Easy 6km @ Z2 HR<br>+ 4&times;100m strides
       - type: rec
@@ -777,14 +777,14 @@ blocks:
       dates_html: Oct 19&ndash;25
       total_km_html: "~17km + race"
       days:
-      - type: rest
-        content_html: Rest
+      - type: easy
+        content_html: Easy 5km @ Z2 HR
       - type: intv
         content_html: 'WU: 1.5km @ 6:35 + 4&times;100m strides<br>Session: 4&times;400m
           @ 4:40/km, 3min full rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 5km total<br>Sharpener
           only &mdash; do not push.'
-      - type: easy
-        content_html: Easy 5km @ Z2 HR
+      - type: rest
+        content_html: Rest
       - type: easy
         content_html: Easy 4km @ Z2 HR<br>+ 4&times;100m strides
       - type: rest

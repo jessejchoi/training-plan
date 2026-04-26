@@ -611,9 +611,9 @@ window.RUN_PLAN_WEEKS = [
     "race": true,
     "days": [
       {
-        "t": "rest",
-        "s": "Rest",
-        "l": "Rest"
+        "t": "easy",
+        "s": "Easy",
+        "l": "Easy<br>5km @ Z2 HR"
       },
       {
         "t": "intv",
@@ -621,9 +621,9 @@ window.RUN_PLAN_WEEKS = [
         "l": "WU: 1.5km @ 6:35 + 4&times;100m strides<br>Session: 4&times;400m @ 4:35/km, 3min full rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 5km total<br>Sharpener only &mdash; do not push."
       },
       {
-        "t": "easy",
-        "s": "Easy",
-        "l": "Easy<br>5km @ Z2 HR"
+        "t": "rest",
+        "s": "Rest",
+        "l": "Rest"
       },
       {
         "t": "easy",
@@ -870,9 +870,9 @@ window.RUN_PLAN_WEEKS = [
     "race": true,
     "days": [
       {
-        "t": "rest",
-        "s": "Rest",
-        "l": "Rest"
+        "t": "rec",
+        "s": "5km rec",
+        "l": "Recovery<br>5km, HR cap 140&ndash;145 bpm"
       },
       {
         "t": "easy",
@@ -880,9 +880,9 @@ window.RUN_PLAN_WEEKS = [
         "l": "Easy 7km @ Z2 HR<br>+ 4&times;100m strides"
       },
       {
-        "t": "rec",
-        "s": "5km rec",
-        "l": "Recovery<br>5km, HR cap 140&ndash;145 bpm"
+        "t": "rest",
+        "s": "Rest",
+        "l": "Rest"
       },
       {
         "t": "easy",
@@ -1258,9 +1258,9 @@ window.RUN_PLAN_WEEKS = [
     "race": true,
     "days": [
       {
-        "t": "rest",
-        "s": "Rest",
-        "l": "Rest"
+        "t": "easy",
+        "s": "5km",
+        "l": "Easy 5km @ Z2 HR"
       },
       {
         "t": "intv",
@@ -1268,9 +1268,9 @@ window.RUN_PLAN_WEEKS = [
         "l": "WU: 1.5km @ 6:35 + 4&times;100m strides<br>Session: 4&times;400m @ 4:40/km, 3min full rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 5km total<br>Sharpener only &mdash; do not push."
       },
       {
-        "t": "easy",
-        "s": "5km",
-        "l": "Easy 5km @ Z2 HR"
+        "t": "rest",
+        "s": "Rest",
+        "l": "Rest"
       },
       {
         "t": "easy",
