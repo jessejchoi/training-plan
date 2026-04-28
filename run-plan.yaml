@@ -123,7 +123,7 @@ blocks:
         content_html: 18km easy<br>@ Z2 HR
     - week_html: '3'
       dates_html: Apr 27&ndash;May 3
-      total_km_html: "~42&ndash;46km"
+      total_km_html: "~39&ndash;43km"
       days:
       - type: rest
         content_html: Rest
@@ -132,48 +132,53 @@ blocks:
           @ 4:45&ndash;4:50/km, 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 9&ndash;9.5km
           total<br>Reduced interval volume while foot settles. Stop if pain changes
           stride or rises above 3/10.'
-      - type: rec
-        content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm<br>If foot is irritated
-          after Tuesday, replace with 35&ndash;50min easy bike/pool/elliptical.
-      - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 26min continuous @ 5:10&ndash;5:15/km
-          (HR 165&ndash;172)<br>CD: 1.5km @ 6:40<br><br>&asymp; 8&ndash;8.5km total<br>If
-          foot is not calm, split as 2&times;13min with 2min jog.'
-      - type: rec
-        content_html: Very easy 4&ndash;5km @ Z1/Z2 HR<br>Or cross-train if the foot
-          is not quiet. Keep this deliberately low stress.
-      - type: lng
-        content_html: 16km easy @ Z2 HR<br>Flat route preferred. No fast finish.
       - type: rest
-        content_html: Rest
+        content_html: Rest / travel day<br>20+ hr Indo-to-US flight. Walking and
+          mobility only.
+      - type: rec
+        content_html: Very easy shakeout 4&ndash;5km, HR cap 140&ndash;145 bpm<br>Or
+          rest if sleep is poor after travel.
+      - type: thr
+        content_html: 'WU: 1.5km @ 6:40<br>Session: 2&times;10&ndash;12min @ threshold
+          HR/effort (HR 165&ndash;172), 2&ndash;3min jog/walk rest<br>CD: 1.5km
+          @ 6:40<br><br>&asymp; 7&ndash;8km total<br>Travel-adjusted threshold
+          &mdash; controlled effort, no chasing pace while jetlagged.'
+      - type: rec
+        content_html: Recovery 4&ndash;5km @ Z1/Z2 HR<br>Or rest if travel fatigue
+          or foot irritation lingers.
+      - type: lng
+        content_html: 14&ndash;16km easy @ Z2 HR<br>Flat route preferred. No fast
+          finish.
   - id: phase2
     title_html: Phase 2 &mdash; Race-Specific Build &middot; Weeks 4&ndash;8 &middot;
       May 4 &ndash; Jun 7
     weeks:
     - week_html: 4 &darr;
       dates_html: May 4&ndash;10
-      total_km_html: "~48&ndash;51km"
+      total_km_html: "~46&ndash;50km"
       days:
+      - type: rest
+        content_html: Rest<br>Protected recovery day after travel-adjusted threshold
+          and long run.
       - type: intv
         content_html: 'WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 4&times;1.2km
           @ 4:48&ndash;4:50/km, 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 9.5km
-          total<br>Controlled rebuild &mdash; keep rhythm without chasing missed mileage.'
+          total<br>Controlled rebuild &mdash; reduce to 4&times;1km if jetlag or
+          foot soreness persists.'
       - type: rec
         content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
       - type: thr
         content_html: 'WU: 1.5km @ 6:40<br>Session: 4&times;6min @ 5:08&ndash;5:12/km
           (HR 165&ndash;172), 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 8km
-          total<br>Broken threshold keeps the aerobic stimulus while managing foot
-          load.'
+          total<br>Keep as planned only if Tuesday was normal; otherwise reduce to
+          3&times;6min.'
       - type: rec
         content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
       - type: easy
-        content_html: Easy 5&ndash;6km @ Z2 HR<br>No hill sprints unless the foot
-          has been stable all week.
+        content_html: Easy 5&ndash;6km @ Z2 HR<br>No hill sprints unless sleep, foot,
+          and travel fatigue are fully normal.
       - type: lng
         content_html: 16km easy<br>@ Z2 HR<br>No progression finish.
-      - type: rest
-        content_html: Rest
     - week_html: '5'
       dates_html: May 11&ndash;17
       total_km_html: "~56km"

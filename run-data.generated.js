@@ -176,7 +176,7 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "3",
     "dates": "Apr 27–May 3",
-    "km": 44,
+    "km": 41,
     "phase": "p1",
     "days": [
       {
@@ -190,42 +190,47 @@ window.RUN_PLAN_WEEKS = [
         "l": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 4&times;1km @ 4:45&ndash;4:50/km, 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 9&ndash;9.5km total<br>Reduced interval volume while foot settles. Stop if pain changes stride or rises above 3/10."
       },
       {
+        "t": "rest",
+        "s": "Rest",
+        "l": "Rest / travel day<br>20+ hr Indo-to-US flight. Walking and mobility only."
+      },
+      {
         "t": "rec",
         "s": "5km rec",
-        "l": "Recovery<br>5km, HR cap 140&ndash;145 bpm<br>If foot is irritated after Tuesday, replace with 35&ndash;50min easy bike/pool/elliptical."
+        "l": "Very easy shakeout 4&ndash;5km, HR cap 140&ndash;145 bpm<br>Or rest if sleep is poor after travel."
       },
       {
         "t": "thr",
-        "s": "26min thr",
-        "l": "WU: 1.5km @ 6:40<br>Session: 26min continuous @ 5:10&ndash;5:15/km (HR 165&ndash;172)<br>CD: 1.5km @ 6:40<br><br>&asymp; 8&ndash;8.5km total<br>If foot is not calm, split as 2&times;13min with 2min jog."
+        "s": "2×10-12min thr",
+        "l": "WU: 1.5km @ 6:40<br>Session: 2&times;10&ndash;12min @ threshold HR/effort (HR 165&ndash;172), 2&ndash;3min jog/walk rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 7&ndash;8km total<br>Travel-adjusted threshold &mdash; controlled effort, no chasing pace while jetlagged."
       },
       {
         "t": "rec",
         "s": "5km rec",
-        "l": "Very easy 4&ndash;5km @ Z1/Z2 HR<br>Or cross-train if the foot is not quiet. Keep this deliberately low stress."
+        "l": "Recovery 4&ndash;5km @ Z1/Z2 HR<br>Or rest if travel fatigue or foot irritation lingers."
       },
       {
         "t": "lng",
         "s": "16km long",
-        "l": "16km easy @ Z2 HR<br>Flat route preferred. No fast finish."
-      },
-      {
-        "t": "rest",
-        "s": "Rest",
-        "l": "Rest"
+        "l": "14&ndash;16km easy @ Z2 HR<br>Flat route preferred. No fast finish."
       }
     ]
   },
   {
     "id": "4",
     "dates": "May 4–10",
-    "km": 49.5,
+    "km": 48,
     "phase": "p2",
     "days": [
       {
+        "t": "rest",
+        "s": "Rest",
+        "l": "Rest<br>Protected recovery day after travel-adjusted threshold and long run."
+      },
+      {
         "t": "intv",
         "s": "4×1.2km",
-        "l": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 4&times;1.2km @ 4:48&ndash;4:50/km, 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 9.5km total<br>Controlled rebuild &mdash; keep rhythm without chasing missed mileage."
+        "l": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 4&times;1.2km @ 4:48&ndash;4:50/km, 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 9.5km total<br>Controlled rebuild &mdash; reduce to 4&times;1km if jetlag or foot soreness persists."
       },
       {
         "t": "rec",
@@ -235,7 +240,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "thr",
         "s": "4×6min thr",
-        "l": "WU: 1.5km @ 6:40<br>Session: 4&times;6min @ 5:08&ndash;5:12/km (HR 165&ndash;172), 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 8km total<br>Broken threshold keeps the aerobic stimulus while managing foot load."
+        "l": "WU: 1.5km @ 6:40<br>Session: 4&times;6min @ 5:08&ndash;5:12/km (HR 165&ndash;172), 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 8km total<br>Keep as planned only if Tuesday was normal; otherwise reduce to 3&times;6min."
       },
       {
         "t": "rec",
@@ -245,17 +250,12 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "easy",
         "s": "6km +hills",
-        "l": "Easy 5&ndash;6km @ Z2 HR<br>No hill sprints unless the foot has been stable all week."
+        "l": "Easy 5&ndash;6km @ Z2 HR<br>No hill sprints unless sleep, foot, and travel fatigue are fully normal."
       },
       {
         "t": "lng",
         "s": "16km prog long",
         "l": "16km easy<br>@ Z2 HR<br>No progression finish."
-      },
-      {
-        "t": "rest",
-        "s": "Rest",
-        "l": "Rest"
       }
     ]
   },
