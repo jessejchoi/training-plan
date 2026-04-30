@@ -219,7 +219,7 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "4",
     "dates": "May 4–10",
-    "km": 48,
+    "km": 43.5,
     "phase": "p2",
     "days": [
       {
@@ -248,27 +248,27 @@ window.RUN_PLAN_WEEKS = [
         "l": "Recovery<br>5km, HR cap 140&ndash;145 bpm"
       },
       {
-        "t": "easy",
-        "s": "6km +hills",
-        "l": "Easy 5&ndash;6km @ Z2 HR<br>No hill sprints unless sleep, foot, and travel fatigue are fully normal."
+        "t": "lng",
+        "s": "16km long",
+        "l": "15&ndash;16km easy<br>@ Z2 HR<br>Flat route preferred. No fast finish."
       },
       {
-        "t": "lng",
-        "s": "16km prog long",
-        "l": "16km easy<br>@ Z2 HR<br>No progression finish."
+        "t": "rest",
+        "s": "Rest",
+        "l": "Rest<br>Clean break before Week 5."
       }
     ]
   },
   {
     "id": "5",
     "dates": "May 11–17",
-    "km": 56,
+    "km": 45.5,
     "phase": "p2",
     "days": [
       {
         "t": "intv",
         "s": "4×1.5km",
-        "l": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 4&times;1.5km @ 4:46&ndash;4:48/km, 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 10.5km total<br>First substantial specific workout &mdash; race pace with controlled density."
+        "l": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 4&times;1.5km @ 4:46&ndash;4:48/km, 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 10.5km total<br>First substantial specific workout &mdash; keep as planned only if Sunday rest absorbed well and foot is normal."
       },
       {
         "t": "rec",
@@ -277,28 +277,28 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "thr",
-        "s": "2×15min thr",
-        "l": "WU: 1.5km @ 6:40<br>Session: 2&times;15min @ 5:08/km (HR 165&ndash;172), 3min walk/jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 9km total<br>Threshold load rises, but in a more repeatable format."
-      },
-      {
-        "t": "rec",
-        "s": "6km rec",
-        "l": "Recovery<br>6km, HR cap 140&ndash;145 bpm"
-      },
-      {
-        "t": "easy",
-        "s": "7km +hills",
-        "l": "Easy 7km @ Z2 HR<br>+ 4&times;100m strides<br>+ 8&times;10s hill sprints (treadmill 8&ndash;10%, max effort, 2min full walk rest)"
-      },
-      {
-        "t": "lng",
-        "s": "18km prog long",
-        "l": "18km progression long<br>10km @ Z2, 5km steady (~5:45&ndash;5:35), last 3km moderate (~5:25&ndash;5:15)<br>No hard finish &mdash; aerobic strength, not a fourth workout."
+        "s": "2×10-12min thr",
+        "l": "WU: 1.5km @ 6:40<br>Session: 2&times;10&ndash;12min @ threshold HR/effort (HR 165&ndash;172), 3min walk/jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 7&ndash;8km total<br>Reduced before travel rest days &mdash; keep the aerobic signal without forcing fatigue."
       },
       {
         "t": "rest",
         "s": "Rest",
-        "l": "Rest"
+        "l": "Rest / travel day<br>Forced rest."
+      },
+      {
+        "t": "rest",
+        "s": "Rest",
+        "l": "Rest / travel day<br>Likely forced rest."
+      },
+      {
+        "t": "easy",
+        "s": "7km +strides",
+        "l": "Easy shakeout 5&ndash;7km @ Z2 HR<br>Optional 4&times;100m strides if legs feel normal. Skip hill work."
+      },
+      {
+        "t": "lng",
+        "s": "18km long",
+        "l": "16&ndash;18km easy @ Z2 HR<br>No fast finish after travel."
       }
     ]
   },

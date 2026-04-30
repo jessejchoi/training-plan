@@ -155,7 +155,7 @@ blocks:
     weeks:
     - week_html: 4 &darr;
       dates_html: May 4&ndash;10
-      total_km_html: "~46&ndash;50km"
+      total_km_html: "~42&ndash;45km"
       days:
       - type: rest
         content_html: Rest<br>Protected recovery day after travel-adjusted threshold
@@ -174,37 +174,36 @@ blocks:
           3&times;6min.'
       - type: rec
         content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
-      - type: easy
-        content_html: Easy 5&ndash;6km @ Z2 HR<br>No hill sprints unless sleep, foot,
-          and travel fatigue are fully normal.
       - type: lng
-        content_html: 16km easy<br>@ Z2 HR<br>No progression finish.
+        content_html: 15&ndash;16km easy<br>@ Z2 HR<br>Flat route preferred. No
+          fast finish.
+      - type: rest
+        content_html: Rest<br>Clean break before Week 5.
     - week_html: '5'
       dates_html: May 11&ndash;17
-      total_km_html: "~56km"
+      total_km_html: "~43&ndash;48km"
       days:
       - type: intv
         content_html: 'WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 4&times;1.5km
           @ 4:46&ndash;4:48/km, 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 10.5km
-          total<br>First substantial specific workout &mdash; race pace with controlled
-          density.'
+          total<br>First substantial specific workout &mdash; keep as planned only
+          if Sunday rest absorbed well and foot is normal.'
       - type: rec
         content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
       - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 2&times;15min @ 5:08/km (HR 165&ndash;172),
-          3min walk/jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 9km total<br>Threshold
-          load rises, but in a more repeatable format.'
-      - type: rec
-        content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
-      - type: easy
-        content_html: Easy 7km @ Z2 HR<br>+ 4&times;100m strides<br>+ 8&times;10s
-          hill sprints (treadmill 8&ndash;10%, max effort, 2min full walk rest)
-      - type: lng
-        content_html: 18km progression long<br>10km @ Z2, 5km steady (~5:45&ndash;5:35),
-          last 3km moderate (~5:25&ndash;5:15)<br>No hard finish &mdash; aerobic strength,
-          not a fourth workout.
+        content_html: 'WU: 1.5km @ 6:40<br>Session: 2&times;10&ndash;12min @ threshold
+          HR/effort (HR 165&ndash;172), 3min walk/jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp;
+          7&ndash;8km total<br>Reduced before travel rest days &mdash; keep the aerobic
+          signal without forcing fatigue.'
       - type: rest
-        content_html: Rest
+        content_html: Rest / travel day<br>Forced rest.
+      - type: rest
+        content_html: Rest / travel day<br>Likely forced rest.
+      - type: easy
+        content_html: Easy shakeout 5&ndash;7km @ Z2 HR<br>Optional 4&times;100m
+          strides if legs feel normal. Skip hill work.
+      - type: lng
+        content_html: 16&ndash;18km easy @ Z2 HR<br>No fast finish after travel.
     - week_html: '6'
       dates_html: May 18&ndash;24
       total_km_html: "~55km"
