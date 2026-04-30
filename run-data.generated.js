@@ -305,7 +305,7 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "6",
     "dates": "May 18–24",
-    "km": 55,
+    "km": 57,
     "phase": "p2",
     "days": [
       {
@@ -315,8 +315,8 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "rec",
-        "s": "5km rec",
-        "l": "Recovery<br>5km, HR cap 140&ndash;145 bpm"
+        "s": "6km rec",
+        "l": "Recovery<br>6km, HR cap 140&ndash;145 bpm"
       },
       {
         "t": "thr",
@@ -325,8 +325,8 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "rec",
-        "s": "5km rec",
-        "l": "Recovery<br>5km, HR cap 140&ndash;145 bpm"
+        "s": "6km rec",
+        "l": "Recovery<br>6km, HR cap 140&ndash;145 bpm"
       },
       {
         "t": "easy",
@@ -348,7 +348,7 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "7",
     "dates": "May 25–31",
-    "km": 54,
+    "km": 57,
     "phase": "p2",
     "days": [
       {
@@ -358,8 +358,8 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "rec",
-        "s": "5km rec",
-        "l": "Recovery<br>5km, HR cap 140&ndash;145 bpm"
+        "s": "6km rec",
+        "l": "Recovery<br>6km, HR cap 140&ndash;145 bpm"
       },
       {
         "t": "thr",
@@ -368,13 +368,13 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "rec",
-        "s": "5km rec",
-        "l": "Recovery<br>5km, HR cap 140&ndash;145 bpm"
+        "s": "6km rec",
+        "l": "Recovery<br>6km, HR cap 140&ndash;145 bpm"
       },
       {
         "t": "easy",
-        "s": "7km +hills",
-        "l": "Easy 7km @ Z2 HR<br>+ 8&times;10s hill sprints (treadmill 8&ndash;10%, max effort, 2min full walk rest)"
+        "s": "8km",
+        "l": "Easy 8km @ Z2 HR<br>No hill work this week; add base without extra neuromuscular load."
       },
       {
         "t": "lng",
@@ -391,7 +391,7 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "8",
     "dates": "Jun 1–7",
-    "km": 48,
+    "km": 51,
     "phase": "p2",
     "days": [
       {
@@ -416,13 +416,13 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "easy",
-        "s": "6km +hills",
-        "l": "Easy 6km @ Z2 HR<br>+ 6&times;10s hill sprints (treadmill 8&ndash;10%, max effort, 2min full walk rest)"
+        "s": "7km +strides",
+        "l": "Easy 7km @ Z2 HR<br>+ 4&times;100m relaxed strides"
       },
       {
         "t": "lng",
-        "s": "16km long",
-        "l": "16km easy<br>@ Z2 HR<br>Cutback &mdash; no race pace, freshness before peak."
+        "s": "18km long",
+        "l": "17&ndash;18km easy<br>@ Z2 HR<br>Cutback from quality, not from aerobic support."
       },
       {
         "t": "rest",
@@ -434,7 +434,7 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "9",
     "dates": "Jun 8–14",
-    "km": 55,
+    "km": 57,
     "phase": "p2",
     "days": [
       {
@@ -444,8 +444,8 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "rec",
-        "s": "5km rec",
-        "l": "Recovery<br>5km, HR cap 140&ndash;145 bpm"
+        "s": "6km rec",
+        "l": "Recovery<br>6km, HR cap 140&ndash;145 bpm"
       },
       {
         "t": "thr",
@@ -454,18 +454,18 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "rec",
-        "s": "5km rec",
-        "l": "Recovery<br>5km, HR cap 140&ndash;145 bpm"
+        "s": "6km rec",
+        "l": "Recovery<br>6km, HR cap 140&ndash;145 bpm"
       },
       {
         "t": "easy",
-        "s": "7km +hills",
-        "l": "Easy 7km @ Z2 HR<br>+ 4&times;100m strides<br>+ 8&times;10s hill sprints (treadmill 8&ndash;10%, max effort, 2min full walk rest)"
+        "s": "7km +strides",
+        "l": "Easy 7km @ Z2 HR<br>+ 4&times;100m strides"
       },
       {
         "t": "lng",
-        "s": "18km prog long",
-        "l": "18km total<br>12km easy, 4km moderate (~5:25&ndash;5:10), last 2km building toward 10K effort<br>Specific, but not a race in training."
+        "s": "19km long",
+        "l": "18&ndash;19km aerobic<br>Mostly easy @ Z2 HR; optional final 3km steady only if smooth. No fast finish."
       },
       {
         "t": "rest",
@@ -477,7 +477,7 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "10",
     "dates": "Jun 15–21",
-    "km": 52,
+    "km": 57,
     "phase": "p3",
     "days": [
       {
@@ -487,8 +487,8 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "rec",
-        "s": "5km rec",
-        "l": "Recovery<br>5km, HR cap 140&ndash;145 bpm"
+        "s": "6km rec",
+        "l": "Recovery<br>6km, HR cap 140&ndash;145 bpm"
       },
       {
         "t": "thr",
@@ -497,18 +497,18 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "rec",
-        "s": "5km rec",
-        "l": "Recovery<br>5km, HR cap 140&ndash;145 bpm"
+        "s": "6km rec",
+        "l": "Recovery<br>6km, HR cap 140&ndash;145 bpm"
       },
       {
         "t": "easy",
-        "s": "6km +hills",
-        "l": "Easy 6km @ Z2 HR<br>+ 4&times;100m strides<br>+ 6&times;10s hill sprints (treadmill 8&ndash;10%, max effort, 2min full walk rest)"
+        "s": "8km +strides",
+        "l": "Easy 8km @ Z2 HR<br>+ 4&times;100m strides"
       },
       {
         "t": "lng",
-        "s": "16km long",
-        "l": "16km easy<br>@ Z2 HR"
+        "s": "18km long",
+        "l": "17&ndash;18km easy<br>@ Z2 HR"
       },
       {
         "t": "rest",
@@ -520,7 +520,7 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "11",
     "dates": "Jun 22–28",
-    "km": 48,
+    "km": 53.5,
     "phase": "p3",
     "days": [
       {
@@ -530,8 +530,8 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "rec",
-        "s": "5km rec",
-        "l": "Recovery<br>5km, HR cap 140&ndash;145 bpm"
+        "s": "6km rec",
+        "l": "Recovery<br>6km, HR cap 140&ndash;145 bpm"
       },
       {
         "t": "thr",
@@ -540,18 +540,18 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "rec",
-        "s": "5km rec",
-        "l": "Recovery<br>5km, HR cap 140&ndash;145 bpm"
+        "s": "6km rec",
+        "l": "Recovery<br>6km, HR cap 140&ndash;145 bpm"
       },
       {
         "t": "easy",
-        "s": "6km +hills",
-        "l": "Easy 6km @ Z2 HR<br>+ 4&times;100m strides<br>+ 8&times;10s hill sprints (treadmill 8&ndash;10%, max effort, 2min full walk rest)"
+        "s": "7km +strides",
+        "l": "Easy 7km @ Z2 HR<br>+ 4&times;100m strides"
       },
       {
         "t": "lng",
-        "s": "15km long",
-        "l": "15km easy<br>@ Z2 HR<br>Volume reduction begins &mdash; no quality finish."
+        "s": "17km long",
+        "l": "17km easy<br>@ Z2 HR<br>Aerobic support continues; no quality finish."
       },
       {
         "t": "rest",
@@ -563,13 +563,13 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "12",
     "dates": "Jun 29–Jul 5",
-    "km": 40,
+    "km": 45.5,
     "phase": "taper",
     "days": [
       {
         "t": "intv",
         "s": "4×800m",
-        "l": "WU: 1.5km @ 6:35 + 4&times;100m strides<br>Session: 4&times;800m @ 4:42&ndash;4:45/km, 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 7km total<br>Real taper week &mdash; enough speed, much less load."
+        "l": "WU: 1.5km @ 6:35 + 4&times;100m strides<br>Session: 4&times;800m @ 4:42&ndash;4:45/km, 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 7km total<br>Light freshen week &mdash; enough speed, but keep building the season."
       },
       {
         "t": "rec",
@@ -583,18 +583,18 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "rec",
-        "s": "4km rec",
-        "l": "Recovery<br>4km, HR cap 140&ndash;145 bpm"
+        "s": "5km rec",
+        "l": "Recovery<br>5km, HR cap 140&ndash;145 bpm"
       },
       {
         "t": "easy",
-        "s": "5km +strides",
-        "l": "Easy 5km @ Z2 HR<br>+ 4&times;100m strides"
+        "s": "6km +strides",
+        "l": "Easy 6km @ Z2 HR<br>+ 4&times;100m strides"
       },
       {
         "t": "lng",
-        "s": "12km long",
-        "l": "12km easy<br>@ Z2 HR<br>No quality finish &mdash; freshness first."
+        "s": "15km long",
+        "l": "14&ndash;15km easy<br>@ Z2 HR<br>No quality finish &mdash; this is a freshen week, not a full taper."
       },
       {
         "t": "rest",
@@ -606,14 +606,14 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "13",
     "dates": "Jul 6–12",
-    "km": 17,
+    "km": 20,
     "phase": "taper",
     "race": true,
     "days": [
       {
         "t": "easy",
         "s": "Easy",
-        "l": "Easy<br>5km @ Z2 HR"
+        "l": "Easy<br>6km @ Z2 HR"
       },
       {
         "t": "intv",
@@ -627,8 +627,8 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "easy",
-        "s": "4km +strides",
-        "l": "Easy 4km @ Z2 HR<br>+ 4&times;100m strides"
+        "s": "5km +strides",
+        "l": "Easy 5km @ Z2 HR<br>+ 4&times;100m strides"
       },
       {
         "t": "rest",
@@ -643,7 +643,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "race",
         "s": "LOMBOK 10K",
-        "l": "RACE DAY<br>Pocari Sweat Lombok 10K<br><br>Target: Sub 48:00<br>Pace: 4:48/km<br><br>Stepping stone &mdash; race hard, recover smart. The bridge block begins next week."
+        "l": "RACE DAY<br>Pocari Sweat Lombok 10K<br><br>Tune-up and benchmark: race hard if fresh, but do not force an A-race peak.<br><br>Use the result to calibrate Bali and Jakarta training. The bridge block begins next week."
       }
     ]
   },
