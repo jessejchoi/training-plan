@@ -56,11 +56,11 @@ const PHASES = [
   { id: 'p2', name: 'Phase 2 · Race Build', startWk: '4', endWk: '9', color: T.run },
   { id: 'p3', name: 'Phase 3 · Peak', startWk: '10', endWk: '11', color: T.run },
   { id: 'taper', name: '10K Taper & Race', startWk: '12', endWk: '13', color: T.race },
-  { id: 'hm1', name: 'HM Reset', startWk: '14', endWk: '16', color: T.muted },
-  { id: 'hm2', name: 'HM Foundation', startWk: '17', endWk: '20', color: T.run },
-  { id: 'hm3', name: 'HM Peak', startWk: '21', endWk: '24', color: T.run },
-  { id: 'hm4', name: 'HM Freshen/Taper', startWk: '25', endWk: '27', color: T.str },
-  { id: 'hmr', name: 'HM Race', startWk: '28', endWk: '28', color: T.race },
+  { id: 'hm1', name: '10K-HM Bridge', startWk: '14', endWk: '16', color: T.muted },
+  { id: 'hm2', name: 'Bali HM Bridge', startWk: '17', endWk: '20', color: T.run },
+  { id: 'hm3', name: 'Oct 10K Build', startWk: '21', endWk: '24', color: T.run },
+  { id: 'hm4', name: '10K Freshen/Taper', startWk: '25', endWk: '27', color: T.str },
+  { id: 'hmr', name: 'Oct 10K Race', startWk: '28', endWk: '28', color: T.race },
 ];
 
 // Generated from run-plan.yaml by scripts/generate_plan_data.rb.

@@ -643,7 +643,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "race",
         "s": "LOMBOK 10K",
-        "l": "RACE DAY<br>Pocari Sweat Lombok 10K<br><br>Target: Sub 48:00<br>Pace: 4:48/km<br><br>Stepping stone &mdash; race hard, recover smart. HM build begins next week."
+        "l": "RACE DAY<br>Pocari Sweat Lombok 10K<br><br>Target: Sub 48:00<br>Pace: 4:48/km<br><br>Stepping stone &mdash; race hard, recover smart. The bridge block begins next week."
       }
     ]
   },
@@ -723,8 +723,8 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "lng",
-        "s": "14km prog long",
-        "l": "14km easy @ Z2 HR<br>Rebuild volume gently."
+        "s": "14km long",
+        "l": "14km easy @ Z2 HR<br>Increase volume gently."
       },
       {
         "t": "rest",
@@ -752,7 +752,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "thr",
         "s": "3×8min thr",
-        "l": "WU: 1.5km @ 6:40<br>Session: 3&times;8min @ 4:55&ndash;5:00/km (HR 165&ndash;170), 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 8.5km total<br>Still foundation work &mdash; no HM-specific stress yet."
+        "l": "WU: 1.5km @ 6:40<br>Session: 3&times;8min @ 4:55&ndash;5:00/km (HR 165&ndash;170), 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 8.5km total<br>Foundation work &mdash; threshold support without racing the reps."
       },
       {
         "t": "rec",
@@ -779,13 +779,13 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "17",
     "dates": "Aug 3–9",
-    "km": 57,
+    "km": 54,
     "phase": "hm2",
     "days": [
       {
         "t": "intv",
-        "s": "3×2km",
-        "l": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 3&times;2km @ 4:58/km, 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 10.5km total<br>First true HM-specific session &mdash; exact goal pace, manageable volume."
+        "s": "4×1.5km",
+        "l": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 4&times;1.5km @ 4:48&ndash;4:55/km, 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 10km total<br>Controlled 10K-strength work while keeping Bali HM in view."
       },
       {
         "t": "rec",
@@ -795,7 +795,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "thr",
         "s": "25min thr",
-        "l": "WU: 1.5km @ 6:40<br>Session: 25min continuous @ 4:52&ndash;4:58/km (HR 165&ndash;172)<br>CD: 1.5km @ 6:40<br><br>&asymp; 8.5km total<br>Threshold stays faster than HM pace."
+        "l": "WU: 1.5km @ 6:40<br>Session: 25min continuous @ 4:52&ndash;4:58/km (HR 165&ndash;172)<br>CD: 1.5km @ 6:40<br><br>&asymp; 8.5km total<br>Threshold support without turning the week into a peak."
       },
       {
         "t": "rec",
@@ -822,13 +822,13 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "18",
     "dates": "Aug 10–16",
-    "km": 61,
+    "km": 56,
     "phase": "hm2",
     "days": [
       {
         "t": "intv",
-        "s": "2×3km",
-        "l": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 2&times;3km @ 4:58/km, 3min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 10.5km total<br>Longer HM reps &mdash; slower than threshold, but more substantial."
+        "s": "3×2km",
+        "l": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 3&times;2km @ 4:50&ndash;4:55/km, 2.5min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 11km total<br>Strength endurance for 10K with enough range for Bali HM."
       },
       {
         "t": "rec",
@@ -852,8 +852,8 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "lng",
-        "s": "20km prog long",
-        "l": "20km progression<br>First 14km easy, last 6km steady/moderate (~5:30&ndash;5:10 descending)<br>Progress, but keep the lid on."
+        "s": "20km long",
+        "l": "20km easy @ Z2 HR<br>Fueling practice only. No fast finish."
       },
       {
         "t": "rest",
@@ -902,20 +902,20 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "race",
         "s": "BALI HM",
-        "l": "BALI HALF MARATHON<br>Run as a controlled long session, not an A-race.<br><br>Plan A: first 10&ndash;12km easy, then build to HM goal pace (4:58/km) only if you feel smooth.<br>Plan B: run the whole race steady around 5:10&ndash;5:20/km.<br><br>Goals: fueling practice, pacing practice, and time-on-feet. Finish feeling controlled."
+        "l": "BALI HALF MARATHON<br>Run as a controlled long session, not an A-race.<br><br>Plan A: first 10&ndash;12km easy, then build steady only if you feel smooth.<br>Plan B: run the whole race steady around 5:10&ndash;5:25/km.<br><br>Goals: fueling practice, pacing practice, and time-on-feet. Finish feeling controlled."
       }
     ]
   },
   {
     "id": "20",
     "dates": "Aug 24–30",
-    "km": 48,
+    "km": 46,
     "phase": "hm2",
     "days": [
       {
         "t": "intv",
-        "s": "3×1.5km",
-        "l": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 3&times;1.5km @ 4:58/km, 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 9km total<br>Post-race week &mdash; back to HM pace, but at lower cost."
+        "s": "5×800m",
+        "l": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 5&times;800m @ controlled 10K effort, 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 8km total<br>Post-HM reset &mdash; rhythm only, no forcing pace."
       },
       {
         "t": "rec",
@@ -925,7 +925,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "thr",
         "s": "20min thr",
-        "l": "WU: 1.5km @ 6:40<br>Session: 20min @ 4:52&ndash;4:58/km (HR 165&ndash;172)<br>CD: 1.5km @ 6:40<br><br>&asymp; 7.5km total<br>Shorter threshold re-entry after the race."
+        "l": "WU: 1.5km @ 6:40<br>Session: 20min @ 4:52&ndash;4:58/km (HR 165&ndash;172)<br>CD: 1.5km @ 6:40<br><br>&asymp; 7.5km total<br>Shorter threshold re-entry after Bali."
       },
       {
         "t": "rec",
@@ -940,7 +940,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "lng",
         "s": "18km long",
-        "l": "18km easy @ Z2 HR<br>Absorb the Aug 23 race and reset before the peak-specific block."
+        "l": "16&ndash;18km easy @ Z2 HR<br>Absorb the Aug 23 race and reset before the 10K-specific block."
       },
       {
         "t": "rest",
@@ -952,13 +952,13 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "21",
     "dates": "Aug 31–Sep 6",
-    "km": 64,
+    "km": 54,
     "phase": "hm3",
     "days": [
       {
         "t": "intv",
-        "s": "3×3km",
-        "l": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 3&times;3km @ 4:58/km, 3min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 13km total<br>Big HM-specific volume &mdash; settle in and make goal pace feel routine."
+        "s": "6×1km",
+        "l": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 6&times;1km @ current 10K effort, 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 11.5km total<br>First focused Oct 10K session after the Bali reset."
       },
       {
         "t": "rec",
@@ -968,7 +968,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "thr",
         "s": "2×15min thr",
-        "l": "WU: 1.5km @ 6:40<br>Session: 2&times;15min @ 4:50&ndash;4:55/km (HR 165&ndash;172), 3min walk/jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 9km total<br>Threshold now supports, rather than matches, the HM work."
+        "l": "WU: 1.5km @ 6:40<br>Session: 2&times;15min @ 4:50&ndash;4:55/km (HR 165&ndash;172), 3min walk/jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 9km total<br>Threshold support for 10K strength."
       },
       {
         "t": "rec",
@@ -982,8 +982,8 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "lng",
-        "s": "22km long",
-        "l": "22km easy @ Z2 HR<br>Keep the long run steady this week while Monday carries the main HM-specific load and Wednesday adds faster support."
+        "s": "18km long",
+        "l": "18km easy @ Z2 HR<br>Maintain HM runway without adding peak-HM fatigue."
       },
       {
         "t": "rest",
@@ -995,13 +995,13 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "22",
     "dates": "Sep 7–13",
-    "km": 64,
+    "km": 56,
     "phase": "hm3",
     "days": [
       {
         "t": "intv",
-        "s": "2×4km",
-        "l": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 2&times;4km @ 4:58/km, 4min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 12.5km total<br>Longest continuous HM-specific reps of plan."
+        "s": "3×2km",
+        "l": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 3&times;2km @ current 10K effort, 3min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 11.5km total<br>Benchmark 10K-strength workout."
       },
       {
         "t": "rec",
@@ -1011,7 +1011,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "thr",
         "s": "28min thr",
-        "l": "WU: 1.5km @ 6:40<br>Session: 28min continuous @ 4:50&ndash;4:55/km (HR 165&ndash;172)<br>CD: 1.5km @ 6:40<br><br>&asymp; 8.5km total<br>Threshold stays faster, but no longer carries the bigger load."
+        "l": "WU: 1.5km @ 6:40<br>Session: 28min continuous @ 4:50&ndash;4:55/km (HR 165&ndash;172)<br>CD: 1.5km @ 6:40<br><br>&asymp; 8.5km total<br>Aerobic ceiling work; HR governs."
       },
       {
         "t": "rec",
@@ -1025,8 +1025,8 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "lng",
-        "s": "24km prog long",
-        "l": "24km total<br>18km easy @ Z2 HR<br>Last 6km build: 2km around 5:10/km, 2km around 5:05/km, final 2km at 4:58/km<br>Specific finish; biggest overall week of the block."
+        "s": "20km long",
+        "l": "19&ndash;20km easy @ Z2 HR<br>Fueling practice if desired. No race-pace finish."
       },
       {
         "t": "rest",
@@ -1038,13 +1038,13 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "23",
     "dates": "Sep 14–20",
-    "km": 68,
+    "km": 57,
     "phase": "hm3",
     "days": [
       {
         "t": "intv",
-        "s": "3×3km",
-        "l": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 3&times;3km @ 4:58/km, 3min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 13km total<br>Return to big race-pace volume under cumulative fatigue."
+        "s": "2×3km",
+        "l": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 2&times;3km @ current 10K effort, 4min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 11.5km total<br>Long 10K reps &mdash; controlled, not a time trial."
       },
       {
         "t": "rec",
@@ -1054,7 +1054,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "thr",
         "s": "2×15min thr",
-        "l": "WU: 1.5km @ 6:40<br>Session: 2&times;15min @ 4:50&ndash;4:55/km (HR 165&ndash;172), 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 9km total<br>Slightly more manageable than Wk 22 so the long run can stay specific."
+        "l": "WU: 1.5km @ 6:40<br>Session: 2&times;15min @ 4:50&ndash;4:55/km (HR 165&ndash;172), 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 9km total<br>Keep this smooth so Monday remains the main 10K-specific load."
       },
       {
         "t": "rec",
@@ -1068,8 +1068,8 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "lng",
-        "s": "24km prog long",
-        "l": "24km total<br>18km easy, last 6km @ 4:58/km<br>Key long run &mdash; simple, specific, and late enough to matter."
+        "s": "20km long",
+        "l": "18&ndash;20km easy @ Z2 HR<br>Simple durability run; no fast finish."
       },
       {
         "t": "rest",
@@ -1081,13 +1081,13 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "24",
     "dates": "Sep 21–27",
-    "km": 54,
+    "km": 50,
     "phase": "hm3",
     "days": [
       {
         "t": "intv",
-        "s": "4×2km",
-        "l": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 4&times;2km @ 4:55&ndash;4:58/km, 2.5min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 12km total<br>Final substantial HM-specific session before freshening."
+        "s": "5×1km",
+        "l": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 5&times;1km @ current 10K effort, 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 10km total<br>Cutback week &mdash; keep rhythm, reduce load."
       },
       {
         "t": "rec",
@@ -1097,7 +1097,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "thr",
         "s": "20min thr",
-        "l": "WU: 1.5km @ 6:40<br>Session: 20min @ 4:52&ndash;4:55/km (HR 165&ndash;172)<br>CD: 1.5km @ 6:40<br><br>&asymp; 7.5km total<br>Cutback threshold."
+        "l": "WU: 1.5km @ 6:40<br>Session: 20min @ 4:52&ndash;4:55/km (HR 165&ndash;172)<br>CD: 1.5km @ 6:40<br><br>&asymp; 7.5km total<br>Cutback threshold support."
       },
       {
         "t": "rec",
@@ -1124,13 +1124,13 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "25",
     "dates": "Sep 28–Oct 4",
-    "km": 48,
+    "km": 47.5,
     "phase": "hm4",
     "days": [
       {
         "t": "intv",
         "s": "4×1km",
-        "l": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 4&times;1km @ 4:50/km, 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 8.5km total<br>Freshen week &mdash; modest volume reduction, keep the engine switched on."
+        "l": "WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 4&times;1km @ current 10K effort, 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 8.5km total<br>Freshen week &mdash; modest volume reduction, keep the engine switched on."
       },
       {
         "t": "rec",
@@ -1139,8 +1139,8 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "thr",
-        "s": "24min thr",
-        "l": "WU: 1.5km @ 6:40<br>Session: 24min @ 4:58/km (HR 165&ndash;172)<br>CD: 1.5km @ 6:40<br><br>&asymp; 8km total<br>Specific maintenance &mdash; not yet full taper."
+        "s": "20min thr",
+        "l": "WU: 1.5km @ 6:40<br>Session: 20min @ threshold effort (HR 165&ndash;172)<br>CD: 1.5km @ 6:40<br><br>&asymp; 7.5km total<br>Aerobic support &mdash; not yet full taper."
       },
       {
         "t": "rec",
@@ -1154,8 +1154,8 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "lng",
-        "s": "16km prog long",
-        "l": "16km total<br>First 12km easy @ Z2 HR<br>Last 4km @ 4:58/km (HM pace)<br>Last HM-pace long run."
+        "s": "16km long",
+        "l": "16km easy @ Z2 HR<br>Last longer run before the 10K taper."
       },
       {
         "t": "rest",
@@ -1167,13 +1167,13 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "26",
     "dates": "Oct 5–11",
-    "km": 37,
+    "km": 38,
     "phase": "hm4",
     "days": [
       {
         "t": "intv",
         "s": "4×800m",
-        "l": "WU: 1.5km @ 6:35 + 4&times;100m strides<br>Session: 4&times;800m @ 4:48&ndash;4:50/km, 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 7km total<br>Sharpener only."
+        "l": "WU: 1.5km @ 6:35 + 4&times;100m strides<br>Session: 4&times;800m @ slightly faster than 10K effort, 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 7km total<br>First taper sharpener; smooth form over pace."
       },
       {
         "t": "rec",
@@ -1197,8 +1197,8 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "lng",
-        "s": "12km long",
-        "l": "12km easy @ Z2 HR<br>Final long run &mdash; very easy, trust the training."
+        "s": "14km long",
+        "l": "12&ndash;14km easy @ Z2 HR<br>Final medium-long run &mdash; very easy, trust the training."
       },
       {
         "t": "rest",
@@ -1210,13 +1210,13 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "27",
     "dates": "Oct 12–18",
-    "km": 21,
+    "km": 28,
     "phase": "hm4",
     "days": [
       {
         "t": "intv",
         "s": "3×1km",
-        "l": "WU: 1.5km @ 6:35 + 4&times;100m strides<br>Session: 3&times;1km @ 4:55/km, 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 7km total<br>Keep legs turning over."
+        "l": "WU: 1.5km @ 6:35 + 4&times;100m strides<br>Session: 3&times;1km @ 10K effort, 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 7km total<br>Keep legs turning over without accumulating fatigue."
       },
       {
         "t": "rec",
@@ -1236,7 +1236,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "easy",
         "s": "Easy jog",
-        "l": "Easy jog<br>4km @ very easy"
+        "l": "Easy jog<br>6&ndash;8km @ Z2 HR"
       },
       {
         "t": "rest",
@@ -1289,8 +1289,8 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "race",
-        "s": "HM RACE",
-        "l": "RACE DAY<br>Half Marathon<br><br>Target: Sub 1:45:00<br>Pace: 4:58/km<br><br>The main event."
+        "s": "10K RACE",
+        "l": "RACE DAY<br>Oct 25 10K<br><br>Target: recalibrate after July 10K and Bali HM.<br><br>The main event."
       }
     ]
   }

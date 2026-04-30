@@ -96,6 +96,7 @@ end
 def race_label(text)
   return "LOMBOK 10K" if text.match?(/Lombok 10K/i)
   return "BALI HM" if text.match?(/Bali Half Marathon/i)
+  return "10K RACE" if text.match?(/10K/i)
   return "HM RACE" if text.match?(/Half Marathon/i)
 
   "Race"
