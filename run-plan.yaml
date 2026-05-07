@@ -11,7 +11,7 @@ blocks:
     weeks:
     - week_html: '1'
       dates_html: May 7&ndash;10
-      total_km_html: "~30km"
+      total_km_html: "~28&ndash;32km"
       template: Partial
       notes_html: Partial start week. Athlete is already workout-ready; no base-from-zero ramp.
       days:
@@ -41,7 +41,7 @@ blocks:
         content_html: Rest
     - week_html: '2'
       dates_html: May 11&ndash;17
-      total_km_html: "~50km"
+      total_km_html: "~56&ndash;62km"
       template: A
       days:
       - type: easy
@@ -69,7 +69,7 @@ blocks:
         content_html: Rest
     - week_html: '3'
       dates_html: May 18&ndash;24
-      total_km_html: "~54km"
+      total_km_html: "~57&ndash;63km"
       template: B
       days:
       - type: intv
@@ -97,7 +97,7 @@ blocks:
         content_html: Rest
     - week_html: '4'
       dates_html: May 25&ndash;31
-      total_km_html: "~56km"
+      total_km_html: "~61&ndash;66km"
       template: A
       days:
       - type: easy
@@ -125,7 +125,7 @@ blocks:
         content_html: Rest
     - week_html: '5'
       dates_html: Jun 1&ndash;7
-      total_km_html: "~47km"
+      total_km_html: "~50&ndash;56km"
       template: Down-ish
       notes_html: Down-ish week absorbs the first threshold block while keeping rhythm.
       days:
@@ -153,7 +153,7 @@ blocks:
         content_html: Rest
     - week_html: '6'
       dates_html: Jun 8&ndash;14
-      total_km_html: "~57km"
+      total_km_html: "~63&ndash;67km"
       template: A
       days:
       - type: easy
@@ -180,7 +180,7 @@ blocks:
         content_html: Rest
     - week_html: '7'
       dates_html: Jun 15&ndash;21
-      total_km_html: "~58km"
+      total_km_html: "~59&ndash;64km"
       template: C
       days:
       - type: intv
@@ -208,7 +208,7 @@ blocks:
         content_html: Rest
     - week_html: '8'
       dates_html: Jun 22&ndash;28
-      total_km_html: "~58km"
+      total_km_html: "~64&ndash;67km"
       template: A
       days:
       - type: easy
@@ -235,7 +235,7 @@ blocks:
         content_html: Rest
     - week_html: '9'
       dates_html: Jun 29&ndash;Jul 5
-      total_km_html: "~53km"
+      total_km_html: "~55&ndash;60km"
       template: B
       days:
       - type: intv
@@ -263,7 +263,7 @@ blocks:
         content_html: Rest
     - week_html: '10'
       dates_html: Jul 6&ndash;12
-      total_km_html: "~40km + race"
+      total_km_html: "~40&ndash;45km"
       template: Race-in-block
       notes_html: July 12 is a B-race benchmark inside the HM build, not a major peak.
       race_notes_html: "July 12 10K benchmark pacing: Km 1&ndash;2 4:55&ndash;5:00/km; Km 3&ndash;6 4:48&ndash;4:52/km if controlled; Km 7&ndash;8 hold or squeeze; Km 9&ndash;10 race hard if possible."
@@ -294,7 +294,7 @@ blocks:
         content_html: July 12 10K race / benchmark
     - week_html: '11'
       dates_html: Jul 13&ndash;19
-      total_km_html: "~48km"
+      total_km_html: "~52&ndash;58km"
       template: Recovery/A
       days:
       - type: easy
@@ -321,7 +321,7 @@ blocks:
         content_html: Rest
     - week_html: '12'
       dates_html: Jul 20&ndash;26
-      total_km_html: "~58km"
+      total_km_html: "~62&ndash;67km"
       template: A
       days:
       - type: easy
@@ -351,7 +351,7 @@ blocks:
     weeks:
     - week_html: '13'
       dates_html: Jul 27&ndash;Aug 2
-      total_km_html: "~58km"
+      total_km_html: "~60&ndash;65km"
       template: C
       days:
       - type: intv
@@ -379,7 +379,7 @@ blocks:
         content_html: Rest
     - week_html: '14'
       dates_html: Aug 3&ndash;9
-      total_km_html: "~63km"
+      total_km_html: "~68&ndash;73km"
       template: A
       days:
       - type: easy
@@ -406,7 +406,7 @@ blocks:
         content_html: Rest
     - week_html: '15'
       dates_html: Aug 10&ndash;16
-      total_km_html: "~58km"
+      total_km_html: "~60&ndash;65km"
       template: C / peak HM
       days:
       - type: easy
@@ -433,7 +433,7 @@ blocks:
         content_html: Rest
     - week_html: '16'
       dates_html: Aug 17&ndash;23
-      total_km_html: "~32km + race"
+      total_km_html: "~48&ndash;53km"
       template: HM taper
       race_notes_html: "Aug 23 HM A-race target: sub-1:45, about 4:59/km. Pacing: Km 1&ndash;5 5:03&ndash;5:08/km; Km 6&ndash;15 4:58&ndash;5:02/km; Km 16&ndash;19 hold effort; Km 20&ndash;21.1 push if possible."
       days:
@@ -466,7 +466,7 @@ blocks:
     weeks:
     - week_html: '17'
       dates_html: Aug 24&ndash;30
-      total_km_html: "~38km"
+      total_km_html: "~38&ndash;44km"
       template: Recovery
       days:
       - type: rec
@@ -492,7 +492,7 @@ blocks:
         content_html: Rest
     - week_html: '18'
       dates_html: Aug 31&ndash;Sep 6
-      total_km_html: "~49km"
+      total_km_html: "~50&ndash;56km"
       template: B
       days:
       - type: intv
@@ -520,7 +520,7 @@ blocks:
         content_html: Rest
     - week_html: '19'
       dates_html: Sep 7&ndash;13
-      total_km_html: "~52km"
+      total_km_html: "~55&ndash;61km"
       template: B
       days:
       - type: intv
@@ -548,7 +548,7 @@ blocks:
         content_html: Rest
     - week_html: '20'
       dates_html: Sep 14&ndash;20
-      total_km_html: "~52km"
+      total_km_html: "~56&ndash;62km"
       template: C
       days:
       - type: intv
@@ -575,7 +575,7 @@ blocks:
         content_html: Rest
     - week_html: '21'
       dates_html: Sep 21&ndash;27
-      total_km_html: "~50km"
+      total_km_html: "~55&ndash;61km"
       template: B
       days:
       - type: intv
@@ -603,7 +603,7 @@ blocks:
         content_html: Rest
     - week_html: '22'
       dates_html: Sep 28&ndash;Oct 4
-      total_km_html: "~52km"
+      total_km_html: "~55&ndash;61km"
       template: B
       days:
       - type: intv
@@ -631,7 +631,7 @@ blocks:
         content_html: Rest
     - week_html: '23'
       dates_html: Oct 5&ndash;11
-      total_km_html: "~50km"
+      total_km_html: "~53&ndash;59km"
       template: C
       days:
       - type: intv
@@ -658,7 +658,7 @@ blocks:
         content_html: Rest
     - week_html: '24'
       dates_html: Oct 12&ndash;18
-      total_km_html: "~48km"
+      total_km_html: "~51&ndash;57km"
       template: B / peak 10K
       days:
       - type: intv
@@ -686,7 +686,7 @@ blocks:
         content_html: Rest
     - week_html: '25'
       dates_html: Oct 19&ndash;25
-      total_km_html: "~25km + race"
+      total_km_html: "~36&ndash;41km"
       template: 10K taper
       race_notes_html: "Oct 25 10K A-race target: sub-45, about 4:30/km. Label as priority 10K."
       days:

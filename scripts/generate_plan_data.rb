@@ -32,6 +32,9 @@ TYPE_SUFFIX = {
   "race" => ""
 }.freeze
 
+QUALITY_TAGS = %w[threshold 10k-specific hm-specific steady].freeze
+QUALITY_TYPES = %w[intv thr hm steady].freeze
+
 def plain_html(value)
   value.to_s
        .gsub(/<br\s*\/?>/i, "\n")
@@ -108,6 +111,48 @@ def race_label(text)
   "Race"
 end
 
+def quality_day?(day)
+  return false if %w[race rest easy rec shake].include?(day.fetch("type"))
+
+  tags = Array(day["tags"])
+  QUALITY_TYPES.include?(day.fetch("type")) || (tags & QUALITY_TAGS).any?
+end
+
+def warmup_for(day)
+  type = day.fetch("type")
+  tags = Array(day["tags"])
+
+  return "First 20&ndash;30 min easy before the prescribed long-run quality." if type == "lng"
+  return "15&ndash;20 min easy before progressing into the steady work." if type == "med" || type == "steady"
+  return "15&ndash;20 min easy + drills + 4 relaxed strides." if type == "intv" || tags.include?("10k-specific")
+
+  "15&ndash;20 min easy + 3&ndash;4 relaxed strides."
+end
+
+def cooldown_for(day)
+  type = day.fetch("type")
+  text = plain_html(day.fetch("content_html"))
+
+  if type == "lng" && text.match?(/\b(last|final)\b/i)
+    return "Optional 5&ndash;10 min very easy after the prescribed time if you need to downshift."
+  end
+
+  return "5&ndash;10 min easy at the end." if type == "med" || type == "steady"
+
+  "10&ndash;15 min easy."
+end
+
+def detail_html(day)
+  return day.fetch("content_html") unless quality_day?(day)
+  return day.fetch("content_html") if day.fetch("content_html").match?(/\AWU:/i)
+
+  [
+    "WU: #{warmup_for(day)}",
+    "Session: #{day.fetch("content_html")}",
+    "CD: #{cooldown_for(day)}"
+  ].join("<br>")
+end
+
 data = YAML.load_file(YAML_PATH)
 plan_block = data.fetch("blocks").first || {}
 
@@ -119,10 +164,11 @@ weeks = data.fetch("blocks").flat_map do |block|
         {
           "t" => day.fetch("type"),
           "s" => short_label(day),
-          "l" => day.fetch("content_html"),
+          "l" => detail_html(day),
           "tags" => day["tags"],
           "pace" => day["pace_html"],
-          "priority" => day["priority"]
+          "priority" => day["priority"],
+          "raceNotes" => day.fetch("type") == "race" ? week["race_notes_html"] : nil
         }.compact
       end
 
@@ -130,10 +176,10 @@ weeks = data.fetch("blocks").flat_map do |block|
         "id" => id,
         "dates" => plain_html(week.fetch("dates_html")).gsub("-", "–"),
         "km" => km_value(week.fetch("total_km_html")),
+        "kmLabel" => plain_html(week.fetch("total_km_html")).gsub("-", "–"),
         "phase" => PHASE_BY_WEEK.fetch(id),
         "template" => week["template"],
         "notes" => week["notes_html"],
-        "raceNotes" => week["race_notes_html"],
         "cutback" => week.fetch("week_html").to_s.include?("↓"),
         "race" => days.any? { |day| day["t"] == "race" },
         "days" => days
@@ -146,7 +192,6 @@ File.write(OUTPUT_PATH, <<~JS)
   // Generated from run-plan.yaml by scripts/generate_plan_data.rb.
   // Do not edit by hand.
   window.RUN_PLAN_META = #{JSON.pretty_generate({
-    "paceGuide" => plan_block["pace_guide_html"],
     "planNote" => plan_block["plan_note_html"]
   }.compact)};
   window.RUN_PLAN_WEEKS = #{JSON.pretty_generate(weeks)};

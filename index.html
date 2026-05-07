@@ -370,7 +370,7 @@ function DayDetailCard({ selectedKey, completed, setCompleted, onGoToToday, card
             lineHeight:1.55,
           }}>{decodeHtml(session.week.notes)}</div>
         ) : null}
-        {session.week.raceNotes ? (
+        {session.day.raceNotes ? (
           <div style={{
             marginTop:4,
             padding:'9px 10px',
@@ -380,7 +380,7 @@ function DayDetailCard({ selectedKey, completed, setCompleted, onGoToToday, card
             fontSize:12.5,
             color:'var(--text)',
             lineHeight:1.55,
-          }}>{decodeHtml(session.week.raceNotes)}</div>
+          }}>{decodeHtml(session.day.raceNotes)}</div>
         ) : null}
       </div>
 
@@ -444,7 +444,7 @@ function Countdowns() {
 }
 
 function PlanNotes() {
-  if (!PLAN_META?.paceGuide && !PLAN_META?.planNote) return null;
+  if (!PLAN_META?.planNote) return null;
   return (
     <div style={{
       background:'var(--surf)',
@@ -457,18 +457,10 @@ function PlanNotes() {
       color:'var(--muted)',
       lineHeight:1.6,
     }}>
-      {PLAN_META.paceGuide ? (
-        <div>
-          <div style={{fontFamily:'var(--mono)',fontSize:9,letterSpacing:1.5,color:'var(--run)',marginBottom:5}}>PACE GUIDE</div>
-          <div dangerouslySetInnerHTML={{__html:PLAN_META.paceGuide}} />
-        </div>
-      ) : null}
-      {PLAN_META.planNote ? (
-        <div>
-          <div style={{fontFamily:'var(--mono)',fontSize:9,letterSpacing:1.5,color:'var(--muted2)',marginBottom:5}}>STRUCTURE</div>
-          <div dangerouslySetInnerHTML={{__html:PLAN_META.planNote}} />
-        </div>
-      ) : null}
+      <div>
+        <div style={{fontFamily:'var(--mono)',fontSize:9,letterSpacing:1.5,color:'var(--muted2)',marginBottom:5}}>STRUCTURE</div>
+        <div dangerouslySetInnerHTML={{__html:PLAN_META.planNote}} />
+      </div>
     </div>
   );
 }
@@ -550,7 +542,7 @@ function VolumeChart() {
     <div>
       <SectionHead
         label="WEEKLY VOLUME"
-        meta={`Wk ${activeWeek.id} · ${activeWeek.km}km · ${activeWeek.dates}`}
+        meta={`Wk ${activeWeek.id} · ${activeWeek.kmLabel || `${activeWeek.km}km`} · ${activeWeek.dates}`}
       />
       <div style={{display:'flex',alignItems:'flex-end',gap:2,height,marginBottom:6}}>
         {WEEKS.map((w, index) => {
@@ -566,7 +558,7 @@ function VolumeChart() {
             <button
               key={w.id}
               type="button"
-              title={`Wk ${w.id}: ${w.km}km`}
+              title={`Wk ${w.id}: ${w.kmLabel || `${w.km}km`}`}
               onMouseEnter={() => setActiveWeekId(w.id)}
               onFocus={() => setActiveWeekId(w.id)}
               onTouchStart={() => setActiveWeekId(w.id)}
@@ -604,7 +596,7 @@ function WeeklyGrid({ completed, selectedKey, setSelectedKey, isWide }) {
   const maxKm = 68;
   const columns = isWide
     ? 'minmax(36px,auto) minmax(74px,auto) minmax(74px,auto) minmax(32px,auto) repeat(7, minmax(28px,1fr)) minmax(42px,auto)'
-    : 'minmax(30px,auto) minmax(64px,auto) minmax(48px,auto) minmax(28px,auto) repeat(7, minmax(22px,1fr))';
+    : 'minmax(30px,auto) minmax(64px,auto) minmax(28px,auto) repeat(7, minmax(22px,1fr))';
   return (
     <div>
       <SectionHead label="FULL GRID · 25 WEEKS × 7 DAYS" meta="tap a day to load the detail card"/>
@@ -619,7 +611,7 @@ function WeeklyGrid({ completed, selectedKey, setSelectedKey, isWide }) {
         letterSpacing:1,
         marginBottom:4,
       }}>
-        <div>WK</div><div>DATES</div><div>TPL</div><div style={{textAlign:'right'}}>KM</div>
+        <div>WK</div><div>DATES</div>{isWide ? <div>TPL</div> : null}<div style={{textAlign:'right'}}>KM</div>
         {DAY_ABBR.map(d => <div key={d} style={{textAlign:'center'}}>{d}</div>)}
         {isWide ? <div style={{textAlign:'right'}}>VOL</div> : null}
       </div>
@@ -657,16 +649,18 @@ function WeeklyGrid({ completed, selectedKey, setSelectedKey, isWide }) {
                     {week.id}{week.cutback ? <span style={{color:'var(--muted)',fontWeight:400}}>↓</span> : null}
                   </div>
                   <div style={{fontFamily:'var(--mono)',fontSize:9.5,color:'var(--muted2)'}}>{week.dates}</div>
-                  <div title={week.template || ''} style={{
-                    fontFamily:'var(--mono)',
-                    fontSize:8.5,
-                    color:'var(--muted)',
-                    whiteSpace:'nowrap',
-                    overflow:'hidden',
-                    textOverflow:'ellipsis',
-                  }}>{week.template || ''}</div>
-                  <div style={{fontFamily:'var(--mono)',fontSize:10,color:isTodayWeek ? 'var(--run)' : 'var(--muted)',textAlign:'right'}}>
-                    {week.km}
+                  {isWide ? (
+                    <div title={week.template || ''} style={{
+                      fontFamily:'var(--mono)',
+                      fontSize:8.5,
+                      color:'var(--muted)',
+                      whiteSpace:'nowrap',
+                      overflow:'hidden',
+                      textOverflow:'ellipsis',
+                    }}>{week.template || ''}</div>
+                  ) : null}
+                  <div title={week.kmLabel || `${week.km}km`} style={{fontFamily:'var(--mono)',fontSize:10,color:isTodayWeek ? 'var(--run)' : 'var(--muted)',textAlign:'right'}}>
+                    {week.kmLabel ? week.kmLabel.replace(/^~/, '').replace(/km$/, '') : week.km}
                   </div>
 
                   {week.days.map((day, dayIndex) => {
@@ -923,8 +917,8 @@ function App() {
                 <DayDetailCard selectedKey={selectedKey} completed={completed} setCompleted={setCompleted} onGoToToday={() => setSelectedKey(TODAY_KEY)} cardRef={cardRef}/>
                 <Countdowns/>
                 <PlanNotes/>
-                <PhaseTimeline/>
                 <VolumeChart/>
+                <PhaseTimeline/>
               </div>
               <WeeklyGrid completed={completed} selectedKey={selectedKey} setSelectedKey={setSelectedKey} isWide={isWide}/>
             </div>
@@ -941,9 +935,9 @@ function App() {
               </div>
               <Countdowns/>
               <PlanNotes/>
-              <PhaseTimeline/>
               <WeeklyGrid completed={completed} selectedKey={selectedKey} setSelectedKey={setSelectedKey} isWide={isWide}/>
               <VolumeChart/>
+              <PhaseTimeline/>
             </div>
           )}
         </div>
