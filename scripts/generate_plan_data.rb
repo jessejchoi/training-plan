@@ -9,16 +9,13 @@ YAML_PATH = File.join(ROOT, "run-plan.yaml")
 OUTPUT_PATH = File.join(ROOT, "run-data.generated.js")
 
 PHASE_BY_WEEK = {
-  "R1" => "ret", "R2" => "ret",
-  "1" => "p1", "2" => "p1", "3" => "p1",
-  "4" => "p2", "5" => "p2", "6" => "p2", "7" => "p2", "8" => "p2", "9" => "p2",
-  "10" => "p3", "11" => "p3",
-  "12" => "taper", "13" => "taper",
-  "14" => "hm1", "15" => "hm1", "16" => "hm1",
-  "17" => "hm2", "18" => "hm2", "19" => "hm2", "20" => "hm2",
-  "21" => "hm3", "22" => "hm3", "23" => "hm3", "24" => "hm3",
-  "25" => "hm4", "26" => "hm4", "27" => "hm4",
-  "28" => "hmr"
+  "1" => "hm-build", "2" => "hm-build", "3" => "hm-build", "4" => "hm-build",
+  "5" => "hm-build", "6" => "hm-build", "7" => "hm-build", "8" => "hm-build",
+  "9" => "hm-build", "10" => "hm-build", "11" => "hm-build", "12" => "hm-build",
+  "13" => "hm-peak", "14" => "hm-peak", "15" => "hm-peak", "16" => "hm-peak",
+  "17" => "tenk-sharpen", "18" => "tenk-sharpen", "19" => "tenk-sharpen",
+  "20" => "tenk-sharpen", "21" => "tenk-sharpen", "22" => "tenk-sharpen",
+  "23" => "tenk-sharpen", "24" => "tenk-sharpen", "25" => "tenk-sharpen"
 }.freeze
 
 TYPE_SUFFIX = {
@@ -27,6 +24,10 @@ TYPE_SUFFIX = {
   "rec" => "rec",
   "easy" => "",
   "lng" => "long",
+  "med" => "med",
+  "steady" => "steady",
+  "hm" => "HM",
+  "shake" => "shake",
   "rest" => "",
   "race" => ""
 }.freeze
@@ -65,6 +66,10 @@ def short_label(day)
   return "Rest" if type == "rest"
   return race_label(text) if type == "race"
 
+  unless first_line.match?(/\A(?:WU|Session|CD):/i)
+    return first_line.split(/\s+@\s+/).first.gsub("&ndash;", "-")
+  end
+
   session = text[/Session:\s*([^@,(]+)/, 1]&.strip
   distance = first_line[/\b\d+(?:\.\d+)?\s*km\b/i]&.gsub(/\s+/, "")
 
@@ -94,8 +99,9 @@ def short_label(day)
 end
 
 def race_label(text)
-  return "LOMBOK 10K" if text.match?(/Lombok 10K/i)
-  return "BALI HM" if text.match?(/Bali Half Marathon/i)
+  return "JULY 10K" if text.match?(/July 12 10K/i)
+  return "OCT 10K" if text.match?(/Oct 25 10K/i)
+  return "HM RACE" if text.match?(/Aug 23|Half Marathon/i)
   return "10K RACE" if text.match?(/10K/i)
   return "HM RACE" if text.match?(/Half Marathon/i)
 
@@ -103,6 +109,7 @@ def race_label(text)
 end
 
 data = YAML.load_file(YAML_PATH)
+plan_block = data.fetch("blocks").first || {}
 
 weeks = data.fetch("blocks").flat_map do |block|
   block.fetch("phases").flat_map do |phase|
@@ -112,8 +119,11 @@ weeks = data.fetch("blocks").flat_map do |block|
         {
           "t" => day.fetch("type"),
           "s" => short_label(day),
-          "l" => day.fetch("content_html")
-        }
+          "l" => day.fetch("content_html"),
+          "tags" => day["tags"],
+          "pace" => day["pace_html"],
+          "priority" => day["priority"]
+        }.compact
       end
 
       {
@@ -121,10 +131,13 @@ weeks = data.fetch("blocks").flat_map do |block|
         "dates" => plain_html(week.fetch("dates_html")).gsub("-", "–"),
         "km" => km_value(week.fetch("total_km_html")),
         "phase" => PHASE_BY_WEEK.fetch(id),
+        "template" => week["template"],
+        "notes" => week["notes_html"],
+        "raceNotes" => week["race_notes_html"],
         "cutback" => week.fetch("week_html").to_s.include?("↓"),
         "race" => days.any? { |day| day["t"] == "race" },
         "days" => days
-      }.reject { |key, value| %w[cutback race].include?(key) && value == false }
+      }.reject { |key, value| value.nil? || (%w[cutback race].include?(key) && value == false) }
     end
   end
 end
@@ -132,5 +145,9 @@ end
 File.write(OUTPUT_PATH, <<~JS)
   // Generated from run-plan.yaml by scripts/generate_plan_data.rb.
   // Do not edit by hand.
+  window.RUN_PLAN_META = #{JSON.pretty_generate({
+    "paceGuide" => plan_block["pace_guide_html"],
+    "planNote" => plan_block["plan_note_html"]
+  }.compact)};
   window.RUN_PLAN_WEEKS = #{JSON.pretty_generate(weeks)};
 JS

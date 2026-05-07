@@ -20,6 +20,8 @@ const T = {
   intv: '#f1de58',
   intvBg: '#211d08',
   intvDim: '#5b5214',
+  med: '#67e8f9',
+  medBg: '#071b1f',
   mob: '#ffa94d',
   mobBg: '#1e1408',
   mobDim: '#4a3010',
@@ -43,6 +45,10 @@ const DAY_TYPES = {
   rec:  { label: 'RECOVERY', color: T.rec, bg: T.recBg },
   intv: { label: 'INTERVAL', color: T.intv, bg: T.intvBg },
   thr:  { label: 'THRESHOLD', color: T.thr, bg: T.mobBg },
+  med:  { label: 'MEDIUM-LONG', color: T.med, bg: T.medBg },
+  steady: { label: 'STEADY', color: T.med, bg: T.medBg },
+  hm:   { label: 'HM-SPECIFIC', color: T.str, bg: T.strBg },
+  shake: { label: 'SHAKEOUT', color: T.rec, bg: T.recBg },
   lng:  { label: 'LONG', color: T.str, bg: T.strBg },
   race: { label: 'RACE', color: T.race, bg: T.raceBg },
 };
@@ -51,20 +57,14 @@ const DAY_ABBR = ['MON','TUE','WED','THU','FRI','SAT','SUN'];
 
 // Phase structure
 const PHASES = [
-  { id: 'ret', name: 'Injury Return', startWk: 'R1', endWk: 'R2', color: T.muted },
-  { id: 'p1', name: 'Phase 1 · Aerobic Base', startWk: '1', endWk: '3', color: T.run },
-  { id: 'p2', name: 'Phase 2 · Race Build', startWk: '4', endWk: '9', color: T.run },
-  { id: 'p3', name: 'Phase 3 · Peak', startWk: '10', endWk: '11', color: T.run },
-  { id: 'taper', name: '10K Taper & Race', startWk: '12', endWk: '13', color: T.race },
-  { id: 'hm1', name: '10K-HM Bridge', startWk: '14', endWk: '16', color: T.muted },
-  { id: 'hm2', name: 'Bali HM Bridge', startWk: '17', endWk: '20', color: T.run },
-  { id: 'hm3', name: 'Oct 10K Build', startWk: '21', endWk: '24', color: T.run },
-  { id: 'hm4', name: '10K Freshen/Taper', startWk: '25', endWk: '27', color: T.str },
-  { id: 'hmr', name: 'Oct 10K Race', startWk: '28', endWk: '28', color: T.race },
+  { id: 'hm-build', name: 'HM-first build with July 10K benchmark', startWk: '1', endWk: '12', color: T.run },
+  { id: 'hm-peak', name: 'HM-specific peak block', startWk: '13', endWk: '16', color: T.str },
+  { id: 'tenk-sharpen', name: 'Post-HM recovery and 10K sharpening', startWk: '17', endWk: '25', color: T.intv },
 ];
 
 // Generated from run-plan.yaml by scripts/generate_plan_data.rb.
 const WEEKS = window.RUN_PLAN_WEEKS || [];
+const PLAN_META = window.RUN_PLAN_META || {};
 
 // Date helpers
 function zonedDateParts(timeZone) {
@@ -90,10 +90,10 @@ function diffWholeDays(fromUtc, toUtc) {
   return Math.floor((toUtc - fromUtc) / 86400000);
 }
 
-const JAKARTA_TODAY = zonedDateParts('Asia/Jakarta');
-const PLAN_START = { year: 2026, month: 3, day: 30 };
+const LOCAL_TODAY = zonedDateParts('America/Los_Angeles');
+const PLAN_START = { year: 2026, month: 5, day: 4 };
 const planStartUtc = utcDateFromParts(PLAN_START);
-const todayUtc = utcDateFromParts(JAKARTA_TODAY);
+const todayUtc = utcDateFromParts(LOCAL_TODAY);
 const planDayOffset = diffWholeDays(planStartUtc, todayUtc);
 const clampedDayOffset = Math.max(0, Math.min(planDayOffset, (WEEKS.length * 7) - 1));
 const TODAY_WEEK_ID = WEEKS[Math.floor(clampedDayOffset / 7)].id;
@@ -108,11 +108,12 @@ function getTodayDay() {
 }
 
 const DAYS_TO_10K = Math.max(0, diffWholeDays(todayUtc, utcDateFromParts({ year: 2026, month: 7, day: 12 })));
-const DAYS_TO_HM = Math.max(0, diffWholeDays(todayUtc, utcDateFromParts({ year: 2026, month: 10, day: 25 })));
+const DAYS_TO_HM = Math.max(0, diffWholeDays(todayUtc, utcDateFromParts({ year: 2026, month: 8, day: 23 })));
+const DAYS_TO_OCT_10K = Math.max(0, diffWholeDays(todayUtc, utcDateFromParts({ year: 2026, month: 10, day: 25 })));
 
 Object.assign(window, {
-  T, DAY_TYPES, DAY_ABBR, PHASES, WEEKS,
+  T, DAY_TYPES, DAY_ABBR, PHASES, WEEKS, PLAN_META,
   TODAY_WEEK_ID, TODAY_DAY_INDEX,
   getWeek, getTodayWeek, getTodayDay,
-  DAYS_TO_10K, DAYS_TO_HM,
+  DAYS_TO_10K, DAYS_TO_HM, DAYS_TO_OCT_10K,
 });

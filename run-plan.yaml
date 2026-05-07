@@ -1,800 +1,718 @@
 # Edit this file, then run:
 #   ruby scripts/generate_plan_data.rb
 ---
-version: 1
+version: 2
 blocks:
-- kind: run-table-section
-  section_id: injury-return
-  section_style: padding-top:32px;
-  legend:
-  - class: ld-rest
-    label_html: Rest
-  - class: ld-easy
-    label_html: Easy
-  - class: ld-rec
-    label_html: Recovery
-  - class: ld-lng
-    label_html: Long run
-  - class: ld-intv
-    label_html: Intervals
-  - class: ld-thr
-    label_html: Threshold
-  - class: ld-race
-    label_html: Race
+- kind: race-priority-plan
+  section_id: race-priority-2026
   phases:
-  - id: 
-    title_html: Injury Return Block &middot; Weeks R1&ndash;R2 &middot; Mar 30 &ndash;
-      Apr 12
-    weeks:
-    - week_html: R1
-      dates_html: Mar 30&ndash;Apr 5
-      total_km_html: "~20km"
-      days:
-      - type: rest
-        content_html: Rest
-      - type: easy
-        content_html: Easy 5km @ Z2 HR<br>Stop immediately if pain &gt;3/10. Walk
-          home if needed.
-      - type: rest
-        content_html: Rest
-      - type: easy
-        content_html: Easy 5km @ Z2 HR<br>Same rule &mdash; 3/10 is the ceiling.
-      - type: rest
-        content_html: Rest
-      - type: easy
-        content_html: Easy 5km @ Z2 HR
-      - type: easy
-        content_html: Easy 5km @ Z2 HR<br>Optional &mdash; only if fully pain-free
-          all week.
-    - week_html: R2
-      dates_html: Apr 6&ndash;12
-      total_km_html: "~38km"
-      days:
-      - type: rest
-        content_html: Rest
-      - type: easy
-        content_html: Easy 6km @ Z2 HR<br>+ 4&times;100m strides (walk back, relaxed,
-          no effort)
-      - type: rest
-        content_html: Rest or cross-train<br>30min easy bike/pool
-      - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 15min @ comfortably hard effort
-          (HR 165&ndash;170, expect ~5:30&ndash;5:40 in heat)<br>CD: 1.5km @ 6:40<br><br>&asymp;
-          6km total<br>Gentle threshold intro &mdash; HR governs, ignore pace.'
-      - type: rec
-        content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
-      - type: easy
-        content_html: Easy 7km @ Z2 HR
-      - type: lng
-        content_html: Long run &mdash; Easy 12km @ Z2 HR<br>Monitor throughout &mdash;
-          back off if anything feels off.
-  - id: phase1
-    title_html: Phase 1 &mdash; Aerobic Base &middot; Weeks 1&ndash;3 &middot; Apr
-      13 &ndash; May 3
+  - id: hm-build
+    title_html: HM-first build with July 10K benchmark &middot; Weeks 1&ndash;12 &middot; May 7 &ndash; Jul 26
     weeks:
     - week_html: '1'
-      dates_html: Apr 13&ndash;19
-      total_km_html: "~49km"
+      dates_html: May 7&ndash;10
+      total_km_html: "~30km"
+      template: Partial
+      notes_html: Partial start week. Athlete is already workout-ready; no base-from-zero ramp.
       days:
       - type: rest
-        content_html: Rest
-      - type: intv
-        content_html: 'WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 8&times;400m
-          @ 4:45/km, 75s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 7.5km total<br>Flat
-          interval entry &mdash; short and fast, neuromuscular without grade. Step
-          up to 800m next week.'
-      - type: rec
-        content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
-      - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 22min continuous @ 5:20/km or
-          HR 165&ndash;170 (&asymp;4.2km)<br>CD: 1.5km @ 6:40<br><br>&asymp; 7km total<br>First
-          continuous threshold &mdash; HR override if ceiling hit before pace.'
-      - type: rec
-        content_html: Cross-train or recovery 5km<br>If legs heavy from Tue+Thu, take
-          the bike.
+        tags: [recovery]
+        content_html: None / already passed
+      - type: rest
+        tags: [recovery]
+        content_html: None / already passed
+      - type: rest
+        tags: [recovery]
+        content_html: None / already passed
       - type: easy
-        content_html: Easy 8km @ Z2 HR<br>+ 8&times;10s hill sprints (treadmill 8&ndash;10%,
-          max effort, 2min full walk rest)
+        tags: [easy, strides]
+        pace_html: Easy effort, likely 6:00&ndash;7:00+/km
+        content_html: Easy 50&ndash;60 min + strides
+      - type: easy
+        tags: [easy]
+        pace_html: Easy effort, likely 6:00&ndash;7:00+/km
+        content_html: Easy 40&ndash;45 min
       - type: lng
-        content_html: 16km easy<br>@ Z2 HR
+        tags: [long-run, easy]
+        pace_html: Easy effort
+        content_html: Long 90 min easy
+      - type: rest
+        tags: [recovery]
+        content_html: Rest
     - week_html: '2'
-      dates_html: Apr 20&ndash;26
-      total_km_html: "~54km"
-      days:
-      - type: rest
-        content_html: Rest
-      - type: intv
-        content_html: 'WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 6&times;800m
-          @ 4:50/km, 90s jog rest (target 155&ndash;160 bpm)<br>CD: 1.5km @ 6:40<br><br>&asymp;
-          10km total<br>HR override: if HR &gt;170 before rep ends, slow down.'
-      - type: rec
-        content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
-      - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 26min continuous @ 5:15/km (HR
-          165&ndash;170) (&asymp;5km)<br>CD: 1.5km @ 6:40<br><br>&asymp; 8km total<br>Continue
-          the aerobic build &mdash; smoother and longer than Wk 1.'
-      - type: rec
-        content_html: Cross-train or recovery 5km<br>If legs heavy from Tue+Thu, take
-          the bike.
-      - type: easy
-        content_html: Easy 8km @ Z2 HR<br>+ 8&times;10s hill sprints (treadmill 8&ndash;10%,
-          max effort, 2min full walk rest)
-      - type: lng
-        content_html: 18km easy<br>@ Z2 HR
-    - week_html: '3'
-      dates_html: Apr 27&ndash;May 3
-      total_km_html: "~39&ndash;43km"
-      days:
-      - type: rest
-        content_html: Rest
-      - type: intv
-        content_html: 'WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 4&times;1km
-          @ 4:45&ndash;4:50/km, 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 9&ndash;9.5km
-          total<br>Reduced interval volume while foot settles. Stop if pain changes
-          stride or rises above 3/10.'
-      - type: rest
-        content_html: Rest / travel day<br>20+ hr Indo-to-US flight. Walking and
-          mobility only.
-      - type: rec
-        content_html: Very easy shakeout 4&ndash;5km, HR cap 140&ndash;145 bpm<br>Or
-          rest if sleep is poor after travel.
-      - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 2&times;10&ndash;12min @ threshold
-          HR/effort (HR 165&ndash;172), 2&ndash;3min jog/walk rest<br>CD: 1.5km
-          @ 6:40<br><br>&asymp; 7&ndash;8km total<br>Travel-adjusted threshold
-          &mdash; controlled effort, no chasing pace while jetlagged.'
-      - type: rec
-        content_html: Recovery 4&ndash;5km @ Z1/Z2 HR<br>Or rest if travel fatigue
-          or foot irritation lingers.
-      - type: lng
-        content_html: 14&ndash;16km easy @ Z2 HR<br>Flat route preferred. No fast
-          finish.
-  - id: phase2
-    title_html: Phase 2 &mdash; Race-Specific Build &middot; Weeks 4&ndash;8 &middot;
-      May 4 &ndash; Jun 7
-    weeks:
-    - week_html: 4 &darr;
-      dates_html: May 4&ndash;10
-      total_km_html: "~42&ndash;45km"
-      days:
-      - type: rest
-        content_html: Rest<br>Protected recovery day after travel-adjusted threshold
-          and long run.
-      - type: intv
-        content_html: 'WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 4&times;1.2km
-          @ 4:48&ndash;4:50/km, 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 9.5km
-          total<br>Controlled rebuild &mdash; reduce to 4&times;1km if jetlag or
-          foot soreness persists.'
-      - type: rec
-        content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
-      - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 4&times;6min @ 5:08&ndash;5:12/km
-          (HR 165&ndash;172), 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 8km
-          total<br>Keep as planned only if Tuesday was normal; otherwise reduce to
-          3&times;6min.'
-      - type: rec
-        content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
-      - type: lng
-        content_html: 15&ndash;16km easy<br>@ Z2 HR<br>Flat route preferred. No
-          fast finish.
-      - type: rest
-        content_html: Rest<br>Clean break before Week 5.
-    - week_html: '5'
       dates_html: May 11&ndash;17
-      total_km_html: "~43&ndash;48km"
+      total_km_html: "~50km"
+      template: A
       days:
-      - type: intv
-        content_html: 'WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 4&times;1.5km
-          @ 4:46&ndash;4:48/km, 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 10.5km
-          total<br>First substantial specific workout &mdash; keep as planned only
-          if Sunday rest absorbed well and foot is normal.'
-      - type: rec
-        content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
-      - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 2&times;10&ndash;12min @ threshold
-          HR/effort (HR 165&ndash;172), 3min walk/jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp;
-          7&ndash;8km total<br>Reduced before travel rest days &mdash; keep the aerobic
-          signal without forcing fatigue.'
-      - type: rest
-        content_html: Rest / travel day<br>Forced rest.
-      - type: rest
-        content_html: Rest / travel day<br>Likely forced rest.
       - type: easy
-        content_html: Easy shakeout 5&ndash;7km @ Z2 HR<br>Optional 4&times;100m
-          strides if legs feel normal. Skip hill work.
+        tags: [easy]
+        content_html: Easy 45 min
+      - type: thr
+        tags: [threshold]
+        pace_html: 5:05&ndash;5:15/km
+        content_html: 3 x 12 min threshold @ ~5:05&ndash;5:15/km, 3 min jog recovery
+      - type: easy
+        tags: [easy]
+        content_html: Easy 45&ndash;50 min
+      - type: med
+        tags: [medium-long, steady]
+        pace_html: Steady roughly 5:35&ndash;5:55/km
+        content_html: Medium-long 70 min, last 20 min steady
+      - type: easy
+        tags: [easy, strides]
+        content_html: Easy 40 min + strides
       - type: lng
-        content_html: 16&ndash;18km easy @ Z2 HR<br>No fast finish after travel.
-    - week_html: '6'
+        tags: [long-run, easy]
+        content_html: Long 95 min easy
+      - type: rest
+        tags: [recovery]
+        content_html: Rest
+    - week_html: '3'
       dates_html: May 18&ndash;24
-      total_km_html: "~57km"
+      total_km_html: "~54km"
+      template: B
       days:
       - type: intv
-        content_html: 'WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 3&times;2km
-          @ 4:48/km, 3min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 10.5km total<br>First
-          truly long specific reps of the block &mdash; key economy session.'
-      - type: rec
-        content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
-      - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 2&times;15min @ 5:05&ndash;5:08/km
-          (HR 165&ndash;172), 3min walk/jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp;
-          9km total<br>Strong threshold load without turning the week into overload.'
-      - type: rec
-        content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
+        tags: [10k-specific]
+        pace_html: 4:50&ndash;4:55/km
+        content_html: 6 x 1 km @ ~4:50&ndash;4:55/km, 90 sec&ndash;2 min recovery
       - type: easy
-        content_html: Easy 7km @ Z2 HR<br>+ 6&times;10s hill sprints (treadmill 8&ndash;10%,
-          max effort, 2min full walk rest)
+        tags: [easy]
+        content_html: Easy 45 min
+      - type: easy
+        tags: [easy]
+        content_html: Easy 45&ndash;50 min
+      - type: thr
+        tags: [threshold, steady]
+        pace_html: 5:10&ndash;5:20/km
+        content_html: 2 x 20 min threshold/strong aerobic @ ~5:10&ndash;5:20/km
+      - type: easy
+        tags: [easy]
+        content_html: Easy 40 min
       - type: lng
-        content_html: 18km easy<br>@ Z2 HR<br>Let Monday and Wednesday be the work.
+        tags: [long-run, easy]
+        content_html: Long 100 min easy
       - type: rest
+        tags: [recovery]
+        content_html: Rest
+    - week_html: '4'
+      dates_html: May 25&ndash;31
+      total_km_html: "~56km"
+      template: A
+      days:
+      - type: easy
+        tags: [easy]
+        content_html: Easy 45 min
+      - type: thr
+        tags: [threshold]
+        pace_html: 5:00&ndash;5:05/km
+        content_html: 4 x 2 km @ ~5:00&ndash;5:05/km, 2&ndash;3 min jog
+      - type: easy
+        tags: [easy]
+        content_html: Easy 45&ndash;50 min
+      - type: med
+        tags: [medium-long, steady]
+        pace_html: Steady roughly 5:35&ndash;5:55/km
+        content_html: Medium-long 75 min with 30 min steady
+      - type: easy
+        tags: [easy, strides]
+        content_html: Easy 40 min + strides
+      - type: lng
+        tags: [long-run, easy]
+        content_html: Long 105 min easy
+      - type: rest
+        tags: [recovery]
+        content_html: Rest
+    - week_html: '5'
+      dates_html: Jun 1&ndash;7
+      total_km_html: "~47km"
+      template: Down-ish
+      notes_html: Down-ish week absorbs the first threshold block while keeping rhythm.
+      days:
+      - type: easy
+        tags: [easy]
+        content_html: Easy 40&ndash;45 min
+      - type: thr
+        tags: [threshold]
+        pace_html: 5:05&ndash;5:15/km
+        content_html: 25&ndash;30 min continuous threshold @ ~5:05&ndash;5:15/km
+      - type: easy
+        tags: [easy]
+        content_html: Easy 45 min
+      - type: easy
+        tags: [easy, medium-long]
+        content_html: Easy-medium 60 min
+      - type: easy
+        tags: [easy, strides]
+        content_html: Easy 35&ndash;40 min + strides
+      - type: lng
+        tags: [long-run, easy]
+        content_html: Long 85&ndash;90 min easy
+      - type: rest
+        tags: [recovery]
+        content_html: Rest
+    - week_html: '6'
+      dates_html: Jun 8&ndash;14
+      total_km_html: "~57km"
+      template: A
+      days:
+      - type: easy
+        tags: [easy]
+        content_html: Easy 45 min
+      - type: thr
+        tags: [threshold]
+        pace_html: 5:05&ndash;5:15/km
+        content_html: 3 x 15 min threshold @ ~5:05&ndash;5:15/km, 3 min jog
+      - type: easy
+        tags: [easy]
+        content_html: Easy 45&ndash;50 min
+      - type: med
+        tags: [medium-long, steady]
+        content_html: Medium-long 80 min easy-to-steady
+      - type: easy
+        tags: [easy]
+        content_html: Easy 40 min
+      - type: lng
+        tags: [long-run, easy]
+        content_html: Long 110 min easy
+      - type: rest
+        tags: [recovery]
         content_html: Rest
     - week_html: '7'
-      dates_html: May 25&ndash;31
-      total_km_html: "~57km"
+      dates_html: Jun 15&ndash;21
+      total_km_html: "~58km"
+      template: C
       days:
       - type: intv
-        content_html: 'WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 2&times;3km
-          @ 4:48/km, 4min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 10.5km total<br>Long
-          specific reps &mdash; this is the benchmark-style session for race economy.'
-      - type: rec
-        content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
-      - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 25min continuous @ 5:05/km (HR
-          165&ndash;172) (&asymp;4.9km)<br>CD: 1.5km @ 6:40<br><br>&asymp; 7.8km total<br>Consolidation
-          threshold &mdash; enough support without competing with Monday.'
-      - type: rec
-        content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
+        tags: [10k-specific]
+        pace_html: 4:30&ndash;4:40/km
+        content_html: 8 x 600m @ ~4:30&ndash;4:40/km, relaxed, 200&ndash;300m jog
       - type: easy
-        content_html: Easy 8km @ Z2 HR<br>No hill work this week; add base without
-          extra neuromuscular load.
+        tags: [easy]
+        content_html: Easy 45 min
+      - type: steady
+        tags: [steady]
+        pace_html: Steady roughly 5:35&ndash;5:55/km
+        content_html: 40 min steady inside 70 min total
+      - type: easy
+        tags: [easy]
+        content_html: Easy 45 min
+      - type: easy
+        tags: [easy, strides]
+        content_html: Easy 35&ndash;40 min + strides
       - type: lng
-        content_html: 19km easy<br>@ Z2 HR<br>Full aerobic support week.
+        tags: [long-run, steady]
+        content_html: Long 105&ndash;110 min with last 25 min steady
       - type: rest
+        tags: [recovery]
         content_html: Rest
-    - week_html: 8 &darr;
-      dates_html: Jun 1&ndash;7
-      total_km_html: "~50&ndash;52km"
+    - week_html: '8'
+      dates_html: Jun 22&ndash;28
+      total_km_html: "~58km"
+      template: A
       days:
-      - type: intv
-        content_html: 'WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 4&times;1km
-          @ 4:45&ndash;4:48/km, 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 8.5km
-          total<br>Cutback &mdash; touch race pace, keep the legs alive.'
-      - type: rec
-        content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
-      - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 20min @ 5:05/km (HR 165&ndash;172)
-          (&asymp;4km)<br>CD: 1.5km @ 6:40<br><br>&asymp; 7km total<br>Cutback &mdash;
-          volume pullback, not pace pullback.'
-      - type: rec
-        content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
       - type: easy
-        content_html: Easy 7km @ Z2 HR<br>+ 4&times;100m relaxed strides
+        tags: [easy]
+        content_html: Easy 45 min
+      - type: thr
+        tags: [threshold, steady]
+        pace_html: 5:10&ndash;5:20/km
+        content_html: 2 x 25 min strong aerobic/threshold-lite @ ~5:10&ndash;5:20/km
+      - type: easy
+        tags: [easy]
+        content_html: Easy 45 min
+      - type: med
+        tags: [medium-long, easy]
+        content_html: Medium-long 80 min easy
+      - type: easy
+        tags: [easy, strides]
+        content_html: Easy 40 min + strides
       - type: lng
-        content_html: 17&ndash;18km easy<br>@ Z2 HR<br>Cutback from quality, not
-          from aerobic support.
+        tags: [long-run, easy]
+        content_html: Long 115 min easy
       - type: rest
+        tags: [recovery]
         content_html: Rest
     - week_html: '9'
-      dates_html: Jun 8&ndash;14
-      total_km_html: "~56&ndash;58km"
-      days:
-      - type: intv
-        content_html: 'WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 3&times;2km
-          @ 4:45&ndash;4:48/km, 3min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 10.5km
-          total<br>One of the key race-specific sessions &mdash; hard, controlled,
-          repeatable.'
-      - type: rec
-        content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
-      - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 3&times;10min @ 5:00&ndash;5:03/km
-          (HR 165&ndash;172), 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 9.5km
-          total<br>Peak threshold support &mdash; quicker, but still aerobic.'
-      - type: rec
-        content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
-      - type: easy
-        content_html: Easy 7km @ Z2 HR<br>+ 4&times;100m strides
-      - type: lng
-        content_html: 18&ndash;19km aerobic<br>Mostly easy @ Z2 HR; optional final
-          3km steady only if smooth. No fast finish.
-      - type: rest
-        content_html: Rest
-  - id: phase3
-    title_html: Phase 3 &mdash; Peak &amp; Consolidation &middot; Weeks 9&ndash;11
-      &middot; Jun 8 &ndash; Jun 28
-    weeks:
-    - week_html: '10'
-      dates_html: Jun 15&ndash;21
-      total_km_html: "~56&ndash;58km"
-      days:
-      - type: intv
-        content_html: 'WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 6&times;1km
-          @ 4:40&ndash;4:43/km, 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 11.5km
-          total<br>Sharpening &mdash; faster than goal pace, but with enough recovery
-          to stay smooth.'
-      - type: rec
-        content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
-      - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 2&times;12min @ 5:00&ndash;5:03/km
-          (HR 165&ndash;172), 3min walk/jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp;
-          8km total<br>Threshold support without blunting the sharpening effect.'
-      - type: rec
-        content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
-      - type: easy
-        content_html: Easy 8km @ Z2 HR<br>+ 4&times;100m strides
-      - type: lng
-        content_html: 17&ndash;18km easy<br>@ Z2 HR
-      - type: rest
-        content_html: Rest
-    - week_html: '11'
-      dates_html: Jun 22&ndash;28
-      total_km_html: "~52&ndash;55km"
-      days:
-      - type: intv
-        content_html: 'WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 5&times;1km
-          @ 4:42&ndash;4:45/km, 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 10km
-          total<br>Consolidation sharpener &mdash; a touch slower, still crisp.'
-      - type: rec
-        content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
-      - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 22min continuous @ 5:02/km (HR
-          165&ndash;172) (&asymp;4.4km)<br>CD: 1.5km @ 6:40<br><br>&asymp; 7.5km total<br>Reinforce
-          threshold without carrying extra fatigue into taper.'
-      - type: rec
-        content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
-      - type: easy
-        content_html: Easy 7km @ Z2 HR<br>+ 4&times;100m strides
-      - type: lng
-        content_html: 17km easy<br>@ Z2 HR<br>Aerobic support continues; no quality
-          finish.
-      - type: rest
-        content_html: Rest
-  - id: raceweek
-    title_html: Freshen &amp; Lombok Tune-Up &middot; Weeks 12&ndash;13 &middot; Jun
-      29 &ndash; Jul 12
-    weeks:
-    - week_html: 12 &darr;
       dates_html: Jun 29&ndash;Jul 5
-      total_km_html: "~44&ndash;47km"
+      total_km_html: "~53km"
+      template: B
       days:
       - type: intv
-        content_html: 'WU: 1.5km @ 6:35 + 4&times;100m strides<br>Session: 4&times;800m
-          @ 4:42&ndash;4:45/km, 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 7km
-          total<br>Light freshen week &mdash; enough speed, but keep building the
-          season.'
-      - type: rec
-        content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
-      - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 18min controlled @ ~5:08/km (HR
-          162&ndash;168)<br>CD: 1.5km @ 6:40<br><br>&asymp; 6km total<br>Taper maintenance
-          &mdash; stay aerobic, stay fresh.'
-      - type: rec
-        content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
+        tags: [10k-specific]
+        pace_html: 4:45&ndash;4:50/km
+        content_html: 5 x 1 km @ ~4:45&ndash;4:50/km, 2 min recovery
       - type: easy
-        content_html: Easy 6km @ Z2 HR<br>+ 4&times;100m strides
+        tags: [easy]
+        content_html: Easy 45 min
+      - type: easy
+        tags: [easy]
+        content_html: Easy 45&ndash;50 min
+      - type: thr
+        tags: [threshold]
+        pace_html: 5:00&ndash;5:10/km
+        content_html: 3 x 10 min threshold @ ~5:00&ndash;5:10/km
+      - type: easy
+        tags: [easy]
+        content_html: Easy 35&ndash;40 min
       - type: lng
-        content_html: 14&ndash;15km easy<br>@ Z2 HR<br>No quality finish &mdash;
-          this is a freshen week, not a full taper.
+        tags: [long-run, easy]
+        content_html: Long 95&ndash;100 min easy
       - type: rest
+        tags: [recovery]
         content_html: Rest
-    - week_html: '13'
+    - week_html: '10'
       dates_html: Jul 6&ndash;12
-      total_km_html: "~20km + race"
+      total_km_html: "~40km + race"
+      template: Race-in-block
+      notes_html: July 12 is a B-race benchmark inside the HM build, not a major peak.
+      race_notes_html: "July 12 10K benchmark pacing: Km 1&ndash;2 4:55&ndash;5:00/km; Km 3&ndash;6 4:48&ndash;4:52/km if controlled; Km 7&ndash;8 hold or squeeze; Km 9&ndash;10 race hard if possible."
       days:
       - type: easy
-        content_html: Easy<br>6km @ Z2 HR
+        tags: [easy]
+        content_html: Easy 45 min
       - type: intv
-        content_html: 'WU: 1.5km @ 6:35 + 4&times;100m strides<br>Session: 4&times;400m
-          @ 4:35/km, 3min full rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 5km total<br>Sharpener
-          only &mdash; do not push.'
-      - type: rest
-        content_html: Rest
+        tags: [10k-specific, strides]
+        pace_html: 4:55&ndash;5:00/km plus relaxed 200s
+        content_html: 2 x 2 km @ ~4:55&ndash;5:00/km + 4 x 200m relaxed
       - type: easy
-        content_html: Easy 5km @ Z2 HR<br>+ 4&times;100m strides
-      - type: rest
-        content_html: Rest
+        tags: [easy]
+        content_html: Easy 40&ndash;45 min
       - type: easy
-        content_html: Easy jog<br>3km @ very easy<br>Shake out only.
+        tags: [easy, strides]
+        content_html: Easy 35&ndash;40 min + 4 strides
+      - type: rest
+        tags: [recovery]
+        content_html: Rest or very easy 20&ndash;25 min if restless
+      - type: shake
+        tags: [easy, recovery, strides]
+        content_html: Easy 20&ndash;25 min + 4 strides
       - type: race
-        content_html: 'RACE DAY<br>Pocari Sweat Lombok 10K<br><br>Tune-up and benchmark:
-          race hard if fresh, but do not force an A-race peak.<br><br>Use the result
-          to calibrate Bali and Jakarta training. The bridge block begins next week.'
-  callout_html: "<strong>Strength integration:</strong> Workout A (heavy bilateral
-    lower body) follows Monday intervals. Workout B (single-leg and control) follows
-    Friday easy run. Never before running on the same day. Deload strength every 4th
-    week alongside running cutback weeks. Drop to Workout B only in the final 2 weeks
-    before race. Skip strength entirely from Wednesday of race week onward."
-  plan_note_html: "&darr; = cutback week &nbsp;&middot;&nbsp; WU = warm-up, CD = cool-down
-    &nbsp;&middot;&nbsp; <strong>Recovery runs:</strong> HR cap 140&ndash;145 bpm
-    &mdash; whatever pace that requires in Jakarta heat is correct &nbsp;&middot;&nbsp;
-    <strong>Easy runs:</strong> upper Z2 HR ceiling (~155&ndash;160 bpm) overrides
-    pace always &nbsp;&middot;&nbsp; <strong>Interval rest:</strong> prescribed times
-    are minimums &mdash; target 155&ndash;160 bpm before next rep &nbsp;&middot;&nbsp;
-    <strong>Threshold:</strong> all paces are cool-weather references &mdash; HR 165&ndash;172
-    governs. If you hit HR ceiling before pace target, the HR is correct and the pace
-    is aspirational &nbsp;&middot;&nbsp; <strong>Threshold rest:</strong> walk recovery,
-    target ~150&ndash;155 bpm before next rep &nbsp;&middot;&nbsp; <strong>Heat protocol:</strong>
-    if ambient temp &gt;30&deg;C, add 10&ndash;15s/km to all pace references &mdash;
-    HR zones do not change &nbsp;&middot;&nbsp; <strong>Goal calibration:</strong>
-    2&ndash;3 weeks out, upgrade the race target only if goal-pace work feels controlled
-    and repeatable. If a benchmark session like 3&times;2km or 2&times;3km at 10K
-    pace feels smooth with good form and recovery, sub-48 is safe; if the same work
-    is controlled at ~4:45/km, consider ~47:30; only push below 47 if multiple race-specific
-    sessions support it &nbsp;&middot;&nbsp; <strong>Strength:</strong> Workout A
-    after Monday intervals, Workout B after Friday easy run &nbsp;&middot;&nbsp;
-    Week 13: preserve enough freshness to race well, but Lombok is a tune-up for the
-    larger Bali/Jakarta build"
-- kind: sectioned-run-table
-  section_id: oct-10k-build
-  section_number_html: 10K
-  title_html: 10K Build + HM Bridge &middot; Weeks 14&ndash;28 &middot; Jul 13 &ndash;
-    Oct 25
-  callout_html: July 10K and Bali HM stay fixed. After Bali, the plan pivots to an
-    Oct 25 <strong>10K target race</strong> while keeping enough 16&ndash;20km long-run
-    durability to make an early-next-year HM build straightforward. Same HR-governs-pace
-    rules apply throughout.
-  phases:
-  - id: 
-    title_html: Post-10K Recovery &middot; Week 14 &middot; Jul 13&ndash;19
-    weeks:
-    - week_html: '14'
+        tags: [race, 10k-specific]
+        priority: B
+        pace_html: Benchmark target around 4:48/km
+        content_html: July 12 10K race / benchmark
+    - week_html: '11'
       dates_html: Jul 13&ndash;19
-      total_km_html: "~27km"
+      total_km_html: "~48km"
+      template: Recovery/A
       days:
       - type: easy
-        content_html: Easy 5km @ Z2 HR<br>Assess post-race soreness.
-      - type: rest
-        content_html: Rest
-      - type: easy
-        content_html: Easy 5km @ Z2 HR
-      - type: rest
-        content_html: Rest or cross-train<br>30min easy bike/pool
-      - type: easy
-        content_html: Easy 5km @ Z2 HR<br>+ 4&times;100m relaxed strides if legs feel
-          normal again.
-      - type: lng
-        content_html: Easy 12km @ Z2 HR<br>First longer run post-race &mdash; check
-          how legs feel.
-      - type: rest
-        content_html: Rest
-  - id: 
-    title_html: 10K-to-HM Bridge &middot; Weeks 15&ndash;16 &middot; Jul 20
-      &ndash; Aug 2
-    weeks:
-    - week_html: '15'
-      dates_html: Jul 20&ndash;26
-      total_km_html: "~45km"
-      days:
-      - type: easy
-        content_html: Easy 7km @ Z2 HR<br>+ 4&times;100m strides
-      - type: rec
-        content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
+        tags: [easy, recovery]
+        content_html: Easy 40&ndash;45 min
       - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 2&times;10min @ 5:00&ndash;5:05/km
-          (HR 165&ndash;170), 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 8km
-          total<br>Threshold reintroduction &mdash; gentle but purposeful.'
-      - type: rec
-        content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
+        tags: [threshold]
+        pace_html: 5:05&ndash;5:15/km
+        content_html: 4 x 8 min threshold @ ~5:05&ndash;5:15/km
       - type: easy
-        content_html: Easy 6km @ Z2 HR<br>+ 8&times;10s hill sprints (treadmill 8&ndash;10%,
-          max effort, 2min full walk rest)
+        tags: [easy]
+        content_html: Easy 45 min
+      - type: med
+        tags: [medium-long, easy]
+        content_html: Medium-long 70 min easy
+      - type: easy
+        tags: [easy, strides]
+        content_html: Easy 35&ndash;40 min + strides
       - type: lng
-        content_html: 14km easy @ Z2 HR<br>Increase volume gently.
+        tags: [long-run, easy]
+        content_html: Long 95 min easy
       - type: rest
+        tags: [recovery]
+        content_html: Rest
+    - week_html: '12'
+      dates_html: Jul 20&ndash;26
+      total_km_html: "~58km"
+      template: A
+      days:
+      - type: easy
+        tags: [easy]
+        content_html: Easy 45 min
+      - type: thr
+        tags: [threshold]
+        pace_html: 5:05&ndash;5:12/km
+        content_html: 3 x 15 min threshold @ ~5:05&ndash;5:12/km
+      - type: easy
+        tags: [easy]
+        content_html: Easy 45&ndash;50 min
+      - type: med
+        tags: [medium-long, steady]
+        content_html: Medium-long 80 min with 40 min steady
+      - type: easy
+        tags: [easy]
+        content_html: Easy 40 min
+      - type: lng
+        tags: [long-run, steady]
+        content_html: Long 110 min, last 30 min steady
+      - type: rest
+        tags: [recovery]
+        content_html: Rest
+  - id: hm-peak
+    title_html: HM-specific peak block &middot; Weeks 13&ndash;16 &middot; Jul 27 &ndash; Aug 23
+    weeks:
+    - week_html: '13'
+      dates_html: Jul 27&ndash;Aug 2
+      total_km_html: "~58km"
+      template: C
+      days:
+      - type: intv
+        tags: [10k-specific]
+        pace_html: 4:45&ndash;4:50/km
+        content_html: 6 x 1 km @ ~4:45&ndash;4:50/km, controlled
+      - type: easy
+        tags: [easy]
+        content_html: Easy 45 min
+      - type: hm
+        tags: [hm-specific]
+        pace_html: 5:00&ndash;5:10/km
+        content_html: 2 x 20 min HM effort @ ~5:00&ndash;5:10/km inside 75 min
+      - type: easy
+        tags: [easy]
+        content_html: Easy 45 min
+      - type: easy
+        tags: [easy]
+        content_html: Easy 35&ndash;40 min
+      - type: lng
+        tags: [long-run, easy]
+        content_html: Long 115 min easy
+      - type: rest
+        tags: [recovery]
+        content_html: Rest
+    - week_html: '14'
+      dates_html: Aug 3&ndash;9
+      total_km_html: "~63km"
+      template: A
+      days:
+      - type: easy
+        tags: [easy]
+        content_html: Easy 45 min
+      - type: thr
+        tags: [threshold, hm-specific]
+        pace_html: 5:00&ndash;5:08/km
+        content_html: 4 x 3 km @ ~5:00&ndash;5:08/km, 3 min jog
+      - type: easy
+        tags: [easy]
+        content_html: Easy 45 min
+      - type: med
+        tags: [medium-long, easy]
+        content_html: Medium-long 80 min easy
+      - type: easy
+        tags: [easy, strides]
+        content_html: Easy 40 min + strides
+      - type: lng
+        tags: [long-run, hm-specific]
+        content_html: Long 120 min with 3 x 15 min HM effort
+      - type: rest
+        tags: [recovery]
+        content_html: Rest
+    - week_html: '15'
+      dates_html: Aug 10&ndash;16
+      total_km_html: "~58km"
+      template: C / peak HM
+      days:
+      - type: easy
+        tags: [easy]
+        content_html: Easy 40&ndash;45 min
+      - type: hm
+        tags: [hm-specific]
+        pace_html: 5:00&ndash;5:08/km
+        content_html: 2 x 5 km @ HM effort, ~5:00&ndash;5:08/km, 5 min easy between
+      - type: easy
+        tags: [easy]
+        content_html: Easy 45 min
+      - type: med
+        tags: [medium-long, strides]
+        content_html: Medium-long 70 min easy + 6 strides
+      - type: easy
+        tags: [easy]
+        content_html: Easy 35&ndash;40 min
+      - type: lng
+        tags: [long-run, steady, hm-specific]
+        content_html: Long 105&ndash;110 min with final 40 min steady/HM-lite
+      - type: rest
+        tags: [recovery]
         content_html: Rest
     - week_html: '16'
-      dates_html: Jul 27&ndash;Aug 2
-      total_km_html: "~50km"
+      dates_html: Aug 17&ndash;23
+      total_km_html: "~32km + race"
+      template: HM taper
+      race_notes_html: "Aug 23 HM A-race target: sub-1:45, about 4:59/km. Pacing: Km 1&ndash;5 5:03&ndash;5:08/km; Km 6&ndash;15 4:58&ndash;5:02/km; Km 16&ndash;19 hold effort; Km 20&ndash;21.1 push if possible."
       days:
       - type: easy
-        content_html: Easy 8km @ Z2 HR<br>+ 4&times;100m strides
-      - type: rec
-        content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
-      - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 3&times;8min @ 4:55&ndash;5:00/km
-          (HR 165&ndash;170), 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 8.5km
-          total<br>Foundation work &mdash; threshold support without racing the reps.'
-      - type: rec
-        content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
+        tags: [easy]
+        content_html: Easy 40 min
+      - type: hm
+        tags: [hm-specific]
+        pace_html: Around 5:00/km
+        content_html: 3 x 2 km @ HM goal effort, ~5:00/km, 3 min jog
       - type: easy
-        content_html: Easy 7km @ Z2 HR<br>+ 8&times;10s hill sprints (treadmill 8&ndash;10%,
-          max effort, 2min full walk rest)
-      - type: lng
-        content_html: 16km easy @ Z2 HR
+        tags: [easy]
+        content_html: Easy 35&ndash;40 min
+      - type: easy
+        tags: [easy, strides]
+        content_html: Easy 35 min + 4 strides
       - type: rest
+        tags: [recovery]
         content_html: Rest
-  - id: bali-hm-bridge
-    title_html: Bali HM Bridge + Reset &middot; Weeks 17&ndash;20 &middot; Aug 3&ndash;30
+      - type: shake
+        tags: [easy, recovery]
+        content_html: Easy 20&ndash;25 min shakeout
+      - type: race
+        tags: [race, hm-specific]
+        priority: A
+        pace_html: Target about 4:59/km
+        content_html: Aug 23 Half Marathon race &mdash; sub-1:45 attempt
+  - id: tenk-sharpen
+    title_html: Post-HM recovery and 10K sharpening &middot; Weeks 17&ndash;25 &middot; Aug 24 &ndash; Oct 25
     weeks:
     - week_html: '17'
-      dates_html: Aug 3&ndash;9
-      total_km_html: "~54km"
+      dates_html: Aug 24&ndash;30
+      total_km_html: "~38km"
+      template: Recovery
       days:
-      - type: intv
-        content_html: 'WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 4&times;1.5km
-          @ 4:48&ndash;4:55/km, 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 10km
-          total<br>Controlled 10K-strength work while keeping Bali HM in view.'
       - type: rec
-        content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
-      - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 25min continuous @ 4:52&ndash;4:58/km
-          (HR 165&ndash;172)<br>CD: 1.5km @ 6:40<br><br>&asymp; 8.5km total<br>Threshold
-          support without turning the week into a peak.'
-      - type: rec
-        content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
+        tags: [recovery, easy]
+        content_html: Rest or easy 30 min
       - type: easy
-        content_html: Easy 8km @ Z2 HR<br>+ 8&times;10s hill sprints (treadmill 8&ndash;10%,
-          max effort, 2min full walk rest)
+        tags: [easy]
+        content_html: Easy 35&ndash;45 min
+      - type: easy
+        tags: [easy]
+        content_html: Easy 40&ndash;45 min
+      - type: easy
+        tags: [easy, strides]
+        content_html: Easy 45 min + 4 strides
+      - type: easy
+        tags: [easy]
+        content_html: Easy 35 min
       - type: lng
-        content_html: 18km easy @ Z2 HR
+        tags: [long-run, easy]
+        content_html: Long 75&ndash;85 min easy
       - type: rest
+        tags: [recovery]
         content_html: Rest
     - week_html: '18'
-      dates_html: Aug 10&ndash;16
-      total_km_html: "~56km"
+      dates_html: Aug 31&ndash;Sep 6
+      total_km_html: "~49km"
+      template: B
       days:
       - type: intv
-        content_html: 'WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 3&times;2km
-          @ 4:50&ndash;4:55/km, 2.5min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp;
-          11km total<br>Strength endurance for 10K with enough range for Bali HM.'
-      - type: rec
-        content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
-      - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 3&times;10min @ 4:50&ndash;4:55/km
-          (HR 165&ndash;172), 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 10km
-          total<br>Threshold is still the faster, ceiling-raising day.'
-      - type: rec
-        content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
+        tags: [10k-specific]
+        pace_html: 4:20&ndash;4:30/km pace
+        content_html: 10 x 400m @ ~4:20&ndash;4:30/km pace, relaxed, 200m jog
       - type: easy
-        content_html: Easy 8km @ Z2 HR<br>+ 8&times;10s hill sprints (treadmill 8&ndash;10%,
-          max effort, 2min full walk rest)
+        tags: [easy]
+        content_html: Easy 45 min
+      - type: easy
+        tags: [easy]
+        content_html: Easy 45 min
+      - type: thr
+        tags: [threshold]
+        pace_html: 5:00&ndash;5:10/km
+        content_html: 25 min threshold @ ~5:00&ndash;5:10/km
+      - type: easy
+        tags: [easy]
+        content_html: Easy 40 min
       - type: lng
-        content_html: 20km easy @ Z2 HR<br>Fueling practice only. No fast finish.
+        tags: [long-run, easy]
+        content_html: Long 90 min easy
       - type: rest
+        tags: [recovery]
         content_html: Rest
     - week_html: '19'
-      dates_html: Aug 17&ndash;23
-      total_km_html: "~25km + race"
-      days:
-      - type: rec
-        content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
-      - type: easy
-        content_html: Easy 7km @ Z2 HR<br>+ 4&times;100m strides
-      - type: rest
-        content_html: Rest
-      - type: easy
-        content_html: Easy 6km @ Z2 HR<br>+ 4&times;100m strides
-      - type: rec
-        content_html: Recovery<br>4km, HR cap 140&ndash;145 bpm
-      - type: easy
-        content_html: Easy jog<br>3km @ very easy<br>Shake out only.
-      - type: race
-        content_html: 'BALI HALF MARATHON<br>Run as a controlled long session, not
-          an A-race.<br><br>Plan A: first 10&ndash;12km easy, then build steady only
-          if you feel smooth.<br>Plan B: run the whole race steady around 5:10&ndash;5:25/km.<br><br>Goals:
-          fueling practice, pacing practice, and time-on-feet. Finish feeling controlled.'
-    - week_html: 20 &darr;
-      dates_html: Aug 24&ndash;30
-      total_km_html: "~44&ndash;48km"
+      dates_html: Sep 7&ndash;13
+      total_km_html: "~52km"
+      template: B
       days:
       - type: intv
-        content_html: 'WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 5&times;800m
-          @ controlled 10K effort, 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp;
-          8km total<br>Post-HM reset &mdash; rhythm only, no forcing pace.'
-      - type: rec
-        content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
-      - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 20min @ 4:52&ndash;4:58/km (HR
-          165&ndash;172)<br>CD: 1.5km @ 6:40<br><br>&asymp; 7.5km total<br>Shorter
-          threshold re-entry after Bali.'
-      - type: rec
-        content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
+        tags: [10k-specific]
+        pace_html: 4:35&ndash;4:40/km
+        content_html: 5 x 1 km @ ~4:35&ndash;4:40/km, 2&ndash;2.5 min recovery
       - type: easy
-        content_html: Easy 6km @ Z2 HR<br>+ 6&times;10s hill sprints (treadmill 8&ndash;10%,
-          max effort, 2min full walk rest)
+        tags: [easy]
+        content_html: Easy 45 min
+      - type: easy
+        tags: [easy]
+        content_html: Easy 45&ndash;50 min
+      - type: thr
+        tags: [threshold]
+        pace_html: 5:00&ndash;5:08/km
+        content_html: 3 x 12 min threshold @ ~5:00&ndash;5:08/km
+      - type: easy
+        tags: [easy, strides]
+        content_html: Easy 40 min + strides
       - type: lng
-        content_html: 16&ndash;18km easy @ Z2 HR<br>Absorb the Aug 23 race and reset
-          before the 10K-specific block.
+        tags: [long-run, easy]
+        content_html: Long 95 min easy
       - type: rest
+        tags: [recovery]
         content_html: Rest
-  - id: tenk-specific
-    title_html: 10K Specific Build &middot; Weeks 21&ndash;24 &middot; Aug 31 &ndash;
-      Sep 27
-    weeks:
+    - week_html: '20'
+      dates_html: Sep 14&ndash;20
+      total_km_html: "~52km"
+      template: C
+      days:
+      - type: intv
+        tags: [10k-specific]
+        pace_html: Around 4:45/km
+        content_html: 3 x 2 km @ ~4:45/km, 3 min recovery
+      - type: easy
+        tags: [easy]
+        content_html: Easy 45 min
+      - type: med
+        tags: [medium-long, easy]
+        content_html: Medium 65&ndash;70 min easy
+      - type: easy
+        tags: [easy]
+        content_html: Easy 45 min
+      - type: easy
+        tags: [easy, strides]
+        content_html: Easy 35&ndash;40 min + strides
+      - type: lng
+        tags: [long-run, steady]
+        content_html: Long 95&ndash;100 min with last 20 min steady
+      - type: rest
+        tags: [recovery]
+        content_html: Rest
     - week_html: '21'
-      dates_html: Aug 31&ndash;Sep 6
-      total_km_html: "~52&ndash;56km"
+      dates_html: Sep 21&ndash;27
+      total_km_html: "~50km"
+      template: B
       days:
       - type: intv
-        content_html: 'WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 6&times;1km
-          @ current 10K effort, 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp;
-          11.5km total<br>First focused Oct 10K session after the Bali reset.'
-      - type: rec
-        content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
-      - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 2&times;15min @ 4:50&ndash;4:55/km
-          (HR 165&ndash;172), 3min walk/jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp;
-          9km total<br>Threshold support for 10K strength.'
-      - type: rec
-        content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
+        tags: [10k-specific]
+        pace_html: 4:20&ndash;4:30/km pace
+        content_html: 12 x 500m @ ~4:20&ndash;4:30/km pace, 200m jog
       - type: easy
-        content_html: Easy 8km @ Z2 HR<br>+ 8&times;10s hill sprints (treadmill 8&ndash;10%,
-          max effort, 2min full walk rest)
+        tags: [easy]
+        content_html: Easy 45 min
+      - type: easy
+        tags: [easy]
+        content_html: Easy 45 min
+      - type: thr
+        tags: [threshold]
+        pace_html: 5:00&ndash;5:08/km
+        content_html: 2 x 20 min threshold @ ~5:00&ndash;5:08/km
+      - type: easy
+        tags: [easy]
+        content_html: Easy 35&ndash;40 min
       - type: lng
-        content_html: 18km easy @ Z2 HR<br>Maintain HM runway without adding peak-HM
-          fatigue.
+        tags: [long-run, easy]
+        content_html: Long 85&ndash;90 min easy
       - type: rest
+        tags: [recovery]
         content_html: Rest
     - week_html: '22'
-      dates_html: Sep 7&ndash;13
-      total_km_html: "~54&ndash;58km"
+      dates_html: Sep 28&ndash;Oct 4
+      total_km_html: "~52km"
+      template: B
       days:
       - type: intv
-        content_html: 'WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 3&times;2km
-          @ current 10K effort, 3min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp;
-          11.5km total<br>Benchmark 10K-strength workout.'
-      - type: rec
-        content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
-      - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 28min continuous @ 4:50&ndash;4:55/km
-          (HR 165&ndash;172)<br>CD: 1.5km @ 6:40<br><br>&asymp; 8.5km total<br>Aerobic
-          ceiling work; HR governs.'
-      - type: rec
-        content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
+        tags: [10k-specific]
+        pace_html: 4:30&ndash;4:35/km
+        content_html: 6 x 1 km @ ~4:30&ndash;4:35/km, 2&ndash;2.5 min recovery
       - type: easy
-        content_html: Easy 7km @ Z2 HR<br>+ 8&times;10s hill sprints (treadmill 8&ndash;10%,
-          max effort, 2min full walk rest)
+        tags: [easy]
+        content_html: Easy 45 min
+      - type: easy
+        tags: [easy]
+        content_html: Easy 45&ndash;50 min
+      - type: thr
+        tags: [threshold]
+        pace_html: 4:58&ndash;5:05/km
+        content_html: 4 x 8 min threshold @ ~4:58&ndash;5:05/km
+      - type: easy
+        tags: [easy, strides]
+        content_html: Easy 40 min + strides
       - type: lng
-        content_html: 19&ndash;20km easy @ Z2 HR<br>Fueling practice if desired. No
-          race-pace finish.
+        tags: [long-run, easy]
+        content_html: Long 90&ndash;95 min easy
       - type: rest
+        tags: [recovery]
         content_html: Rest
     - week_html: '23'
-      dates_html: Sep 14&ndash;20
-      total_km_html: "~55&ndash;59km"
-      days:
-      - type: intv
-        content_html: 'WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 2&times;3km
-          @ current 10K effort, 4min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp;
-          11.5km total<br>Long 10K reps &mdash; controlled, not a time trial.'
-      - type: rec
-        content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
-      - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 2&times;15min @ 4:50&ndash;4:55/km
-          (HR 165&ndash;172), 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 9km
-          total<br>Keep this smooth so Monday remains the main 10K-specific load.'
-      - type: rec
-        content_html: Recovery<br>6km, HR cap 140&ndash;145 bpm
-      - type: easy
-        content_html: Easy 8km @ Z2 HR<br>+ 8&times;10s hill sprints (treadmill 8&ndash;10%,
-          max effort, 2min full walk rest)
-      - type: lng
-        content_html: 18&ndash;20km easy @ Z2 HR<br>Simple durability run; no fast
-          finish.
-      - type: rest
-        content_html: Rest
-    - week_html: 24 &darr;
-      dates_html: Sep 21&ndash;27
-      total_km_html: "~48&ndash;52km"
-      days:
-      - type: intv
-        content_html: 'WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 5&times;1km
-          @ current 10K effort, 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp;
-          10km total<br>Cutback week &mdash; keep rhythm, reduce load.'
-      - type: rec
-        content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
-      - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 20min @ 4:52&ndash;4:55/km (HR
-          165&ndash;172)<br>CD: 1.5km @ 6:40<br><br>&asymp; 7.5km total<br>Cutback
-          threshold support.'
-      - type: rec
-        content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
-      - type: easy
-        content_html: Easy 6km @ Z2 HR<br>+ 6&times;10s hill sprints (treadmill 8&ndash;10%,
-          max effort, 2min full walk rest)
-      - type: lng
-        content_html: 18km easy @ Z2 HR<br>Cutback long run &mdash; save the legs.
-      - type: rest
-        content_html: Rest
-  - id: tenk-freshen
-    title_html: 10K Freshen &middot; Week 25 &middot; Sep 28 &ndash; Oct 4
-    weeks:
-    - week_html: 25 &darr;
-      dates_html: Sep 28&ndash;Oct 4
-      total_km_html: "~45&ndash;50km"
-      days:
-      - type: intv
-        content_html: 'WU: 2km @ 6:35 + 4&times;100m strides<br>Session: 4&times;1km
-          @ current 10K effort, 90s jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp;
-          8.5km total<br>Freshen week &mdash; modest volume reduction, keep the engine
-          switched on.'
-      - type: rec
-        content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
-      - type: thr
-        content_html: 'WU: 1.5km @ 6:40<br>Session: 20min @ threshold effort (HR
-          165&ndash;172)<br>CD: 1.5km @ 6:40<br><br>&asymp; 7.5km total<br>Aerobic
-          support &mdash; not yet full taper.'
-      - type: rec
-        content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
-      - type: easy
-        content_html: Easy 5km @ Z2 HR<br>+ 4&times;100m strides<br>+ 6&times;10s
-          hill sprints (treadmill 8&ndash;10%, max effort, 2min full walk rest)
-      - type: lng
-        content_html: 16km easy @ Z2 HR<br>Last longer run before the 10K taper.
-      - type: rest
-        content_html: Rest
-  - id: tenk-taper
-    title_html: 10K Taper &middot; Week 26 &middot; Oct 5 &ndash; Oct 11
-    weeks:
-    - week_html: 26 &darr;
       dates_html: Oct 5&ndash;11
-      total_km_html: "~36&ndash;40km"
+      total_km_html: "~50km"
+      template: C
       days:
       - type: intv
-        content_html: 'WU: 1.5km @ 6:35 + 4&times;100m strides<br>Session: 4&times;800m
-          @ slightly faster than 10K effort, 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp;
-          7km total<br>First taper sharpener; smooth form over pace.'
-      - type: rec
-        content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
+        tags: [10k-specific]
+        pace_html: 4:35&ndash;4:40/km
+        content_html: 3 x 2 km @ ~4:35&ndash;4:40/km, 3 min recovery
       - type: easy
-        content_html: Easy 5km @ Z2 HR<br>+ 4&times;100m strides
+        tags: [easy]
+        content_html: Easy 45 min
+      - type: med
+        tags: [medium-long, easy]
+        content_html: Medium 60&ndash;70 min easy
       - type: easy
-        content_html: Easy 4km @ Z2 HR
+        tags: [easy, strides]
+        content_html: Easy 45 min + strides
       - type: easy
-        content_html: Easy 4km @ Z2 HR
+        tags: [easy]
+        content_html: Easy 35&ndash;40 min
       - type: lng
-        content_html: 12&ndash;14km easy @ Z2 HR<br>Final medium-long run &mdash;
-          very easy, trust the training.
+        tags: [long-run, 10k-specific]
+        content_html: Long 85&ndash;90 min easy with 6 x 1 min fast late
       - type: rest
+        tags: [recovery]
         content_html: Rest
-  - id: tenk-final-prep
-    title_html: 10K Final Prep &middot; Week 27 &middot; Oct 12&ndash;18
-    weeks:
-    - week_html: '27'
+    - week_html: '24'
       dates_html: Oct 12&ndash;18
-      total_km_html: "~26&ndash;30km"
+      total_km_html: "~48km"
+      template: B / peak 10K
       days:
       - type: intv
-        content_html: 'WU: 1.5km @ 6:35 + 4&times;100m strides<br>Session: 3&times;1km
-          @ 10K effort, 2min jog rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 7km total<br>Keep
-          legs turning over without accumulating fatigue.'
-      - type: rec
-        content_html: Recovery<br>5km, HR cap 140&ndash;145 bpm
+        tags: [10k-specific]
+        pace_html: 4:25&ndash;4:30/km
+        content_html: 5 x 1 km @ ~4:25&ndash;4:30/km, 2&ndash;3 min recovery
       - type: easy
-        content_html: Easy 5km @ Z2 HR<br>+ 4&times;100m strides
-      - type: rest
-        content_html: Rest
+        tags: [easy]
+        content_html: Easy 45 min
       - type: easy
-        content_html: Easy jog<br>6&ndash;8km @ Z2 HR
+        tags: [easy]
+        content_html: Easy 45 min
+      - type: intv
+        tags: [10k-specific, strides]
+        pace_html: 4:35&ndash;4:40/km plus relaxed 200s
+        content_html: 2 x 3 km @ ~4:35&ndash;4:40/km + 4 x 200m relaxed
+      - type: easy
+        tags: [easy]
+        content_html: Easy 35 min
+      - type: lng
+        tags: [long-run, easy]
+        content_html: Long 75&ndash;85 min easy
       - type: rest
+        tags: [recovery]
         content_html: Rest
-      - type: rest
-        content_html: Rest
-  - id: tenk-raceweek
-    title_html: 10K Race Week &middot; Week 28 &middot; Oct 19&ndash;25
-    weeks:
-    - week_html: '28'
+    - week_html: '25'
       dates_html: Oct 19&ndash;25
-      total_km_html: "~17km + race"
+      total_km_html: "~25km + race"
+      template: 10K taper
+      race_notes_html: "Oct 25 10K A-race target: sub-45, about 4:30/km. Label as priority 10K."
       days:
       - type: easy
-        content_html: Easy 5km @ Z2 HR
+        tags: [easy]
+        content_html: Easy 35&ndash;40 min
       - type: intv
-        content_html: 'WU: 1.5km @ 6:35 + 4&times;100m strides<br>Session: 4&times;400m
-          @ 4:40/km, 3min full rest<br>CD: 1.5km @ 6:40<br><br>&asymp; 5km total<br>Sharpener
-          only &mdash; do not push.'
-      - type: rest
-        content_html: Rest
+        tags: [10k-specific, strides]
+        pace_html: 4:30/km
+        content_html: 3 x 1 km @ 4:30/km, full recovery + 4 x 200m relaxed
       - type: easy
-        content_html: Easy 4km @ Z2 HR<br>+ 4&times;100m strides
-      - type: rest
-        content_html: Rest
+        tags: [easy]
+        content_html: Easy 35&ndash;40 min
       - type: easy
-        content_html: Easy jog<br>3km @ very easy<br>Shake out only.
+        tags: [easy, strides]
+        content_html: Easy 30&ndash;35 min + 4 strides
+      - type: rest
+        tags: [recovery]
+        content_html: Rest
+      - type: shake
+        tags: [easy, recovery, strides]
+        content_html: Easy 20&ndash;25 min + 4 strides
       - type: race
-        content_html: 'RACE DAY<br>Oct 25 10K<br><br>Target: recalibrate after July
-          10K and Bali HM.<br><br>The main event.'
-  plan_note_html: "<strong>10K notes:</strong> Same HR-governs-pace rules as the July
-    10K block &nbsp;&middot;&nbsp; Oct 25 target pace should be recalibrated after
-    the July 10K and Bali HM &nbsp;&middot;&nbsp; Long runs stay mostly 16&ndash;20km
-    to preserve early-next-year HM runway, but avoid 22&ndash;24km HM peak fatigue
-    &nbsp;&middot;&nbsp; Strength: maintain Workout A + B pattern, deload at cutback
-    weeks, Workout B only from Wk 27, skip from Wed of race week"
+        tags: [race, 10k-specific]
+        priority: A
+        pace_html: Target about 4:30/km
+        content_html: Oct 25 10K race &mdash; sub-45 attempt
+  pace_guide_html: "<strong>Easy:</strong> effort-based, likely 6:00&ndash;7:00+/km depending heat/humidity &nbsp;&middot;&nbsp; <strong>Steady:</strong> roughly 5:35&ndash;5:55/km early, potentially 5:25&ndash;5:45/km later &nbsp;&middot;&nbsp; <strong>HM effort:</strong> initially 5:10&ndash;5:20/km, progressing toward 4:58&ndash;5:05/km &nbsp;&middot;&nbsp; <strong>Threshold:</strong> currently around 5:05&ndash;5:15/km, ideally moving toward 4:55&ndash;5:05/km &nbsp;&middot;&nbsp; <strong>July 10K benchmark:</strong> roughly 4:45&ndash;4:55/km &nbsp;&middot;&nbsp; <strong>Oct 10K goal:</strong> 4:30/km &nbsp;&middot;&nbsp; <strong>Short fast reps:</strong> roughly 4:20&ndash;4:40/km depending rep length."
+  plan_note_html: "Six runs per week in normal weeks. Sunday stays rest except fixed Sunday race dates. Saturday stays long run except pre-race Saturdays, which become short shakeouts. Weekly structure is flexible: the extra easy day moves depending on whether the week protects the second quality session or the Saturday long run. July 12 is a benchmark/B-race inside the HM build, not a peak."
