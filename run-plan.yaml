@@ -24,6 +24,9 @@ blocks:
       - type: rest
         tags: [recovery]
         content_html: None / already passed
+      - type: rest
+        tags: [recovery]
+        content_html: None / already passed
       - type: thr
         tags: [threshold]
         pace_html: 5:05&ndash;5:15/km
@@ -36,9 +39,6 @@ blocks:
         tags: [long-run, easy]
         pace_html: Easy effort
         content_html: Long 85&ndash;95 min easy
-      - type: rest
-        tags: [recovery]
-        content_html: Rest
     - week_html: '2'
       dates_html: May 11&ndash;17
       total_km_html: "~42&ndash;50km"

@@ -38,6 +38,14 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
+        "t": "rest",
+        "s": "Rest",
+        "l": "None / already passed",
+        "tags": [
+          "recovery"
+        ]
+      },
+      {
         "t": "thr",
         "s": "3 x 10 min threshold",
         "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 10 min threshold @ ~5:05&ndash;5:15/km, 3 min jog recovery<br>CD: 10&ndash;15 min easy.",
@@ -64,14 +72,6 @@ window.RUN_PLAN_WEEKS = [
           "easy"
         ],
         "pace": "Easy effort"
-      },
-      {
-        "t": "rest",
-        "s": "Rest",
-        "l": "Rest",
-        "tags": [
-          "recovery"
-        ]
       }
     ]
   },
