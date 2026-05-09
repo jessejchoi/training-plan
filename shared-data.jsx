@@ -47,7 +47,7 @@ const DAY_TYPES = {
   thr:  { label: 'THRESHOLD', color: T.thr, bg: T.mobBg },
   med:  { label: 'MEDIUM-LONG', color: T.med, bg: T.medBg },
   steady: { label: 'MEDIUM-LONG', color: T.med, bg: T.medBg },
-  hm:   { label: 'HM-SPECIFIC', color: T.str, bg: T.strBg },
+  hm:   { label: 'HM-SPECIFIC', color: T.race, bg: T.raceBg },
   shake: { label: 'RECOVERY', color: T.rec, bg: T.recBg },
   lng:  { label: 'LONG', color: T.str, bg: T.strBg },
   race: { label: 'RACE', color: T.race, bg: T.raceBg },
