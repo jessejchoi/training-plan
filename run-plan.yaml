@@ -105,8 +105,8 @@ blocks:
         content_html: Easy 45 min
       - type: thr
         tags: [threshold]
-        pace_html: 5:00&ndash;5:05/km
-        content_html: 4 x 2 km @ ~5:00&ndash;5:05/km, 2&ndash;3 min jog
+        pace_html: 5:05&ndash;5:12/km
+        content_html: 4 x 2 km @ ~5:05&ndash;5:12/km, 2&ndash;3 min jog
       - type: easy
         tags: [easy]
         content_html: Easy 45&ndash;50 min
@@ -161,8 +161,8 @@ blocks:
         content_html: Easy 45 min
       - type: thr
         tags: [threshold]
-        pace_html: 5:05&ndash;5:15/km
-        content_html: 3 x 15 min threshold @ ~5:05&ndash;5:15/km, 3 min jog
+        pace_html: 5:05&ndash;5:12/km
+        content_html: 3 x 15 min threshold @ ~5:05&ndash;5:12/km, 3 min jog
       - type: easy
         tags: [easy]
         content_html: Easy 45&ndash;50 min
@@ -216,8 +216,8 @@ blocks:
         content_html: Easy 45 min
       - type: thr
         tags: [threshold, steady]
-        pace_html: 5:10&ndash;5:20/km
-        content_html: 2 x 25 min strong aerobic/threshold-lite @ ~5:10&ndash;5:20/km
+        pace_html: 5:08&ndash;5:18/km
+        content_html: 2 x 25 min strong aerobic/threshold-lite @ ~5:08&ndash;5:18/km
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
@@ -273,8 +273,8 @@ blocks:
         content_html: Easy 45 min
       - type: intv
         tags: [10k-specific, strides]
-        pace_html: 4:55&ndash;5:00/km plus relaxed 200s
-        content_html: 2 x 2 km @ ~4:55&ndash;5:00/km + 4 x 200m relaxed
+        pace_html: 4:50&ndash;4:55/km plus relaxed 200s
+        content_html: 2 x 2 km @ ~4:50&ndash;4:55/km + 4 x 200m relaxed
       - type: easy
         tags: [easy]
         content_html: Easy 40&ndash;45 min
@@ -302,8 +302,8 @@ blocks:
         content_html: Easy 40&ndash;45 min
       - type: thr
         tags: [threshold]
-        pace_html: 5:05&ndash;5:15/km
-        content_html: 4 x 8 min threshold @ ~5:05&ndash;5:15/km
+        pace_html: 5:05&ndash;5:12/km
+        content_html: 4 x 8 min threshold @ ~5:05&ndash;5:12/km
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
@@ -329,8 +329,8 @@ blocks:
         content_html: Easy 45 min
       - type: thr
         tags: [threshold]
-        pace_html: 5:05&ndash;5:12/km
-        content_html: 3 x 15 min threshold @ ~5:05&ndash;5:12/km
+        pace_html: 5:03&ndash;5:10/km
+        content_html: 3 x 15 min threshold @ ~5:03&ndash;5:10/km
       - type: easy
         tags: [easy]
         content_html: Easy 45&ndash;50 min
@@ -497,8 +497,8 @@ blocks:
       days:
       - type: intv
         tags: [10k-specific]
-        pace_html: 4:20&ndash;4:30/km pace
-        content_html: 10 x 400m @ ~4:20&ndash;4:30/km pace, relaxed, 200m jog
+        pace_html: 4:25&ndash;4:35/km pace
+        content_html: 10 x 400m @ ~4:25&ndash;4:35/km pace, relaxed, 200m jog
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
@@ -535,8 +535,8 @@ blocks:
         content_html: Easy 45&ndash;50 min
       - type: thr
         tags: [threshold]
-        pace_html: 5:00&ndash;5:08/km
-        content_html: 3 x 12 min threshold @ ~5:00&ndash;5:08/km
+        pace_html: 4:58&ndash;5:08/km
+        content_html: 3 x 12 min threshold @ ~4:58&ndash;5:08/km
       - type: easy
         tags: [easy, strides]
         content_html: Easy 40 min + strides
@@ -553,8 +553,8 @@ blocks:
       days:
       - type: intv
         tags: [10k-specific]
-        pace_html: Around 4:45/km
-        content_html: 3 x 2 km @ ~4:45/km, 3 min recovery
+        pace_html: 4:42&ndash;4:48/km
+        content_html: 3 x 2 km @ ~4:42&ndash;4:48/km, 3 min recovery
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
@@ -590,8 +590,8 @@ blocks:
         content_html: Easy 45 min
       - type: thr
         tags: [threshold]
-        pace_html: 5:00&ndash;5:08/km
-        content_html: 2 x 20 min threshold @ ~5:00&ndash;5:08/km
+        pace_html: 4:58&ndash;5:06/km
+        content_html: 2 x 20 min threshold @ ~4:58&ndash;5:06/km
       - type: easy
         tags: [easy]
         content_html: Easy 35&ndash;40 min
@@ -618,8 +618,8 @@ blocks:
         content_html: Easy 45&ndash;50 min
       - type: thr
         tags: [threshold]
-        pace_html: 4:58&ndash;5:05/km
-        content_html: 4 x 8 min threshold @ ~4:58&ndash;5:05/km
+        pace_html: 4:55&ndash;5:05/km
+        content_html: 4 x 8 min threshold @ ~4:55&ndash;5:05/km
       - type: easy
         tags: [easy, strides]
         content_html: Easy 40 min + strides
