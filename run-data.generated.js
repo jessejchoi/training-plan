@@ -455,7 +455,7 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
-        "t": "steady",
+        "t": "med",
         "s": "40 min steady inside 70 min total",
         "l": "WU: 15&ndash;20 min easy before progressing into the steady work.<br>Session: 40 min steady inside 70 min total<br>CD: 5&ndash;10 min easy at the end.",
         "tags": [
@@ -693,7 +693,7 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
-        "t": "shake",
+        "t": "rec",
         "s": "Easy 20-25 min + 4 strides",
         "l": "Easy 20&ndash;25 min + 4 strides",
         "tags": [
@@ -1118,7 +1118,7 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
-        "t": "shake",
+        "t": "rec",
         "s": "Easy 20-25 min shakeout",
         "l": "Easy 20&ndash;25 min shakeout",
         "tags": [
@@ -1750,7 +1750,7 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
-        "t": "shake",
+        "t": "rec",
         "s": "Easy 20-25 min + 4 strides",
         "l": "Easy 20&ndash;25 min + 4 strides",
         "tags": [

@@ -44,7 +44,7 @@ const { WEEKS, PHASES, DAY_TYPES, DAY_ABBR, TODAY_WEEK_ID, TODAY_DAY_INDEX,
         DAYS_TO_10K, DAYS_TO_HM, DAYS_TO_OCT_10K, getTodayWeek, getTodayDay } = window;
 
 const TODAY_KEY = `${TODAY_WEEK_ID}-${TODAY_DAY_INDEX}`;
-const GLYPH = { rest:'·', easy:'E', rec:'R', intv:'I', thr:'T', med:'M', steady:'S', hm:'H', shake:'S', lng:'L', race:'★' };
+const GLYPH = { rest:'·', easy:'E', rec:'R', intv:'I', thr:'T', med:'M', steady:'M', hm:'H', shake:'R', lng:'L', race:'★' };
 
 const useLocal = (key, init) => {
   const [v, setV] = React.useState(() => {

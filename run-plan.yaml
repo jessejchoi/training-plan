@@ -190,7 +190,7 @@ blocks:
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
-      - type: steady
+      - type: med
         tags: [steady]
         pace_html: Steady roughly 5:35&ndash;5:55/km
         content_html: 40 min steady inside 70 min total
@@ -284,7 +284,7 @@ blocks:
       - type: rest
         tags: [recovery]
         content_html: Rest or very easy 20&ndash;25 min if restless
-      - type: shake
+      - type: rec
         tags: [easy, recovery, strides]
         content_html: Easy 20&ndash;25 min + 4 strides
       - type: race
@@ -453,7 +453,7 @@ blocks:
       - type: rest
         tags: [recovery]
         content_html: Rest
-      - type: shake
+      - type: rec
         tags: [easy, recovery]
         content_html: Easy 20&ndash;25 min shakeout
       - type: race
@@ -706,7 +706,7 @@ blocks:
       - type: rest
         tags: [recovery]
         content_html: Rest
-      - type: shake
+      - type: rec
         tags: [easy, recovery, strides]
         content_html: Easy 20&ndash;25 min + 4 strides
       - type: race

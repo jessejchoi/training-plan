@@ -25,9 +25,9 @@ TYPE_SUFFIX = {
   "easy" => "",
   "lng" => "long",
   "med" => "med",
-  "steady" => "steady",
+  "steady" => "med",
   "hm" => "HM",
-  "shake" => "shake",
+  "shake" => "rec",
   "rest" => "",
   "race" => ""
 }.freeze
