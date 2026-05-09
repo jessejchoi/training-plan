@@ -40,7 +40,7 @@
 <script type="text/babel" src="shared-data.jsx"></script>
 
 <script type="text/babel">
-const { WEEKS, PHASES, DAY_TYPES, DAY_ABBR, PLAN_META, TODAY_WEEK_ID, TODAY_DAY_INDEX,
+const { WEEKS, PHASES, DAY_TYPES, DAY_ABBR, TODAY_WEEK_ID, TODAY_DAY_INDEX,
         DAYS_TO_10K, DAYS_TO_HM, DAYS_TO_OCT_10K, getTodayWeek, getTodayDay } = window;
 
 const TODAY_KEY = `${TODAY_WEEK_ID}-${TODAY_DAY_INDEX}`;
@@ -439,28 +439,6 @@ function Countdowns() {
           </div>
         </div>
       ))}
-    </div>
-  );
-}
-
-function PlanNotes() {
-  if (!PLAN_META?.planNote) return null;
-  return (
-    <div style={{
-      background:'var(--surf)',
-      border:'1px solid var(--border)',
-      borderRadius:6,
-      padding:'13px 14px',
-      display:'grid',
-      gap:10,
-      fontSize:12.5,
-      color:'var(--muted)',
-      lineHeight:1.6,
-    }}>
-      <div>
-        <div style={{fontFamily:'var(--mono)',fontSize:9,letterSpacing:1.5,color:'var(--muted2)',marginBottom:5}}>STRUCTURE</div>
-        <div dangerouslySetInnerHTML={{__html:PLAN_META.planNote}} />
-      </div>
     </div>
   );
 }
@@ -916,7 +894,6 @@ function App() {
               }}>
                 <DayDetailCard selectedKey={selectedKey} completed={completed} setCompleted={setCompleted} onGoToToday={() => setSelectedKey(TODAY_KEY)} cardRef={cardRef}/>
                 <Countdowns/>
-                <PlanNotes/>
                 <VolumeChart/>
                 <PhaseTimeline/>
               </div>
