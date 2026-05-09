@@ -7,11 +7,11 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "1",
     "dates": "May 7–10",
-    "km": 30,
-    "kmLabel": "~28–32km",
+    "km": 33,
+    "kmLabel": "~30–36km",
     "phase": "hm-build",
     "template": "Partial",
-    "notes": "Partial start week. Athlete is already workout-ready; no base-from-zero ramp.",
+    "notes": "Partial start week adjusted after Friday threshold. Keep the weekend aerobic.",
     "days": [
       {
         "t": "rest",
@@ -38,19 +38,18 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
-        "t": "easy",
-        "s": "Easy 50-60 min + strides",
-        "l": "Easy 50&ndash;60 min + strides",
+        "t": "thr",
+        "s": "3 x 10 min threshold",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 10 min threshold @ ~5:05&ndash;5:15/km, 3 min jog recovery<br>CD: 10&ndash;15 min easy.",
         "tags": [
-          "easy",
-          "strides"
+          "threshold"
         ],
-        "pace": "Easy effort, likely 6:00&ndash;7:00+/km"
+        "pace": "5:05&ndash;5:15/km"
       },
       {
         "t": "easy",
-        "s": "Easy 40-45 min",
-        "l": "Easy 40&ndash;45 min",
+        "s": "Easy 35-45 min",
+        "l": "Easy 35&ndash;45 min",
         "tags": [
           "easy"
         ],
@@ -58,8 +57,8 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "lng",
-        "s": "Long 90 min easy",
-        "l": "Long 90 min easy",
+        "s": "Long 85-95 min easy",
+        "l": "Long 85&ndash;95 min easy",
         "tags": [
           "long-run",
           "easy"
@@ -79,70 +78,72 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "2",
     "dates": "May 11–17",
-    "km": 59,
-    "kmLabel": "~56–62km",
+    "km": 46,
+    "kmLabel": "~42–50km",
     "phase": "hm-build",
-    "template": "A",
+    "template": "Travel-adjusted",
+    "notes": "Travel forces rest May 14&ndash;15. Friday threshold from the prior week replaces the planned Tuesday threshold.",
     "days": [
       {
         "t": "easy",
-        "s": "Easy 45 min",
-        "l": "Easy 45 min",
+        "s": "Recovery 35-45 min",
+        "l": "Recovery 35&ndash;45 min",
         "tags": [
-          "easy"
-        ]
-      },
-      {
-        "t": "thr",
-        "s": "3 x 12 min threshold",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 12 min threshold @ ~5:05&ndash;5:15/km, 3 min jog recovery<br>CD: 10&ndash;15 min easy.",
-        "tags": [
-          "threshold"
-        ],
-        "pace": "5:05&ndash;5:15/km"
-      },
-      {
-        "t": "easy",
-        "s": "Easy 45-50 min",
-        "l": "Easy 45&ndash;50 min",
-        "tags": [
-          "easy"
+          "easy",
+          "recovery"
         ]
       },
       {
         "t": "med",
-        "s": "Medium-long 70 min, last 20 min steady",
-        "l": "WU: 15&ndash;20 min easy before progressing into the steady work.<br>Session: Medium-long 70 min, last 20 min steady<br>CD: 5&ndash;10 min easy at the end.",
+        "s": "Medium-long 60-70 min, mostly easy; optional last 15-20 min steady if legs feel good",
+        "l": "WU: 15&ndash;20 min easy before progressing into the steady work.<br>Session: Medium-long 60&ndash;70 min, mostly easy; optional last 15&ndash;20 min steady if legs feel good<br>CD: 5&ndash;10 min easy at the end.",
         "tags": [
           "medium-long",
           "steady"
         ],
-        "pace": "Steady roughly 5:35&ndash;5:55/km"
+        "pace": "Easy effort; optional steady roughly 5:35&ndash;5:55/km"
       },
       {
         "t": "easy",
-        "s": "Easy 40 min + strides",
-        "l": "Easy 40 min + strides",
+        "s": "Easy 30-45 min + optional 4 relaxed strides",
+        "l": "Easy 30&ndash;45 min + optional 4 relaxed strides",
         "tags": [
           "easy",
           "strides"
         ]
       },
       {
-        "t": "lng",
-        "s": "Long 95 min easy",
-        "l": "Long 95 min easy",
+        "t": "rest",
+        "s": "Rest",
+        "l": "Travel rest",
         "tags": [
-          "long-run",
-          "easy"
+          "recovery",
+          "travel"
         ]
       },
       {
         "t": "rest",
         "s": "Rest",
-        "l": "Rest",
+        "l": "Travel rest",
         "tags": [
-          "recovery"
+          "recovery",
+          "travel"
+        ]
+      },
+      {
+        "t": "easy",
+        "s": "Easy return 30-45 min",
+        "l": "Easy return 30&ndash;45 min",
+        "tags": [
+          "easy"
+        ]
+      },
+      {
+        "t": "easy",
+        "s": "Easy 45-60 min",
+        "l": "Easy 45&ndash;60 min",
+        "tags": [
+          "easy"
         ]
       }
     ]

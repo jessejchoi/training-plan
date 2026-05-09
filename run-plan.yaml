@@ -11,9 +11,9 @@ blocks:
     weeks:
     - week_html: '1'
       dates_html: May 7&ndash;10
-      total_km_html: "~28&ndash;32km"
+      total_km_html: "~30&ndash;36km"
       template: Partial
-      notes_html: Partial start week. Athlete is already workout-ready; no base-from-zero ramp.
+      notes_html: Partial start week adjusted after Friday threshold. Keep the weekend aerobic.
       days:
       - type: rest
         tags: [recovery]
@@ -24,49 +24,49 @@ blocks:
       - type: rest
         tags: [recovery]
         content_html: None / already passed
-      - type: easy
-        tags: [easy, strides]
-        pace_html: Easy effort, likely 6:00&ndash;7:00+/km
-        content_html: Easy 50&ndash;60 min + strides
+      - type: thr
+        tags: [threshold]
+        pace_html: 5:05&ndash;5:15/km
+        content_html: 3 x 10 min threshold @ ~5:05&ndash;5:15/km, 3 min jog recovery
       - type: easy
         tags: [easy]
         pace_html: Easy effort, likely 6:00&ndash;7:00+/km
-        content_html: Easy 40&ndash;45 min
+        content_html: Easy 35&ndash;45 min
       - type: lng
         tags: [long-run, easy]
         pace_html: Easy effort
-        content_html: Long 90 min easy
+        content_html: Long 85&ndash;95 min easy
       - type: rest
         tags: [recovery]
         content_html: Rest
     - week_html: '2'
       dates_html: May 11&ndash;17
-      total_km_html: "~56&ndash;62km"
-      template: A
+      total_km_html: "~42&ndash;50km"
+      template: Travel-adjusted
+      notes_html: Travel forces rest May 14&ndash;15. Friday threshold from the prior week replaces the planned Tuesday threshold.
       days:
       - type: easy
-        tags: [easy]
-        content_html: Easy 45 min
-      - type: thr
-        tags: [threshold]
-        pace_html: 5:05&ndash;5:15/km
-        content_html: 3 x 12 min threshold @ ~5:05&ndash;5:15/km, 3 min jog recovery
-      - type: easy
-        tags: [easy]
-        content_html: Easy 45&ndash;50 min
+        tags: [easy, recovery]
+        content_html: Recovery 35&ndash;45 min
       - type: med
         tags: [medium-long, steady]
-        pace_html: Steady roughly 5:35&ndash;5:55/km
-        content_html: Medium-long 70 min, last 20 min steady
+        pace_html: Easy effort; optional steady roughly 5:35&ndash;5:55/km
+        content_html: Medium-long 60&ndash;70 min, mostly easy; optional last 15&ndash;20 min steady if legs feel good
       - type: easy
         tags: [easy, strides]
-        content_html: Easy 40 min + strides
-      - type: lng
-        tags: [long-run, easy]
-        content_html: Long 95 min easy
+        content_html: Easy 30&ndash;45 min + optional 4 relaxed strides
       - type: rest
-        tags: [recovery]
-        content_html: Rest
+        tags: [recovery, travel]
+        content_html: Travel rest
+      - type: rest
+        tags: [recovery, travel]
+        content_html: Travel rest
+      - type: easy
+        tags: [easy]
+        content_html: Easy return 30&ndash;45 min
+      - type: easy
+        tags: [easy]
+        content_html: Easy 45&ndash;60 min
     - week_html: '3'
       dates_html: May 18&ndash;24
       total_km_html: "~57&ndash;63km"
