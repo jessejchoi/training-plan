@@ -398,45 +398,93 @@ function DayDetailCard({ selectedKey, completed, setCompleted, onGoToToday, card
   );
 }
 
-function Countdowns() {
+function Countdowns({ compact = false }) {
+  const races = [
+    { label:'JULY 10K', date:'Jul 12', tgt:'B · ~48:00', n:DAYS_TO_10K, c:'var(--race)' },
+    { label:'HALF MARATHON', date:'Aug 23', tgt:'A · Sub 1:45', n:DAYS_TO_HM, c:'var(--str)' },
+    { label:'OCT 10K', date:'Oct 25', tgt:'A · Sub 45', n:DAYS_TO_OCT_10K, c:'var(--intv)' },
+  ];
+
+  if (compact) {
+    return (
+      <div style={{
+        background:'var(--border)',
+        border:'1px solid var(--border)',
+        borderRadius:6,
+        flexShrink:0,
+        overflow:'hidden',
+      }}>
+        {races.map(r => (
+          <div key={r.label} style={{
+            background:'var(--surf)',
+            padding:'10px 12px',
+            display:'flex',
+            justifyContent:'space-between',
+            alignItems:'center',
+            gap:12,
+            borderTop:r.label === races[0].label ? 'none' : '1px solid var(--border)',
+          }}>
+            <div>
+              <div style={{fontFamily:'var(--mono)',fontSize:8.5,color:'var(--muted2)',letterSpacing:1.5,lineHeight:1.45}}>{r.label}</div>
+              <div style={{fontFamily:'var(--mono)',fontSize:9.5,color:'var(--muted)',marginTop:4}}>{r.date}</div>
+              <div style={{fontFamily:'var(--mono)',fontSize:10,fontWeight:700,letterSpacing:1.1,color:r.c,marginTop:4}}>{r.tgt}</div>
+            </div>
+            <div style={{
+              fontFamily:'var(--serif)',
+              fontSize:28,
+              fontWeight:300,
+              color:r.c,
+              lineHeight:1,
+              whiteSpace:'nowrap',
+            }}>{r.n}<span style={{fontSize:11,color:'var(--muted)',marginLeft:4}}>days</span></div>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
   return (
     <div style={{
       display:'grid',
-      gridTemplateColumns:'repeat(3, 1fr)',
+      gridTemplateColumns:'repeat(3, minmax(0, 1fr))',
       gap:1,
       background:'var(--border)',
       border:'1px solid var(--border)',
       borderRadius:6,
+      flexShrink:0,
       overflow:'hidden',
     }}>
-      {[
-        { label:'JULY 10K', date:'Jul 12', tgt:'B · ~48:00', n:DAYS_TO_10K, c:'var(--race)' },
-        { label:'HALF MARATHON', date:'Aug 23', tgt:'A · Sub 1:45', n:DAYS_TO_HM, c:'var(--str)' },
-        { label:'OCT 10K', date:'Oct 25', tgt:'A · Sub 45', n:DAYS_TO_OCT_10K, c:'var(--intv)' },
-      ].map((r, i) => (
-        <div key={i} style={{background:'var(--surf)',padding:'12px 14px'}}>
-          <div style={{fontFamily:'var(--mono)',fontSize:9,color:'var(--muted2)',letterSpacing:1.5}}>{r.label}</div>
+      {races.map((r, i) => (
+        <div key={i} style={{
+          background:'var(--surf)',
+          padding:'10px 12px 12px',
+          minHeight:114,
+        }}>
+          <div>
+            <div style={{fontFamily:'var(--mono)',fontSize:8.5,color:'var(--muted2)',letterSpacing:1.5,lineHeight:1.45}}>{r.label}</div>
+            <div style={{fontFamily:'var(--mono)',fontSize:9.5,color:'var(--muted)',marginTop:4}}>
+              {r.date}
+            </div>
+            <div style={{
+              fontFamily:'var(--mono)',
+              fontSize:11,
+              fontWeight:700,
+              letterSpacing:1.1,
+              color:r.c,
+              marginTop:6,
+            }}>
+              {r.tgt}
+            </div>
+          </div>
           <div style={{
             fontFamily:'var(--serif)',
-            fontSize:30,
+            fontSize:29,
             fontWeight:300,
             color:r.c,
             lineHeight:1,
             marginTop:4,
+            whiteSpace:'nowrap',
           }}>{r.n}<span style={{fontSize:11,color:'var(--muted)',marginLeft:4}}>days</span></div>
-          <div style={{fontFamily:'var(--mono)',fontSize:9.5,color:'var(--muted)',marginTop:4}}>
-            {r.date}
-          </div>
-          <div style={{
-            fontFamily:'var(--mono)',
-            fontSize:12,
-            fontWeight:700,
-            letterSpacing:1.1,
-            color:r.c,
-            marginTop:6,
-          }}>
-            {r.tgt}
-          </div>
         </div>
       ))}
     </div>
@@ -893,7 +941,7 @@ function App() {
                 paddingRight:4,
               }}>
                 <DayDetailCard selectedKey={selectedKey} completed={completed} setCompleted={setCompleted} onGoToToday={() => setSelectedKey(TODAY_KEY)} cardRef={cardRef}/>
-                <Countdowns/>
+                <Countdowns compact/>
                 <VolumeChart/>
                 <PhaseTimeline/>
               </div>
