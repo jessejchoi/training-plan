@@ -216,8 +216,8 @@ blocks:
         content_html: Easy 45 min
       - type: thr
         tags: [threshold, steady]
-        pace_html: 5:08&ndash;5:18/km
-        content_html: 2 x 25 min strong aerobic/threshold-lite @ ~5:08&ndash;5:18/km
+        pace_html: 5:15&ndash;5:25/km
+        content_html: 2 x 25 min strong aerobic @ ~5:15&ndash;5:25/km
       - type: easy
         tags: [easy]
         content_html: Easy 45 min

@@ -517,13 +517,13 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "thr",
-        "s": "2 x 25 min strong aerobic/threshold-lite",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 25 min strong aerobic/threshold-lite @ ~5:08&ndash;5:18/km<br>CD: 10&ndash;15 min easy.",
+        "s": "2 x 25 min strong aerobic",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 25 min strong aerobic @ ~5:15&ndash;5:25/km<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "threshold",
           "steady"
         ],
-        "pace": "5:08&ndash;5:18/km"
+        "pace": "5:15&ndash;5:25/km"
       },
       {
         "t": "easy",
