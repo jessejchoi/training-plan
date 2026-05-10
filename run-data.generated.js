@@ -883,8 +883,8 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "hm",
-        "s": "2 x 20 min HM-specific",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 20 min HM-specific @ target HM pace ~4:58/km; run controlled at ~5:00&ndash;5:10/km inside 75 min<br>CD: 10&ndash;15 min easy.",
+        "s": "2 x 20 min controlled HM work",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 20 min controlled HM work @ 5:00&ndash;5:10/km. Goal HM pace: ~4:58/km.<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "hm-specific"
         ],
@@ -943,8 +943,8 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "thr",
-        "s": "4 x 3 km",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 4 x 3 km @ ~5:00&ndash;5:08/km, 3 min jog<br>CD: 10&ndash;15 min easy.",
+        "s": "4 x 3 km controlled HM/threshold work",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 4 x 3 km controlled HM/threshold work @ 5:00&ndash;5:08/km, 3 min jog. Goal HM pace: ~4:58/km.<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "threshold",
           "hm-specific"
@@ -1014,8 +1014,8 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "hm",
-        "s": "2 x 5 km",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 5 km @ target HM pace ~4:58/km; run ~5:00&ndash;5:08/km, 5 min easy between<br>CD: 10&ndash;15 min easy.",
+        "s": "2 x 5 km controlled HM work",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 5 km controlled HM work @ 5:00&ndash;5:08/km, 5 min easy between. Goal HM pace: ~4:58/km.<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "hm-specific"
         ],
@@ -1086,7 +1086,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "hm",
         "s": "3 x 2 km",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 2 km @ HM target pace, ~4:58/km, 3 min jog<br>CD: 10&ndash;15 min easy.",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 2 km @ HM target pace, ~4:58/km, 3 min jog. Goal HM pace: ~4:58/km.<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "hm-specific"
         ],
