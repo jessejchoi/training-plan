@@ -840,11 +840,12 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "lng",
         "s": "Long 110 min, last 30 min steady",
-        "l": "WU: First 20&ndash;30 min easy before the prescribed long-run quality.<br>Session: Long 110 min, last 30 min steady<br>CD: Optional 5&ndash;10 min very easy after the prescribed time if you need to downshift.",
+        "l": "WU: First 20&ndash;30 min easy before the prescribed long-run quality.<br>Session: Long 110 min, last 30 min steady @ 5:25&ndash;5:45/km<br>CD: Optional 5&ndash;10 min very easy after the prescribed time if you need to downshift.",
         "tags": [
           "long-run",
           "steady"
-        ]
+        ],
+        "pace": "Last 30 min steady @ 5:25&ndash;5:45/km"
       },
       {
         "t": "rest",
@@ -980,11 +981,12 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "lng",
         "s": "Long 120 min with 3 x 15 min HM effort",
-        "l": "WU: First 20&ndash;30 min easy before the prescribed long-run quality.<br>Session: Long 120 min with 3 x 15 min HM effort<br>CD: 10&ndash;15 min easy.",
+        "l": "WU: First 20&ndash;30 min easy before the prescribed long-run quality.<br>Session: Long 120 min with 3 x 15 min HM effort @ 5:05&ndash;5:12/km. Goal HM pace: ~4:58/km.<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "long-run",
           "hm-specific"
-        ]
+        ],
+        "pace": "3 x 15 min HM effort @ 5:05&ndash;5:12/km"
       },
       {
         "t": "rest",
@@ -1049,12 +1051,13 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "lng",
         "s": "Long 105-110 min with final 40 min steady/HM-lite",
-        "l": "WU: First 20&ndash;30 min easy before the prescribed long-run quality.<br>Session: Long 105&ndash;110 min with final 40 min steady/HM-lite<br>CD: Optional 5&ndash;10 min very easy after the prescribed time if you need to downshift.",
+        "l": "WU: First 20&ndash;30 min easy before the prescribed long-run quality.<br>Session: Long 105&ndash;110 min with final 40 min steady/HM-lite @ 5:12&ndash;5:25/km. Goal HM pace: ~4:58/km.<br>CD: Optional 5&ndash;10 min very easy after the prescribed time if you need to downshift.",
         "tags": [
           "long-run",
           "steady",
           "hm-specific"
-        ]
+        ],
+        "pace": "Final 40 min steady/HM-lite @ 5:12&ndash;5:25/km"
       },
       {
         "t": "rest",

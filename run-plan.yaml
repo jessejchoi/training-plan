@@ -342,7 +342,8 @@ blocks:
         content_html: Easy 40 min
       - type: lng
         tags: [long-run, steady]
-        content_html: Long 110 min, last 30 min steady
+        pace_html: Last 30 min steady @ 5:25&ndash;5:45/km
+        content_html: Long 110 min, last 30 min steady @ 5:25&ndash;5:45/km
       - type: rest
         tags: [recovery]
         content_html: Rest
@@ -400,7 +401,8 @@ blocks:
         content_html: Easy 40 min + strides
       - type: lng
         tags: [long-run, hm-specific]
-        content_html: Long 120 min with 3 x 15 min HM effort
+        pace_html: 3 x 15 min HM effort @ 5:05&ndash;5:12/km
+        content_html: "Long 120 min with 3 x 15 min HM effort @ 5:05&ndash;5:12/km. Goal HM pace: ~4:58/km."
       - type: rest
         tags: [recovery]
         content_html: Rest
@@ -427,7 +429,8 @@ blocks:
         content_html: Easy 35&ndash;40 min
       - type: lng
         tags: [long-run, steady, hm-specific]
-        content_html: Long 105&ndash;110 min with final 40 min steady/HM-lite
+        pace_html: Final 40 min steady/HM-lite @ 5:12&ndash;5:25/km
+        content_html: "Long 105&ndash;110 min with final 40 min steady/HM-lite @ 5:12&ndash;5:25/km. Goal HM pace: ~4:58/km."
       - type: rest
         tags: [recovery]
         content_html: Rest
