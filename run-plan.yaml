@@ -202,7 +202,8 @@ blocks:
         content_html: Easy 35&ndash;40 min + strides
       - type: lng
         tags: [long-run, steady]
-        content_html: Long 105&ndash;110 min with last 25 min steady
+        pace_html: Last 25 min steady @ 5:35&ndash;5:55/km
+        content_html: Long 105&ndash;110 min with last 25 min steady @ 5:35&ndash;5:55/km
       - type: rest
         tags: [recovery]
         content_html: Rest

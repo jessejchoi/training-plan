@@ -483,11 +483,12 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "lng",
         "s": "Long 105-110 min with last 25 min steady",
-        "l": "WU: First 20&ndash;30 min easy before the prescribed long-run quality.<br>Session: Long 105&ndash;110 min with last 25 min steady<br>CD: Optional 5&ndash;10 min very easy after the prescribed time if you need to downshift.",
+        "l": "WU: First 20&ndash;30 min easy before the prescribed long-run quality.<br>Session: Long 105&ndash;110 min with last 25 min steady @ 5:35&ndash;5:55/km<br>CD: Optional 5&ndash;10 min very easy after the prescribed time if you need to downshift.",
         "tags": [
           "long-run",
           "steady"
-        ]
+        ],
+        "pace": "Last 25 min steady @ 5:35&ndash;5:55/km"
       },
       {
         "t": "rest",
