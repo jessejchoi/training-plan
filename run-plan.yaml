@@ -364,7 +364,7 @@ blocks:
       - type: hm
         tags: [hm-specific]
         pace_html: 5:00&ndash;5:10/km
-        content_html: 2 x 20 min HM effort @ ~5:00&ndash;5:10/km inside 75 min
+        content_html: 2 x 20 min HM-specific @ target HM pace ~4:58/km; run controlled at ~5:00&ndash;5:10/km inside 75 min
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
@@ -415,7 +415,7 @@ blocks:
       - type: hm
         tags: [hm-specific]
         pace_html: 5:00&ndash;5:08/km
-        content_html: 2 x 5 km @ HM effort, ~5:00&ndash;5:08/km, 5 min easy between
+        content_html: 2 x 5 km @ target HM pace ~4:58/km; run ~5:00&ndash;5:08/km, 5 min easy between
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
@@ -442,8 +442,8 @@ blocks:
         content_html: Easy 40 min
       - type: hm
         tags: [hm-specific]
-        pace_html: Around 5:00/km
-        content_html: 3 x 2 km @ HM goal effort, ~5:00/km, 3 min jog
+        pace_html: Around 4:58/km
+        content_html: 3 x 2 km @ HM target pace, ~4:58/km, 3 min jog
       - type: easy
         tags: [easy]
         content_html: Easy 35&ndash;40 min

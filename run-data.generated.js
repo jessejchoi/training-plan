@@ -883,8 +883,8 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "hm",
-        "s": "2 x 20 min HM effort",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 20 min HM effort @ ~5:00&ndash;5:10/km inside 75 min<br>CD: 10&ndash;15 min easy.",
+        "s": "2 x 20 min HM-specific",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 20 min HM-specific @ target HM pace ~4:58/km; run controlled at ~5:00&ndash;5:10/km inside 75 min<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "hm-specific"
         ],
@@ -1015,7 +1015,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "hm",
         "s": "2 x 5 km",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 5 km @ HM effort, ~5:00&ndash;5:08/km, 5 min easy between<br>CD: 10&ndash;15 min easy.",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 5 km @ target HM pace ~4:58/km; run ~5:00&ndash;5:08/km, 5 min easy between<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "hm-specific"
         ],
@@ -1086,11 +1086,11 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "hm",
         "s": "3 x 2 km",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 2 km @ HM goal effort, ~5:00/km, 3 min jog<br>CD: 10&ndash;15 min easy.",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 2 km @ HM target pace, ~4:58/km, 3 min jog<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "hm-specific"
         ],
-        "pace": "Around 5:00/km"
+        "pace": "Around 4:58/km"
       },
       {
         "t": "easy",
