@@ -7,8 +7,8 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "1",
     "dates": "May 7–10",
-    "km": 33,
-    "kmLabel": "~30–36km",
+    "km": 31,
+    "kmLabel": "~29–33km",
     "phase": "hm-build",
     "template": "Partial",
     "notes": "Partial start week adjusted after Friday threshold. Keep the weekend aerobic.",
@@ -78,8 +78,8 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "2",
     "dates": "May 11–17",
-    "km": 46,
-    "kmLabel": "~42–50km",
+    "km": 35,
+    "kmLabel": "~30–40km",
     "phase": "hm-build",
     "template": "Travel-adjusted",
     "notes": "Travel forces rest May 14&ndash;15. Friday threshold from the prior week replaces the planned Tuesday threshold. May 24 10K added after this week, so the weekend stays aerobic.",
@@ -151,8 +151,8 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "3",
     "dates": "May 18–24",
-    "km": 46,
-    "kmLabel": "~42–50km",
+    "km": 42.5,
+    "kmLabel": "~37–48km",
     "phase": "hm-build",
     "template": "May 24 10K mini-taper",
     "notes": "Surprise May 24 10K becomes a race-like B/C effort inside the HM-first block. Stay sharp, reduce fatigue, and avoid treating this as a full peak.",
@@ -229,8 +229,8 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "4",
     "dates": "May 25–31",
-    "km": 63.5,
-    "kmLabel": "~61–66km",
+    "km": 61.5,
+    "kmLabel": "~60–63km",
     "phase": "hm-build",
     "template": "A",
     "days": [
@@ -300,8 +300,8 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "5",
     "dates": "Jun 1–7",
-    "km": 53,
-    "kmLabel": "~50–56km",
+    "km": 51,
+    "kmLabel": "~49–53km",
     "phase": "hm-build",
     "template": "Down-ish",
     "notes": "Down-ish week absorbs the first threshold block while keeping rhythm.",
@@ -371,8 +371,8 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "6",
     "dates": "Jun 8–14",
-    "km": 65,
-    "kmLabel": "~63–67km",
+    "km": 62,
+    "kmLabel": "~61–63km",
     "phase": "hm-build",
     "template": "A",
     "days": [
@@ -440,8 +440,8 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "7",
     "dates": "Jun 15–21",
-    "km": 61.5,
-    "kmLabel": "~59–64km",
+    "km": 58.5,
+    "kmLabel": "~57–60km",
     "phase": "hm-build",
     "template": "C",
     "days": [
@@ -511,8 +511,8 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "8",
     "dates": "Jun 22–28",
-    "km": 65.5,
-    "kmLabel": "~64–67km",
+    "km": 63,
+    "kmLabel": "~62–64km",
     "phase": "hm-build",
     "template": "A",
     "days": [
@@ -582,8 +582,8 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "9",
     "dates": "Jun 29–Jul 5",
-    "km": 57.5,
-    "kmLabel": "~55–60km",
+    "km": 55.5,
+    "kmLabel": "~53–58km",
     "phase": "hm-build",
     "template": "B",
     "days": [
@@ -651,8 +651,8 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "10",
     "dates": "Jul 6–12",
-    "km": 42.5,
-    "kmLabel": "~40–45km",
+    "km": 44,
+    "kmLabel": "~40–48km",
     "phase": "hm-build",
     "template": "Race-in-block",
     "notes": "July 12 is a B-race benchmark inside the HM build, not a major peak.",
@@ -728,8 +728,8 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "11",
     "dates": "Jul 13–19",
-    "km": 55,
-    "kmLabel": "~52–58km",
+    "km": 54.5,
+    "kmLabel": "~53–56km",
     "phase": "hm-build",
     "template": "Recovery/A",
     "days": [
@@ -799,8 +799,8 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "12",
     "dates": "Jul 20–26",
-    "km": 64.5,
-    "kmLabel": "~62–67km",
+    "km": 63.5,
+    "kmLabel": "~62–65km",
     "phase": "hm-build",
     "template": "A",
     "days": [
@@ -869,8 +869,8 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "13",
     "dates": "Jul 27–Aug 2",
-    "km": 62.5,
-    "kmLabel": "~60–65km",
+    "km": 59.5,
+    "kmLabel": "~58–61km",
     "phase": "hm-peak",
     "template": "C",
     "days": [
@@ -938,8 +938,8 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "14",
     "dates": "Aug 3–9",
-    "km": 70.5,
-    "kmLabel": "~68–73km",
+    "km": 69.5,
+    "kmLabel": "~69–70km",
     "phase": "hm-peak",
     "template": "A",
     "days": [
@@ -1011,7 +1011,7 @@ window.RUN_PLAN_WEEKS = [
     "id": "15",
     "dates": "Aug 10–16",
     "km": 62.5,
-    "kmLabel": "~60–65km",
+    "kmLabel": "~61–64km",
     "phase": "hm-peak",
     "template": "C / peak HM",
     "days": [
@@ -1081,8 +1081,8 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "16",
     "dates": "Aug 17–23",
-    "km": 50.5,
-    "kmLabel": "~48–53km",
+    "km": 53.5,
+    "kmLabel": "~52–55km",
     "phase": "hm-peak",
     "template": "HM taper",
     "race": true,
@@ -1155,8 +1155,8 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "17",
     "dates": "Aug 24–30",
-    "km": 41,
-    "kmLabel": "~38–44km",
+    "km": 38.5,
+    "kmLabel": "~34–43km",
     "phase": "tenk-sharpen",
     "template": "Recovery",
     "days": [
@@ -1225,7 +1225,7 @@ window.RUN_PLAN_WEEKS = [
     "id": "18",
     "dates": "Aug 31–Sep 6",
     "km": 53,
-    "kmLabel": "~50–56km",
+    "kmLabel": "~52–54km",
     "phase": "tenk-sharpen",
     "template": "B",
     "days": [
@@ -1293,8 +1293,8 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "19",
     "dates": "Sep 7–13",
-    "km": 58,
-    "kmLabel": "~55–61km",
+    "km": 57,
+    "kmLabel": "~55–59km",
     "phase": "tenk-sharpen",
     "template": "B",
     "days": [
@@ -1363,8 +1363,8 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "20",
     "dates": "Sep 14–20",
-    "km": 59,
-    "kmLabel": "~56–62km",
+    "km": 56,
+    "kmLabel": "~54–58km",
     "phase": "tenk-sharpen",
     "template": "C",
     "days": [
@@ -1433,8 +1433,8 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "21",
     "dates": "Sep 21–27",
-    "km": 58,
-    "kmLabel": "~55–61km",
+    "km": 57.5,
+    "kmLabel": "~55–60km",
     "phase": "tenk-sharpen",
     "template": "B",
     "days": [
@@ -1502,8 +1502,8 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "22",
     "dates": "Sep 28–Oct 4",
-    "km": 58,
-    "kmLabel": "~55–61km",
+    "km": 57.5,
+    "kmLabel": "~55–60km",
     "phase": "tenk-sharpen",
     "template": "B",
     "days": [
@@ -1572,8 +1572,8 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "23",
     "dates": "Oct 5–11",
-    "km": 56,
-    "kmLabel": "~53–59km",
+    "km": 54,
+    "kmLabel": "~52–56km",
     "phase": "tenk-sharpen",
     "template": "C",
     "days": [
@@ -1642,8 +1642,8 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "24",
     "dates": "Oct 12–18",
-    "km": 54,
-    "kmLabel": "~51–57km",
+    "km": 53.5,
+    "kmLabel": "~51–56km",
     "phase": "tenk-sharpen",
     "template": "B / peak 10K",
     "days": [
@@ -1712,8 +1712,8 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "25",
     "dates": "Oct 19–25",
-    "km": 38.5,
-    "kmLabel": "~36–41km",
+    "km": 39.5,
+    "kmLabel": "~37–42km",
     "phase": "tenk-sharpen",
     "template": "10K taper",
     "race": true,

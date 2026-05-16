@@ -11,7 +11,7 @@ blocks:
     weeks:
     - week_html: '1'
       dates_html: May 7&ndash;10
-      total_km_html: "~30&ndash;36km"
+      total_km_html: "~29&ndash;33km"
       template: Partial
       notes_html: Partial start week adjusted after Friday threshold. Keep the weekend aerobic.
       days:
@@ -41,7 +41,7 @@ blocks:
         content_html: Long 85&ndash;95 min easy
     - week_html: '2'
       dates_html: May 11&ndash;17
-      total_km_html: "~42&ndash;50km"
+      total_km_html: "~30&ndash;40km"
       template: Travel-adjusted
       notes_html: Travel forces rest May 14&ndash;15. Friday threshold from the prior week replaces the planned Tuesday threshold. May 24 10K added after this week, so the weekend stays aerobic.
       days:
@@ -69,7 +69,7 @@ blocks:
         content_html: Easy 45&ndash;60 min, or 35&ndash;45 min if legs feel stale
     - week_html: '3'
       dates_html: May 18&ndash;24
-      total_km_html: "~42&ndash;50km"
+      total_km_html: "~37&ndash;48km"
       template: May 24 10K mini-taper
       notes_html: Surprise May 24 10K becomes a race-like B/C effort inside the HM-first block. Stay sharp, reduce fatigue, and avoid treating this as a full peak.
       race_notes_html: "May 24 10K pacing: Km 1&ndash;2 controlled around 4:55&ndash;5:00/km; Km 3&ndash;6 settle around 4:50&ndash;4:55/km if breathing is under control; Km 7&ndash;8 hold effort; Km 9&ndash;10 race properly if gears are still there."
@@ -100,7 +100,7 @@ blocks:
         content_html: May 24 10K race &mdash; race-like B/C effort
     - week_html: '4'
       dates_html: May 25&ndash;31
-      total_km_html: "~61&ndash;66km"
+      total_km_html: "~60&ndash;63km"
       template: A
       days:
       - type: easy
@@ -128,7 +128,7 @@ blocks:
         content_html: Rest
     - week_html: '5'
       dates_html: Jun 1&ndash;7
-      total_km_html: "~50&ndash;56km"
+      total_km_html: "~49&ndash;53km"
       template: Down-ish
       notes_html: Down-ish week absorbs the first threshold block while keeping rhythm.
       days:
@@ -156,7 +156,7 @@ blocks:
         content_html: Rest
     - week_html: '6'
       dates_html: Jun 8&ndash;14
-      total_km_html: "~63&ndash;67km"
+      total_km_html: "~61&ndash;63km"
       template: A
       days:
       - type: easy
@@ -183,7 +183,7 @@ blocks:
         content_html: Rest
     - week_html: '7'
       dates_html: Jun 15&ndash;21
-      total_km_html: "~59&ndash;64km"
+      total_km_html: "~57&ndash;60km"
       template: C
       days:
       - type: intv
@@ -212,7 +212,7 @@ blocks:
         content_html: Rest
     - week_html: '8'
       dates_html: Jun 22&ndash;28
-      total_km_html: "~64&ndash;67km"
+      total_km_html: "~62&ndash;64km"
       template: A
       days:
       - type: easy
@@ -239,7 +239,7 @@ blocks:
         content_html: Rest
     - week_html: '9'
       dates_html: Jun 29&ndash;Jul 5
-      total_km_html: "~55&ndash;60km"
+      total_km_html: "~53&ndash;58km"
       template: B
       days:
       - type: intv
@@ -267,7 +267,7 @@ blocks:
         content_html: Rest
     - week_html: '10'
       dates_html: Jul 6&ndash;12
-      total_km_html: "~40&ndash;45km"
+      total_km_html: "~40&ndash;48km"
       template: Race-in-block
       notes_html: July 12 is a B-race benchmark inside the HM build, not a major peak.
       race_notes_html: "July 12 10K benchmark pacing: Km 1&ndash;2 4:55&ndash;5:00/km; Km 3&ndash;6 4:48&ndash;4:52/km if controlled; Km 7&ndash;8 hold or squeeze; Km 9&ndash;10 race hard if possible."
@@ -298,7 +298,7 @@ blocks:
         content_html: July 12 10K race / benchmark
     - week_html: '11'
       dates_html: Jul 13&ndash;19
-      total_km_html: "~52&ndash;58km"
+      total_km_html: "~53&ndash;56km"
       template: Recovery/A
       days:
       - type: easy
@@ -325,7 +325,7 @@ blocks:
         content_html: Rest
     - week_html: '12'
       dates_html: Jul 20&ndash;26
-      total_km_html: "~62&ndash;67km"
+      total_km_html: "~62&ndash;65km"
       template: A
       days:
       - type: easy
@@ -356,7 +356,7 @@ blocks:
     weeks:
     - week_html: '13'
       dates_html: Jul 27&ndash;Aug 2
-      total_km_html: "~60&ndash;65km"
+      total_km_html: "~58&ndash;61km"
       template: C
       days:
       - type: intv
@@ -384,7 +384,7 @@ blocks:
         content_html: Rest
     - week_html: '14'
       dates_html: Aug 3&ndash;9
-      total_km_html: "~68&ndash;73km"
+      total_km_html: "~69&ndash;70km"
       template: A
       days:
       - type: easy
@@ -412,7 +412,7 @@ blocks:
         content_html: Rest
     - week_html: '15'
       dates_html: Aug 10&ndash;16
-      total_km_html: "~60&ndash;65km"
+      total_km_html: "~61&ndash;64km"
       template: C / peak HM
       days:
       - type: easy
@@ -440,7 +440,7 @@ blocks:
         content_html: Rest
     - week_html: '16'
       dates_html: Aug 17&ndash;23
-      total_km_html: "~48&ndash;53km"
+      total_km_html: "~52&ndash;55km"
       template: HM taper
       race_notes_html: "Aug 23 HM A-race target: sub-1:45, about 4:59/km. Pacing: Km 1&ndash;5 5:03&ndash;5:08/km; Km 6&ndash;15 4:58&ndash;5:02/km; Km 16&ndash;19 hold effort; Km 20&ndash;21.1 push if possible."
       days:
@@ -473,7 +473,7 @@ blocks:
     weeks:
     - week_html: '17'
       dates_html: Aug 24&ndash;30
-      total_km_html: "~38&ndash;44km"
+      total_km_html: "~34&ndash;43km"
       template: Recovery
       days:
       - type: rec
@@ -499,7 +499,7 @@ blocks:
         content_html: Rest
     - week_html: '18'
       dates_html: Aug 31&ndash;Sep 6
-      total_km_html: "~50&ndash;56km"
+      total_km_html: "~52&ndash;54km"
       template: B
       days:
       - type: intv
@@ -527,7 +527,7 @@ blocks:
         content_html: Rest
     - week_html: '19'
       dates_html: Sep 7&ndash;13
-      total_km_html: "~55&ndash;61km"
+      total_km_html: "~55&ndash;59km"
       template: B
       days:
       - type: intv
@@ -555,7 +555,7 @@ blocks:
         content_html: Rest
     - week_html: '20'
       dates_html: Sep 14&ndash;20
-      total_km_html: "~56&ndash;62km"
+      total_km_html: "~54&ndash;58km"
       template: C
       days:
       - type: intv
@@ -582,7 +582,7 @@ blocks:
         content_html: Rest
     - week_html: '21'
       dates_html: Sep 21&ndash;27
-      total_km_html: "~55&ndash;61km"
+      total_km_html: "~55&ndash;60km"
       template: B
       days:
       - type: intv
@@ -610,7 +610,7 @@ blocks:
         content_html: Rest
     - week_html: '22'
       dates_html: Sep 28&ndash;Oct 4
-      total_km_html: "~55&ndash;61km"
+      total_km_html: "~55&ndash;60km"
       template: B
       days:
       - type: intv
@@ -638,7 +638,7 @@ blocks:
         content_html: Rest
     - week_html: '23'
       dates_html: Oct 5&ndash;11
-      total_km_html: "~53&ndash;59km"
+      total_km_html: "~52&ndash;56km"
       template: C
       days:
       - type: intv
@@ -665,7 +665,7 @@ blocks:
         content_html: Rest
     - week_html: '24'
       dates_html: Oct 12&ndash;18
-      total_km_html: "~51&ndash;57km"
+      total_km_html: "~51&ndash;56km"
       template: B / peak 10K
       days:
       - type: intv
@@ -693,7 +693,7 @@ blocks:
         content_html: Rest
     - week_html: '25'
       dates_html: Oct 19&ndash;25
-      total_km_html: "~36&ndash;41km"
+      total_km_html: "~37&ndash;42km"
       template: 10K taper
       race_notes_html: "Oct 25 10K A-race target: sub-45, about 4:30/km. Label as priority 10K."
       days:
@@ -721,5 +721,5 @@ blocks:
         priority: A
         pace_html: Target about 4:30/km
         content_html: Oct 25 10K race &mdash; sub-45 attempt
-  pace_guide_html: "<strong>Easy:</strong> effort-based, likely 6:00&ndash;7:00+/km depending heat/humidity &nbsp;&middot;&nbsp; <strong>Steady:</strong> roughly 5:35&ndash;5:55/km early, potentially 5:25&ndash;5:45/km later &nbsp;&middot;&nbsp; <strong>HM effort:</strong> initially 5:10&ndash;5:20/km, progressing toward 4:58&ndash;5:05/km &nbsp;&middot;&nbsp; <strong>Threshold:</strong> currently around 5:05&ndash;5:15/km, ideally moving toward 4:55&ndash;5:05/km &nbsp;&middot;&nbsp; <strong>July 10K benchmark:</strong> roughly 4:45&ndash;4:55/km &nbsp;&middot;&nbsp; <strong>Oct 10K goal:</strong> 4:30/km &nbsp;&middot;&nbsp; <strong>Short fast reps:</strong> roughly 4:20&ndash;4:40/km depending rep length."
+  pace_guide_html: "<strong>Easy:</strong> effort-based, usually around 6:45/km depending heat/humidity &nbsp;&middot;&nbsp; <strong>Steady:</strong> roughly 5:35&ndash;5:55/km early, potentially 5:25&ndash;5:45/km later &nbsp;&middot;&nbsp; <strong>HM effort:</strong> initially 5:10&ndash;5:20/km, progressing toward 4:58&ndash;5:05/km &nbsp;&middot;&nbsp; <strong>Threshold:</strong> currently around 5:05&ndash;5:15/km, ideally moving toward 4:55&ndash;5:05/km &nbsp;&middot;&nbsp; <strong>July 10K benchmark:</strong> roughly 4:45&ndash;4:55/km &nbsp;&middot;&nbsp; <strong>Oct 10K goal:</strong> 4:30/km &nbsp;&middot;&nbsp; <strong>Short fast reps:</strong> roughly 4:20&ndash;4:40/km depending rep length."
   plan_note_html: "Six runs per week in normal weeks. Sunday stays rest except fixed Sunday race dates. Saturday stays long run except pre-race Saturdays, which become short shakeouts. Weekly structure is flexible: the extra easy day moves depending on whether the week protects the second quality session or the Saturday long run. May 24 is a race-like B/C 10K mini-taper inside the HM-first block. July 12 is a benchmark/B-race inside the HM build, not a peak."

@@ -45,6 +45,7 @@ const { WEEKS, PHASES, DAY_TYPES, DAY_ABBR, TODAY_WEEK_ID, TODAY_DAY_INDEX,
 
 const TODAY_KEY = `${TODAY_WEEK_ID}-${TODAY_DAY_INDEX}`;
 const GLYPH = { rest:'·', easy:'E', rec:'R', intv:'I', thr:'T', med:'M', steady:'M', hm:'H', shake:'R', lng:'L', race:'★' };
+const MAX_WEEK_KM = Math.ceil(Math.max(1, ...WEEKS.map(w => w.km)));
 
 const useLocal = (key, init) => {
   const [v, setV] = React.useState(() => {
@@ -561,7 +562,7 @@ function PhaseTimeline() {
 
 function VolumeChart() {
   const todayIdx = WEEKS.findIndex(w => w.id === TODAY_WEEK_ID);
-  const maxKm = 68;
+  const maxKm = MAX_WEEK_KM;
   const height = 120;
   const [activeWeekId, setActiveWeekId] = React.useState(TODAY_WEEK_ID);
   const activeWeek = WEEKS.find(w => w.id === activeWeekId) || getTodayWeek();
@@ -620,7 +621,7 @@ function VolumeChart() {
 
 function WeeklyGrid({ completed, selectedKey, setSelectedKey, isWide }) {
   const todayIdx = WEEKS.findIndex(w => w.id === TODAY_WEEK_ID);
-  const maxKm = 68;
+  const maxKm = MAX_WEEK_KM;
   const columns = isWide
     ? 'minmax(36px,auto) minmax(74px,auto) minmax(74px,auto) minmax(32px,auto) repeat(7, minmax(28px,1fr)) minmax(42px,auto)'
     : 'minmax(30px,auto) minmax(64px,auto) minmax(28px,auto) repeat(7, minmax(22px,1fr))';
