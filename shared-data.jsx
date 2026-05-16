@@ -91,7 +91,8 @@ function diffWholeDays(fromUtc, toUtc) {
   return Math.floor((toUtc - fromUtc) / 86400000);
 }
 
-const LOCAL_TODAY = zonedDateParts('America/Los_Angeles');
+const PLAN_TIME_ZONE = 'Asia/Jakarta';
+const LOCAL_TODAY = zonedDateParts(PLAN_TIME_ZONE);
 const PLAN_START = { year: 2026, month: 5, day: 4 };
 const planStartUtc = utcDateFromParts(PLAN_START);
 const todayUtc = utcDateFromParts(LOCAL_TODAY);
@@ -113,7 +114,7 @@ const DAYS_TO_HM = Math.max(0, diffWholeDays(todayUtc, utcDateFromParts({ year: 
 const DAYS_TO_OCT_10K = Math.max(0, diffWholeDays(todayUtc, utcDateFromParts({ year: 2026, month: 10, day: 25 })));
 
 Object.assign(window, {
-  T, DAY_TYPES, DAY_ABBR, PHASES, WEEKS, PLAN_META,
+  T, DAY_TYPES, DAY_ABBR, PHASES, WEEKS, PLAN_META, PLAN_TIME_ZONE,
   TODAY_WEEK_ID, TODAY_DAY_INDEX,
   getWeek, getTodayWeek, getTodayDay,
   DAYS_TO_10K, DAYS_TO_HM, DAYS_TO_OCT_10K,
