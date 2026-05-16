@@ -43,7 +43,7 @@ blocks:
       dates_html: May 11&ndash;17
       total_km_html: "~42&ndash;50km"
       template: Travel-adjusted
-      notes_html: Travel forces rest May 14&ndash;15. Friday threshold from the prior week replaces the planned Tuesday threshold.
+      notes_html: Travel forces rest May 14&ndash;15. Friday threshold from the prior week replaces the planned Tuesday threshold. May 24 10K added after this week, so the weekend stays aerobic.
       days:
       - type: easy
         tags: [easy, recovery]
@@ -63,38 +63,41 @@ blocks:
         content_html: Travel rest
       - type: easy
         tags: [easy]
-        content_html: Easy return 30&ndash;45 min
+        content_html: Easy 30&ndash;45 min. Keep it genuinely easy after travel.
       - type: easy
         tags: [easy]
-        content_html: Easy 45&ndash;60 min
+        content_html: Easy 45&ndash;60 min, or 35&ndash;45 min if legs feel stale
     - week_html: '3'
       dates_html: May 18&ndash;24
-      total_km_html: "~57&ndash;63km"
-      template: B
+      total_km_html: "~42&ndash;50km"
+      template: May 24 10K mini-taper
+      notes_html: Surprise May 24 10K becomes a race-like B/C effort inside the HM-first block. Stay sharp, reduce fatigue, and avoid treating this as a full peak.
+      race_notes_html: "May 24 10K pacing: Km 1&ndash;2 controlled around 4:55&ndash;5:00/km; Km 3&ndash;6 settle around 4:50&ndash;4:55/km if breathing is under control; Km 7&ndash;8 hold effort; Km 9&ndash;10 race properly if gears are still there."
       days:
+      - type: easy
+        tags: [easy, strides]
+        content_html: Easy 35&ndash;45 min + 4 relaxed strides
       - type: intv
-        tags: [10k-specific]
-        pace_html: 4:50&ndash;4:55/km
-        content_html: 6 x 1 km @ ~4:50&ndash;4:55/km, 90 sec&ndash;2 min recovery
+        tags: [10k-specific, strides]
+        pace_html: 4:50&ndash;4:55/km plus relaxed 200s
+        content_html: 3 x 1 km @ controlled 10K effort, ~4:50&ndash;4:55/km, 2&ndash;3 min jog. Optional 4 x 200m relaxed-fast if springy; stop while it still feels repeatable.
       - type: easy
         tags: [easy]
-        content_html: Easy 45 min
+        content_html: Easy 40&ndash;45 min
       - type: easy
-        tags: [easy]
-        content_html: Easy 45&ndash;50 min
-      - type: thr
-        tags: [threshold, steady]
-        pace_html: 5:10&ndash;5:20/km
-        content_html: 2 x 20 min threshold/strong aerobic @ ~5:10&ndash;5:20/km
-      - type: easy
-        tags: [easy]
-        content_html: Easy 40 min
-      - type: lng
-        tags: [long-run, easy]
-        content_html: Long 100 min easy
+        tags: [easy, strides]
+        content_html: Easy 30&ndash;40 min + 4 strides. No threshold session.
       - type: rest
         tags: [recovery]
-        content_html: Rest
+        content_html: Rest, or very easy 20&ndash;25 min if restless
+      - type: rec
+        tags: [easy, recovery, strides]
+        content_html: Shakeout 20&ndash;25 min + 4 short strides. Done feeling better than when you started.
+      - type: race
+        tags: [race, 10k-specific]
+        priority: C
+        pace_html: Race-like effort; open 4:55&ndash;5:00/km, settle 4:50&ndash;4:55/km if controlled
+        content_html: May 24 10K race &mdash; race-like B/C effort
     - week_html: '4'
       dates_html: May 25&ndash;31
       total_km_html: "~61&ndash;66km"
@@ -719,4 +722,4 @@ blocks:
         pace_html: Target about 4:30/km
         content_html: Oct 25 10K race &mdash; sub-45 attempt
   pace_guide_html: "<strong>Easy:</strong> effort-based, likely 6:00&ndash;7:00+/km depending heat/humidity &nbsp;&middot;&nbsp; <strong>Steady:</strong> roughly 5:35&ndash;5:55/km early, potentially 5:25&ndash;5:45/km later &nbsp;&middot;&nbsp; <strong>HM effort:</strong> initially 5:10&ndash;5:20/km, progressing toward 4:58&ndash;5:05/km &nbsp;&middot;&nbsp; <strong>Threshold:</strong> currently around 5:05&ndash;5:15/km, ideally moving toward 4:55&ndash;5:05/km &nbsp;&middot;&nbsp; <strong>July 10K benchmark:</strong> roughly 4:45&ndash;4:55/km &nbsp;&middot;&nbsp; <strong>Oct 10K goal:</strong> 4:30/km &nbsp;&middot;&nbsp; <strong>Short fast reps:</strong> roughly 4:20&ndash;4:40/km depending rep length."
-  plan_note_html: "Six runs per week in normal weeks. Sunday stays rest except fixed Sunday race dates. Saturday stays long run except pre-race Saturdays, which become short shakeouts. Weekly structure is flexible: the extra easy day moves depending on whether the week protects the second quality session or the Saturday long run. July 12 is a benchmark/B-race inside the HM build, not a peak."
+  plan_note_html: "Six runs per week in normal weeks. Sunday stays rest except fixed Sunday race dates. Saturday stays long run except pre-race Saturdays, which become short shakeouts. Weekly structure is flexible: the extra easy day moves depending on whether the week protects the second quality session or the Saturday long run. May 24 is a race-like B/C 10K mini-taper inside the HM-first block. July 12 is a benchmark/B-race inside the HM build, not a peak."

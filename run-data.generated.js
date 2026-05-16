@@ -1,7 +1,7 @@
 // Generated from run-plan.yaml by scripts/generate_plan_data.rb.
 // Do not edit by hand.
 window.RUN_PLAN_META = {
-  "planNote": "Six runs per week in normal weeks. Sunday stays rest except fixed Sunday race dates. Saturday stays long run except pre-race Saturdays, which become short shakeouts. Weekly structure is flexible: the extra easy day moves depending on whether the week protects the second quality session or the Saturday long run. July 12 is a benchmark/B-race inside the HM build, not a peak."
+  "planNote": "Six runs per week in normal weeks. Sunday stays rest except fixed Sunday race dates. Saturday stays long run except pre-race Saturdays, which become short shakeouts. Weekly structure is flexible: the extra easy day moves depending on whether the week protects the second quality session or the Saturday long run. May 24 is a race-like B/C 10K mini-taper inside the HM-first block. July 12 is a benchmark/B-race inside the HM build, not a peak."
 };
 window.RUN_PLAN_WEEKS = [
   {
@@ -82,7 +82,7 @@ window.RUN_PLAN_WEEKS = [
     "kmLabel": "~42–50km",
     "phase": "hm-build",
     "template": "Travel-adjusted",
-    "notes": "Travel forces rest May 14&ndash;15. Friday threshold from the prior week replaces the planned Tuesday threshold.",
+    "notes": "Travel forces rest May 14&ndash;15. Friday threshold from the prior week replaces the planned Tuesday threshold. May 24 10K added after this week, so the weekend stays aerobic.",
     "days": [
       {
         "t": "easy",
@@ -132,16 +132,16 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "easy",
-        "s": "Easy return 30-45 min",
-        "l": "Easy return 30&ndash;45 min",
+        "s": "Easy 30-45 min. Keep it genuinely easy after travel.",
+        "l": "Easy 30&ndash;45 min. Keep it genuinely easy after travel.",
         "tags": [
           "easy"
         ]
       },
       {
         "t": "easy",
-        "s": "Easy 45-60 min",
-        "l": "Easy 45&ndash;60 min",
+        "s": "Easy 45-60 min, or 35-45 min if legs feel stale",
+        "l": "Easy 45&ndash;60 min, or 35&ndash;45 min if legs feel stale",
         "tags": [
           "easy"
         ]
@@ -151,70 +151,78 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "3",
     "dates": "May 18–24",
-    "km": 60,
-    "kmLabel": "~57–63km",
+    "km": 46,
+    "kmLabel": "~42–50km",
     "phase": "hm-build",
-    "template": "B",
+    "template": "May 24 10K mini-taper",
+    "notes": "Surprise May 24 10K becomes a race-like B/C effort inside the HM-first block. Stay sharp, reduce fatigue, and avoid treating this as a full peak.",
+    "race": true,
     "days": [
       {
+        "t": "easy",
+        "s": "Easy 35-45 min + 4 relaxed strides",
+        "l": "Easy 35&ndash;45 min + 4 relaxed strides",
+        "tags": [
+          "easy",
+          "strides"
+        ]
+      },
+      {
         "t": "intv",
-        "s": "6 x 1 km",
-        "l": "WU: 15&ndash;20 min easy + drills + 4 relaxed strides.<br>Session: 6 x 1 km @ ~4:50&ndash;4:55/km, 90 sec&ndash;2 min recovery<br>CD: 10&ndash;15 min easy.",
+        "s": "3 x 1 km",
+        "l": "WU: 15&ndash;20 min easy + drills + 4 relaxed strides.<br>Session: 3 x 1 km @ controlled 10K effort, ~4:50&ndash;4:55/km, 2&ndash;3 min jog. Optional 4 x 200m relaxed-fast if springy; stop while it still feels repeatable.<br>CD: 10&ndash;15 min easy.",
         "tags": [
-          "10k-specific"
+          "10k-specific",
+          "strides"
         ],
-        "pace": "4:50&ndash;4:55/km"
+        "pace": "4:50&ndash;4:55/km plus relaxed 200s"
       },
       {
         "t": "easy",
-        "s": "Easy 45 min",
-        "l": "Easy 45 min",
+        "s": "Easy 40-45 min",
+        "l": "Easy 40&ndash;45 min",
         "tags": [
           "easy"
         ]
       },
       {
         "t": "easy",
-        "s": "Easy 45-50 min",
-        "l": "Easy 45&ndash;50 min",
+        "s": "Easy 30-40 min + 4 strides. No threshold session.",
+        "l": "Easy 30&ndash;40 min + 4 strides. No threshold session.",
         "tags": [
-          "easy"
-        ]
-      },
-      {
-        "t": "thr",
-        "s": "2 x 20 min threshold/strong aerobic",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 20 min threshold/strong aerobic @ ~5:10&ndash;5:20/km<br>CD: 10&ndash;15 min easy.",
-        "tags": [
-          "threshold",
-          "steady"
-        ],
-        "pace": "5:10&ndash;5:20/km"
-      },
-      {
-        "t": "easy",
-        "s": "Easy 40 min",
-        "l": "Easy 40 min",
-        "tags": [
-          "easy"
-        ]
-      },
-      {
-        "t": "lng",
-        "s": "Long 100 min easy",
-        "l": "Long 100 min easy",
-        "tags": [
-          "long-run",
-          "easy"
+          "easy",
+          "strides"
         ]
       },
       {
         "t": "rest",
         "s": "Rest",
-        "l": "Rest",
+        "l": "Rest, or very easy 20&ndash;25 min if restless",
         "tags": [
           "recovery"
         ]
+      },
+      {
+        "t": "rec",
+        "s": "Shakeout 20-25 min + 4 short strides. Done feeling better than when you started.",
+        "l": "Shakeout 20&ndash;25 min + 4 short strides. Done feeling better than when you started.",
+        "tags": [
+          "easy",
+          "recovery",
+          "strides"
+        ]
+      },
+      {
+        "t": "race",
+        "s": "MAY 10K",
+        "l": "May 24 10K race &mdash; race-like B/C effort",
+        "tags": [
+          "race",
+          "10k-specific"
+        ],
+        "pace": "Race-like effort; open 4:55&ndash;5:00/km, settle 4:50&ndash;4:55/km if controlled",
+        "priority": "C",
+        "raceNotes": "May 24 10K pacing: Km 1&ndash;2 controlled around 4:55&ndash;5:00/km; Km 3&ndash;6 settle around 4:50&ndash;4:55/km if breathing is under control; Km 7&ndash;8 hold effort; Km 9&ndash;10 race properly if gears are still there."
       }
     ]
   },
