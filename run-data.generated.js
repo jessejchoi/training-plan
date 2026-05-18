@@ -229,23 +229,41 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "4",
     "dates": "May 25–31",
-    "km": 61.5,
-    "kmLabel": "~60–63km",
+    "km": 44,
+    "kmLabel": "~42–46km",
     "phase": "hm-build",
     "template": "A",
+    "notes": "Full rest Monday after the May 24 10K. Keep this as a lighter bridge week before rebuilding volume.",
     "days": [
       {
+        "t": "rest",
+        "s": "Rest",
+        "l": "Rest",
+        "tags": [
+          "recovery"
+        ]
+      },
+      {
         "t": "easy",
-        "s": "Easy 45 min",
-        "l": "Easy 45 min",
+        "s": "Easy 45 min + 4 relaxed strides",
+        "l": "Easy 45 min + 4 relaxed strides",
+        "tags": [
+          "easy",
+          "strides"
+        ]
+      },
+      {
+        "t": "easy",
+        "s": "Easy 40-45 min",
+        "l": "Easy 40&ndash;45 min",
         "tags": [
           "easy"
         ]
       },
       {
         "t": "thr",
-        "s": "4 x 2 km",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 4 x 2 km @ ~5:05&ndash;5:12/km, 2&ndash;3 min jog<br>CD: 10&ndash;15 min easy.",
+        "s": "3 x 2 km",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 2 km @ ~5:05&ndash;5:12/km, 2&ndash;3 min jog<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "threshold"
         ],
@@ -253,35 +271,16 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "easy",
-        "s": "Easy 45-50 min",
-        "l": "Easy 45&ndash;50 min",
+        "s": "Easy 35-40 min",
+        "l": "Easy 35&ndash;40 min",
         "tags": [
           "easy"
         ]
       },
       {
-        "t": "med",
-        "s": "Medium-long 75 min with 30 min steady",
-        "l": "WU: 15&ndash;20 min easy before progressing into the steady work.<br>Session: Medium-long 75 min with 30 min steady<br>CD: 5&ndash;10 min easy at the end.",
-        "tags": [
-          "medium-long",
-          "steady"
-        ],
-        "pace": "Steady roughly 5:35&ndash;5:55/km"
-      },
-      {
-        "t": "easy",
-        "s": "Easy 40 min + strides",
-        "l": "Easy 40 min + strides",
-        "tags": [
-          "easy",
-          "strides"
-        ]
-      },
-      {
         "t": "lng",
-        "s": "Long 105 min easy",
-        "l": "Long 105 min easy",
+        "s": "Long 90-95 min easy",
+        "l": "Long 90&ndash;95 min easy",
         "tags": [
           "long-run",
           "easy"
@@ -1224,11 +1223,36 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "18",
     "dates": "Aug 31–Sep 6",
-    "km": 53,
-    "kmLabel": "~52–54km",
+    "km": 44.5,
+    "kmLabel": "~43–46km",
     "phase": "tenk-sharpen",
     "template": "B",
+    "notes": "Full rest Monday after the post-HM recovery week. Re-enter sharpening with one relaxed workout, not two quality days.",
     "days": [
+      {
+        "t": "rest",
+        "s": "Rest",
+        "l": "Rest",
+        "tags": [
+          "recovery"
+        ]
+      },
+      {
+        "t": "easy",
+        "s": "Easy 45 min",
+        "l": "Easy 45 min",
+        "tags": [
+          "easy"
+        ]
+      },
+      {
+        "t": "easy",
+        "s": "Easy 45-50 min",
+        "l": "Easy 45&ndash;50 min",
+        "tags": [
+          "easy"
+        ]
+      },
       {
         "t": "intv",
         "s": "10 x 400m",
@@ -1247,34 +1271,9 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
-        "t": "easy",
-        "s": "Easy 45 min",
-        "l": "Easy 45 min",
-        "tags": [
-          "easy"
-        ]
-      },
-      {
-        "t": "thr",
-        "s": "25 min threshold",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 25 min threshold @ ~5:00&ndash;5:10/km<br>CD: 10&ndash;15 min easy.",
-        "tags": [
-          "threshold"
-        ],
-        "pace": "5:00&ndash;5:10/km"
-      },
-      {
-        "t": "easy",
-        "s": "Easy 40 min",
-        "l": "Easy 40 min",
-        "tags": [
-          "easy"
-        ]
-      },
-      {
         "t": "lng",
-        "s": "Long 90 min easy",
-        "l": "Long 90 min easy",
+        "s": "Long 90-95 min easy",
+        "l": "Long 90&ndash;95 min easy",
         "tags": [
           "long-run",
           "easy"

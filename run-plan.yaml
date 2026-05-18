@@ -100,29 +100,29 @@ blocks:
         content_html: May 24 10K race &mdash; race-like B/C effort
     - week_html: '4'
       dates_html: May 25&ndash;31
-      total_km_html: "~60&ndash;63km"
+      total_km_html: "~42&ndash;46km"
       template: A
+      notes_html: Full rest Monday after the May 24 10K. Keep this as a lighter bridge week before rebuilding volume.
       days:
+      - type: rest
+        tags: [recovery]
+        content_html: Rest
+      - type: easy
+        tags: [easy, strides]
+        content_html: Easy 45 min + 4 relaxed strides
       - type: easy
         tags: [easy]
-        content_html: Easy 45 min
+        content_html: Easy 40&ndash;45 min
       - type: thr
         tags: [threshold]
         pace_html: 5:05&ndash;5:12/km
-        content_html: 4 x 2 km @ ~5:05&ndash;5:12/km, 2&ndash;3 min jog
+        content_html: 3 x 2 km @ ~5:05&ndash;5:12/km, 2&ndash;3 min jog
       - type: easy
         tags: [easy]
-        content_html: Easy 45&ndash;50 min
-      - type: med
-        tags: [medium-long, steady]
-        pace_html: Steady roughly 5:35&ndash;5:55/km
-        content_html: Medium-long 75 min with 30 min steady
-      - type: easy
-        tags: [easy, strides]
-        content_html: Easy 40 min + strides
+        content_html: Easy 35&ndash;40 min
       - type: lng
         tags: [long-run, easy]
-        content_html: Long 105 min easy
+        content_html: Long 90&ndash;95 min easy
       - type: rest
         tags: [recovery]
         content_html: Rest
@@ -499,9 +499,19 @@ blocks:
         content_html: Rest
     - week_html: '18'
       dates_html: Aug 31&ndash;Sep 6
-      total_km_html: "~52&ndash;54km"
+      total_km_html: "~43&ndash;46km"
       template: B
+      notes_html: Full rest Monday after the post-HM recovery week. Re-enter sharpening with one relaxed workout, not two quality days.
       days:
+      - type: rest
+        tags: [recovery]
+        content_html: Rest
+      - type: easy
+        tags: [easy]
+        content_html: Easy 45 min
+      - type: easy
+        tags: [easy]
+        content_html: Easy 45&ndash;50 min
       - type: intv
         tags: [10k-specific]
         pace_html: 4:25&ndash;4:35/km pace
@@ -509,19 +519,9 @@ blocks:
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
-      - type: easy
-        tags: [easy]
-        content_html: Easy 45 min
-      - type: thr
-        tags: [threshold]
-        pace_html: 5:00&ndash;5:10/km
-        content_html: 25 min threshold @ ~5:00&ndash;5:10/km
-      - type: easy
-        tags: [easy]
-        content_html: Easy 40 min
       - type: lng
         tags: [long-run, easy]
-        content_html: Long 90 min easy
+        content_html: Long 90&ndash;95 min easy
       - type: rest
         tags: [recovery]
         content_html: Rest
