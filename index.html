@@ -401,7 +401,7 @@ function DayDetailCard({ selectedKey, completed, setCompleted, onGoToToday, card
 
 function Countdowns({ compact = false }) {
   const races = [
-    { label:'MAY 10K', date:'May 24', tgt:'B/C · race-like', n:DAYS_TO_MAY_10K, c:'var(--race)' },
+    { label:'MAY 10K', date:'May 24', tgt:'FINISH TIME', metric:'49:45', unit:null, c:'var(--race)' },
     { label:'JULY 10K', date:'Jul 12', tgt:'B · 48:30–49:00', n:DAYS_TO_10K, c:'var(--race)' },
     { label:'HALF MARATHON', date:'Aug 23', tgt:'A · Sub 1:45 stretch', n:DAYS_TO_HM, c:'var(--str)' },
     { label:'OCT 10K', date:'Oct 25', tgt:'A · Sub 45', n:DAYS_TO_OCT_10K, c:'var(--intv)' },
@@ -438,7 +438,7 @@ function Countdowns({ compact = false }) {
               color:r.c,
               lineHeight:1,
               whiteSpace:'nowrap',
-            }}>{r.n}<span style={{fontSize:11,color:'var(--muted)',marginLeft:4}}>days</span></div>
+            }}>{r.metric || r.n}{r.unit !== null ? <span style={{fontSize:11,color:'var(--muted)',marginLeft:4}}>{r.unit || 'days'}</span> : null}</div>
           </div>
         ))}
       </div>
@@ -486,7 +486,7 @@ function Countdowns({ compact = false }) {
             lineHeight:1,
             marginTop:4,
             whiteSpace:'nowrap',
-          }}>{r.n}<span style={{fontSize:11,color:'var(--muted)',marginLeft:4}}>days</span></div>
+          }}>{r.metric || r.n}{r.unit !== null ? <span style={{fontSize:11,color:'var(--muted)',marginLeft:4}}>{r.unit || 'days'}</span> : null}</div>
         </div>
       ))}
     </div>
