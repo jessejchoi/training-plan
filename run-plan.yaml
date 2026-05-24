@@ -100,8 +100,8 @@ blocks:
         content_html: May 24 10K race &mdash; race-like B/C effort
     - week_html: '4'
       dates_html: May 25&ndash;31
-      total_km_html: "~42&ndash;46km"
-      template: A
+      total_km_html: "~44km"
+      template: Post-10K Bridge
       notes_html: Full rest Monday after the May 24 10K. Keep this as a lighter bridge week before rebuilding volume.
       days:
       - type: rest
@@ -115,8 +115,8 @@ blocks:
         content_html: Easy 40&ndash;45 min
       - type: thr
         tags: [threshold]
-        pace_html: 5:05&ndash;5:12/km
-        content_html: 3 x 2 km @ ~5:05&ndash;5:12/km, 2&ndash;3 min jog
+        pace_html: 5:08&ndash;5:15/km
+        content_html: 3 x 2 km threshold @ 5:08&ndash;5:15/km, 2&ndash;3 min jog
       - type: easy
         tags: [easy]
         content_html: Easy 35&ndash;40 min
@@ -128,36 +128,36 @@ blocks:
         content_html: Rest
     - week_html: '5'
       dates_html: Jun 1&ndash;7
-      total_km_html: "~49&ndash;53km"
-      template: Down-ish
-      notes_html: Down-ish week absorbs the first threshold block while keeping rhythm.
+      total_km_html: "~51km"
+      template: Threshold Rhythm
+      notes_html: Keep the threshold continuous and controlled; this is rhythm, not a test.
       days:
       - type: easy
         tags: [easy]
         content_html: Easy 40&ndash;45 min
       - type: thr
         tags: [threshold]
-        pace_html: 5:05&ndash;5:15/km
-        content_html: 25&ndash;30 min continuous threshold @ ~5:05&ndash;5:15/km
+        pace_html: 5:08&ndash;5:15/km
+        content_html: 25&ndash;30 min continuous threshold @ 5:08&ndash;5:15/km
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
-      - type: easy
+      - type: med
         tags: [easy, medium-long]
-        content_html: Easy-medium 60 min
+        content_html: Medium-long 60&ndash;65 min easy
       - type: easy
         tags: [easy, strides]
-        content_html: Easy 35&ndash;40 min + strides
+        content_html: Easy 35&ndash;40 min + 4&ndash;6 strides
       - type: lng
         tags: [long-run, easy]
-        content_html: Long 85&ndash;90 min easy
+        content_html: Long 90 min easy
       - type: rest
         tags: [recovery]
         content_html: Rest
     - week_html: '6'
       dates_html: Jun 8&ndash;14
-      total_km_html: "~61&ndash;63km"
-      template: A
+      total_km_html: "~62km"
+      template: Aerobic Build
       days:
       - type: easy
         tags: [easy]
@@ -171,7 +171,8 @@ blocks:
         content_html: Easy 45&ndash;50 min
       - type: med
         tags: [medium-long, steady]
-        content_html: Medium-long 80 min easy-to-steady
+        pace_html: Easy effort; optional last 15&ndash;20 min light steady
+        content_html: Medium-long 80 min easy; last 15&ndash;20 min light steady only if smooth
       - type: easy
         tags: [easy]
         content_html: Easy 40 min
@@ -183,20 +184,20 @@ blocks:
         content_html: Rest
     - week_html: '7'
       dates_html: Jun 15&ndash;21
-      total_km_html: "~57&ndash;60km"
-      template: C
+      total_km_html: "~58km"
+      template: Light 10K Touch
       days:
       - type: intv
         tags: [10k-specific]
-        pace_html: 4:30&ndash;4:40/km
-        content_html: 8 x 600m @ ~4:30&ndash;4:40/km, relaxed, 200&ndash;300m jog
+        pace_html: 4:35&ndash;4:45/km
+        content_html: 8 x 600m @ 4:35&ndash;4:45/km, relaxed, 200&ndash;300m jog
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
       - type: med
         tags: [steady]
         pace_html: Steady roughly 5:35&ndash;5:55/km
-        content_html: 40 min steady inside 70 min total
+        content_html: 70 min total with 35&ndash;40 min steady @ 5:35&ndash;5:55/km
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
@@ -205,23 +206,23 @@ blocks:
         content_html: Easy 35&ndash;40 min + strides
       - type: lng
         tags: [long-run, steady]
-        pace_html: Last 25 min steady @ 5:35&ndash;5:55/km
-        content_html: Long 105&ndash;110 min with last 25 min steady @ 5:35&ndash;5:55/km
+        pace_html: Last 20&ndash;25 min steady @ 5:35&ndash;5:55/km
+        content_html: Long 105&ndash;110 min with last 20&ndash;25 min steady @ 5:35&ndash;5:55/km
       - type: rest
         tags: [recovery]
         content_html: Rest
     - week_html: '8'
       dates_html: Jun 22&ndash;28
-      total_km_html: "~62&ndash;64km"
-      template: A
+      total_km_html: "~64km"
+      template: HM Durability
       days:
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
       - type: thr
         tags: [threshold, steady]
-        pace_html: 5:15&ndash;5:25/km
-        content_html: 2 x 25 min strong aerobic @ ~5:15&ndash;5:25/km
+        pace_html: 5:12&ndash;5:22/km
+        content_html: 2 x 25 min strong aerobic @ 5:12&ndash;5:22/km, 4 min jog
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
@@ -239,13 +240,13 @@ blocks:
         content_html: Rest
     - week_html: '9'
       dates_html: Jun 29&ndash;Jul 5
-      total_km_html: "~53&ndash;58km"
-      template: B
+      total_km_html: "~56km"
+      template: 10K-Specific Week 1
       days:
       - type: intv
         tags: [10k-specific]
-        pace_html: 4:45&ndash;4:50/km
-        content_html: 5 x 1 km @ ~4:45&ndash;4:50/km, 2 min recovery
+        pace_html: 4:50&ndash;4:58/km
+        content_html: 5 x 1 km @ 4:50&ndash;4:58/km, 2 min jog
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
@@ -254,8 +255,8 @@ blocks:
         content_html: Easy 45&ndash;50 min
       - type: thr
         tags: [threshold]
-        pace_html: 5:00&ndash;5:10/km
-        content_html: 3 x 10 min threshold @ ~5:00&ndash;5:10/km
+        pace_html: 5:03&ndash;5:12/km
+        content_html: 3 x 10 min threshold @ 5:03&ndash;5:12/km
       - type: easy
         tags: [easy]
         content_html: Easy 35&ndash;40 min
@@ -267,18 +268,18 @@ blocks:
         content_html: Rest
     - week_html: '10'
       dates_html: Jul 6&ndash;12
-      total_km_html: "~40&ndash;48km"
-      template: Race-in-block
-      notes_html: July 12 is a B-race benchmark inside the HM build, not a major peak.
-      race_notes_html: "July 12 10K benchmark pacing: Km 1&ndash;2 4:55&ndash;5:00/km; Km 3&ndash;6 4:48&ndash;4:52/km if controlled; Km 7&ndash;8 hold or squeeze; Km 9&ndash;10 race hard if possible."
+      total_km_html: "~45km"
+      template: July 10K Mini Taper
+      notes_html: July 12 is a B-race benchmark inside the HM build, not a goal race. Sharpen, reduce fatigue, and keep the half marathon as the A-race.
+      race_notes_html: "July 12 10K benchmark: target 48:30&ndash;49:00; stretch sub-48 if controlled. Open 4:55&ndash;5:00/km, settle 4:50&ndash;4:55/km, race from 7K."
       days:
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
       - type: intv
         tags: [10k-specific, strides]
-        pace_html: 4:50&ndash;4:55/km plus relaxed 200s
-        content_html: 2 x 2 km @ ~4:50&ndash;4:55/km + 4 x 200m relaxed
+        pace_html: 4:52&ndash;4:58/km plus relaxed 200s
+        content_html: 2 x 2 km @ 4:52&ndash;4:58/km + 4 x 200m relaxed-fast, full control
       - type: easy
         tags: [easy]
         content_html: Easy 40&ndash;45 min
@@ -287,19 +288,20 @@ blocks:
         content_html: Easy 35&ndash;40 min + 4 strides
       - type: rest
         tags: [recovery]
-        content_html: Rest or very easy 20&ndash;25 min if restless
+        content_html: Rest or 20&ndash;25 min very easy
       - type: rec
         tags: [easy, recovery, strides]
         content_html: Easy 20&ndash;25 min + 4 strides
       - type: race
         tags: [race, 10k-specific]
         priority: B
-        pace_html: Benchmark target around 4:48/km
-        content_html: July 12 10K race / benchmark
+        pace_html: Target 48:30&ndash;49:00; stretch sub-48 if controlled
+        content_html: July 12 10K benchmark
     - week_html: '11'
       dates_html: Jul 13&ndash;19
-      total_km_html: "~53&ndash;56km"
-      template: Recovery/A
+      total_km_html: "~55km"
+      template: Post-10K Rebuild
+      notes_html: "After July 12, recalibrate HM paces: &le;48:30 and controlled keeps late-block HM work at 5:03&ndash;5:10/km; 48:30&ndash;49:30 keeps the plan as written; &gt;49:30 or heavy fatigue moves HM work 5&ndash;8 sec/km slower for two weeks."
       days:
       - type: easy
         tags: [easy, recovery]
@@ -307,7 +309,7 @@ blocks:
       - type: thr
         tags: [threshold]
         pace_html: 5:05&ndash;5:12/km
-        content_html: 4 x 8 min threshold @ ~5:05&ndash;5:12/km
+        content_html: 4 x 8 min threshold @ 5:05&ndash;5:12/km, controlled
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
@@ -325,8 +327,8 @@ blocks:
         content_html: Rest
     - week_html: '12'
       dates_html: Jul 20&ndash;26
-      total_km_html: "~62&ndash;65km"
-      template: A
+      total_km_html: "~64km"
+      template: HM Build Resumes
       days:
       - type: easy
         tags: [easy]
@@ -340,7 +342,8 @@ blocks:
         content_html: Easy 45&ndash;50 min
       - type: med
         tags: [medium-long, steady]
-        content_html: Medium-long 80 min with 40 min steady
+        pace_html: 35&ndash;40 min steady @ 5:30&ndash;5:50/km
+        content_html: Medium-long 80 min with 35&ndash;40 min steady @ 5:30&ndash;5:50/km
       - type: easy
         tags: [easy]
         content_html: Easy 40 min
@@ -356,20 +359,20 @@ blocks:
     weeks:
     - week_html: '13'
       dates_html: Jul 27&ndash;Aug 2
-      total_km_html: "~58&ndash;61km"
-      template: C
+      total_km_html: "~60km"
+      template: HM-Specific Entry
       days:
       - type: intv
         tags: [10k-specific]
-        pace_html: 4:45&ndash;4:50/km
-        content_html: 6 x 1 km @ ~4:45&ndash;4:50/km, controlled
+        pace_html: 4:50&ndash;4:58/km
+        content_html: 6 x 1 km @ 4:50&ndash;4:58/km, controlled, 2 min jog
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
       - type: hm
         tags: [hm-specific]
-        pace_html: 5:00&ndash;5:10/km
-        content_html: "2 x 20 min controlled HM work @ 5:00&ndash;5:10/km. Goal HM pace: ~4:58/km."
+        pace_html: 5:05&ndash;5:12/km
+        content_html: 2 x 20 min HM/threshold blend @ 5:05&ndash;5:12/km
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
@@ -384,16 +387,16 @@ blocks:
         content_html: Rest
     - week_html: '14'
       dates_html: Aug 3&ndash;9
-      total_km_html: "~69&ndash;70km"
-      template: A
+      total_km_html: "~65km"
+      template: Peak HM Week
       days:
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
       - type: thr
         tags: [threshold, hm-specific]
-        pace_html: 5:00&ndash;5:08/km
-        content_html: "4 x 3 km controlled HM/threshold work @ 5:00&ndash;5:08/km, 3 min jog. Goal HM pace: ~4:58/km."
+        pace_html: 5:03&ndash;5:10/km
+        content_html: 4 x 3 km controlled HM work @ 5:03&ndash;5:10/km, 3 min jog
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
@@ -406,22 +409,22 @@ blocks:
       - type: lng
         tags: [long-run, hm-specific]
         pace_html: 3 x 15 min HM effort @ 5:05&ndash;5:12/km
-        content_html: "Long 120 min with 3 x 15 min HM effort @ 5:05&ndash;5:12/km. Goal HM pace: ~4:58/km."
+        content_html: Long 120 min with 3 x 15 min HM effort @ 5:05&ndash;5:12/km
       - type: rest
         tags: [recovery]
         content_html: Rest
     - week_html: '15'
       dates_html: Aug 10&ndash;16
-      total_km_html: "~61&ndash;64km"
-      template: C / peak HM
+      total_km_html: "~62km"
+      template: Specific But Fresh
       days:
       - type: easy
         tags: [easy]
         content_html: Easy 40&ndash;45 min
       - type: hm
         tags: [hm-specific]
-        pace_html: 5:00&ndash;5:08/km
-        content_html: "2 x 5 km controlled HM work @ 5:00&ndash;5:08/km, 5 min easy between. Goal HM pace: ~4:58/km."
+        pace_html: 5:03&ndash;5:10/km
+        content_html: 2 x 5 km HM work @ 5:03&ndash;5:10/km, 5 min easy between
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
@@ -433,24 +436,24 @@ blocks:
         content_html: Easy 35&ndash;40 min
       - type: lng
         tags: [long-run, steady, hm-specific]
-        pace_html: Final 40 min steady/HM-lite @ 5:12&ndash;5:25/km
-        content_html: "Long 105&ndash;110 min with final 40 min steady/HM-lite @ 5:12&ndash;5:25/km. Goal HM pace: ~4:58/km."
+        pace_html: Final 35&ndash;40 min steady/HM-lite @ 5:12&ndash;5:25/km
+        content_html: Long 105&ndash;110 min with final 35&ndash;40 min steady/HM-lite @ 5:12&ndash;5:25/km
       - type: rest
         tags: [recovery]
         content_html: Rest
     - week_html: '16'
       dates_html: Aug 17&ndash;23
-      total_km_html: "~52&ndash;55km"
-      template: HM taper
-      race_notes_html: "Aug 23 HM A-race target: sub-1:45, about 4:59/km. Pacing: Km 1&ndash;5 5:03&ndash;5:08/km; Km 6&ndash;15 4:58&ndash;5:02/km; Km 16&ndash;19 hold effort; Km 20&ndash;21.1 push if possible."
+      total_km_html: "~52km"
+      template: HM Taper And Race
+      race_notes_html: "Aug 23 HM A-race: start 5:05&ndash;5:08/km for 5 km, settle 5:00&ndash;5:04/km through 15 km, then press toward ~4:58/km only if controlled. Sub-1:45 remains the stretch outcome."
       days:
       - type: easy
         tags: [easy]
         content_html: Easy 40 min
       - type: hm
         tags: [hm-specific]
-        pace_html: Around 4:58/km
-        content_html: "3 x 2 km @ HM target pace, ~4:58/km, 3 min jog. Goal HM pace: ~4:58/km."
+        pace_html: 5:00&ndash;5:05/km
+        content_html: 3 x 2 km @ 5:00&ndash;5:05/km, 3 min jog; should feel controlled, not like a test
       - type: easy
         tags: [easy]
         content_html: Easy 35&ndash;40 min
@@ -466,8 +469,8 @@ blocks:
       - type: race
         tags: [race, hm-specific]
         priority: A
-        pace_html: Target about 4:59/km
-        content_html: Aug 23 Half Marathon race &mdash; sub-1:45 attempt
+        pace_html: Start 5:05&ndash;5:08/km, settle 5:00&ndash;5:04/km, press late if controlled
+        content_html: Aug 23 Half Marathon A race &mdash; sub-1:45 stretch attempt
   - id: tenk-sharpen
     title_html: Post-HM recovery and 10K sharpening &middot; Weeks 17&ndash;25 &middot; Aug 24 &ndash; Oct 25
     weeks:
@@ -721,5 +724,5 @@ blocks:
         priority: A
         pace_html: Target about 4:30/km
         content_html: Oct 25 10K race &mdash; sub-45 attempt
-  pace_guide_html: "<strong>Easy:</strong> effort-based, usually around 6:45/km depending heat/humidity &nbsp;&middot;&nbsp; <strong>Steady:</strong> roughly 5:35&ndash;5:55/km early, potentially 5:25&ndash;5:45/km later &nbsp;&middot;&nbsp; <strong>HM effort:</strong> initially 5:10&ndash;5:20/km, progressing toward 4:58&ndash;5:05/km &nbsp;&middot;&nbsp; <strong>Threshold:</strong> currently around 5:05&ndash;5:15/km, ideally moving toward 4:55&ndash;5:05/km &nbsp;&middot;&nbsp; <strong>July 10K benchmark:</strong> roughly 4:45&ndash;4:55/km &nbsp;&middot;&nbsp; <strong>Oct 10K goal:</strong> 4:30/km &nbsp;&middot;&nbsp; <strong>Short fast reps:</strong> roughly 4:20&ndash;4:40/km depending rep length."
-  plan_note_html: "Six runs per week in normal weeks. Sunday stays rest except fixed Sunday race dates. Saturday stays long run except pre-race Saturdays, which become short shakeouts. Weekly structure is flexible: the extra easy day moves depending on whether the week protects the second quality session or the Saturday long run. May 24 is a race-like B/C 10K mini-taper inside the HM-first block. July 12 is a benchmark/B-race inside the HM build, not a peak."
+  pace_guide_html: "<strong>Easy/recovery:</strong> effort-first, usually ~6:15&ndash;7:10/km in Jakarta conditions &nbsp;&middot;&nbsp; <strong>Steady:</strong> ~5:35&ndash;5:55/km early, progressing toward ~5:25&ndash;5:45/km &nbsp;&middot;&nbsp; <strong>Threshold:</strong> mostly ~5:05&ndash;5:15/km, progressing toward ~5:00&ndash;5:10/km &nbsp;&middot;&nbsp; <strong>HM effort:</strong> early ~5:10&ndash;5:18/km, peak block ~5:03&ndash;5:12/km &nbsp;&middot;&nbsp; <strong>10K-specific:</strong> short reps ~4:35&ndash;4:45/km; longer reps ~4:50&ndash;5:00/km &nbsp;&middot;&nbsp; <strong>Stretch HM race pace:</strong> ~4:58/km, used sparingly before late August."
+  plan_note_html: "Six runs per week in normal weeks. Sunday stays rest except fixed Sunday race dates. Saturday stays long run except pre-race Saturdays, which become short shakeouts. The Aug 23 half marathon is the A race, with sub-1:45 as a stretch outcome rather than the early-block pace anchor. Peak volume is ~65km before taper. July 12 is a B benchmark with a two-week 10K-specific touch and mini taper, not a goal race."
