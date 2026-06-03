@@ -174,6 +174,10 @@ function fmt(value, digits = 1) {
   return Number.isFinite(value) ? value.toFixed(digits) : '—';
 }
 
+function lbToKg(value) {
+  return Math.round(value * 0.45359237 * 10) / 10;
+}
+
 function summarizeHealth(entries) {
   const byWeek = new Map();
   entries.forEach(entry => {
@@ -261,8 +265,8 @@ function HealthMetric({ label, value, meta, color = 'var(--run)' }) {
 
 function weightStatusForDelta(delta) {
   if (!Number.isFinite(delta)) return 'BASELINE';
-  if (delta <= -0.75 && delta >= -1.25) return 'TARGET';
-  if (delta < -1.25) return 'FAST';
+  if (delta <= -0.35 && delta >= -0.55) return 'TARGET';
+  if (delta < -0.55) return 'FAST';
   if (delta < 0) return 'SLOW';
   return 'UP';
 }
@@ -289,6 +293,18 @@ function HealthView({ isWide }) {
   const latestWeek = weekly[weekly.length - 1];
   const latestEntry = sortedEntries[0];
   const healthAccent = 'var(--med)';
+
+  React.useEffect(() => {
+    try {
+      const unit = localStorage.getItem('tp-health-weight-unit');
+      if (unit === 'kg') return;
+      setEntries(currentEntries => currentEntries.map(entry => ({
+        ...entry,
+        weight: Number.isFinite(entry.weight) ? lbToKg(entry.weight) : entry.weight,
+      })));
+      localStorage.setItem('tp-health-weight-unit', 'kg');
+    } catch (e) {}
+  }, [setEntries]);
 
   React.useEffect(() => {
     const next = entries.find(entry => entry.date === date);
@@ -320,9 +336,9 @@ function HealthView({ isWide }) {
   const weeklyDelta = latestWeek?.delta;
   const weightTrend = weeklyDelta === null || weeklyDelta === undefined
     ? 'NEEDS PRIOR WEEK'
-    : weeklyDelta <= -1.25
+    : weeklyDelta <= -0.55
       ? 'AHEAD OF TARGET'
-      : weeklyDelta <= -0.75
+      : weeklyDelta <= -0.35
         ? 'ON TARGET'
         : weeklyDelta < 0
           ? 'LOSING SLOWER'
@@ -349,14 +365,14 @@ function HealthView({ isWide }) {
       }}>
         <HealthMetric
           label="CURRENT WEEK AVG"
-          value={latestWeek?.avgWeight ? `${fmt(latestWeek.avgWeight)} lb` : '—'}
+          value={latestWeek?.avgWeight ? `${fmt(latestWeek.avgWeight)} kg` : '—'}
           meta={latestWeek ? `${latestWeek.label} · ${latestWeek.count}/7 logs` : 'No weight logs yet'}
           color={healthAccent}
         />
         <HealthMetric
           label="WEEKLY CHANGE"
-          value={Number.isFinite(weeklyDelta) ? `${weeklyDelta > 0 ? '+' : ''}${fmt(weeklyDelta)} lb` : '—'}
-          meta={`${weightTrend} · goal -1.0 lb/wk`}
+          value={Number.isFinite(weeklyDelta) ? `${weeklyDelta > 0 ? '+' : ''}${fmt(weeklyDelta)} kg` : '—'}
+          meta={`${weightTrend} · goal -0.45 kg/wk`}
           color={trendColor}
         />
         <HealthMetric
@@ -368,7 +384,7 @@ function HealthView({ isWide }) {
         <HealthMetric
           label="LATEST ENTRY"
           value={latestEntry ? formatShortDate(latestEntry.date) : '—'}
-          meta={latestEntry ? `${latestEntry.weight ? `${fmt(latestEntry.weight)} lb` : 'no weight'} · ${latestEntry.systolic && latestEntry.diastolic ? `${latestEntry.systolic}/${latestEntry.diastolic}` : 'no BP'}` : 'Start with today'}
+          meta={latestEntry ? `${latestEntry.weight ? `${fmt(latestEntry.weight)} kg` : 'no weight'} · ${latestEntry.systolic && latestEntry.diastolic ? `${latestEntry.systolic}/${latestEntry.diastolic}` : 'no BP'}` : 'Start with today'}
           color="var(--text)"
         />
       </div>
@@ -391,7 +407,7 @@ function HealthView({ isWide }) {
           <SectionHead label={existing ? 'UPDATE DAILY ENTRY' : 'NEW DAILY ENTRY'} meta="weight + blood pressure"/>
           <div style={{display:'grid',gap:12,minWidth:0}}>
             <TextField label="DATE" type="date" value={date} onChange={setDate} inputRef={dateInputRef}/>
-            <TextField label="WEIGHT · LB" type="number" min="0" value={weight} onChange={setWeight} placeholder="185.0" inputRef={weightInputRef}/>
+            <TextField label="WEIGHT · KG" type="number" min="0" value={weight} onChange={setWeight} placeholder="84.0" inputRef={weightInputRef}/>
             <div style={{display:'grid',gridTemplateColumns:'minmax(0, 1fr) minmax(0, 1fr)',gap:10,minWidth:0}}>
               <TextField label="SYSTOLIC" type="number" min="0" max="300" value={systolic} onChange={setSystolic} placeholder="120" inputRef={systolicInputRef}/>
               <TextField label="DIASTOLIC" type="number" min="0" max="200" value={diastolic} onChange={setDiastolic} placeholder="80" inputRef={diastolicInputRef}/>
@@ -425,7 +441,7 @@ function HealthView({ isWide }) {
                 marginBottom:4,
                 alignItems:'center',
               }}>
-                <div>WEEK</div><div style={{textAlign:'right'}}>LOGS</div><div style={{textAlign:'right'}}>AVG LB</div><div style={{textAlign:'right'}}>DELTA</div><div style={{textAlign:'right'}}>BP AVG</div><div style={{textAlign:'right'}}>STATUS</div>
+                <div>WEEK</div><div style={{textAlign:'right'}}>LOGS</div><div style={{textAlign:'right'}}>AVG KG</div><div style={{textAlign:'right'}}>DELTA</div><div style={{textAlign:'right'}}>BP AVG</div><div style={{textAlign:'right'}}>STATUS</div>
               </div>
               <div style={{display:'grid',gap:3}}>
                 {weekly.slice().reverse().map(week => {
@@ -486,7 +502,7 @@ function HealthView({ isWide }) {
                       </div>
                       <div style={{display:'grid',gridTemplateColumns:'repeat(2, minmax(0, 1fr))',gap:8}}>
                         <div>
-                          <div style={{fontSize:8.5,letterSpacing:1.2,color:'var(--muted2)',marginBottom:3}}>AVG LB</div>
+                          <div style={{fontSize:8.5,letterSpacing:1.2,color:'var(--muted2)',marginBottom:3}}>AVG KG</div>
                           <div style={{fontSize:14,color:healthAccent}}>{week.avgWeight ? fmt(week.avgWeight) : '—'}</div>
                         </div>
                         <div>
@@ -541,12 +557,12 @@ function HealthView({ isWide }) {
                     </button>
                     {!isWide ? (
                       <div style={{display:'flex',gap:12,flexWrap:'wrap',marginTop:7,fontSize:12}}>
-                        <span style={{color:healthAccent}}>{entry.weight ? `${fmt(entry.weight)} lb` : '—'}</span>
+                        <span style={{color:healthAccent}}>{entry.weight ? `${fmt(entry.weight)} kg` : '—'}</span>
                         <span style={{color:healthAccent}}>{entry.systolic && entry.diastolic ? `${entry.systolic}/${entry.diastolic}` : '—'}</span>
                       </div>
                     ) : null}
                   </div>
-                  {isWide ? <div style={{color:healthAccent,textAlign:'right'}}>{entry.weight ? `${fmt(entry.weight)} lb` : '—'}</div> : null}
+                  {isWide ? <div style={{color:healthAccent,textAlign:'right'}}>{entry.weight ? `${fmt(entry.weight)} kg` : '—'}</div> : null}
                   {isWide ? <div style={{color:healthAccent,textAlign:'right'}}>{entry.systolic && entry.diastolic ? `${entry.systolic}/${entry.diastolic}` : '—'}</div> : null}
                   <button onClick={() => deleteEntry(entry.date)} title="Delete entry" style={{fontFamily:'var(--mono)',fontSize:12,color:'var(--muted2)',padding:'2px 4px'}}>×</button>
                 </div>
