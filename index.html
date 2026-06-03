@@ -253,6 +253,19 @@ function HealthMetric({ label, value, meta, color = 'var(--run)' }) {
   );
 }
 
+function weightStatusForDelta(delta) {
+  if (!Number.isFinite(delta)) return 'BASELINE';
+  if (delta <= -0.75 && delta >= -1.25) return 'TARGET';
+  if (delta < -1.25) return 'FAST';
+  if (delta < 0) return 'SLOW';
+  return 'UP';
+}
+
+function colorForWeightDelta(delta) {
+  if (!Number.isFinite(delta)) return 'var(--muted)';
+  return delta < 0 ? 'var(--med)' : 'var(--mob)';
+}
+
 function HealthView({ isWide }) {
   const [entries, setEntries] = useLocal('tp-health-entries', []);
   const today = localDateInputValue();
@@ -269,6 +282,7 @@ function HealthView({ isWide }) {
   const weekly = summarizeHealth(entries);
   const latestWeek = weekly[weekly.length - 1];
   const latestEntry = sortedEntries[0];
+  const healthAccent = 'var(--med)';
 
   React.useEffect(() => {
     const next = entries.find(entry => entry.date === date);
@@ -310,14 +324,14 @@ function HealthView({ isWide }) {
   const trendColor = weeklyDelta === null || weeklyDelta === undefined
     ? 'var(--muted)'
     : weeklyDelta < 0
-      ? 'var(--run)'
+      ? healthAccent
       : 'var(--mob)';
 
   return (
     <div style={{padding:'12px 0 42px'}}>
       <div style={{paddingTop:14}}>
         <div style={{fontFamily:'var(--serif)',fontSize:30,fontWeight:300,color:'var(--text)',marginBottom:6}}>
-          Bodyweight <em style={{fontStyle:'italic',color:'var(--run)'}}>Monitor</em>
+          Bodyweight <em style={{fontStyle:'italic',color:healthAccent}}>Monitor</em>
         </div>
       </div>
 
@@ -331,7 +345,7 @@ function HealthView({ isWide }) {
           label="CURRENT WEEK AVG"
           value={latestWeek?.avgWeight ? `${fmt(latestWeek.avgWeight)} lb` : '—'}
           meta={latestWeek ? `${latestWeek.label} · ${latestWeek.count}/7 logs` : 'No weight logs yet'}
-          color="var(--run)"
+          color={healthAccent}
         />
         <HealthMetric
           label="WEEKLY CHANGE"
@@ -343,7 +357,7 @@ function HealthView({ isWide }) {
           label="BP WEEK AVG"
           value={latestWeek?.avgSys && latestWeek?.avgDia ? `${Math.round(latestWeek.avgSys)}/${Math.round(latestWeek.avgDia)}` : '—'}
           meta={latestWeek ? `${latestWeek.label} · systolic/diastolic` : 'No BP logs yet'}
-          color="var(--str)"
+          color={healthAccent}
         />
         <HealthMetric
           label="LATEST ENTRY"
@@ -375,7 +389,7 @@ function HealthView({ isWide }) {
               <TextField label="DIASTOLIC" type="number" min="0" max="200" value={diastolic} onChange={setDiastolic} placeholder="80" inputRef={diastolicInputRef}/>
             </div>
             <div style={{display:'flex',gap:8,flexWrap:'wrap',paddingTop:2}}>
-              <button onClick={saveEntry} style={cardButtonStyle('var(--run)', false)}>
+              <button onClick={saveEntry} style={cardButtonStyle(healthAccent, false)}>
                 SAVE ENTRY
               </button>
               {existing ? (
@@ -390,9 +404,9 @@ function HealthView({ isWide }) {
         <div style={{display:'grid',gap:22}}>
           <div>
             <SectionHead label="WEEKLY TREND" meta="Monday-start weeks · daily entries averaged"/>
-            <div style={{overflowX:'auto'}}>
+            {isWide ? (
+              <div>
               <div style={{
-                minWidth:620,
                 display:'grid',
                 gridTemplateColumns:'minmax(92px,1.1fr) minmax(54px,.6fr) repeat(3, minmax(70px,.8fr)) minmax(86px,1fr)',
                 gap:3,
@@ -405,19 +419,11 @@ function HealthView({ isWide }) {
               }}>
                 <div>WEEK</div><div style={{textAlign:'right'}}>LOGS</div><div style={{textAlign:'right'}}>AVG LB</div><div style={{textAlign:'right'}}>DELTA</div><div style={{textAlign:'right'}}>BP AVG</div><div style={{textAlign:'right'}}>STATUS</div>
               </div>
-              <div style={{display:'grid',gap:3,minWidth:620}}>
+              <div style={{display:'grid',gap:3}}>
                 {weekly.slice().reverse().map(week => {
                   const delta = week.delta;
-                  const status = !Number.isFinite(delta)
-                    ? 'BASELINE'
-                    : delta <= -0.75 && delta >= -1.25
-                      ? 'TARGET'
-                      : delta < -1.25
-                        ? 'FAST'
-                        : delta < 0
-                          ? 'SLOW'
-                          : 'UP';
-                  const color = !Number.isFinite(delta) ? 'var(--muted)' : delta < 0 ? 'var(--run)' : 'var(--mob)';
+                  const status = weightStatusForDelta(delta);
+                  const color = colorForWeightDelta(delta);
                   return (
                     <div key={week.weekStart} style={{
                       display:'grid',
@@ -433,9 +439,9 @@ function HealthView({ isWide }) {
                     }}>
                       <div style={{color:'var(--text)'}}>{week.label}</div>
                       <div style={{color:'var(--muted)',textAlign:'right'}}>{week.count}/7</div>
-                      <div style={{color:'var(--run)',textAlign:'right'}}>{week.avgWeight ? fmt(week.avgWeight) : '—'}</div>
+                      <div style={{color:healthAccent,textAlign:'right'}}>{week.avgWeight ? fmt(week.avgWeight) : '—'}</div>
                       <div style={{color,textAlign:'right'}}>{Number.isFinite(delta) ? `${delta > 0 ? '+' : ''}${fmt(delta)}` : '—'}</div>
-                      <div style={{color:'var(--str)',textAlign:'right'}}>{week.avgSys && week.avgDia ? `${Math.round(week.avgSys)}/${Math.round(week.avgDia)}` : '—'}</div>
+                      <div style={{color:healthAccent,textAlign:'right'}}>{week.avgSys && week.avgDia ? `${Math.round(week.avgSys)}/${Math.round(week.avgDia)}` : '—'}</div>
                       <div style={{color,textAlign:'right',letterSpacing:1.1}}>{status}</div>
                     </div>
                   );
@@ -451,7 +457,58 @@ function HealthView({ isWide }) {
                   }}>No entries yet.</div>
                 ) : null}
               </div>
-            </div>
+              </div>
+            ) : (
+              <div style={{display:'grid',gap:8}}>
+                {weekly.slice().reverse().map(week => {
+                  const delta = week.delta;
+                  const status = weightStatusForDelta(delta);
+                  const color = colorForWeightDelta(delta);
+                  return (
+                    <div key={week.weekStart} style={{
+                      background:'var(--surf)',
+                      border:'1px solid var(--border)',
+                      borderRadius:4,
+                      padding:'11px 12px',
+                      fontFamily:'var(--mono)',
+                    }}>
+                      <div style={{display:'flex',justifyContent:'space-between',gap:10,alignItems:'baseline',marginBottom:10}}>
+                        <div style={{fontSize:11,color:'var(--text)'}}>{week.label}</div>
+                        <div style={{fontSize:10,color,fontWeight:600,letterSpacing:1}}>{status}</div>
+                      </div>
+                      <div style={{display:'grid',gridTemplateColumns:'repeat(2, minmax(0, 1fr))',gap:8}}>
+                        <div>
+                          <div style={{fontSize:8.5,letterSpacing:1.2,color:'var(--muted2)',marginBottom:3}}>AVG LB</div>
+                          <div style={{fontSize:14,color:healthAccent}}>{week.avgWeight ? fmt(week.avgWeight) : '—'}</div>
+                        </div>
+                        <div>
+                          <div style={{fontSize:8.5,letterSpacing:1.2,color:'var(--muted2)',marginBottom:3}}>DELTA</div>
+                          <div style={{fontSize:14,color}}>{Number.isFinite(delta) ? `${delta > 0 ? '+' : ''}${fmt(delta)}` : '—'}</div>
+                        </div>
+                        <div>
+                          <div style={{fontSize:8.5,letterSpacing:1.2,color:'var(--muted2)',marginBottom:3}}>BP AVG</div>
+                          <div style={{fontSize:14,color:healthAccent}}>{week.avgSys && week.avgDia ? `${Math.round(week.avgSys)}/${Math.round(week.avgDia)}` : '—'}</div>
+                        </div>
+                        <div>
+                          <div style={{fontSize:8.5,letterSpacing:1.2,color:'var(--muted2)',marginBottom:3}}>LOGS</div>
+                          <div style={{fontSize:14,color:'var(--muted)'}}>{week.count}/7</div>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+                {!weekly.length ? (
+                  <div style={{
+                    background:'var(--surf)',
+                    border:'1px solid var(--border)',
+                    borderRadius:4,
+                    padding:'16px',
+                    color:'var(--muted)',
+                    fontSize:13,
+                  }}>No entries yet.</div>
+                ) : null}
+              </div>
+            )}
           </div>
 
           <div>
@@ -460,21 +517,29 @@ function HealthView({ isWide }) {
               {sortedEntries.slice(0, 14).map(entry => (
                 <div key={entry.date} style={{
                   display:'grid',
-                  gridTemplateColumns:'minmax(86px,1fr) minmax(74px,.8fr) minmax(74px,.8fr) auto',
-                  gap:8,
-                  alignItems:'center',
+                  gridTemplateColumns:isWide ? 'minmax(86px,1fr) minmax(74px,.8fr) minmax(74px,.8fr) auto' : '1fr auto',
+                  gap:isWide ? 8 : 10,
+                  alignItems:isWide ? 'center' : 'start',
                   background:'var(--surf)',
                   border:'1px solid var(--border)',
                   borderRadius:3,
-                  padding:'8px 9px',
+                  padding:isWide ? '8px 9px' : '10px 12px',
                   fontFamily:'var(--mono)',
                   fontSize:10,
                 }}>
-                  <button onClick={() => setDate(entry.date)} style={{textAlign:'left',color:'var(--text)',fontFamily:'var(--mono)',fontSize:10}}>
-                    {formatShortDate(entry.date)}
-                  </button>
-                  <div style={{color:'var(--run)',textAlign:'right'}}>{entry.weight ? `${fmt(entry.weight)} lb` : '—'}</div>
-                  <div style={{color:'var(--str)',textAlign:'right'}}>{entry.systolic && entry.diastolic ? `${entry.systolic}/${entry.diastolic}` : '—'}</div>
+                  <div>
+                    <button onClick={() => setDate(entry.date)} style={{textAlign:'left',color:'var(--text)',fontFamily:'var(--mono)',fontSize:10}}>
+                      {formatShortDate(entry.date)}
+                    </button>
+                    {!isWide ? (
+                      <div style={{display:'flex',gap:12,flexWrap:'wrap',marginTop:7,fontSize:12}}>
+                        <span style={{color:healthAccent}}>{entry.weight ? `${fmt(entry.weight)} lb` : '—'}</span>
+                        <span style={{color:healthAccent}}>{entry.systolic && entry.diastolic ? `${entry.systolic}/${entry.diastolic}` : '—'}</span>
+                      </div>
+                    ) : null}
+                  </div>
+                  {isWide ? <div style={{color:healthAccent,textAlign:'right'}}>{entry.weight ? `${fmt(entry.weight)} lb` : '—'}</div> : null}
+                  {isWide ? <div style={{color:healthAccent,textAlign:'right'}}>{entry.systolic && entry.diastolic ? `${entry.systolic}/${entry.diastolic}` : '—'}</div> : null}
                   <button onClick={() => deleteEntry(entry.date)} title="Delete entry" style={{fontFamily:'var(--mono)',fontSize:12,color:'var(--muted2)',padding:'2px 4px'}}>×</button>
                 </div>
               ))}
@@ -596,7 +661,7 @@ function ModeBar({ mode, setMode }) {
     { k: 'run', label: 'RUN PLAN', c: 'var(--run)' },
     { k: 'mob', label: 'MOBILITY', c: 'var(--mob)' },
     { k: 'str', label: 'STRENGTH', c: 'var(--str)' },
-    { k: 'health', label: 'HEALTH', c: 'var(--run)' },
+    { k: 'health', label: 'HEALTH', c: 'var(--med)' },
   ];
   return (
     <div style={{
@@ -1274,7 +1339,7 @@ function App() {
   const [selectedKey, setSelectedKey] = React.useState(TODAY_KEY);
   const [isWide, setIsWide] = React.useState(typeof window !== 'undefined' && window.innerWidth >= 900);
   const cardRef = React.useRef(null);
-  const modeAccent = mode === 'mob' ? 'var(--mob)' : mode === 'str' ? 'var(--str)' : 'var(--run)';
+  const modeAccent = mode === 'mob' ? 'var(--mob)' : mode === 'str' ? 'var(--str)' : mode === 'health' ? 'var(--med)' : 'var(--run)';
   const headerTitle = mode === 'health'
     ? <>Weight + <em style={{fontStyle:'italic',color:modeAccent}}>Blood Pressure</em></>
     : <>HM Build → <em style={{fontStyle:'italic',color:modeAccent}}>10K Sharpening</em></>;
