@@ -166,6 +166,12 @@ function numberOrNull(value) {
   return Number.isFinite(n) && n > 0 ? n : null;
 }
 
+function sanitizeDecimalInput(value) {
+  const cleaned = String(value || '').replace(/[^\d.]/g, '');
+  const [whole, ...rest] = cleaned.split('.');
+  return rest.length ? `${whole}.${rest.join('')}` : whole;
+}
+
 function mean(values) {
   const nums = values.filter(v => Number.isFinite(v));
   return nums.length ? nums.reduce((sum, v) => sum + v, 0) / nums.length : null;
@@ -212,19 +218,27 @@ function summarizeHealth(entries) {
   });
 }
 
-function TextField({ label, value, onChange, type = 'text', placeholder, min, max, inputRef }) {
+function TextField({ label, value, onChange, type = 'text', placeholder, min, max, inputRef, numeric = false }) {
+  const handleInput = e => {
+    const nextValue = numeric ? sanitizeDecimalInput(e.currentTarget.value) : e.currentTarget.value;
+    if (numeric && nextValue !== e.currentTarget.value) e.currentTarget.value = nextValue;
+    onChange(nextValue);
+  };
+
   return (
     <label style={{display:'grid',gap:6,minWidth:0}}>
       <span style={{fontFamily:'var(--mono)',fontSize:9,letterSpacing:1.3,color:'var(--muted2)'}}>{label}</span>
       <input
         ref={inputRef}
-        type={type}
+        type={numeric ? 'text' : type}
         value={value}
         min={min}
         max={max}
+        inputMode={numeric ? 'decimal' : undefined}
+        pattern={numeric ? '[0-9]*[.]?[0-9]*' : undefined}
         placeholder={placeholder}
-        onChange={e => onChange(e.target.value)}
-        onInput={e => onChange(e.currentTarget.value)}
+        onChange={handleInput}
+        onInput={handleInput}
         style={{
           width:'100%',
           maxWidth:'100%',
@@ -282,7 +296,7 @@ function HealthView({ isWide }) {
   const today = localDateInputValue();
   const [date, setDate] = React.useState(today);
   const existing = entries.find(entry => entry.date === date);
-  const [weight, setWeight] = React.useState(existing?.weight ? String(existing.weight) : DEFAULT_WEIGHT_KG);
+  const [weight, setWeight] = React.useState(existing?.weight ? String(existing.weight) : '');
   const [systolic, setSystolic] = React.useState(existing?.systolic ? String(existing.systolic) : '');
   const [diastolic, setDiastolic] = React.useState(existing?.diastolic ? String(existing.diastolic) : '');
   const dateInputRef = React.useRef(null);
@@ -309,7 +323,7 @@ function HealthView({ isWide }) {
 
   React.useEffect(() => {
     const next = entries.find(entry => entry.date === date);
-    setWeight(next?.weight ? String(next.weight) : DEFAULT_WEIGHT_KG);
+    setWeight(next?.weight ? String(next.weight) : '');
     setSystolic(next?.systolic ? String(next.systolic) : '');
     setDiastolic(next?.diastolic ? String(next.diastolic) : '');
   }, [date, entries]);
@@ -408,10 +422,10 @@ function HealthView({ isWide }) {
           <SectionHead label={existing ? 'UPDATE DAILY ENTRY' : 'NEW DAILY ENTRY'} meta="weight + blood pressure"/>
           <div style={{display:'grid',gap:12,minWidth:0}}>
             <TextField label="DATE" type="date" value={date} onChange={setDate} inputRef={dateInputRef}/>
-            <TextField label="WEIGHT · KG" type="number" min="0" value={weight} onChange={setWeight} placeholder={DEFAULT_WEIGHT_KG} inputRef={weightInputRef}/>
+            <TextField label="WEIGHT · KG" value={weight} onChange={setWeight} placeholder={DEFAULT_WEIGHT_KG} inputRef={weightInputRef} numeric/>
             <div style={{display:'grid',gridTemplateColumns:'minmax(0, 1fr) minmax(0, 1fr)',gap:10,minWidth:0}}>
-              <TextField label="SYSTOLIC" type="number" min="0" max="300" value={systolic} onChange={setSystolic} placeholder="120" inputRef={systolicInputRef}/>
-              <TextField label="DIASTOLIC" type="number" min="0" max="200" value={diastolic} onChange={setDiastolic} placeholder="80" inputRef={diastolicInputRef}/>
+              <TextField label="SYSTOLIC" value={systolic} onChange={setSystolic} placeholder="120" inputRef={systolicInputRef} numeric/>
+              <TextField label="DIASTOLIC" value={diastolic} onChange={setDiastolic} placeholder="80" inputRef={diastolicInputRef} numeric/>
             </div>
             <div style={{display:'flex',gap:8,flexWrap:'wrap',paddingTop:2}}>
               <button onClick={saveEntry} style={cardButtonStyle(healthAccent, false)}>
