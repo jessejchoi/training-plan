@@ -46,6 +46,7 @@ const { WEEKS, PHASES, DAY_TYPES, DAY_ABBR, TODAY_WEEK_ID, TODAY_DAY_INDEX,
 const TODAY_KEY = `${TODAY_WEEK_ID}-${TODAY_DAY_INDEX}`;
 const GLYPH = { rest:'·', easy:'E', rec:'R', intv:'I', thr:'T', med:'M', steady:'M', hm:'H', shake:'R', lng:'L', race:'★' };
 const MAX_WEEK_KM = Math.ceil(Math.max(1, ...WEEKS.map(w => w.km)));
+const DEFAULT_WEIGHT_KG = '75';
 
 const useLocal = (key, init) => {
   const [v, setV] = React.useState(() => {
@@ -281,7 +282,7 @@ function HealthView({ isWide }) {
   const today = localDateInputValue();
   const [date, setDate] = React.useState(today);
   const existing = entries.find(entry => entry.date === date);
-  const [weight, setWeight] = React.useState(existing?.weight ? String(existing.weight) : '');
+  const [weight, setWeight] = React.useState(existing?.weight ? String(existing.weight) : DEFAULT_WEIGHT_KG);
   const [systolic, setSystolic] = React.useState(existing?.systolic ? String(existing.systolic) : '');
   const [diastolic, setDiastolic] = React.useState(existing?.diastolic ? String(existing.diastolic) : '');
   const dateInputRef = React.useRef(null);
@@ -308,7 +309,7 @@ function HealthView({ isWide }) {
 
   React.useEffect(() => {
     const next = entries.find(entry => entry.date === date);
-    setWeight(next?.weight ? String(next.weight) : '');
+    setWeight(next?.weight ? String(next.weight) : DEFAULT_WEIGHT_KG);
     setSystolic(next?.systolic ? String(next.systolic) : '');
     setDiastolic(next?.diastolic ? String(next.diastolic) : '');
   }, [date, entries]);
@@ -407,7 +408,7 @@ function HealthView({ isWide }) {
           <SectionHead label={existing ? 'UPDATE DAILY ENTRY' : 'NEW DAILY ENTRY'} meta="weight + blood pressure"/>
           <div style={{display:'grid',gap:12,minWidth:0}}>
             <TextField label="DATE" type="date" value={date} onChange={setDate} inputRef={dateInputRef}/>
-            <TextField label="WEIGHT · KG" type="number" min="0" value={weight} onChange={setWeight} placeholder="84.0" inputRef={weightInputRef}/>
+            <TextField label="WEIGHT · KG" type="number" min="0" value={weight} onChange={setWeight} placeholder={DEFAULT_WEIGHT_KG} inputRef={weightInputRef}/>
             <div style={{display:'grid',gridTemplateColumns:'minmax(0, 1fr) minmax(0, 1fr)',gap:10,minWidth:0}}>
               <TextField label="SYSTOLIC" type="number" min="0" max="300" value={systolic} onChange={setSystolic} placeholder="120" inputRef={systolicInputRef}/>
               <TextField label="DIASTOLIC" type="number" min="0" max="200" value={diastolic} onChange={setDiastolic} placeholder="80" inputRef={diastolicInputRef}/>
