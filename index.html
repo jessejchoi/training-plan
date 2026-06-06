@@ -41,7 +41,7 @@
 
 <script type="text/babel">
 const { WEEKS, PHASES, DAY_TYPES, DAY_ABBR, TODAY_WEEK_ID, TODAY_DAY_INDEX,
-        DAYS_TO_MAY_10K, DAYS_TO_10K, DAYS_TO_HM, DAYS_TO_OCT_10K, getTodayWeek, getTodayDay } = window;
+        DAYS_TO_MAY_10K, DAYS_TO_10K, DAYS_TO_HM, DAYS_TO_OCT_HM, getTodayWeek, getTodayDay } = window;
 
 const TODAY_KEY = `${TODAY_WEEK_ID}-${TODAY_DAY_INDEX}`;
 const GLYPH = { rest:'·', easy:'E', rec:'R', intv:'I', thr:'T', med:'M', steady:'M', hm:'H', shake:'R', lng:'L', race:'★' };
@@ -887,8 +887,8 @@ function Countdowns({ compact = false }) {
   const races = [
     { label:'MAY 10K', date:'May 24', tgt:'FINISH TIME', metric:'49:45', unit:null, c:'var(--race)' },
     { label:'JULY 10K', date:'Jul 12', tgt:'B · 48:30–49:00', n:DAYS_TO_10K, c:'var(--race)' },
-    { label:'HALF MARATHON', date:'Aug 23', tgt:'A · Sub 1:45 stretch', n:DAYS_TO_HM, c:'var(--str)' },
-    { label:'OCT 10K', date:'Oct 25', tgt:'A · Sub 45', n:DAYS_TO_OCT_10K, c:'var(--intv)' },
+    { label:'AUG HM', date:'Aug 23', tgt:'B · Controlled tune-up', n:DAYS_TO_HM, c:'var(--str)' },
+    { label:'OCT HM', date:'Oct 25', tgt:'A · Sub 1:45 stretch', n:DAYS_TO_OCT_HM, c:'var(--intv)' },
   ];
 
   if (compact) {
@@ -1381,7 +1381,7 @@ function App() {
   const modeAccent = mode === 'mob' ? 'var(--mob)' : mode === 'str' ? 'var(--str)' : mode === 'health' ? 'var(--med)' : 'var(--run)';
   const headerTitle = mode === 'health'
     ? <>Weight + <em style={{fontStyle:'italic',color:modeAccent}}>Blood Pressure</em></>
-    : <>HM Build → <em style={{fontStyle:'italic',color:modeAccent}}>10K Sharpening</em></>;
+    : <>HM Build → <em style={{fontStyle:'italic',color:modeAccent}}>Oct HM Peak</em></>;
   const headerMeta = mode === 'health'
     ? 'JAKARTA RUNNER · J. CHOI · HEALTH LOG'
     : 'JAKARTA RUNNER · J. CHOI · MAY 2026';
@@ -1470,7 +1470,7 @@ function App() {
         color:'var(--muted2)',
         borderTop:'1px solid var(--border)',
       }}>
-        JAKARTA RUNNER · MAY 24 10K MINI-TAPER · JUL 12 10K BENCHMARK · AUG 23 HM A-RACE · OCT 25 10K A-RACE
+        JAKARTA RUNNER · MAY 24 10K MINI-TAPER · JUL 12 10K BENCHMARK · AUG 23 HM TUNE-UP · OCT 25 HM A-RACE
       </footer>
     </div>
   );

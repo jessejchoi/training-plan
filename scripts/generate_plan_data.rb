@@ -13,9 +13,9 @@ PHASE_BY_WEEK = {
   "5" => "hm-build", "6" => "hm-build", "7" => "hm-build", "8" => "hm-build",
   "9" => "hm-build", "10" => "hm-build", "11" => "hm-build", "12" => "hm-build",
   "13" => "hm-peak", "14" => "hm-peak", "15" => "hm-peak", "16" => "hm-peak",
-  "17" => "tenk-sharpen", "18" => "tenk-sharpen", "19" => "tenk-sharpen",
-  "20" => "tenk-sharpen", "21" => "tenk-sharpen", "22" => "tenk-sharpen",
-  "23" => "tenk-sharpen", "24" => "tenk-sharpen", "25" => "tenk-sharpen"
+  "17" => "oct-hm-peak", "18" => "oct-hm-peak", "19" => "oct-hm-peak",
+  "20" => "oct-hm-peak", "21" => "oct-hm-peak", "22" => "oct-hm-peak",
+  "23" => "oct-hm-peak", "24" => "oct-hm-peak", "25" => "oct-hm-peak"
 }.freeze
 
 TYPE_SUFFIX = {
@@ -104,10 +104,10 @@ end
 def race_label(text)
   return "MAY 10K" if text.match?(/May 24 10K/i)
   return "JULY 10K" if text.match?(/July 12 10K/i)
-  return "OCT 10K" if text.match?(/Oct 25 10K/i)
-  return "HM RACE" if text.match?(/Aug 23|Half Marathon/i)
-  return "10K RACE" if text.match?(/10K/i)
+  return "AUG HM" if text.match?(/Aug 23/i)
+  return "OCT HM" if text.match?(/Oct 25.*(?:HM|Half Marathon)/i)
   return "HM RACE" if text.match?(/Half Marathon/i)
+  return "10K RACE" if text.match?(/10K/i)
 
   "Race"
 end

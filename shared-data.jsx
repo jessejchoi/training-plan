@@ -59,8 +59,8 @@ const DAY_ABBR = ['MON','TUE','WED','THU','FRI','SAT','SUN'];
 // Phase structure
 const PHASES = [
   { id: 'hm-build', name: 'HM-first build with July 10K benchmark', startWk: '1', endWk: '12', color: T.run },
-  { id: 'hm-peak', name: 'HM-specific peak block', startWk: '13', endWk: '16', color: T.str },
-  { id: 'tenk-sharpen', name: 'Post-HM recovery and 10K sharpening', startWk: '17', endWk: '25', color: T.intv },
+  { id: 'hm-peak', name: 'HM tune-up block', startWk: '13', endWk: '16', color: T.str },
+  { id: 'oct-hm-peak', name: 'Recover, rebuild, and Oct HM peak', startWk: '17', endWk: '25', color: T.intv },
 ];
 
 // Generated from run-plan.yaml by scripts/generate_plan_data.rb.
@@ -112,11 +112,11 @@ function getTodayDay() {
 const DAYS_TO_MAY_10K = Math.max(0, diffWholeDays(todayUtc, utcDateFromParts({ year: 2026, month: 5, day: 24 })));
 const DAYS_TO_10K = Math.max(0, diffWholeDays(todayUtc, utcDateFromParts({ year: 2026, month: 7, day: 12 })));
 const DAYS_TO_HM = Math.max(0, diffWholeDays(todayUtc, utcDateFromParts({ year: 2026, month: 8, day: 23 })));
-const DAYS_TO_OCT_10K = Math.max(0, diffWholeDays(todayUtc, utcDateFromParts({ year: 2026, month: 10, day: 25 })));
+const DAYS_TO_OCT_HM = Math.max(0, diffWholeDays(todayUtc, utcDateFromParts({ year: 2026, month: 10, day: 25 })));
 
 Object.assign(window, {
   T, DAY_TYPES, DAY_ABBR, PHASES, WEEKS, PLAN_META, PLAN_TIME_ZONE,
   TODAY_WEEK_ID, TODAY_DAY_INDEX,
   getWeek, getTodayWeek, getTodayDay,
-  DAYS_TO_MAY_10K, DAYS_TO_10K, DAYS_TO_HM, DAYS_TO_OCT_10K,
+  DAYS_TO_MAY_10K, DAYS_TO_10K, DAYS_TO_HM, DAYS_TO_OCT_HM,
 });
