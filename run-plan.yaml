@@ -29,8 +29,8 @@ blocks:
         content_html: None / already passed
       - type: thr
         tags: [threshold]
-        pace_html: 5:05&ndash;5:15/km
-        content_html: 3 x 10 min threshold @ ~5:05&ndash;5:15/km, 3 min jog recovery
+        pace_html: 5:05&ndash;5:12/km
+        content_html: 3 x 10 min threshold @ ~5:05&ndash;5:12/km, 3 min jog recovery
       - type: easy
         tags: [easy]
         pace_html: Easy effort, likely 6:00&ndash;7:00+/km
@@ -115,8 +115,8 @@ blocks:
         content_html: Easy 40&ndash;45 min
       - type: thr
         tags: [threshold]
-        pace_html: 5:08&ndash;5:15/km
-        content_html: 3 x 2 km threshold @ 5:08&ndash;5:15/km, 2&ndash;3 min jog
+        pace_html: 5:05&ndash;5:12/km
+        content_html: 3 x 2 km threshold @ 5:05&ndash;5:12/km, 2&ndash;3 min jog
       - type: easy
         tags: [easy]
         content_html: Easy 35&ndash;40 min
@@ -137,8 +137,8 @@ blocks:
         content_html: Easy 40&ndash;45 min
       - type: thr
         tags: [threshold]
-        pace_html: 5:08&ndash;5:15/km
-        content_html: 25&ndash;30 min continuous threshold @ 5:08&ndash;5:15/km
+        pace_html: 5:05&ndash;5:12/km
+        content_html: 25&ndash;30 min continuous threshold @ 5:05&ndash;5:12/km
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
@@ -190,8 +190,8 @@ blocks:
       days:
       - type: intv
         tags: [vo2max]
-        pace_html: 4:30&ndash;4:40/km effort, full control
-        content_html: 5 x 3 min @ ~4:30&ndash;4:40/km effort, 2.5&ndash;3 min easy jog; smooth and capped
+        pace_html: 4:35&ndash;4:45/km effort, full control
+        content_html: 5 x 3 min @ ~4:35&ndash;4:45/km effort, 2.5&ndash;3 min easy jog; smooth and capped
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
@@ -301,15 +301,15 @@ blocks:
       dates_html: Jul 13&ndash;19
       total_km_html: "~55km"
       template: Post-10K Rebuild
-      notes_html: "After July 12, recalibrate HM paces: &le;48:30 and controlled keeps late-block HM work at 5:03&ndash;5:10/km; 48:30&ndash;49:30 keeps the plan as written; &gt;49:30 or heavy fatigue moves HM work 5&ndash;8 sec/km slower for two weeks."
+      notes_html: "After July 12, recalibrate HM paces: &le;48:30 and controlled keeps late-block HM work at 5:05&ndash;5:10/km; 48:30&ndash;49:30 keeps the plan as written; &gt;49:30 or heavy fatigue moves HM work 5&ndash;8 sec/km slower for two weeks."
       days:
       - type: easy
         tags: [easy, recovery]
         content_html: Easy 40&ndash;45 min
       - type: thr
         tags: [threshold]
-        pace_html: 5:05&ndash;5:12/km
-        content_html: 4 x 8 min threshold @ 5:05&ndash;5:12/km, controlled
+        pace_html: 5:03&ndash;5:12/km
+        content_html: 4 x 8 min threshold @ 5:03&ndash;5:12/km, controlled
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
@@ -336,7 +336,7 @@ blocks:
       - type: thr
         tags: [threshold, steady]
         pace_html: Progress from steady toward threshold effort
-        content_html: 45 min progression @ steady-to-threshold effort; finish near 5:03&ndash;5:10/km only if smooth
+        content_html: 45 min progression @ steady-to-threshold effort; finish near 5:03&ndash;5:08/km only if smooth
       - type: easy
         tags: [easy]
         content_html: Easy 45&ndash;50 min
@@ -370,8 +370,8 @@ blocks:
         content_html: Easy 45 min
       - type: hm
         tags: [hm-specific]
-        pace_html: 5:05&ndash;5:12/km
-        content_html: 2 x 20 min HM/threshold blend @ 5:05&ndash;5:12/km
+        pace_html: 5:05&ndash;5:10/km, with threshold feel only late
+        content_html: 2 x 20 min HM/threshold blend @ 5:05&ndash;5:10/km; keep it HM-controlled unless conditions are excellent
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
@@ -393,10 +393,10 @@ blocks:
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
-      - type: thr
-        tags: [threshold, hm-specific]
-        pace_html: 5:03&ndash;5:10/km
-        content_html: 2 x 3 km HM effort @ 5:03&ndash;5:10/km, 3 min jog
+      - type: hm
+        tags: [hm-specific]
+        pace_html: 5:05&ndash;5:10/km
+        content_html: 2 x 3 km HM effort @ 5:05&ndash;5:10/km, 3 min jog
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
@@ -408,8 +408,8 @@ blocks:
         content_html: Easy 40 min + strides
       - type: lng
         tags: [long-run, hm-specific]
-        pace_html: Last 8&ndash;10 km continuous @ 5:08&ndash;5:12/km
-        content_html: Long 18&ndash;19 km with last 8&ndash;10 km continuous @ 5:08&ndash;5:12/km. Use effort if heat is heavy.
+        pace_html: Last 8&ndash;10 km continuous @ 5:05&ndash;5:10/km
+        content_html: Long 18&ndash;19 km with last 8&ndash;10 km continuous @ 5:05&ndash;5:10/km. Use effort if heat is heavy.
       - type: rest
         tags: [recovery]
         content_html: Rest
@@ -424,8 +424,8 @@ blocks:
         content_html: Easy 40&ndash;45 min
       - type: hm
         tags: [hm-specific]
-        pace_html: 5:03&ndash;5:10/km
-        content_html: 2 x 4 km HM work @ 5:03&ndash;5:10/km, 5 min easy between
+        pace_html: 5:05&ndash;5:10/km
+        content_html: 2 x 4 km HM work @ 5:05&ndash;5:10/km, 5 min easy between
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
@@ -445,15 +445,15 @@ blocks:
       dates_html: Aug 17&ndash;23
       total_km_html: "~48&ndash;52km"
       template: HM Tune-Up Race
-      race_notes_html: "Aug 23 HM B-race tune-up: start controlled around 5:08&ndash;5:12/km, keep the middle smooth, and press toward 5:00&ndash;5:05/km only after 16 km if it still feels comfortable."
+      race_notes_html: "Aug 23 HM B-race tune-up: start controlled around 5:10&ndash;5:12/km, keep the middle smooth around 5:06&ndash;5:10/km, and press toward 5:03&ndash;5:06/km only after 16 km if it still feels comfortable."
       days:
       - type: easy
         tags: [easy]
         content_html: Easy 40 min
       - type: hm
         tags: [hm-specific]
-        pace_html: 5:00&ndash;5:08/km
-        content_html: 3 x 2 km @ 5:00&ndash;5:08/km, 3 min jog; should feel controlled, not like a test
+        pace_html: 5:05&ndash;5:10/km
+        content_html: 3 x 2 km @ 5:05&ndash;5:10/km, 3 min jog; should feel controlled, not like a test
       - type: easy
         tags: [easy]
         content_html: Easy 35&ndash;40 min
@@ -469,7 +469,7 @@ blocks:
       - type: race
         tags: [race, hm-specific]
         priority: B
-        pace_html: Start 5:08&ndash;5:12/km; press toward 5:00&ndash;5:05/km only after 16 km if smooth
+        pace_html: Start 5:10&ndash;5:12/km; press toward 5:03&ndash;5:06/km only after 16 km if smooth
         content_html: Aug 23 Half Marathon tune-up &mdash; controlled B-race
   - id: oct-hm-peak
     title_html: Recover, rebuild, and Oct HM peak &middot; Weeks 17&ndash;25 &middot; Aug 24 &ndash; Oct 25
@@ -517,8 +517,8 @@ blocks:
         content_html: Easy 45&ndash;50 min
       - type: thr
         tags: [threshold]
-        pace_html: 5:05&ndash;5:12/km
-        content_html: 3 x 10 min threshold @ 5:05&ndash;5:12/km, controlled
+        pace_html: 5:03&ndash;5:12/km
+        content_html: 3 x 10 min threshold @ 5:03&ndash;5:12/km, controlled
       - type: easy
         tags: [easy]
         content_html: Easy 40&ndash;45 min
@@ -566,8 +566,8 @@ blocks:
         content_html: Easy 45 min
       - type: thr
         tags: [threshold]
-        pace_html: Threshold portions 5:02&ndash;5:10/km; floats controlled by feel
-        content_html: 2 x 20 min threshold float set @ 4 min 5:02&ndash;5:10/km / 1 min float, 4 min jog between sets
+        pace_html: Threshold portions 4:58&ndash;5:06/km; floats controlled by feel
+        content_html: 2 x 20 min threshold float set @ 4 min 4:58&ndash;5:06/km / 1 min float, 4 min jog between sets
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
@@ -600,8 +600,8 @@ blocks:
         content_html: Easy 45 min
       - type: thr
         tags: [threshold, hm-specific]
-        pace_html: 5:03&ndash;5:10/km
-        content_html: 2 x 15 min HM/threshold @ 5:03&ndash;5:10/km
+        pace_html: HM into threshold feel
+        content_html: 2 x 15 min HM/threshold progression; start 5:08&ndash;5:10/km and finish near 4:58&ndash;5:06/km only if smooth
       - type: easy
         tags: [easy]
         content_html: Easy 35&ndash;40 min
@@ -622,8 +622,8 @@ blocks:
         content_html: Easy 45 min
       - type: hm
         tags: [hm-specific]
-        pace_html: 5:00&ndash;5:08/km
-        content_html: 2 x 4 km HM effort @ 5:00&ndash;5:08/km, 4 min easy
+        pace_html: 5:05&ndash;5:10/km
+        content_html: 2 x 4 km HM effort @ 5:05&ndash;5:10/km, 4 min easy
       - type: easy
         tags: [easy]
         content_html: Easy 45&ndash;50 min
@@ -635,8 +635,8 @@ blocks:
         content_html: Easy 40 min + strides
       - type: lng
         tags: [long-run, hm-specific]
-        pace_html: Last 10&ndash;12 km continuous @ 5:00&ndash;5:05/km
-        content_html: Long 130&ndash;135 min / ~20&ndash;22 km with last 10&ndash;12 km continuous @ 5:00&ndash;5:05/km. Use a treadmill portion or cooler route if heat load is high.
+        pace_html: Last 10&ndash;12 km continuous @ 5:05&ndash;5:10/km
+        content_html: Long 130&ndash;135 min / ~20&ndash;22 km with last 10&ndash;12 km continuous @ 5:05&ndash;5:10/km. Use a treadmill portion or cooler route if heat load is high.
       - type: rest
         tags: [recovery]
         content_html: Rest
@@ -657,8 +657,8 @@ blocks:
         content_html: Medium-long 70 min easy
       - type: hm
         tags: [hm-specific]
-        pace_html: 5:00&ndash;5:08/km
-        content_html: 2 x 4 km HM rhythm @ 5:00&ndash;5:08/km, 5 min easy
+        pace_html: 5:05&ndash;5:10/km
+        content_html: 2 x 4 km HM rhythm @ 5:05&ndash;5:10/km, 5 min easy
       - type: easy
         tags: [easy]
         content_html: Easy 35&ndash;40 min
@@ -678,8 +678,8 @@ blocks:
         content_html: Easy 40&ndash;45 min
       - type: hm
         tags: [hm-specific]
-        pace_html: 5:00&ndash;5:08/km
-        content_html: 2 x 4 km HM effort @ 5:00&ndash;5:08/km, controlled
+        pace_html: 5:05&ndash;5:10/km
+        content_html: 2 x 4 km HM effort @ 5:05&ndash;5:10/km, controlled
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
@@ -699,15 +699,15 @@ blocks:
       dates_html: Oct 19&ndash;25
       total_km_html: "~38&ndash;45km"
       template: HM Taper And Race
-      race_notes_html: "Oct 25 HM A-race: first 5 km at 5:05&ndash;5:08/km, settle around 5:00&ndash;5:04/km from 5&ndash;15 km, then press toward 4:58&ndash;5:02/km from 16 km only if controlled. Sub-1:45 remains the stretch outcome."
+      race_notes_html: "Oct 25 HM A-race: first 5 km at 5:10&ndash;5:12/km, settle around 5:06&ndash;5:08/km from 5&ndash;15 km, then press toward 5:03&ndash;5:05/km from 16 km only if controlled. 1:48 is the primary target."
       days:
       - type: easy
         tags: [easy]
         content_html: Easy 35&ndash;40 min
       - type: hm
         tags: [hm-specific, strides]
-        pace_html: 5:00&ndash;5:06/km
-        content_html: 3 x 2 km HM rhythm @ 5:00&ndash;5:06/km, full control
+        pace_html: 5:05&ndash;5:10/km
+        content_html: 3 x 2 km HM rhythm @ 5:05&ndash;5:10/km, full control
       - type: easy
         tags: [easy]
         content_html: Easy 35&ndash;40 min
@@ -723,7 +723,7 @@ blocks:
       - type: race
         tags: [race, hm-specific]
         priority: A
-        pace_html: Start 5:05&ndash;5:08/km, settle 5:00&ndash;5:04/km, press late if controlled
-        content_html: Oct 25 Half Marathon A race &mdash; sub-1:45 stretch attempt
-  pace_guide_html: "<strong>Easy/recovery:</strong> effort-first, usually ~6:15&ndash;7:10/km in Jakarta conditions &nbsp;&middot;&nbsp; <strong>Steady:</strong> ~5:35&ndash;5:55/km early, progressing toward ~5:20&ndash;5:45/km &nbsp;&middot;&nbsp; <strong>Threshold:</strong> mostly ~5:05&ndash;5:15/km, progressing toward ~5:00&ndash;5:10/km; float sets keep the floats controlled, not sprinty &nbsp;&middot;&nbsp; <strong>VO2 touches:</strong> ~4:30&ndash;4:40/km effort with full recovery, capped at two sessions total &nbsp;&middot;&nbsp; <strong>HM effort:</strong> early ~5:10&ndash;5:18/km, peak block ~5:00&ndash;5:08/km &nbsp;&middot;&nbsp; <strong>10K-specific touch:</strong> relaxed reps mostly ~4:45&ndash;4:55/km, used sparingly to maintain leg speed &nbsp;&middot;&nbsp; <strong>Stretch HM race pace:</strong> ~4:58&ndash;5:02/km, used only late in the Oct 25 A-race if controlled."
-  plan_note_html: "Six runs per week in normal weeks. Sunday stays rest except fixed Sunday race dates. Saturday stays long run except pre-race Saturdays, which become short shakeouts. The Aug 23 half marathon is now a controlled B-race tune-up. Oct 25 is the A half marathon, with sub-1:45 as the stretch outcome. Peak volume remains ~65&ndash;66km before taper, with two continuous HM-finish long-run rehearsals, two capped VO2 touches, varied threshold formats, and heat-aware treadmill/cooler-route options. July 12 stays a B benchmark with a two-week 10K-specific touch and mini taper, not a goal race."
+        pace_html: Start 5:10&ndash;5:12/km, settle 5:06&ndash;5:08/km, press late if controlled
+        content_html: Oct 25 Half Marathon A race &mdash; 1:48 target
+  pace_guide_html: "<strong>Easy/recovery:</strong> effort-first, usually ~6:15&ndash;7:10/km in Jakarta conditions &nbsp;&middot;&nbsp; <strong>Steady:</strong> ~5:35&ndash;5:55/km early, progressing toward ~5:20&ndash;5:45/km &nbsp;&middot;&nbsp; <strong>Early threshold:</strong> 5:03&ndash;5:12/km &nbsp;&middot;&nbsp; <strong>Peak threshold:</strong> 4:58&ndash;5:06/km; float sets keep the floats controlled, not sprinty &nbsp;&middot;&nbsp; <strong>Early HM effort:</strong> 5:10&ndash;5:18/km &nbsp;&middot;&nbsp; <strong>Peak HM / 1:48 goal rhythm:</strong> 5:05&ndash;5:10/km &nbsp;&middot;&nbsp; <strong>VO2 touches:</strong> early ~4:35&ndash;4:45/km, peak ~4:30&ndash;4:40/km with full recovery &nbsp;&middot;&nbsp; <strong>10K-specific touch:</strong> early ~4:50&ndash;5:00/km, peak ~4:45&ndash;4:55/km, used sparingly."
+  plan_note_html: "Six runs per week in normal weeks. Sunday stays rest except fixed Sunday race dates. Saturday stays long run except pre-race Saturdays, which become short shakeouts. The Aug 23 half marathon is now a controlled B-race tune-up. Oct 25 is the A half marathon, with 1:48 as the primary target. Peak volume remains ~65&ndash;66km before taper, with two continuous HM-finish long-run rehearsals, two capped VO2 touches, varied threshold formats, and heat-aware treadmill/cooler-route options. July 12 stays a B benchmark with a two-week 10K-specific touch and mini taper, not a goal race."
