@@ -1,7 +1,7 @@
 // Generated from run-plan.yaml by scripts/generate_plan_data.rb.
 // Do not edit by hand.
 window.RUN_PLAN_META = {
-  "planNote": "Six runs per week in normal weeks. Sunday stays rest except fixed Sunday race dates. Saturday stays long run except pre-race Saturdays, which become short shakeouts. The Aug 23 half marathon is now a controlled B-race tune-up. Oct 25 is the A half marathon, with sub-1:45 as the stretch outcome. Peak volume remains ~65&ndash;66km before taper, with two continuous HM-finish long-run rehearsals and heat-aware treadmill/cooler-route options. July 12 stays a B benchmark with a two-week 10K-specific touch and mini taper, not a goal race."
+  "planNote": "Six runs per week in normal weeks. Sunday stays rest except fixed Sunday race dates. Saturday stays long run except pre-race Saturdays, which become short shakeouts. The Aug 23 half marathon is now a controlled B-race tune-up. Oct 25 is the A half marathon, with sub-1:45 as the stretch outcome. Peak volume remains ~65&ndash;66km before taper, with two continuous HM-finish long-run rehearsals, two capped VO2 touches, varied threshold formats, and heat-aware treadmill/cooler-route options. July 12 stays a B benchmark with a two-week 10K-specific touch and mini taper, not a goal race."
 };
 window.RUN_PLAN_WEEKS = [
   {
@@ -373,7 +373,7 @@ window.RUN_PLAN_WEEKS = [
     "km": 62,
     "kmLabel": "~62km",
     "phase": "hm-build",
-    "template": "Aerobic Build",
+    "template": "Aerobic Build / Float Tempo",
     "days": [
       {
         "t": "easy",
@@ -385,12 +385,12 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "thr",
-        "s": "3 x 15 min threshold",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 15 min threshold @ ~5:05&ndash;5:12/km, 3 min jog<br>CD: 10&ndash;15 min easy.",
+        "s": "3 x 10 min threshold float set",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 10 min threshold float set @ 90 sec strong / 30 sec float, 3 min jog between sets<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "threshold"
         ],
-        "pace": "5:05&ndash;5:12/km"
+        "pace": "Threshold effort; float by feel"
       },
       {
         "t": "easy",
@@ -443,16 +443,17 @@ window.RUN_PLAN_WEEKS = [
     "km": 58,
     "kmLabel": "~58km",
     "phase": "hm-build",
-    "template": "Light 10K Touch",
+    "template": "VO2 Ceiling Touch",
+    "notes": "Short controlled VO2 stimulus to raise the ceiling before the July 10K-specific block. Keep it capped; this is not a race rehearsal.",
     "days": [
       {
         "t": "intv",
-        "s": "8 x 600m",
-        "l": "WU: 15&ndash;20 min easy + drills + 4 relaxed strides.<br>Session: 8 x 600m @ 4:35&ndash;4:45/km, relaxed, 200&ndash;300m jog<br>CD: 10&ndash;15 min easy.",
+        "s": "5 x 3 min",
+        "l": "WU: 15&ndash;20 min easy + drills + 4 relaxed strides.<br>Session: 5 x 3 min @ ~4:30&ndash;4:40/km effort, 2.5&ndash;3 min easy jog; smooth and capped<br>CD: 10&ndash;15 min easy.",
         "tags": [
-          "10k-specific"
+          "vo2max"
         ],
-        "pace": "4:35&ndash;4:45/km"
+        "pace": "4:30&ndash;4:40/km effort, full control"
       },
       {
         "t": "easy",
@@ -803,7 +804,7 @@ window.RUN_PLAN_WEEKS = [
     "km": 61.5,
     "kmLabel": "~60–63km",
     "phase": "hm-build",
-    "template": "HM Build Resumes",
+    "template": "HM Build Resumes / Progression",
     "days": [
       {
         "t": "easy",
@@ -815,12 +816,13 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "thr",
-        "s": "3 x 15 min threshold",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 15 min threshold @ ~5:03&ndash;5:10/km<br>CD: 10&ndash;15 min easy.",
+        "s": "45 min progression",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 45 min progression @ steady-to-threshold effort; finish near 5:03&ndash;5:10/km only if smooth<br>CD: 10&ndash;15 min easy.",
         "tags": [
-          "threshold"
+          "threshold",
+          "steady"
         ],
-        "pace": "5:03&ndash;5:10/km"
+        "pace": "Progress from steady toward threshold effort"
       },
       {
         "t": "easy",
@@ -1297,17 +1299,17 @@ window.RUN_PLAN_WEEKS = [
     "km": 57,
     "kmLabel": "~55–59km",
     "phase": "oct-hm-peak",
-    "template": "HM Rebuild",
+    "template": "VO2 Ceiling Touch",
+    "notes": "Second and final VO2 touch of the plan, placed before the Oct peak-specific weeks. Run it controlled, then return to HM-specific work.",
     "days": [
       {
-        "t": "hm",
-        "s": "4 x 2 km threshold/HM blend",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 4 x 2 km threshold/HM blend @ 5:03&ndash;5:10/km, 2&ndash;3 min jog<br>CD: 10&ndash;15 min easy.",
+        "t": "intv",
+        "s": "4 x 1 km",
+        "l": "WU: 15&ndash;20 min easy + drills + 4 relaxed strides.<br>Session: 4 x 1 km @ ~4:30&ndash;4:40/km, 3 min easy jog; controlled, not a time trial<br>CD: 10&ndash;15 min easy.",
         "tags": [
-          "threshold",
-          "hm-specific"
+          "vo2max"
         ],
-        "pace": "5:03&ndash;5:10/km"
+        "pace": "4:30&ndash;4:40/km effort, full recovery"
       },
       {
         "t": "easy",
@@ -1368,7 +1370,7 @@ window.RUN_PLAN_WEEKS = [
     "km": 63,
     "kmLabel": "~61–65km",
     "phase": "oct-hm-peak",
-    "template": "HM Aerobic Strength",
+    "template": "HM Aerobic Strength / Float Tempo",
     "days": [
       {
         "t": "easy",
@@ -1380,12 +1382,12 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "thr",
-        "s": "3 x 15 min threshold",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 15 min threshold @ 5:02&ndash;5:10/km<br>CD: 10&ndash;15 min easy.",
+        "s": "2 x 20 min threshold float set",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 20 min threshold float set @ 4 min 5:02&ndash;5:10/km / 1 min float, 4 min jog between sets<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "threshold"
         ],
-        "pace": "5:02&ndash;5:10/km"
+        "pace": "Threshold portions 5:02&ndash;5:10/km; floats controlled by feel"
       },
       {
         "t": "easy",

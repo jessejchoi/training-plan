@@ -157,15 +157,15 @@ blocks:
     - week_html: '6'
       dates_html: Jun 8&ndash;14
       total_km_html: "~62km"
-      template: Aerobic Build
+      template: Aerobic Build / Float Tempo
       days:
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
       - type: thr
         tags: [threshold]
-        pace_html: 5:05&ndash;5:12/km
-        content_html: 3 x 15 min threshold @ ~5:05&ndash;5:12/km, 3 min jog
+        pace_html: Threshold effort; float by feel
+        content_html: 3 x 10 min threshold float set @ 90 sec strong / 30 sec float, 3 min jog between sets
       - type: easy
         tags: [easy]
         content_html: Easy 45&ndash;50 min
@@ -185,12 +185,13 @@ blocks:
     - week_html: '7'
       dates_html: Jun 15&ndash;21
       total_km_html: "~58km"
-      template: Light 10K Touch
+      template: VO2 Ceiling Touch
+      notes_html: Short controlled VO2 stimulus to raise the ceiling before the July 10K-specific block. Keep it capped; this is not a race rehearsal.
       days:
       - type: intv
-        tags: [10k-specific]
-        pace_html: 4:35&ndash;4:45/km
-        content_html: 8 x 600m @ 4:35&ndash;4:45/km, relaxed, 200&ndash;300m jog
+        tags: [vo2max]
+        pace_html: 4:30&ndash;4:40/km effort, full control
+        content_html: 5 x 3 min @ ~4:30&ndash;4:40/km effort, 2.5&ndash;3 min easy jog; smooth and capped
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
@@ -327,15 +328,15 @@ blocks:
     - week_html: '12'
       dates_html: Jul 20&ndash;26
       total_km_html: "~60&ndash;63km"
-      template: HM Build Resumes
+      template: HM Build Resumes / Progression
       days:
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
       - type: thr
-        tags: [threshold]
-        pace_html: 5:03&ndash;5:10/km
-        content_html: 3 x 15 min threshold @ ~5:03&ndash;5:10/km
+        tags: [threshold, steady]
+        pace_html: Progress from steady toward threshold effort
+        content_html: 45 min progression @ steady-to-threshold effort; finish near 5:03&ndash;5:10/km only if smooth
       - type: easy
         tags: [easy]
         content_html: Easy 45&ndash;50 min
@@ -530,12 +531,13 @@ blocks:
     - week_html: '19'
       dates_html: Sep 7&ndash;13
       total_km_html: "~55&ndash;59km"
-      template: HM Rebuild
+      template: VO2 Ceiling Touch
+      notes_html: Second and final VO2 touch of the plan, placed before the Oct peak-specific weeks. Run it controlled, then return to HM-specific work.
       days:
-      - type: hm
-        tags: [threshold, hm-specific]
-        pace_html: 5:03&ndash;5:10/km
-        content_html: 4 x 2 km threshold/HM blend @ 5:03&ndash;5:10/km, 2&ndash;3 min jog
+      - type: intv
+        tags: [vo2max]
+        pace_html: 4:30&ndash;4:40/km effort, full recovery
+        content_html: 4 x 1 km @ ~4:30&ndash;4:40/km, 3 min easy jog; controlled, not a time trial
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
@@ -557,15 +559,15 @@ blocks:
     - week_html: '20'
       dates_html: Sep 14&ndash;20
       total_km_html: "~61&ndash;65km"
-      template: HM Aerobic Strength
+      template: HM Aerobic Strength / Float Tempo
       days:
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
       - type: thr
         tags: [threshold]
-        pace_html: 5:02&ndash;5:10/km
-        content_html: 3 x 15 min threshold @ 5:02&ndash;5:10/km
+        pace_html: Threshold portions 5:02&ndash;5:10/km; floats controlled by feel
+        content_html: 2 x 20 min threshold float set @ 4 min 5:02&ndash;5:10/km / 1 min float, 4 min jog between sets
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
@@ -723,5 +725,5 @@ blocks:
         priority: A
         pace_html: Start 5:05&ndash;5:08/km, settle 5:00&ndash;5:04/km, press late if controlled
         content_html: Oct 25 Half Marathon A race &mdash; sub-1:45 stretch attempt
-  pace_guide_html: "<strong>Easy/recovery:</strong> effort-first, usually ~6:15&ndash;7:10/km in Jakarta conditions &nbsp;&middot;&nbsp; <strong>Steady:</strong> ~5:35&ndash;5:55/km early, progressing toward ~5:20&ndash;5:45/km &nbsp;&middot;&nbsp; <strong>Threshold:</strong> mostly ~5:05&ndash;5:15/km, progressing toward ~5:00&ndash;5:10/km &nbsp;&middot;&nbsp; <strong>HM effort:</strong> early ~5:10&ndash;5:18/km, peak block ~5:00&ndash;5:08/km &nbsp;&middot;&nbsp; <strong>10K-specific touch:</strong> relaxed reps mostly ~4:45&ndash;4:55/km, used sparingly to maintain leg speed &nbsp;&middot;&nbsp; <strong>Stretch HM race pace:</strong> ~4:58&ndash;5:02/km, used only late in the Oct 25 A-race if controlled."
-  plan_note_html: "Six runs per week in normal weeks. Sunday stays rest except fixed Sunday race dates. Saturday stays long run except pre-race Saturdays, which become short shakeouts. The Aug 23 half marathon is now a controlled B-race tune-up. Oct 25 is the A half marathon, with sub-1:45 as the stretch outcome. Peak volume remains ~65&ndash;66km before taper, with two continuous HM-finish long-run rehearsals and heat-aware treadmill/cooler-route options. July 12 stays a B benchmark with a two-week 10K-specific touch and mini taper, not a goal race."
+  pace_guide_html: "<strong>Easy/recovery:</strong> effort-first, usually ~6:15&ndash;7:10/km in Jakarta conditions &nbsp;&middot;&nbsp; <strong>Steady:</strong> ~5:35&ndash;5:55/km early, progressing toward ~5:20&ndash;5:45/km &nbsp;&middot;&nbsp; <strong>Threshold:</strong> mostly ~5:05&ndash;5:15/km, progressing toward ~5:00&ndash;5:10/km; float sets keep the floats controlled, not sprinty &nbsp;&middot;&nbsp; <strong>VO2 touches:</strong> ~4:30&ndash;4:40/km effort with full recovery, capped at two sessions total &nbsp;&middot;&nbsp; <strong>HM effort:</strong> early ~5:10&ndash;5:18/km, peak block ~5:00&ndash;5:08/km &nbsp;&middot;&nbsp; <strong>10K-specific touch:</strong> relaxed reps mostly ~4:45&ndash;4:55/km, used sparingly to maintain leg speed &nbsp;&middot;&nbsp; <strong>Stretch HM race pace:</strong> ~4:58&ndash;5:02/km, used only late in the Oct 25 A-race if controlled."
+  plan_note_html: "Six runs per week in normal weeks. Sunday stays rest except fixed Sunday race dates. Saturday stays long run except pre-race Saturdays, which become short shakeouts. The Aug 23 half marathon is now a controlled B-race tune-up. Oct 25 is the A half marathon, with sub-1:45 as the stretch outcome. Peak volume remains ~65&ndash;66km before taper, with two continuous HM-finish long-run rehearsals, two capped VO2 touches, varied threshold formats, and heat-aware treadmill/cooler-route options. July 12 stays a B benchmark with a two-week 10K-specific touch and mini taper, not a goal race."
