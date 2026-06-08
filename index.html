@@ -660,12 +660,13 @@ const MOBILITY_SECTIONS = [
 ];
 
 const MOBILITY_TIMING = [
-  ['Monday — Intervals', 'Pre-run activation → run → post-run flexibility. Skip the standalone session and keep recovery the priority.'],
-  ['Tuesday — Easy', 'Pre-run → run → post-run plus standalone and hip-focus reset. This is the best all-in mobility day.'],
-  ['Wednesday — Threshold', 'Same structure as Monday: pre-run activation, threshold session, then long post-run holds.'],
-  ['Friday — Easy', 'Pre-run → run → post-run. Add the hip-focus reset if the week has left the glutes or piriformis tight.'],
+  ['Monday — Rest', 'Standalone mobility or hip-focus reset only if you feel stiff. Keep the day restorative.'],
+  ['Tuesday — Quality', 'Pre-run activation → run → post-run flexibility. Skip the standalone session and keep recovery the priority.'],
+  ['Wednesday — Easy', 'Pre-run → run → post-run plus standalone and hip-focus reset. This is the best all-in mobility day.'],
+  ['Thursday — Quality / Medium-long', 'Pre-run activation → run → post-run flexibility. Keep the extra work minimal if the session is demanding.'],
+  ['Friday — Rest', 'Optional short standalone session if you feel stiff. Otherwise leave it alone.'],
   ['Saturday — Long Run', 'Use the longest post-run hold durations after the long run.'],
-  ['Sunday — Rest', 'Optional short standalone session if you feel stiff. Otherwise leave it alone.'],
+  ['Sunday — Recovery', 'Keep mobility gentle after the recovery run. No aggressive holds if Saturday carried steady or HM work.'],
 ];
 
 const STRENGTH_A = [
@@ -687,12 +688,13 @@ const STRENGTH_B = [
 ];
 
 const STRENGTH_TIMING = [
-  ['Monday', 'Interval run → Workout A. Keep the gym session focused and leave with a little in reserve.'],
-  ['Tuesday', 'Easy run only. No strength. Use mobility instead.'],
-  ['Wednesday', 'Threshold run only. Let that adaptation land without extra lifting.'],
-  ['Friday', 'Easy run → Workout B. Lower loads, better control, watch the hip if the week has stacked fatigue.'],
+  ['Monday', 'Full rest. No strength.'],
+  ['Tuesday', 'Quality run → Workout A. Keep the gym session focused and leave with a little in reserve.'],
+  ['Wednesday', 'Easy run → optional Workout B. Lower loads, better control, and skip it if Tuesday bit hard.'],
+  ['Thursday', 'Quality or medium-long only. Let the run adaptation land without extra lifting.'],
+  ['Friday', 'Full rest. No strength.'],
   ['Saturday', 'Long run only. No strength.'],
-  ['Sunday', 'Full rest, with light mobility only if needed.'],
+  ['Sunday', 'Recovery run only, with light mobility if needed.'],
 ];
 
 function ModeBar({ mode, setMode }) {
@@ -1346,7 +1348,7 @@ function StrengthView() {
 
       <ContentSection
         label="WORKOUT A — LOWER COMPOUND"
-        meta="Monday · after intervals"
+        meta="Tuesday · after quality"
         intro="Heavy bilateral work while the nervous system is already switched on from the quality run. Keep the focus on clean force production, not junk volume."
         accent="var(--str)"
         items={STRENGTH_A}
@@ -1354,8 +1356,8 @@ function StrengthView() {
 
       <ContentSection
         label="WORKOUT B — SINGLE-LEG & CONTROL"
-        meta="Friday · after easy run"
-        intro="Moderate loads and better control. This is where hip stability, glute med support, and unilateral mechanics get the emphasis."
+        meta="Wednesday · optional after easy run"
+        intro="Moderate loads and better control. This is where hip stability, glute med support, and unilateral mechanics get the emphasis; skip it when Tuesday quality leaves residue."
         accent="var(--str)"
         items={STRENGTH_B}
       />

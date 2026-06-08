@@ -1,7 +1,7 @@
 // Generated from run-plan.yaml by scripts/generate_plan_data.rb.
 // Do not edit by hand.
 window.RUN_PLAN_META = {
-  "planNote": "Six runs per week in normal weeks. Sunday stays rest except fixed Sunday race dates. Saturday stays long run except pre-race Saturdays, which become short shakeouts. The Aug 23 half marathon is now a controlled B-race tune-up. Oct 25 is the A half marathon, with 1:48 as the primary target. Peak volume remains ~65&ndash;66km before taper, with two continuous HM-finish long-run rehearsals, two capped VO2 touches, varied threshold formats, and heat-aware treadmill/cooler-route options. July 12 stays a B benchmark with a two-week 10K-specific touch and mini taper, not a goal race."
+  "planNote": "Weeks 6&ndash;16 use five runs per week with Monday and Friday fixed as rest days, Tuesday as the main quality day, Thursday as medium-long or second controlled quality, Saturday as long run or pre-race shakeout, and Sunday as recovery except fixed Sunday race dates. The Aug 23 half marathon is now a controlled B-race tune-up. Oct 25 is the A half marathon, with 1:48 as the primary target. Peak volume remains ~65&ndash;66km before taper, with two continuous HM-finish long-run rehearsals, two capped VO2 touches, varied threshold formats, and heat-aware treadmill/cooler-route options. July 12 stays a B benchmark with a two-week 10K-specific touch and mini taper, not a goal race."
 };
 window.RUN_PLAN_WEEKS = [
   {
@@ -370,17 +370,17 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "6",
     "dates": "Jun 8–14",
-    "km": 62,
-    "kmLabel": "~62km",
+    "km": 55,
+    "kmLabel": "~54–56km",
     "phase": "hm-build",
     "template": "Aerobic Build / Cruise Threshold",
     "days": [
       {
-        "t": "easy",
-        "s": "Easy 45 min",
-        "l": "Easy 45 min",
+        "t": "rest",
+        "s": "Rest",
+        "l": "Rest",
         "tags": [
-          "easy"
+          "recovery"
         ]
       },
       {
@@ -411,11 +411,11 @@ window.RUN_PLAN_WEEKS = [
         "pace": "Easy effort; optional last 15&ndash;20 min light steady"
       },
       {
-        "t": "easy",
-        "s": "Easy 40 min",
-        "l": "Easy 40 min",
+        "t": "rest",
+        "s": "Rest",
+        "l": "Rest",
         "tags": [
-          "easy"
+          "recovery"
         ]
       },
       {
@@ -428,10 +428,11 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
-        "t": "rest",
-        "s": "Rest",
-        "l": "Rest",
+        "t": "rec",
+        "s": "Recovery 35-45 min",
+        "l": "Recovery 35&ndash;45 min",
         "tags": [
+          "easy",
           "recovery"
         ]
       }
@@ -440,12 +441,20 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "7",
     "dates": "Jun 15–21",
-    "km": 58,
-    "kmLabel": "~58km",
+    "km": 51,
+    "kmLabel": "~50–52km",
     "phase": "hm-build",
     "template": "VO2 Ceiling Touch",
     "notes": "Short controlled VO2 stimulus to raise the ceiling before the July 10K-specific block. Keep it capped; this is not a race rehearsal.",
     "days": [
+      {
+        "t": "rest",
+        "s": "Rest",
+        "l": "Rest",
+        "tags": [
+          "recovery"
+        ]
+      },
       {
         "t": "intv",
         "s": "5 x 3 min",
@@ -473,20 +482,11 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
-        "t": "easy",
-        "s": "Easy 45 min",
-        "l": "Easy 45 min",
+        "t": "rest",
+        "s": "Rest",
+        "l": "Rest",
         "tags": [
-          "easy"
-        ]
-      },
-      {
-        "t": "easy",
-        "s": "Easy 35-40 min + strides",
-        "l": "Easy 35&ndash;40 min + strides",
-        "tags": [
-          "easy",
-          "strides"
+          "recovery"
         ]
       },
       {
@@ -500,10 +500,11 @@ window.RUN_PLAN_WEEKS = [
         "pace": "Last 20&ndash;25 min steady @ 5:35&ndash;5:55/km"
       },
       {
-        "t": "rest",
-        "s": "Rest",
-        "l": "Rest",
+        "t": "rec",
+        "s": "Recovery 30-40 min",
+        "l": "Recovery 30&ndash;40 min",
         "tags": [
+          "easy",
           "recovery"
         ]
       }
@@ -512,18 +513,18 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "8",
     "dates": "Jun 22–28",
-    "km": 50,
-    "kmLabel": "~48–52km",
+    "km": 44,
+    "kmLabel": "~42–46km",
     "phase": "hm-build",
     "template": "Cutback / Absorb",
     "notes": "Deliberate recovery week after the early build. Remove one quality day, cut the long run back, and arrive fresher for the July 10K-specific touch.",
     "days": [
       {
-        "t": "easy",
-        "s": "Easy 45 min",
-        "l": "Easy 45 min",
+        "t": "rest",
+        "s": "Rest",
+        "l": "Rest",
         "tags": [
-          "easy"
+          "recovery"
         ]
       },
       {
@@ -553,12 +554,11 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
-        "t": "easy",
-        "s": "Easy 35-40 min + strides",
-        "l": "Easy 35&ndash;40 min + strides",
+        "t": "rest",
+        "s": "Rest",
+        "l": "Rest",
         "tags": [
-          "easy",
-          "strides"
+          "recovery"
         ]
       },
       {
@@ -571,10 +571,11 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
-        "t": "rest",
-        "s": "Rest",
-        "l": "Rest",
+        "t": "rec",
+        "s": "Recovery 30-40 min",
+        "l": "Recovery 30&ndash;40 min",
         "tags": [
+          "easy",
           "recovery"
         ]
       }
@@ -583,11 +584,19 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "9",
     "dates": "Jun 29–Jul 5",
-    "km": 56,
-    "kmLabel": "~56km",
+    "km": 50,
+    "kmLabel": "~49–51km",
     "phase": "hm-build",
     "template": "10K-Specific Week 1",
     "days": [
+      {
+        "t": "rest",
+        "s": "Rest",
+        "l": "Rest",
+        "tags": [
+          "recovery"
+        ]
+      },
       {
         "t": "intv",
         "s": "5 x 1 km",
@@ -596,14 +605,6 @@ window.RUN_PLAN_WEEKS = [
           "10k-specific"
         ],
         "pace": "4:50&ndash;4:58/km"
-      },
-      {
-        "t": "easy",
-        "s": "Easy 45 min",
-        "l": "Easy 45 min",
-        "tags": [
-          "easy"
-        ]
       },
       {
         "t": "easy",
@@ -623,11 +624,11 @@ window.RUN_PLAN_WEEKS = [
         "pace": "5:03&ndash;5:12/km"
       },
       {
-        "t": "easy",
-        "s": "Easy 35-40 min",
-        "l": "Easy 35&ndash;40 min",
+        "t": "rest",
+        "s": "Rest",
+        "l": "Rest",
         "tags": [
-          "easy"
+          "recovery"
         ]
       },
       {
@@ -640,10 +641,11 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
-        "t": "rest",
-        "s": "Rest",
-        "l": "Rest",
+        "t": "rec",
+        "s": "Recovery 35-45 min",
+        "l": "Recovery 35&ndash;45 min",
         "tags": [
+          "easy",
           "recovery"
         ]
       }
@@ -652,19 +654,19 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "10",
     "dates": "Jul 6–12",
-    "km": 45,
-    "kmLabel": "~45km",
+    "km": 41,
+    "kmLabel": "~39–43km",
     "phase": "hm-build",
     "template": "July 10K Mini Taper",
     "notes": "July 12 is a B-race benchmark inside the HM build, not a goal race. Sharpen, reduce fatigue, and keep the longer Oct half marathon priority intact.",
     "race": true,
     "days": [
       {
-        "t": "easy",
-        "s": "Easy 45 min",
-        "l": "Easy 45 min",
+        "t": "rest",
+        "s": "Rest",
+        "l": "Rest",
         "tags": [
-          "easy"
+          "recovery"
         ]
       },
       {
@@ -697,7 +699,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "rest",
         "s": "Rest",
-        "l": "Rest or 20&ndash;25 min very easy",
+        "l": "Rest",
         "tags": [
           "recovery"
         ]
@@ -729,18 +731,17 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "11",
     "dates": "Jul 13–19",
-    "km": 55,
-    "kmLabel": "~55km",
+    "km": 49,
+    "kmLabel": "~48–50km",
     "phase": "hm-build",
     "template": "Post-10K Rebuild",
     "notes": "After July 12, recalibrate HM paces: &le;48:30 and controlled keeps late-block HM work at 5:05&ndash;5:10/km; 48:30&ndash;49:30 keeps the plan as written; &gt;49:30 or heavy fatigue moves HM work 5&ndash;8 sec/km slower for two weeks.",
     "days": [
       {
-        "t": "easy",
-        "s": "Easy 40-45 min",
-        "l": "Easy 40&ndash;45 min",
+        "t": "rest",
+        "s": "Rest",
+        "l": "Rest after race",
         "tags": [
-          "easy",
           "recovery"
         ]
       },
@@ -771,12 +772,11 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
-        "t": "easy",
-        "s": "Easy 35-40 min + strides",
-        "l": "Easy 35&ndash;40 min + strides",
+        "t": "rest",
+        "s": "Rest",
+        "l": "Rest",
         "tags": [
-          "easy",
-          "strides"
+          "recovery"
         ]
       },
       {
@@ -789,10 +789,11 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
-        "t": "rest",
-        "s": "Rest",
-        "l": "Rest",
+        "t": "rec",
+        "s": "Recovery 35-45 min",
+        "l": "Recovery 35&ndash;45 min",
         "tags": [
+          "easy",
           "recovery"
         ]
       }
@@ -801,17 +802,17 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "12",
     "dates": "Jul 20–26",
-    "km": 61.5,
-    "kmLabel": "~60–63km",
+    "km": 54.5,
+    "kmLabel": "~53–56km",
     "phase": "hm-build",
     "template": "HM Build Resumes / Progression",
     "days": [
       {
-        "t": "easy",
-        "s": "Easy 45 min",
-        "l": "Easy 45 min",
+        "t": "rest",
+        "s": "Rest",
+        "l": "Rest",
         "tags": [
-          "easy"
+          "recovery"
         ]
       },
       {
@@ -842,11 +843,11 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
-        "t": "easy",
-        "s": "Easy 40 min",
-        "l": "Easy 40 min",
+        "t": "rest",
+        "s": "Rest",
+        "l": "Rest",
         "tags": [
-          "easy"
+          "recovery"
         ]
       },
       {
@@ -860,10 +861,11 @@ window.RUN_PLAN_WEEKS = [
         "pace": "Last 30 min steady @ 5:25&ndash;5:45/km"
       },
       {
-        "t": "rest",
-        "s": "Rest",
-        "l": "Rest",
+        "t": "rec",
+        "s": "Recovery 30-40 min",
+        "l": "Recovery 30&ndash;40 min",
         "tags": [
+          "easy",
           "recovery"
         ]
       }
@@ -872,11 +874,19 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "13",
     "dates": "Jul 27–Aug 2",
-    "km": 60,
-    "kmLabel": "~60km",
+    "km": 53,
+    "kmLabel": "~52–54km",
     "phase": "hm-peak",
     "template": "HM Tune-Up Entry",
     "days": [
+      {
+        "t": "rest",
+        "s": "Rest",
+        "l": "Rest",
+        "tags": [
+          "recovery"
+        ]
+      },
       {
         "t": "intv",
         "s": "5 x 1 km",
@@ -904,19 +914,11 @@ window.RUN_PLAN_WEEKS = [
         "pace": "Each rep: 12 min HM @ 5:08&ndash;5:10/km + 8 min threshold @ 4:58&ndash;5:06/km"
       },
       {
-        "t": "easy",
-        "s": "Easy 45 min",
-        "l": "Easy 45 min",
+        "t": "rest",
+        "s": "Rest",
+        "l": "Rest",
         "tags": [
-          "easy"
-        ]
-      },
-      {
-        "t": "easy",
-        "s": "Easy 35-40 min",
-        "l": "Easy 35&ndash;40 min",
-        "tags": [
-          "easy"
+          "recovery"
         ]
       },
       {
@@ -929,10 +931,11 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
-        "t": "rest",
-        "s": "Rest",
-        "l": "Rest",
+        "t": "rec",
+        "s": "Recovery 35-45 min",
+        "l": "Recovery 35&ndash;45 min",
         "tags": [
+          "easy",
           "recovery"
         ]
       }
@@ -941,18 +944,18 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "14",
     "dates": "Aug 3–9",
-    "km": 62,
-    "kmLabel": "~60–64km",
+    "km": 55.5,
+    "kmLabel": "~54–57km",
     "phase": "hm-peak",
     "template": "Continuous HM Finish",
     "notes": "Peak long-run rehearsal for the Aug 23 tune-up. Keep Tuesday controlled so Saturday can be the main race-specific stimulus.",
     "days": [
       {
-        "t": "easy",
-        "s": "Easy 45 min",
-        "l": "Easy 45 min",
+        "t": "rest",
+        "s": "Rest",
+        "l": "Rest",
         "tags": [
-          "easy"
+          "recovery"
         ]
       },
       {
@@ -982,12 +985,11 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
-        "t": "easy",
-        "s": "Easy 40 min + strides",
-        "l": "Easy 40 min + strides",
+        "t": "rest",
+        "s": "Rest",
+        "l": "Rest",
         "tags": [
-          "easy",
-          "strides"
+          "recovery"
         ]
       },
       {
@@ -1001,10 +1003,11 @@ window.RUN_PLAN_WEEKS = [
         "pace": "Last 8&ndash;10 km continuous @ 5:05&ndash;5:10/km"
       },
       {
-        "t": "rest",
-        "s": "Rest",
-        "l": "Rest",
+        "t": "rec",
+        "s": "Recovery 25-35 min",
+        "l": "Recovery 25&ndash;35 min",
         "tags": [
+          "easy",
           "recovery"
         ]
       }
@@ -1013,18 +1016,18 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "15",
     "dates": "Aug 10–16",
-    "km": 56,
-    "kmLabel": "~54–58km",
+    "km": 49.5,
+    "kmLabel": "~48–51km",
     "phase": "hm-peak",
     "template": "Specific But Fresh",
     "notes": "Absorb the continuous-finish long run from week 14. Keep the long run easy even if the legs feel good.",
     "days": [
       {
-        "t": "easy",
-        "s": "Easy 40-45 min",
-        "l": "Easy 40&ndash;45 min",
+        "t": "rest",
+        "s": "Rest",
+        "l": "Rest",
         "tags": [
-          "easy"
+          "recovery"
         ]
       },
       {
@@ -1054,11 +1057,11 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
-        "t": "easy",
-        "s": "Easy 35-40 min",
-        "l": "Easy 35&ndash;40 min",
+        "t": "rest",
+        "s": "Rest",
+        "l": "Rest",
         "tags": [
-          "easy"
+          "recovery"
         ]
       },
       {
@@ -1071,10 +1074,11 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
-        "t": "rest",
-        "s": "Rest",
-        "l": "Rest",
+        "t": "rec",
+        "s": "Recovery 35-45 min",
+        "l": "Recovery 35&ndash;45 min",
         "tags": [
+          "easy",
           "recovery"
         ]
       }
@@ -1083,18 +1087,18 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "16",
     "dates": "Aug 17–23",
-    "km": 50,
-    "kmLabel": "~48–52km",
+    "km": 47,
+    "kmLabel": "~45–49km",
     "phase": "hm-peak",
     "template": "HM Tune-Up Race",
     "race": true,
     "days": [
       {
-        "t": "easy",
-        "s": "Easy 40 min",
-        "l": "Easy 40 min",
+        "t": "rest",
+        "s": "Rest",
+        "l": "Rest",
         "tags": [
-          "easy"
+          "recovery"
         ]
       },
       {
