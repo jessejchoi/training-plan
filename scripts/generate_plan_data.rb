@@ -154,6 +154,18 @@ def detail_html(day)
   ].join("<br>")
 end
 
+def serialize_day(day, race_notes = nil)
+  {
+    "t" => day.fetch("type"),
+    "s" => short_label(day),
+    "l" => detail_html(day),
+    "tags" => day["tags"],
+    "pace" => day["pace_html"],
+    "priority" => day["priority"],
+    "raceNotes" => day.fetch("type") == "race" ? race_notes : nil
+  }.compact
+end
+
 data = YAML.load_file(YAML_PATH)
 plan_block = data.fetch("blocks").first || {}
 
@@ -162,15 +174,23 @@ weeks = data.fetch("blocks").flat_map do |block|
     phase.fetch("weeks").map do |week|
       id = week_id(week.fetch("week_html"))
       days = week.fetch("days").map do |day|
+        serialize_day(day, week["race_notes_html"])
+      end
+
+      alternatives = Array(week["alternatives"]).map do |alternative|
+        alternative_days = alternative.fetch("days").map do |day|
+          serialize_day(day, alternative["race_notes_html"] || week["race_notes_html"])
+        end
+
         {
-          "t" => day.fetch("type"),
-          "s" => short_label(day),
-          "l" => detail_html(day),
-          "tags" => day["tags"],
-          "pace" => day["pace_html"],
-          "priority" => day["priority"],
-          "raceNotes" => day.fetch("type") == "race" ? week["race_notes_html"] : nil
-        }.compact
+          "label" => plain_html(alternative["label_html"] || "Alternative"),
+          "km" => km_value(alternative.fetch("total_km_html")),
+          "kmLabel" => plain_html(alternative.fetch("total_km_html")).gsub("-", "–"),
+          "template" => alternative["template"],
+          "notes" => alternative["notes_html"],
+          "race" => alternative_days.any? { |day| day["t"] == "race" },
+          "days" => alternative_days
+        }.reject { |key, value| value.nil? || (key == "race" && value == false) }
       end
 
       {
@@ -181,10 +201,11 @@ weeks = data.fetch("blocks").flat_map do |block|
         "phase" => PHASE_BY_WEEK.fetch(id),
         "template" => week["template"],
         "notes" => week["notes_html"],
+        "alternatives" => alternatives,
         "cutback" => week.fetch("week_html").to_s.include?("↓"),
         "race" => days.any? { |day| day["t"] == "race" },
         "days" => days
-      }.reject { |key, value| value.nil? || (%w[cutback race].include?(key) && value == false) }
+      }.reject { |key, value| value.nil? || (key == "alternatives" && value.empty?) || (%w[cutback race].include?(key) && value == false) }
     end
   end
 end

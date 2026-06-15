@@ -747,6 +747,75 @@ function SectionHead({ label, meta }) {
   );
 }
 
+function AlternativeWeekPlans({ alternatives }) {
+  if (!alternatives || !alternatives.length) return null;
+
+  return (
+    <div style={{
+      marginTop:6,
+      paddingTop:10,
+      borderTop:'1px solid var(--border)',
+    }}>
+      <div style={{
+        fontFamily:'var(--mono)',
+        fontSize:9,
+        letterSpacing:1.4,
+        color:'var(--muted2)',
+        marginBottom:8,
+        textTransform:'uppercase',
+      }}>Alternative path</div>
+      {alternatives.map((alternative, index) => (
+        <div key={`${alternative.label}-${index}`} style={{marginTop:index ? 12 : 0}}>
+          <div style={{
+            display:'flex',
+            justifyContent:'space-between',
+            gap:10,
+            alignItems:'baseline',
+            marginBottom:6,
+          }}>
+            <span style={{fontFamily:'var(--mono)',fontSize:10,letterSpacing:1,color:'var(--race)'}}>
+              {alternative.label}
+            </span>
+            <span style={{fontFamily:'var(--mono)',fontSize:9,color:'var(--muted2)',textAlign:'right'}}>
+              {alternative.kmLabel}{alternative.template ? ` · ${alternative.template}` : ''}
+            </span>
+          </div>
+          {alternative.notes ? (
+            <div style={{fontSize:12.5,color:'var(--muted)',lineHeight:1.55,marginBottom:7}}>
+              {decodeHtml(alternative.notes)}
+            </div>
+          ) : null}
+          <div style={{
+            display:'grid',
+            gridTemplateColumns:'repeat(7, minmax(0, 1fr))',
+            gap:3,
+            fontFamily:'var(--mono)',
+            fontSize:8.5,
+          }}>
+            {alternative.days.map((day, dayIndex) => {
+              const meta = DAY_TYPES[day.t] || DAY_TYPES.easy;
+              return (
+                <div key={`${dayIndex}-${day.s}`} title={`${DAY_ABBR[dayIndex]}: ${day.s}`} style={{
+                  minHeight:38,
+                  border:'1px solid var(--border)',
+                  borderRadius:3,
+                  padding:'5px 4px',
+                  background:day.t === 'rest' ? 'var(--bg)' : meta.bg,
+                  color:day.t === 'rest' ? 'var(--muted2)' : meta.color,
+                  overflow:'hidden',
+                }}>
+                  <div style={{fontSize:8,color:'var(--muted2)',marginBottom:4}}>{DAY_ABBR[dayIndex]}</div>
+                  <div style={{whiteSpace:'nowrap',overflow:'hidden',textOverflow:'ellipsis'}}>{day.s}</div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 function DayDetailCard({ selectedKey, completed, setCompleted, onGoToToday, cardRef }) {
   const session = getSessionByKey(selectedKey) || getSessionByKey(TODAY_KEY);
   const isToday = session.key === TODAY_KEY;
@@ -869,6 +938,7 @@ function DayDetailCard({ selectedKey, completed, setCompleted, onGoToToday, card
             lineHeight:1.55,
           }}>{decodeHtml(session.day.raceNotes)}</div>
         ) : null}
+        <AlternativeWeekPlans alternatives={session.week.alternatives}/>
       </div>
 
       <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>
@@ -888,7 +958,7 @@ function DayDetailCard({ selectedKey, completed, setCompleted, onGoToToday, card
 function Countdowns({ compact = false }) {
   const races = [
     { label:'MAY 10K', date:'May 24', tgt:'FINISH TIME', metric:'49:45', unit:null, c:'var(--race)' },
-    { label:'JULY 10K', date:'Jul 12', tgt:'B · 48:30–49:00', n:DAYS_TO_10K, c:'var(--race)' },
+    { label:'JULY 10K', date:'Jul 12', tgt:'OPTIONAL · ALT PATH', n:DAYS_TO_10K, c:'var(--race)' },
     { label:'AUG HM', date:'Aug 23', tgt:'B · Controlled tune-up', n:DAYS_TO_HM, c:'var(--str)' },
     { label:'OCT HM', date:'Oct 25', tgt:'A · Sub 1:45 stretch', n:DAYS_TO_OCT_HM, c:'var(--intv)' },
   ];
