@@ -670,31 +670,33 @@ const MOBILITY_TIMING = [
 ];
 
 const STRENGTH_A = [
-  { name:'Barbell Back Squat', dose:'4 × 4–6 reps', detail:'Primary bilateral lower-body lift. Brace hard before each rep, drive through the full foot, and keep depth consistent rather than chasing range that breaks position.', focus:'Quad · Glute max · Force production' },
-  { name:'Romanian Deadlift', dose:'4 × 5–6 reps', detail:'Hinge at the hip with a neutral spine and let the hamstrings load before returning. Keep the bar close and avoid turning the movement into a squat.', focus:'Hamstring · Glute max · Posterior chain strength' },
-  { name:'Leg Press', dose:'3 × 6–8 reps', detail:'Use it as supplemental knee-dominant strength. If you do not have the machine, a heavy goblet squat with a slow eccentric is the fallback.', focus:'Quad strength · Knee extension power' },
-  { name:'Nordic Hamstring Curl', dose:'3 × 4–6 reps', detail:'Control the lowering phase and use the hands to help on the way back up. Keep volume modest because these get expensive fast.', focus:'Hamstring eccentric strength · Injury resilience' },
-  { name:'Heavy Straight-Leg Calf Raise', dose:'4 × 8 reps', detail:'Use a full range with a slow eccentric and a real pause at the bottom. Most runners underload this pattern, so err heavier than your instinct says.', focus:'Gastrocnemius strength · Achilles resilience' },
-  { name:'Plank Rotation', dose:'3 rounds', detail:'Rotate through front plank, side plank, and a more aggressive brace variation like an RKC plank. Keep the rib cage stacked instead of drifting into extension.', focus:'Anti-rotation core · Running posture' },
+  { name:'Squat or Leg Press', dose:'3 × 4–6 reps', detail:'Main knee-dominant lift. Use the option that lets you load cleanly after the quality run without chasing soreness. Stop with one to three reps in reserve.', focus:'Quad · Glute max · Force production' },
+  { name:'Romanian Deadlift', dose:'3 × 5–8 reps', detail:'Hinge at the hip with a neutral spine and let the hamstrings load before returning. Keep the bar close and avoid turning the movement into a squat.', focus:'Hamstring · Glute max · Posterior chain strength' },
+  { name:'Bench Press or DB Press', dose:'3 × 5–8 reps', detail:'Use a stable press variation and keep the reps crisp. This gives the session real full-body coverage without draining the legs further.', focus:'Chest · Triceps · Upper-body strength' },
+  { name:'Pull-Up, Pulldown, or Row', dose:'3 × 6–10 reps', detail:'Choose the cleanest strong pull available that day. Keep the torso controlled and finish each rep without shrugging into the neck.', focus:'Lats · Upper back · Postural strength' },
+  { name:'Split Squat or Step-Up', dose:'2 × 6–8 / side', detail:'Controlled unilateral work after the heavy bilateral lift. Keep the range honest and the pelvis quiet; this is support volume, not a second main lift.', focus:'Single-leg strength · Hip stability' },
+  { name:'Calf Raise', dose:'2–3 × 8–12 reps', detail:'Use a full range with a slow eccentric and a real pause at the bottom. Load it enough to matter while leaving the calves usable for the next run.', focus:'Calf strength · Achilles resilience' },
+  { name:'Plank, Dead Bug, or Pallof Press', dose:'2–3 sets', detail:'Pick one brace pattern and make it high quality. Keep the rib cage stacked instead of drifting into extension.', focus:'Core stiffness · Anti-rotation control' },
 ];
 
 const STRENGTH_B = [
-  { name:'Bulgarian Split Squat', dose:'3 × 8–10 / side', detail:'Rear foot up, torso quiet, front knee tracking over the foot. This is one of the most useful strength transfers back into running mechanics.', focus:'Unilateral quad · Glute max · Hip stability' },
-  { name:'Single-Leg RDL (Supported)', dose:'3 × 8–10 / side', detail:'Use light fingertip support if needed so the hinge pattern stays clean and the pelvis stays square. Do not let balance ruin the loading target.', focus:'Unilateral hamstring and glute · Pelvic control' },
-  { name:'Step-Up (Lateral + Forward)', dose:'3 × 10 / side', detail:'Alternate lateral and forward patterns from a moderate box height. Drive through the working foot and avoid using momentum.', focus:'Glute med · Hip abductor strength' },
-  { name:'Single-Leg Eccentric Calf Raise', dose:'3 × 10–12 / side', detail:'Rise with two feet, shift to one, and lower slowly over three to four seconds. This remains one of the best tendon-health pieces in the plan.', focus:'Soleus · Achilles loading · Push-off power' },
-  { name:'Banded Clamshell + Abduction', dose:'3 × 15 / side', detail:'Use the band for control, not ego. Keep the pelvis steady and feel the lateral hip working instead of rolling backward.', focus:'Glute med isolation · Piriformis support' },
-  { name:'Dead Bug', dose:'3 × 8 / side', detail:'Press the lower back into the floor and move slowly enough that you can keep that position through every rep.', focus:'Deep core · Anti-extension stability' },
+  { name:'Hip Thrust or Light Trap-Bar Deadlift', dose:'2 × 6–8 reps', detail:'Keep this easy-moderate and smooth. The goal is posterior-chain support after a rest or recovery day, not a heavy hinge that echoes into Tuesday.', focus:'Glute max · Posterior-chain durability' },
+  { name:'Reverse Lunge or Single-Leg RDL', dose:'2 × 6–8 / side', detail:'Choose the pattern that feels cleanest. Move slowly enough to control the pelvis and stop before balance becomes the limiting factor.', focus:'Unilateral strength · Pelvic control' },
+  { name:'Overhead Press or Incline DB Press', dose:'2–3 × 6–10 reps', detail:'Use a controlled upper-body press that does not require a huge brace. This keeps the session full-body without adding more leg cost.', focus:'Shoulders · Chest · Triceps' },
+  { name:'Seated Row, Cable Row, or Pulldown', dose:'2–3 × 8–12 reps', detail:'Own the shoulder blades and keep the neck quiet. This is a good place to build upper-back volume with low systemic fatigue.', focus:'Upper back · Lats · Postural strength' },
+  { name:'Hamstring Curl', dose:'2 × 10–12 reps', detail:'Use a smooth tempo and avoid cramping through the range. This gives the hamstrings direct work without the eccentric cost of Nordics.', focus:'Hamstring strength · Knee flexion support' },
+  { name:'Calf or Tibialis Raise', dose:'2 × 10–15 reps', detail:'Pick the lower-leg emphasis that feels most useful that week. Keep the load honest but leave the legs springy.', focus:'Lower-leg durability · Tendon support' },
+  { name:'Side Plank or Loaded Carry', dose:'2–3 sets', detail:'Finish with lateral trunk control. Keep the body stacked and stop the set before the position starts leaking.', focus:'Lateral core · Hip and trunk control' },
 ];
 
 const STRENGTH_TIMING = [
-  ['Monday', 'Full rest. No strength.'],
-  ['Tuesday', 'Quality run → Workout A. Keep the gym session focused and leave with a little in reserve.'],
-  ['Wednesday', 'Easy run → optional Workout B. Lower loads, better control, and skip it if Tuesday bit hard.'],
-  ['Thursday', 'Quality or medium-long only. Let the run adaptation land without extra lifting.'],
-  ['Friday', 'Full rest. No strength.'],
+  ['Monday', 'Rest. Keep it fully restorative unless you only need mobility.'],
+  ['Tuesday', 'Quality run only if using the Thursday/Sunday setup. If the week makes Tuesday the better lift slot, place Workout A after this run.'],
+  ['Wednesday', 'Easy run. No default strength; protect the space between Tuesday quality and Thursday medium-long work.'],
+  ['Thursday', 'Quality or medium-long → Workout A. This is the heavier full-body lift, done after the run and kept clean.'],
+  ['Friday', 'Rest. Keep it free so Saturday long-run quality stays protected.'],
   ['Saturday', 'Long run only. No strength.'],
-  ['Sunday', 'Recovery run only, with light mobility if needed.'],
+  ['Sunday', 'Recovery run or rest → Workout B. Lighter full-body durability, no grinding, and no soreness chasing.'],
 ];
 
 function ModeBar({ mode, setMode }) {
@@ -1412,22 +1414,22 @@ function StrengthView() {
     <div style={{padding:'12px 0 42px'}}>
       <div style={{paddingTop:14}}>
         <div style={{fontFamily:'var(--serif)',fontSize:30,fontWeight:300,color:'var(--text)',marginBottom:6}}>
-          Lower-Body <em style={{fontStyle:'italic',color:'var(--str)'}}>Strength</em>
+          Full-Body <em style={{fontStyle:'italic',color:'var(--str)'}}>Strength</em>
         </div>
       </div>
 
       <ContentSection
-        label="WORKOUT A — LOWER COMPOUND"
-        meta="Tuesday · after quality"
-        intro="Heavy bilateral work while the nervous system is already switched on from the quality run. Keep the focus on clean force production, not junk volume."
+        label="WORKOUT A — HEAVIER FULL BODY"
+        meta="after quality · Thursday default"
+        intro="Heavier full-body strength after quality or controlled medium-long work. Keep the focus on clean force production, low junk volume, and leaving with one to three reps in reserve."
         accent="var(--str)"
         items={STRENGTH_A}
       />
 
       <ContentSection
-        label="WORKOUT B — SINGLE-LEG & CONTROL"
-        meta="Wednesday · optional after easy run"
-        intro="Moderate loads and better control. This is where hip stability, glute med support, and unilateral mechanics get the emphasis; skip it when Tuesday quality leaves residue."
+        label="WORKOUT B — LIGHTER FULL BODY"
+        meta="after rest or recovery · Sunday default"
+        intro="Lighter full-body durability after a rest or recovery day. Move well, keep the legs springy, and skip lower-body compounds when Saturday carried a hard steady or HM-specific finish."
         accent="var(--str)"
         items={STRENGTH_B}
       />
@@ -1435,10 +1437,10 @@ function StrengthView() {
       <TimingSection
         label="WEEKLY INTEGRATION"
         meta="fitting strength into the run week"
-        intro="Strength comes after running on the same day, never before it. That keeps the quality sessions clean and clusters hard work together."
+        intro="Use Thursday and Sunday as the default pairing: Workout A after the week's quality or controlled medium-long run, Workout B after recovery. If Thursday is too close to a race-specific long run, reduce A or move it to Tuesday."
         accent="var(--str)"
         rows={STRENGTH_TIMING}
-        footnote="Taper note: in the final two weeks before a goal race, reduce volume aggressively. In race week, strength should be gone by midweek."
+        footnote="Taper note: in race weeks, keep one short early-week session at most. In the final two weeks before the Oct 25 A race, reduce volume aggressively and avoid heavy lower-body work."
       />
     </div>
   );
