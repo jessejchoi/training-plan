@@ -742,7 +742,7 @@ blocks:
       - type: hm
         tags: [hm-specific]
         pace_html: 5:05&ndash;5:10/km
-        content_html: 2 x 4 km HM effort @ 5:05&ndash;5:10/km, controlled
+        content_html: 2 x 4 km HM effort @ 5:05&ndash;5:10/km, 5 min easy jog between reps, controlled
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
@@ -771,7 +771,7 @@ blocks:
       - type: hm
         tags: [hm-specific, strides]
         pace_html: 5:05&ndash;5:10/km
-        content_html: 3 x 2 km HM rhythm @ 5:05&ndash;5:10/km, full control
+        content_html: 3 x 2 km HM rhythm @ 5:05&ndash;5:10/km, 3 min easy jog between reps, full control
       - type: easy
         tags: [easy]
         content_html: Easy 35&ndash;40 min

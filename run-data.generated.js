@@ -1822,7 +1822,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "hm",
         "s": "2 x 4 km HM effort",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 4 km HM effort @ 5:05&ndash;5:10/km, controlled<br>CD: 10&ndash;15 min easy.",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 4 km HM effort @ 5:05&ndash;5:10/km, 5 min easy jog between reps, controlled<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "hm-specific"
         ],
@@ -1895,7 +1895,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "hm",
         "s": "3 x 2 km HM rhythm",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 2 km HM rhythm @ 5:05&ndash;5:10/km, full control<br>CD: 10&ndash;15 min easy.",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 2 km HM rhythm @ 5:05&ndash;5:10/km, 3 min easy jog between reps, full control<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "hm-specific",
           "strides"
