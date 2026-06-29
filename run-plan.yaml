@@ -534,12 +534,13 @@ blocks:
     weeks:
     - week_html: '17'
       dates_html: Aug 24&ndash;30
-      total_km_html: "~34&ndash;43km"
-      template: Recovery
+      total_km_html: "~34&ndash;40km"
+      template: Post-HM Recovery
+      notes_html: Keep the five-day rhythm after the Aug 23 HM, but remove all workouts. Drop Sunday if the HM was harder than planned or soreness changes mechanics.
       days:
-      - type: rec
-        tags: [recovery, easy]
-        content_html: Rest or easy 30 min
+      - type: rest
+        tags: [recovery]
+        content_html: Rest
       - type: easy
         tags: [easy]
         content_html: Easy 35&ndash;45 min
@@ -548,16 +549,16 @@ blocks:
         content_html: Easy 40&ndash;45 min
       - type: easy
         tags: [easy, strides]
-        content_html: Easy 45 min + 4 strides
-      - type: easy
-        tags: [easy]
-        content_html: Easy 35 min
-      - type: lng
-        tags: [long-run, easy]
-        content_html: Long 75&ndash;85 min easy
+        content_html: Easy 45 min + 4 relaxed strides
       - type: rest
         tags: [recovery]
         content_html: Rest
+      - type: lng
+        tags: [long-run, easy]
+        content_html: Long 75&ndash;85 min easy
+      - type: rec
+        tags: [easy, recovery]
+        content_html: Recovery 30&ndash;40 min
     - week_html: '18'
       dates_html: Aug 31&ndash;Sep 6
       total_km_html: "~45&ndash;50km"
@@ -577,21 +578,24 @@ blocks:
         tags: [threshold]
         pace_html: 5:03&ndash;5:12/km
         content_html: 3 x 10 min threshold @ 5:03&ndash;5:12/km, controlled
-      - type: easy
-        tags: [easy]
-        content_html: Easy 40&ndash;45 min
-      - type: lng
-        tags: [long-run, easy]
-        content_html: Long 90&ndash;95 min easy
       - type: rest
         tags: [recovery]
         content_html: Rest
+      - type: lng
+        tags: [long-run, easy]
+        content_html: Long 90&ndash;95 min easy
+      - type: rec
+        tags: [easy, recovery]
+        content_html: Recovery 35&ndash;45 min
     - week_html: '19'
       dates_html: Sep 7&ndash;13
-      total_km_html: "~55&ndash;59km"
-      template: VO2 Ceiling Touch
-      notes_html: Second and final VO2 touch of the plan, placed before the Oct peak-specific weeks. Run it controlled, then return to HM-specific work.
+      total_km_html: "~54&ndash;58km"
+      template: VO2 + Steady Finish
+      notes_html: Second and final VO2 touch of the plan, paired with a steady-finish long run instead of a second formal workout. If Aug 23 was harder than planned, downgrade Saturday to easy.
       days:
+      - type: rest
+        tags: [recovery]
+        content_html: Rest
       - type: intv
         tags: [vo2max]
         pace_html: 4:30&ndash;4:40/km effort, full recovery
@@ -599,29 +603,28 @@ blocks:
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
-      - type: easy
-        tags: [easy]
-        content_html: Easy 45&ndash;50 min
       - type: med
         tags: [medium-long, easy]
-        content_html: Medium-long 75 min easy
-      - type: easy
-        tags: [easy, strides]
-        content_html: Easy 40 min + strides
-      - type: lng
-        tags: [long-run, easy]
-        content_html: Long 105&ndash;110 min easy
+        content_html: Medium-long 70&ndash;75 min easy
       - type: rest
         tags: [recovery]
         content_html: Rest
+      - type: lng
+        tags: [long-run, steady]
+        pace_html: Last 20&ndash;25 min steady @ ~5:35&ndash;5:55/km
+        content_html: Long 105&ndash;110 min with last 20&ndash;25 min steady @ ~5:35&ndash;5:55/km
+      - type: rec
+        tags: [easy, recovery]
+        content_html: Recovery 30&ndash;40 min
     - week_html: '20'
       dates_html: Sep 14&ndash;20
-      total_km_html: "~61&ndash;65km"
+      total_km_html: "~60&ndash;64km"
       template: HM Aerobic Strength / Threshold Floats
+      notes_html: This is the aerobic-strength long-run progression before the cutback. Keep the finish effort-first in Jakarta heat, not a forced pace chase.
       days:
-      - type: easy
-        tags: [easy]
-        content_html: Easy 45 min
+      - type: rest
+        tags: [recovery]
+        content_html: Rest
       - type: thr
         tags: [threshold]
         pace_html: Threshold 4:58&ndash;5:06/km; float 5:25&ndash;5:40/km
@@ -632,27 +635,28 @@ blocks:
       - type: med
         tags: [medium-long, easy]
         content_html: Medium-long 75&ndash;80 min easy
-      - type: easy
-        tags: [easy, strides]
-        content_html: Easy 35&ndash;40 min + strides
-      - type: lng
-        tags: [long-run, easy]
-        content_html: Long 125&ndash;130 min easy / ~19&ndash;21 km, or split outdoor/treadmill if heat makes the duration costly
       - type: rest
         tags: [recovery]
         content_html: Rest
+      - type: lng
+        tags: [long-run, steady]
+        pace_html: Last 30&ndash;35 min steady to moderate, roughly 5:25&ndash;5:50/km by feel
+        content_html: Long 120&ndash;130 min / ~19&ndash;21 km with last 30&ndash;35 min steady to moderate, roughly 5:25&ndash;5:50/km by feel
+      - type: rec
+        tags: [easy, recovery]
+        content_html: Recovery 30&ndash;40 min
     - week_html: '21'
       dates_html: Sep 21&ndash;27
-      total_km_html: "~48&ndash;52km"
+      total_km_html: "~46&ndash;51km"
       template: Cutback / Absorb
-      notes_html: Deliberate recovery before the Oct peak-specific long run. Remove the 10K touch and keep only one controlled quality day.
+      notes_html: Deliberate recovery before the Oct peak-specific long run. Keep one controlled quality day and arrive ready for the Week 22 rehearsal.
       days:
+      - type: rest
+        tags: [recovery]
+        content_html: Rest
       - type: easy
         tags: [easy, strides]
         content_html: Easy 40&ndash;45 min + 6 relaxed strides
-      - type: easy
-        tags: [easy]
-        content_html: Easy 45 min
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
@@ -660,24 +664,24 @@ blocks:
         tags: [threshold, hm-specific]
         pace_html: HM into threshold feel
         content_html: 2 x 15 min HM/threshold progression; start 5:08&ndash;5:10/km and finish near 4:58&ndash;5:06/km only if smooth
-      - type: easy
-        tags: [easy]
-        content_html: Easy 35&ndash;40 min
-      - type: lng
-        tags: [long-run, easy]
-        content_html: Long 85&ndash;95 min easy
       - type: rest
         tags: [recovery]
         content_html: Rest
+      - type: lng
+        tags: [long-run, easy]
+        content_html: Long 85&ndash;95 min easy
+      - type: rec
+        tags: [easy, recovery]
+        content_html: Recovery 30&ndash;40 min
     - week_html: '22'
       dates_html: Sep 28&ndash;Oct 4
-      total_km_html: "~63&ndash;66km"
+      total_km_html: "~62&ndash;66km"
       template: Peak Continuous HM Finish
       notes_html: Main Oct race-specific long run. Tuesday is supportive, not another peak session.
       days:
-      - type: easy
-        tags: [easy]
-        content_html: Easy 45 min
+      - type: rest
+        tags: [recovery]
+        content_html: Rest
       - type: hm
         tags: [hm-specific]
         pace_html: 5:05&ndash;5:10/km
@@ -687,29 +691,29 @@ blocks:
         content_html: Easy 45&ndash;50 min
       - type: med
         tags: [medium-long, easy]
-        content_html: Medium-long 80 min easy
-      - type: easy
-        tags: [easy, strides]
-        content_html: Easy 40 min + strides
-      - type: lng
-        tags: [long-run, hm-specific]
-        pace_html: Last 10&ndash;12 km continuous @ 5:05&ndash;5:10/km
-        content_html: Long 130&ndash;135 min / ~20&ndash;22 km with last 10&ndash;12 km continuous @ 5:05&ndash;5:10/km. Use a treadmill portion or cooler route if heat load is high.
+        content_html: Medium-long 75&ndash;80 min easy
       - type: rest
         tags: [recovery]
         content_html: Rest
+      - type: lng
+        tags: [long-run, hm-specific]
+        pace_html: Last 10&ndash;12 km continuous @ 5:05&ndash;5:10/km
+        content_html: Long 20&ndash;22 km with last 10&ndash;12 km continuous @ 5:05&ndash;5:10/km. Use a treadmill portion or cooler route if heat load is high.
+      - type: rec
+        tags: [easy, recovery]
+        content_html: Recovery 30&ndash;40 min
     - week_html: '23'
       dates_html: Oct 5&ndash;11
-      total_km_html: "~54&ndash;58km"
-      template: HM Race Rhythm / Absorb
+      total_km_html: "~52&ndash;57km"
+      template: Consolidate
       notes_html: Consolidate the week 22 peak long run. Keep the rhythm work controlled and skip extra leg-speed work.
       days:
+      - type: rest
+        tags: [recovery]
+        content_html: Rest
       - type: easy
         tags: [easy, strides]
         content_html: Easy 40&ndash;45 min + 6 relaxed strides
-      - type: easy
-        tags: [easy]
-        content_html: Easy 45 min
       - type: med
         tags: [medium-long, easy]
         content_html: Medium-long 70 min easy
@@ -717,23 +721,24 @@ blocks:
         tags: [hm-specific]
         pace_html: 5:05&ndash;5:10/km
         content_html: 2 x 4 km HM rhythm @ 5:05&ndash;5:10/km, 5 min easy
-      - type: easy
-        tags: [easy]
-        content_html: Easy 35&ndash;40 min
-      - type: lng
-        tags: [long-run, easy]
-        content_html: Long 95&ndash;105 min easy
       - type: rest
         tags: [recovery]
         content_html: Rest
+      - type: lng
+        tags: [long-run, easy]
+        content_html: Long 95&ndash;105 min easy
+      - type: rec
+        tags: [easy, recovery]
+        content_html: Recovery 30&ndash;40 min
     - week_html: '24'
       dates_html: Oct 12&ndash;18
-      total_km_html: "~48&ndash;53km"
+      total_km_html: "~45&ndash;52km"
       template: HM Taper Begins
+      notes_html: Keep only optional light steady work so the taper does not go flat. Skip the Saturday uptick unless the legs feel fresh.
       days:
-      - type: easy
-        tags: [easy]
-        content_html: Easy 40&ndash;45 min
+      - type: rest
+        tags: [recovery]
+        content_html: Rest
       - type: hm
         tags: [hm-specific]
         pace_html: 5:05&ndash;5:10/km
@@ -741,27 +746,28 @@ blocks:
       - type: easy
         tags: [easy]
         content_html: Easy 45 min
-      - type: med
-        tags: [medium-long, strides]
-        content_html: Medium-long 65&ndash;70 min easy + strides
       - type: easy
-        tags: [easy]
-        content_html: Easy 35 min
-      - type: lng
-        tags: [long-run, easy]
-        content_html: Long 85&ndash;95 min easy
+        tags: [easy, strides]
+        content_html: Easy 60&ndash;65 min + 4&ndash;6 strides
       - type: rest
         tags: [recovery]
         content_html: Rest
+      - type: lng
+        tags: [long-run, easy, steady]
+        pace_html: Optional last 10&ndash;15 min light steady only if fresh
+        content_html: Long 80&ndash;90 min easy, optional last 10&ndash;15 min light steady only if fresh
+      - type: rec
+        tags: [easy, recovery]
+        content_html: Recovery 25&ndash;35 min
     - week_html: '25'
       dates_html: Oct 19&ndash;25
       total_km_html: "~38&ndash;45km"
       template: HM Taper And Race
       race_notes_html: "Oct 25 HM A-race: first 5 km at 5:10&ndash;5:12/km, settle around 5:06&ndash;5:08/km from 5&ndash;15 km, then press toward 5:03&ndash;5:05/km from 16 km only if controlled. 1:48 is the primary target."
       days:
-      - type: easy
-        tags: [easy]
-        content_html: Easy 35&ndash;40 min
+      - type: rest
+        tags: [recovery]
+        content_html: Rest
       - type: hm
         tags: [hm-specific, strides]
         pace_html: 5:05&ndash;5:10/km
@@ -777,11 +783,11 @@ blocks:
         content_html: Rest
       - type: rec
         tags: [easy, recovery, strides]
-        content_html: Easy 20&ndash;25 min + 4 strides
+        content_html: Easy 20&ndash;25 min shakeout + 4 short strides
       - type: race
         tags: [race, hm-specific]
         priority: A
         pace_html: Start 5:10&ndash;5:12/km, settle 5:06&ndash;5:08/km, press late if controlled
         content_html: Oct 25 Half Marathon A race &mdash; 1:48 target
   pace_guide_html: "<strong>Easy:</strong> effort-first, usually ~6:15&ndash;7:10/km in Jakarta conditions &nbsp;&middot;&nbsp; <strong>Recovery:</strong> softer than easy, often ~6:40&ndash;7:30/km or pure effort after harder Saturdays &nbsp;&middot;&nbsp; <strong>Steady:</strong> ~5:35&ndash;5:55/km early, progressing toward ~5:20&ndash;5:45/km &nbsp;&middot;&nbsp; <strong>Early threshold:</strong> 5:03&ndash;5:12/km &nbsp;&middot;&nbsp; <strong>Peak threshold:</strong> 4:58&ndash;5:06/km; float sets keep the floats controlled, not sprinty &nbsp;&middot;&nbsp; <strong>Early HM effort:</strong> 5:10&ndash;5:18/km &nbsp;&middot;&nbsp; <strong>Peak HM / 1:48 goal rhythm:</strong> 5:05&ndash;5:10/km &nbsp;&middot;&nbsp; <strong>VO2 touches:</strong> early ~4:35&ndash;4:45/km, peak ~4:30&ndash;4:40/km with full recovery &nbsp;&middot;&nbsp; <strong>10K-specific touch:</strong> early ~4:50&ndash;5:00/km, peak ~4:45&ndash;4:55/km, used sparingly."
-  plan_note_html: "Weeks 6&ndash;16 use five runs per week with Monday and Friday fixed as rest days, Tuesday as the main quality day, Thursday as medium-long or second controlled quality, Saturday as long run or pre-race shakeout, and Sunday as recovery except fixed Sunday race dates. The primary path now skips the July 12 10K and uses that window for smoother HM building; the original 10K race and post-race weeks remain saved as alternatives. The Aug 23 half marathon is a controlled B-race tune-up. Oct 25 is the A half marathon, with 1:48 as the primary target. Peak volume remains ~65&ndash;66km before taper, with two continuous HM-finish long-run rehearsals, two capped VO2 touches, varied threshold formats, and heat-aware treadmill/cooler-route options."
+  plan_note_html: "Weeks 6&ndash;25 use five runs per week by default with Monday and Friday fixed as rest days, Tuesday as the main quality day, Thursday as medium-long or second controlled quality, Saturday as long run or pre-race shakeout, and Sunday as recovery except fixed Sunday race dates. The primary path now skips the July 12 10K and uses that window for smoother HM building; the original 10K race and post-race weeks remain saved as alternatives. The Aug 23 half marathon is a controlled B-race tune-up. Oct 25 is the A half marathon, with 1:48 as the primary target. The post-Aug 23 block adds steady-finish long runs in Weeks 19 and 20, keeps Week 22 as the only peak HM-specific continuous-finish long run, and uses heat-aware effort first in Jakarta conditions."
