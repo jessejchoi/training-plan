@@ -110,7 +110,6 @@ function getTodayDay() {
 }
 
 const DAYS_TO_MAY_10K = Math.max(0, diffWholeDays(todayUtc, utcDateFromParts({ year: 2026, month: 5, day: 24 })));
-const DAYS_TO_10K = Math.max(0, diffWholeDays(todayUtc, utcDateFromParts({ year: 2026, month: 7, day: 12 })));
 const DAYS_TO_HM = Math.max(0, diffWholeDays(todayUtc, utcDateFromParts({ year: 2026, month: 8, day: 23 })));
 const DAYS_TO_OCT_HM = Math.max(0, diffWholeDays(todayUtc, utcDateFromParts({ year: 2026, month: 10, day: 25 })));
 
@@ -118,5 +117,5 @@ Object.assign(window, {
   T, DAY_TYPES, DAY_ABBR, PHASES, WEEKS, PLAN_META, PLAN_TIME_ZONE,
   TODAY_WEEK_ID, TODAY_DAY_INDEX,
   getWeek, getTodayWeek, getTodayDay,
-  DAYS_TO_MAY_10K, DAYS_TO_10K, DAYS_TO_HM, DAYS_TO_OCT_HM,
+  DAYS_TO_MAY_10K, DAYS_TO_HM, DAYS_TO_OCT_HM,
 });

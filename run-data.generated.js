@@ -1,7 +1,7 @@
 // Generated from run-plan.yaml by scripts/generate_plan_data.rb.
 // Do not edit by hand.
 window.RUN_PLAN_META = {
-  "planNote": "Weeks 6&ndash;25 use five runs per week by default with Monday and Friday fixed as rest days, Tuesday as the main quality day, Thursday as medium-long or second controlled quality, Saturday as long run or pre-race shakeout, and Sunday as recovery except fixed Sunday race dates. The primary path now skips the July 12 10K and uses that window for smoother HM building; the original 10K race and post-race weeks remain saved as alternatives. The Aug 23 half marathon is a controlled B-race tune-up. Oct 25 is the A half marathon, with 1:48 as the primary target. The post-Aug 23 block adds steady-finish long runs in Weeks 19 and 20, keeps Week 22 as the only peak HM-specific continuous-finish long run, and uses heat-aware effort first in Jakarta conditions."
+  "planNote": "Weeks 6&ndash;25 use five runs per week by default with Monday and Friday fixed as rest days, Tuesday as the main quality day, Thursday as medium-long or second controlled quality, Saturday as long run or pre-race shakeout, and Sunday as recovery except fixed Sunday race dates. The July 12 10K is confirmed off the calendar, so that window now stays on the smoother HM-building path. The Aug 23 half marathon is a controlled B-race tune-up. Oct 25 is the A half marathon, with 1:48 as the primary target. The post-Aug 23 block adds steady-finish long runs in Weeks 19 and 20, keeps Week 22 as the only peak HM-specific continuous-finish long run, and uses heat-aware effort first in Jakarta conditions."
 };
 window.RUN_PLAN_WEEKS = [
   {
@@ -445,7 +445,7 @@ window.RUN_PLAN_WEEKS = [
     "kmLabel": "~50–52km",
     "phase": "hm-build",
     "template": "VO2 Ceiling Touch",
-    "notes": "Short controlled VO2 stimulus to raise the ceiling before the July 10K-specific block. Keep it capped; this is not a race rehearsal.",
+    "notes": "Short controlled VO2 stimulus to raise the ceiling while preserving the HM build. Keep it capped; this is not a race rehearsal.",
     "days": [
       {
         "t": "rest",
@@ -658,84 +658,7 @@ window.RUN_PLAN_WEEKS = [
     "kmLabel": "~50–53km",
     "phase": "hm-build",
     "template": "HM Build / No 10K Race",
-    "notes": "Primary path if skipping July 12. Do not replace the race with a hard solo 10K; use the week to build smooth HM strength.",
-    "alternatives": [
-      {
-        "label": "Race alternative",
-        "km": 41,
-        "kmLabel": "~39–43km",
-        "template": "July 10K Mini Taper",
-        "notes": "Use this only if you decide to run July 12. Sharpen, reduce fatigue, and keep the longer Oct half marathon priority intact.",
-        "race": true,
-        "days": [
-          {
-            "t": "rest",
-            "s": "Rest",
-            "l": "Rest",
-            "tags": [
-              "recovery"
-            ]
-          },
-          {
-            "t": "intv",
-            "s": "2 x 2 km",
-            "l": "WU: 15&ndash;20 min easy + drills + 4 relaxed strides.<br>Session: 2 x 2 km @ 4:52&ndash;4:58/km + 4 x 200m relaxed-fast, full control<br>CD: 10&ndash;15 min easy.",
-            "tags": [
-              "10k-specific",
-              "strides"
-            ],
-            "pace": "4:52&ndash;4:58/km plus relaxed 200s"
-          },
-          {
-            "t": "easy",
-            "s": "Easy 40-45 min",
-            "l": "Easy 40&ndash;45 min",
-            "tags": [
-              "easy"
-            ]
-          },
-          {
-            "t": "easy",
-            "s": "Easy 35-40 min + 4 strides",
-            "l": "Easy 35&ndash;40 min + 4 strides",
-            "tags": [
-              "easy",
-              "strides"
-            ]
-          },
-          {
-            "t": "rest",
-            "s": "Rest",
-            "l": "Rest",
-            "tags": [
-              "recovery"
-            ]
-          },
-          {
-            "t": "rec",
-            "s": "Easy 20-25 min + 4 strides",
-            "l": "Easy 20&ndash;25 min + 4 strides",
-            "tags": [
-              "easy",
-              "recovery",
-              "strides"
-            ]
-          },
-          {
-            "t": "race",
-            "s": "JULY 10K",
-            "l": "July 12 10K benchmark",
-            "tags": [
-              "race",
-              "10k-specific"
-            ],
-            "pace": "Target 48:30&ndash;49:00; stretch sub-48 if controlled",
-            "priority": "B",
-            "raceNotes": "July 12 10K benchmark: target 48:30&ndash;49:00; stretch sub-48 if controlled. Open 4:55&ndash;5:00/km, settle 4:50&ndash;4:55/km, race from 7K."
-          }
-        ]
-      }
-    ],
+    "notes": "July 12 race is confirmed off the calendar. Do not replace it with a hard solo 10K; use the week to build smooth HM strength.",
     "days": [
       {
         "t": "rest",
@@ -807,78 +730,7 @@ window.RUN_PLAN_WEEKS = [
     "kmLabel": "~55–58km",
     "phase": "hm-build",
     "template": "HM Build / Threshold Strength",
-    "notes": "Primary path if skipping July 12. This becomes a proper HM-build week, but keep Saturday easy so the block does not turn into a grind.",
-    "alternatives": [
-      {
-        "label": "Post-race alternative",
-        "km": 49,
-        "kmLabel": "~48–50km",
-        "template": "Post-10K Rebuild",
-        "notes": "Use this only if you raced July 12. Recalibrate HM paces: &le;48:30 and controlled keeps late-block HM work at 5:05&ndash;5:10/km; 48:30&ndash;49:30 keeps the plan as written; &gt;49:30 or heavy fatigue moves HM work 5&ndash;8 sec/km slower for two weeks.",
-        "days": [
-          {
-            "t": "rest",
-            "s": "Rest",
-            "l": "Rest after race",
-            "tags": [
-              "recovery"
-            ]
-          },
-          {
-            "t": "thr",
-            "s": "4 x 8 min threshold",
-            "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 4 x 8 min threshold @ 5:03&ndash;5:12/km, controlled<br>CD: 10&ndash;15 min easy.",
-            "tags": [
-              "threshold"
-            ],
-            "pace": "5:03&ndash;5:12/km"
-          },
-          {
-            "t": "easy",
-            "s": "Easy 45 min",
-            "l": "Easy 45 min",
-            "tags": [
-              "easy"
-            ]
-          },
-          {
-            "t": "med",
-            "s": "Medium-long 70 min easy",
-            "l": "Medium-long 70 min easy",
-            "tags": [
-              "medium-long",
-              "easy"
-            ]
-          },
-          {
-            "t": "rest",
-            "s": "Rest",
-            "l": "Rest",
-            "tags": [
-              "recovery"
-            ]
-          },
-          {
-            "t": "lng",
-            "s": "Long 95 min easy",
-            "l": "Long 95 min easy",
-            "tags": [
-              "long-run",
-              "easy"
-            ]
-          },
-          {
-            "t": "rec",
-            "s": "Recovery 35-45 min",
-            "l": "Recovery 35&ndash;45 min",
-            "tags": [
-              "easy",
-              "recovery"
-            ]
-          }
-        ]
-      }
-    ],
+    "notes": "Proper HM-build week after the canceled July 12 race window. Keep Saturday easy so the block does not turn into a grind.",
     "days": [
       {
         "t": "rest",

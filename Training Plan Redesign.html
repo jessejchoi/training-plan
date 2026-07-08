@@ -38,7 +38,7 @@
 
 <script type="text/babel">
 const { WEEKS, PHASES, DAY_TYPES, DAY_ABBR, TODAY_WEEK_ID, TODAY_DAY_INDEX,
-        DAYS_TO_10K, DAYS_TO_HM, getTodayWeek, getTodayDay } = window;
+        DAYS_TO_OCT_HM, getTodayWeek, getTodayDay } = window;
 
 // ——— sessions per-day inline detail
 const SESSION_DETAIL = {
@@ -166,13 +166,12 @@ function TodayCard({ completed, onToggle }) {
 function Countdowns() {
   return (
     <div style={{
-      display:'grid', gridTemplateColumns:'1fr 1fr', gap:1,
+      display:'grid', gridTemplateColumns:'1fr', gap:1,
       background:'var(--border)', border:'1px solid var(--border)', borderRadius:6,
       overflow:'hidden',
     }}>
       {[
-        { label:'LOMBOK 10K', date:'Jul 12', tgt:'Sub 48:00', n:DAYS_TO_10K, c:'var(--race)' },
-        { label:'JAKARTA HM', date:'Oct 25', tgt:'Sub 1:45',  n:DAYS_TO_HM,  c:'var(--str)' },
+        { label:'JAKARTA HM', date:'Oct 25', tgt:'Sub 1:45', n:DAYS_TO_OCT_HM, c:'var(--str)' },
       ].map((r,i)=>(
         <div key={i} style={{background:'var(--surf)',padding:'12px 14px'}}>
           <div style={{fontFamily:'var(--mono)',fontSize:9,color:'var(--muted2)',letterSpacing:1.5}}>{r.label}</div>

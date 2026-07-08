@@ -41,7 +41,7 @@
 
 <script type="text/babel">
 const { WEEKS, PHASES, DAY_TYPES, DAY_ABBR, TODAY_WEEK_ID, TODAY_DAY_INDEX,
-        DAYS_TO_MAY_10K, DAYS_TO_10K, DAYS_TO_HM, DAYS_TO_OCT_HM, getTodayWeek, getTodayDay } = window;
+        DAYS_TO_MAY_10K, DAYS_TO_HM, DAYS_TO_OCT_HM, getTodayWeek, getTodayDay } = window;
 
 const TODAY_KEY = `${TODAY_WEEK_ID}-${TODAY_DAY_INDEX}`;
 const GLYPH = { rest:'·', easy:'E', rec:'R', intv:'I', thr:'T', med:'M', steady:'M', hm:'H', shake:'R', lng:'L', race:'★' };
@@ -1020,7 +1020,6 @@ function DayDetailCard({ selectedKey, completed, setCompleted, onGoToToday, card
 function Countdowns({ compact = false }) {
   const races = [
     { label:'MAY 10K', date:'May 24', tgt:'FINISH TIME', metric:'49:45', unit:null, c:'var(--race)' },
-    { label:'JULY 10K', date:'Jul 12', tgt:'OPTIONAL · ALT PATH', n:DAYS_TO_10K, c:'var(--race)' },
     { label:'AUG HM', date:'Aug 23', tgt:'B · Controlled tune-up', n:DAYS_TO_HM, c:'var(--str)' },
     { label:'OCT HM', date:'Oct 25', tgt:'A · Sub 1:45 stretch', n:DAYS_TO_OCT_HM, c:'var(--intv)' },
   ];
@@ -1066,7 +1065,7 @@ function Countdowns({ compact = false }) {
   return (
     <div style={{
       display:'grid',
-      gridTemplateColumns:'repeat(4, minmax(0, 1fr))',
+      gridTemplateColumns:'repeat(3, minmax(0, 1fr))',
       gap:1,
       background:'var(--border)',
       border:'1px solid var(--border)',

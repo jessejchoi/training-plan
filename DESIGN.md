@@ -1,7 +1,7 @@
 # Design System — Jakarta Runner Training Reference
 
 ## Product Context
-- **What this is:** A personal training reference page for a 17-week 10K plan targeting sub 45:00 at Pocari Sweat Lombok 10K (July 12, 2026)
+- **What this is:** A personal training reference page for a 2026 half-marathon-focused plan after the canceled July 12 10K
 - **Who it's for:** Personal use only — Jesse Choi
 - **Space/industry:** Running / endurance sports / personal training tools
 - **Project type:** Single-page reference tool, data-dense, consulted daily

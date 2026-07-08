@@ -103,7 +103,6 @@ end
 
 def race_label(text)
   return "MAY 10K" if text.match?(/May 24 10K/i)
-  return "JULY 10K" if text.match?(/July 12 10K/i)
   return "AUG HM" if text.match?(/Aug 23/i)
   return "OCT HM" if text.match?(/Oct 25.*(?:HM|Half Marathon)/i)
   return "HM RACE" if text.match?(/Half Marathon/i)

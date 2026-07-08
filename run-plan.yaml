@@ -186,7 +186,7 @@ blocks:
       dates_html: Jun 15&ndash;21
       total_km_html: "~50&ndash;52km"
       template: VO2 Ceiling Touch
-      notes_html: Short controlled VO2 stimulus to raise the ceiling before the July 10K-specific block. Keep it capped; this is not a race rehearsal.
+      notes_html: Short controlled VO2 stimulus to raise the ceiling while preserving the HM build. Keep it capped; this is not a race rehearsal.
       days:
       - type: rest
         tags: [recovery]
@@ -270,8 +270,7 @@ blocks:
       dates_html: Jul 6&ndash;12
       total_km_html: "~50&ndash;53km"
       template: HM Build / No 10K Race
-      notes_html: Primary path if skipping July 12. Do not replace the race with a hard solo 10K; use the week to build smooth HM strength.
-      race_notes_html: "July 12 10K benchmark: target 48:30&ndash;49:00; stretch sub-48 if controlled. Open 4:55&ndash;5:00/km, settle 4:50&ndash;4:55/km, race from 7K."
+      notes_html: July 12 race is confirmed off the calendar. Do not replace it with a hard solo 10K; use the week to build smooth HM strength.
       days:
       - type: rest
         tags: [recovery]
@@ -296,41 +295,11 @@ blocks:
       - type: rec
         tags: [easy, recovery]
         content_html: Recovery 30&ndash;40 min
-      alternatives:
-      - label_html: Race alternative
-        total_km_html: "~39&ndash;43km"
-        template: July 10K Mini Taper
-        notes_html: Use this only if you decide to run July 12. Sharpen, reduce fatigue, and keep the longer Oct half marathon priority intact.
-        days:
-        - type: rest
-          tags: [recovery]
-          content_html: Rest
-        - type: intv
-          tags: [10k-specific, strides]
-          pace_html: 4:52&ndash;4:58/km plus relaxed 200s
-          content_html: 2 x 2 km @ 4:52&ndash;4:58/km + 4 x 200m relaxed-fast, full control
-        - type: easy
-          tags: [easy]
-          content_html: Easy 40&ndash;45 min
-        - type: easy
-          tags: [easy, strides]
-          content_html: Easy 35&ndash;40 min + 4 strides
-        - type: rest
-          tags: [recovery]
-          content_html: Rest
-        - type: rec
-          tags: [easy, recovery, strides]
-          content_html: Easy 20&ndash;25 min + 4 strides
-        - type: race
-          tags: [race, 10k-specific]
-          priority: B
-          pace_html: Target 48:30&ndash;49:00; stretch sub-48 if controlled
-          content_html: July 12 10K benchmark
     - week_html: '11'
       dates_html: Jul 13&ndash;19
       total_km_html: "~55&ndash;58km"
       template: HM Build / Threshold Strength
-      notes_html: Primary path if skipping July 12. This becomes a proper HM-build week, but keep Saturday easy so the block does not turn into a grind.
+      notes_html: Proper HM-build week after the canceled July 12 race window. Keep Saturday easy so the block does not turn into a grind.
       days:
       - type: rest
         tags: [recovery]
@@ -355,34 +324,6 @@ blocks:
       - type: rec
         tags: [easy, recovery]
         content_html: Recovery 35&ndash;45 min
-      alternatives:
-      - label_html: Post-race alternative
-        total_km_html: "~48&ndash;50km"
-        template: Post-10K Rebuild
-        notes_html: "Use this only if you raced July 12. Recalibrate HM paces: &le;48:30 and controlled keeps late-block HM work at 5:05&ndash;5:10/km; 48:30&ndash;49:30 keeps the plan as written; &gt;49:30 or heavy fatigue moves HM work 5&ndash;8 sec/km slower for two weeks."
-        days:
-        - type: rest
-          tags: [recovery]
-          content_html: Rest after race
-        - type: thr
-          tags: [threshold]
-          pace_html: 5:03&ndash;5:12/km
-          content_html: 4 x 8 min threshold @ 5:03&ndash;5:12/km, controlled
-        - type: easy
-          tags: [easy]
-          content_html: Easy 45 min
-        - type: med
-          tags: [medium-long, easy]
-          content_html: Medium-long 70 min easy
-        - type: rest
-          tags: [recovery]
-          content_html: Rest
-        - type: lng
-          tags: [long-run, easy]
-          content_html: Long 95 min easy
-        - type: rec
-          tags: [easy, recovery]
-          content_html: Recovery 35&ndash;45 min
     - week_html: '12'
       dates_html: Jul 20&ndash;26
       total_km_html: "~53&ndash;56km"
@@ -790,4 +731,4 @@ blocks:
         pace_html: Start 5:10&ndash;5:12/km, settle 5:06&ndash;5:08/km, press late if controlled
         content_html: Oct 25 Half Marathon A race &mdash; 1:48 target
   pace_guide_html: "<strong>Easy:</strong> effort-first, usually ~6:15&ndash;7:10/km in Jakarta conditions &nbsp;&middot;&nbsp; <strong>Recovery:</strong> softer than easy, often ~6:40&ndash;7:30/km or pure effort after harder Saturdays &nbsp;&middot;&nbsp; <strong>Steady:</strong> ~5:35&ndash;5:55/km early, progressing toward ~5:20&ndash;5:45/km &nbsp;&middot;&nbsp; <strong>Early threshold:</strong> 5:03&ndash;5:12/km &nbsp;&middot;&nbsp; <strong>Peak threshold:</strong> 4:58&ndash;5:06/km; float sets keep the floats controlled, not sprinty &nbsp;&middot;&nbsp; <strong>Early HM effort:</strong> 5:10&ndash;5:18/km &nbsp;&middot;&nbsp; <strong>Peak HM / 1:48 goal rhythm:</strong> 5:05&ndash;5:10/km &nbsp;&middot;&nbsp; <strong>VO2 touches:</strong> early ~4:35&ndash;4:45/km, peak ~4:30&ndash;4:40/km with full recovery &nbsp;&middot;&nbsp; <strong>10K-specific touch:</strong> early ~4:50&ndash;5:00/km, peak ~4:45&ndash;4:55/km, used sparingly."
-  plan_note_html: "Weeks 6&ndash;25 use five runs per week by default with Monday and Friday fixed as rest days, Tuesday as the main quality day, Thursday as medium-long or second controlled quality, Saturday as long run or pre-race shakeout, and Sunday as recovery except fixed Sunday race dates. The primary path now skips the July 12 10K and uses that window for smoother HM building; the original 10K race and post-race weeks remain saved as alternatives. The Aug 23 half marathon is a controlled B-race tune-up. Oct 25 is the A half marathon, with 1:48 as the primary target. The post-Aug 23 block adds steady-finish long runs in Weeks 19 and 20, keeps Week 22 as the only peak HM-specific continuous-finish long run, and uses heat-aware effort first in Jakarta conditions."
+  plan_note_html: "Weeks 6&ndash;25 use five runs per week by default with Monday and Friday fixed as rest days, Tuesday as the main quality day, Thursday as medium-long or second controlled quality, Saturday as long run or pre-race shakeout, and Sunday as recovery except fixed Sunday race dates. The July 12 10K is confirmed off the calendar, so that window now stays on the smoother HM-building path. The Aug 23 half marathon is a controlled B-race tune-up. Oct 25 is the A half marathon, with 1:48 as the primary target. The post-Aug 23 block adds steady-finish long runs in Weeks 19 and 20, keeps Week 22 as the only peak HM-specific continuous-finish long run, and uses heat-aware effort first in Jakarta conditions."
