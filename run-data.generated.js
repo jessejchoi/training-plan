@@ -48,11 +48,11 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "thr",
         "s": "3 x 10 min threshold",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 10 min threshold @ ~5:05&ndash;5:12/km, 3 min jog recovery<br>CD: 10&ndash;15 min easy.",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 10 min threshold @ ~4:50&ndash;4:58/km, 3 min jog recovery<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "threshold"
         ],
-        "pace": "5:05&ndash;5:12/km"
+        "pace": "4:50&ndash;4:58/km"
       },
       {
         "t": "easy",
@@ -61,7 +61,7 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "easy"
         ],
-        "pace": "Easy effort, likely 6:00&ndash;7:00+/km"
+        "pace": "Easy effort, usually 6:15&ndash;7:10/km in Jakarta conditions"
       },
       {
         "t": "lng",
@@ -101,7 +101,7 @@ window.RUN_PLAN_WEEKS = [
           "medium-long",
           "steady"
         ],
-        "pace": "Easy effort; optional steady roughly 5:35&ndash;5:55/km"
+        "pace": "Easy effort; optional steady roughly 5:25&ndash;5:50/km"
       },
       {
         "t": "easy",
@@ -170,12 +170,12 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "intv",
         "s": "3 x 1 km",
-        "l": "WU: 15&ndash;20 min easy + drills + 4 relaxed strides.<br>Session: 3 x 1 km @ controlled 10K effort, ~4:50&ndash;4:55/km, 2&ndash;3 min jog. Optional 4 x 200m relaxed-fast if springy; stop while it still feels repeatable.<br>CD: 10&ndash;15 min easy.",
+        "l": "WU: 15&ndash;20 min easy + drills + 4 relaxed strides.<br>Session: 3 x 1 km @ controlled 10K effort, ~4:43&ndash;4:50/km, 2&ndash;3 min jog. Optional 4 x 200m relaxed-fast if springy; stop while it still feels repeatable.<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "10k-specific",
           "strides"
         ],
-        "pace": "4:50&ndash;4:55/km plus relaxed 200s"
+        "pace": "4:43&ndash;4:50/km plus relaxed 200s"
       },
       {
         "t": "easy",
@@ -220,9 +220,9 @@ window.RUN_PLAN_WEEKS = [
           "race",
           "10k-specific"
         ],
-        "pace": "Race-like effort; open 4:55&ndash;5:00/km, settle 4:50&ndash;4:55/km if controlled",
+        "pace": "Race-like effort; open 4:50&ndash;4:55/km, settle 4:43&ndash;4:50/km if controlled",
         "priority": "C",
-        "raceNotes": "May 24 10K pacing: Km 1&ndash;2 controlled around 4:55&ndash;5:00/km; Km 3&ndash;6 settle around 4:50&ndash;4:55/km if breathing is under control; Km 7&ndash;8 hold effort; Km 9&ndash;10 race properly if gears are still there."
+        "raceNotes": "May 24 10K pacing: Km 1&ndash;2 controlled around 4:50&ndash;4:55/km; Km 3&ndash;6 settle around 4:43&ndash;4:50/km if breathing is under control; Km 7&ndash;8 hold effort; Km 9&ndash;10 race properly if gears are still there."
       }
     ]
   },
@@ -263,11 +263,11 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "thr",
         "s": "3 x 2 km threshold",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 2 km threshold @ 5:05&ndash;5:12/km, 2&ndash;3 min jog<br>CD: 10&ndash;15 min easy.",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 2 km threshold @ 4:50&ndash;4:58/km, 2&ndash;3 min jog<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "threshold"
         ],
-        "pace": "5:05&ndash;5:12/km"
+        "pace": "4:50&ndash;4:58/km"
       },
       {
         "t": "easy",
@@ -316,11 +316,11 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "thr",
         "s": "25-30 min continuous threshold",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 25&ndash;30 min continuous threshold @ 5:05&ndash;5:12/km<br>CD: 10&ndash;15 min easy.",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 25&ndash;30 min continuous threshold @ 4:55&ndash;5:03/km<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "threshold"
         ],
-        "pace": "5:05&ndash;5:12/km"
+        "pace": "4:55&ndash;5:03/km"
       },
       {
         "t": "easy",
@@ -386,11 +386,11 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "thr",
         "s": "3 x 12 min threshold",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 12 min threshold @ 5:05&ndash;5:12/km, 3 min jog between reps<br>CD: 10&ndash;15 min easy.",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 12 min threshold @ 4:50&ndash;4:58/km, 3 min jog between reps<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "threshold"
         ],
-        "pace": "5:05&ndash;5:12/km"
+        "pace": "4:50&ndash;4:58/km"
       },
       {
         "t": "easy",
@@ -458,11 +458,11 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "intv",
         "s": "5 x 3 min",
-        "l": "WU: 15&ndash;20 min easy + drills + 4 relaxed strides.<br>Session: 5 x 3 min @ ~4:35&ndash;4:45/km effort, 2.5&ndash;3 min easy jog; smooth and capped<br>CD: 10&ndash;15 min easy.",
+        "l": "WU: 15&ndash;20 min easy + drills + 4 relaxed strides.<br>Session: 5 x 3 min @ ~4:28&ndash;4:38/km effort, 2.5&ndash;3 min easy jog; smooth and capped<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "vo2max"
         ],
-        "pace": "4:35&ndash;4:45/km effort, full control"
+        "pace": "4:28&ndash;4:38/km effort, full control"
       },
       {
         "t": "easy",
@@ -492,12 +492,12 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "lng",
         "s": "Long 105-110 min with last 20-25 min steady",
-        "l": "WU: First 20&ndash;30 min easy before the prescribed long-run quality.<br>Session: Long 105&ndash;110 min with last 20&ndash;25 min steady @ 5:35&ndash;5:55/km<br>CD: Optional 5&ndash;10 min very easy after the prescribed time if you need to downshift.",
+        "l": "WU: First 20&ndash;30 min easy before the prescribed long-run quality.<br>Session: Long 105&ndash;110 min with last 20&ndash;25 min steady @ 5:25&ndash;5:50/km<br>CD: Optional 5&ndash;10 min very easy after the prescribed time if you need to downshift.",
         "tags": [
           "long-run",
           "steady"
         ],
-        "pace": "Last 20&ndash;25 min steady @ 5:35&ndash;5:55/km"
+        "pace": "Last 20&ndash;25 min steady @ 5:25&ndash;5:50/km"
       },
       {
         "t": "rec",
@@ -600,11 +600,11 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "intv",
         "s": "5 x 1 km",
-        "l": "WU: 15&ndash;20 min easy + drills + 4 relaxed strides.<br>Session: 5 x 1 km @ 4:50&ndash;4:58/km, 2 min jog<br>CD: 10&ndash;15 min easy.",
+        "l": "WU: 15&ndash;20 min easy + drills + 4 relaxed strides.<br>Session: 5 x 1 km @ 4:43&ndash;4:50/km, 2 min jog<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "10k-specific"
         ],
-        "pace": "4:50&ndash;4:58/km"
+        "pace": "4:43&ndash;4:50/km"
       },
       {
         "t": "easy",
@@ -617,11 +617,11 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "thr",
         "s": "3 x 10 min threshold",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 10 min threshold @ 5:03&ndash;5:12/km<br>CD: 10&ndash;15 min easy.",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 10 min threshold @ 4:50&ndash;4:58/km<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "threshold"
         ],
-        "pace": "5:03&ndash;5:12/km"
+        "pace": "4:50&ndash;4:58/km"
       },
       {
         "t": "rest",
@@ -671,11 +671,11 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "thr",
         "s": "4 x 8 min threshold",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 4 x 8 min threshold @ 5:03&ndash;5:12/km, controlled<br>CD: 10&ndash;15 min easy.",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 4 x 8 min threshold @ 4:50&ndash;4:58/km, controlled<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "threshold"
         ],
-        "pace": "5:03&ndash;5:12/km"
+        "pace": "4:50&ndash;4:58/km"
       },
       {
         "t": "easy",
@@ -743,11 +743,11 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "thr",
         "s": "3 x 12 min threshold",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 12 min threshold @ 5:03&ndash;5:12/km, 3 min jog between reps<br>CD: 10&ndash;15 min easy.",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 12 min threshold @ 4:50&ndash;4:58/km, 3 min jog between reps<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "threshold"
         ],
-        "pace": "5:03&ndash;5:12/km"
+        "pace": "4:50&ndash;4:58/km"
       },
       {
         "t": "easy",
@@ -814,12 +814,12 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "thr",
         "s": "45 min progression",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 45 min progression @ 15 min steady 5:35&ndash;5:45/km, 15 min strong steady 5:20&ndash;5:30/km, 15 min controlled threshold 5:03&ndash;5:08/km<br>CD: 10&ndash;15 min easy.",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 45 min progression @ 15 min steady 5:25&ndash;5:50/km, 15 min strong steady 5:15&ndash;5:30/km, 15 min controlled threshold 4:55&ndash;5:03/km<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "threshold",
           "steady"
         ],
-        "pace": "15 min @ 5:35&ndash;5:45/km, 15 min @ 5:20&ndash;5:30/km, 15 min @ 5:03&ndash;5:08/km"
+        "pace": "15 min @ 5:25&ndash;5:50/km, 15 min @ 5:15&ndash;5:30/km, 15 min @ 4:55&ndash;5:03/km"
       },
       {
         "t": "easy",
@@ -849,12 +849,12 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "lng",
         "s": "Long 110 min, last 30 min steady",
-        "l": "WU: First 20&ndash;30 min easy before the prescribed long-run quality.<br>Session: Long 110 min, last 30 min steady @ 5:25&ndash;5:45/km<br>CD: Optional 5&ndash;10 min very easy after the prescribed time if you need to downshift.",
+        "l": "WU: First 20&ndash;30 min easy before the prescribed long-run quality.<br>Session: Long 110 min, last 30 min steady @ 5:25&ndash;5:50/km<br>CD: Optional 5&ndash;10 min very easy after the prescribed time if you need to downshift.",
         "tags": [
           "long-run",
           "steady"
         ],
-        "pace": "Last 30 min steady @ 5:25&ndash;5:45/km"
+        "pace": "Last 30 min steady @ 5:25&ndash;5:50/km"
       },
       {
         "t": "rec",
@@ -886,11 +886,11 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "intv",
         "s": "5 x 1 km",
-        "l": "WU: 15&ndash;20 min easy + drills + 4 relaxed strides.<br>Session: 5 x 1 km @ 4:50&ndash;4:58/km, controlled, 2 min jog<br>CD: 10&ndash;15 min easy.",
+        "l": "WU: 15&ndash;20 min easy + drills + 4 relaxed strides.<br>Session: 5 x 1 km @ 4:43&ndash;4:50/km, controlled, 2 min jog<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "10k-specific"
         ],
-        "pace": "4:50&ndash;4:58/km"
+        "pace": "4:43&ndash;4:50/km"
       },
       {
         "t": "easy",
@@ -903,11 +903,11 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "hm",
         "s": "2 x 20 min HM/threshold",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 20 min HM/threshold @ 12 min HM rhythm 5:08&ndash;5:10/km, then 8 min controlled threshold 4:58&ndash;5:06/km; 4 min jog between reps<br>CD: 10&ndash;15 min easy.",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 20 min HM/threshold @ 12 min HM rhythm 5:03&ndash;5:10/km, then 8 min controlled threshold 4:50&ndash;4:58/km; 4 min jog between reps<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "hm-specific"
         ],
-        "pace": "Each rep: 12 min HM @ 5:08&ndash;5:10/km + 8 min threshold @ 4:58&ndash;5:06/km"
+        "pace": "Each rep: 12 min HM @ 5:03&ndash;5:10/km + 8 min threshold @ 4:50&ndash;4:58/km"
       },
       {
         "t": "rest",
@@ -957,11 +957,11 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "hm",
         "s": "2 x 3 km HM effort",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 3 km HM effort @ 5:05&ndash;5:10/km, 3 min jog<br>CD: 10&ndash;15 min easy.",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 3 km HM effort @ 5:03&ndash;5:10/km, 3 min jog<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "hm-specific"
         ],
-        "pace": "5:05&ndash;5:10/km"
+        "pace": "5:03&ndash;5:10/km"
       },
       {
         "t": "easy",
@@ -991,12 +991,12 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "lng",
         "s": "Long 18-19 km with last 8-10 km continuous",
-        "l": "WU: First 20&ndash;30 min easy before the prescribed long-run quality.<br>Session: Long 18&ndash;19 km with last 8&ndash;10 km continuous @ 5:05&ndash;5:10/km. Use effort if heat is heavy.<br>CD: Optional 5&ndash;10 min very easy after the prescribed time if you need to downshift.",
+        "l": "WU: First 20&ndash;30 min easy before the prescribed long-run quality.<br>Session: Long 18&ndash;19 km with last 8&ndash;10 km continuous @ 5:03&ndash;5:10/km. Use effort if heat is heavy.<br>CD: Optional 5&ndash;10 min very easy after the prescribed time if you need to downshift.",
         "tags": [
           "long-run",
           "hm-specific"
         ],
-        "pace": "Last 8&ndash;10 km continuous @ 5:05&ndash;5:10/km"
+        "pace": "Last 8&ndash;10 km continuous @ 5:03&ndash;5:10/km"
       },
       {
         "t": "rec",
@@ -1029,11 +1029,11 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "hm",
         "s": "2 x 4 km HM work",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 4 km HM work @ 5:05&ndash;5:10/km, 5 min easy between<br>CD: 10&ndash;15 min easy.",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 4 km HM work @ 5:03&ndash;5:10/km, 5 min easy between<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "hm-specific"
         ],
-        "pace": "5:05&ndash;5:10/km"
+        "pace": "5:03&ndash;5:10/km"
       },
       {
         "t": "easy",
@@ -1100,11 +1100,11 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "hm",
         "s": "3 x 2 km",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 2 km @ 5:05&ndash;5:10/km, 3 min jog; should feel controlled, not like a test<br>CD: 10&ndash;15 min easy.",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 2 km @ 5:03&ndash;5:10/km, 3 min jog; should feel controlled, not like a test<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "hm-specific"
         ],
-        "pace": "5:05&ndash;5:10/km"
+        "pace": "5:03&ndash;5:10/km"
       },
       {
         "t": "easy",
@@ -1148,9 +1148,9 @@ window.RUN_PLAN_WEEKS = [
           "race",
           "hm-specific"
         ],
-        "pace": "Start 5:10&ndash;5:12/km; press toward 5:03&ndash;5:06/km only after 16 km if smooth",
+        "pace": "Start 5:08&ndash;5:10/km; press toward 4:58&ndash;5:03/km only after 16 km if smooth",
         "priority": "B",
-        "raceNotes": "Aug 23 HM B-race tune-up: start controlled around 5:10&ndash;5:12/km, keep the middle smooth around 5:06&ndash;5:10/km, and press toward 5:03&ndash;5:06/km only after 16 km if it still feels comfortable."
+        "raceNotes": "Aug 23 HM B-race tune-up: start controlled around 5:08&ndash;5:10/km, keep the middle smooth around 5:03&ndash;5:08/km, and press toward 4:58&ndash;5:03/km only after 16 km if it still feels comfortable."
       }
     ]
   },
@@ -1260,11 +1260,11 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "thr",
         "s": "3 x 10 min threshold",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 10 min threshold @ 5:03&ndash;5:12/km, controlled<br>CD: 10&ndash;15 min easy.",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 10 min threshold @ 4:50&ndash;4:58/km, controlled<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "threshold"
         ],
-        "pace": "5:03&ndash;5:12/km"
+        "pace": "4:50&ndash;4:58/km"
       },
       {
         "t": "rest",
@@ -1314,11 +1314,11 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "intv",
         "s": "4 x 1 km",
-        "l": "WU: 15&ndash;20 min easy + drills + 4 relaxed strides.<br>Session: 4 x 1 km @ ~4:30&ndash;4:40/km, 3 min easy jog; controlled, not a time trial<br>CD: 10&ndash;15 min easy.",
+        "l": "WU: 15&ndash;20 min easy + drills + 4 relaxed strides.<br>Session: 4 x 1 km @ ~4:28&ndash;4:38/km, 3 min easy jog; controlled, not a time trial<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "vo2max"
         ],
-        "pace": "4:30&ndash;4:40/km effort, full recovery"
+        "pace": "4:28&ndash;4:38/km effort, full recovery"
       },
       {
         "t": "easy",
@@ -1348,12 +1348,12 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "lng",
         "s": "Long 105-110 min with last 20-25 min steady",
-        "l": "WU: First 20&ndash;30 min easy before the prescribed long-run quality.<br>Session: Long 105&ndash;110 min with last 20&ndash;25 min steady @ ~5:35&ndash;5:55/km<br>CD: Optional 5&ndash;10 min very easy after the prescribed time if you need to downshift.",
+        "l": "WU: First 20&ndash;30 min easy before the prescribed long-run quality.<br>Session: Long 105&ndash;110 min with last 20&ndash;25 min steady @ ~5:25&ndash;5:50/km<br>CD: Optional 5&ndash;10 min very easy after the prescribed time if you need to downshift.",
         "tags": [
           "long-run",
           "steady"
         ],
-        "pace": "Last 20&ndash;25 min steady @ ~5:35&ndash;5:55/km"
+        "pace": "Last 20&ndash;25 min steady @ ~5:25&ndash;5:50/km"
       },
       {
         "t": "rec",
@@ -1386,11 +1386,11 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "thr",
         "s": "2 x 20 min threshold floats",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 20 min threshold floats @ repeat 4 min threshold 4:58&ndash;5:06/km + 1 min float 5:25&ndash;5:40/km; 4 min jog between sets<br>CD: 10&ndash;15 min easy.",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 20 min threshold floats @ repeat 4 min threshold 4:48&ndash;4:55/km + 1 min float 5:15&ndash;5:30/km; 4 min jog between sets<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "threshold"
         ],
-        "pace": "Threshold 4:58&ndash;5:06/km; float 5:25&ndash;5:40/km"
+        "pace": "Threshold 4:48&ndash;4:55/km; float 5:15&ndash;5:30/km"
       },
       {
         "t": "easy",
@@ -1474,8 +1474,8 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "thr",
-        "s": "2 x 15 min HM/threshold progression; start 5:08-5:10/km and finish near 4:58-5:06/km only if smooth",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 15 min HM/threshold progression; start 5:08&ndash;5:10/km and finish near 4:58&ndash;5:06/km only if smooth<br>CD: 10&ndash;15 min easy.",
+        "s": "2 x 15 min HM/threshold progression; start 5:03-5:10/km and finish near 4:50-4:58/km only if smooth",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 15 min HM/threshold progression; start 5:03&ndash;5:10/km and finish near 4:50&ndash;4:58/km only if smooth<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "threshold",
           "hm-specific"
@@ -1530,11 +1530,11 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "hm",
         "s": "2 x 4 km HM effort",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 4 km HM effort @ 5:05&ndash;5:10/km, 4 min easy<br>CD: 10&ndash;15 min easy.",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 4 km HM effort @ 5:03&ndash;5:10/km, 4 min easy<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "hm-specific"
         ],
-        "pace": "5:05&ndash;5:10/km"
+        "pace": "5:03&ndash;5:10/km"
       },
       {
         "t": "easy",
@@ -1564,12 +1564,12 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "lng",
         "s": "Long 20-22 km with last 10-12 km continuous",
-        "l": "WU: First 20&ndash;30 min easy before the prescribed long-run quality.<br>Session: Long 20&ndash;22 km with last 10&ndash;12 km continuous @ 5:05&ndash;5:10/km. Use a treadmill portion or cooler route if heat load is high.<br>CD: Optional 5&ndash;10 min very easy after the prescribed time if you need to downshift.",
+        "l": "WU: First 20&ndash;30 min easy before the prescribed long-run quality.<br>Session: Long 20&ndash;22 km with last 10&ndash;12 km continuous @ 5:03&ndash;5:10/km. Use a treadmill portion or cooler route if heat load is high.<br>CD: Optional 5&ndash;10 min very easy after the prescribed time if you need to downshift.",
         "tags": [
           "long-run",
           "hm-specific"
         ],
-        "pace": "Last 10&ndash;12 km continuous @ 5:05&ndash;5:10/km"
+        "pace": "Last 10&ndash;12 km continuous @ 5:03&ndash;5:10/km"
       },
       {
         "t": "rec",
@@ -1620,11 +1620,11 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "hm",
         "s": "2 x 4 km HM rhythm",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 4 km HM rhythm @ 5:05&ndash;5:10/km, 5 min easy<br>CD: 10&ndash;15 min easy.",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 4 km HM rhythm @ 5:03&ndash;5:10/km, 5 min easy<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "hm-specific"
         ],
-        "pace": "5:05&ndash;5:10/km"
+        "pace": "5:03&ndash;5:10/km"
       },
       {
         "t": "rest",
@@ -1674,11 +1674,11 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "hm",
         "s": "2 x 4 km HM effort",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 4 km HM effort @ 5:05&ndash;5:10/km, 5 min easy jog between reps, controlled<br>CD: 10&ndash;15 min easy.",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 4 km HM effort @ 5:03&ndash;5:10/km, 5 min easy jog between reps, controlled<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "hm-specific"
         ],
-        "pace": "5:05&ndash;5:10/km"
+        "pace": "5:03&ndash;5:10/km"
       },
       {
         "t": "easy",
@@ -1747,12 +1747,12 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "hm",
         "s": "3 x 2 km HM rhythm",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 2 km HM rhythm @ 5:05&ndash;5:10/km, 3 min easy jog between reps, full control<br>CD: 10&ndash;15 min easy.",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 2 km HM rhythm @ 5:03&ndash;5:10/km, 3 min easy jog between reps, full control<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "hm-specific",
           "strides"
         ],
-        "pace": "5:05&ndash;5:10/km"
+        "pace": "5:03&ndash;5:10/km"
       },
       {
         "t": "easy",
@@ -1797,9 +1797,9 @@ window.RUN_PLAN_WEEKS = [
           "race",
           "hm-specific"
         ],
-        "pace": "Start 5:10&ndash;5:12/km, settle 5:06&ndash;5:08/km, press late if controlled",
+        "pace": "Start 5:08&ndash;5:10/km, settle 5:03&ndash;5:08/km, press late if controlled",
         "priority": "A",
-        "raceNotes": "Oct 25 HM A-race: first 5 km at 5:10&ndash;5:12/km, settle around 5:06&ndash;5:08/km from 5&ndash;15 km, then press toward 5:03&ndash;5:05/km from 16 km only if controlled. 1:48 is the primary target."
+        "raceNotes": "Oct 25 HM A-race: first 5 km at 5:08&ndash;5:10/km, settle around 5:03&ndash;5:08/km from 5&ndash;15 km, then press toward 4:58&ndash;5:03/km from 16 km only if controlled. 1:48 is the primary target."
       }
     ]
   }
