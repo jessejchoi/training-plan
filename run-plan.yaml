@@ -298,23 +298,23 @@ blocks:
     - week_html: '11'
       dates_html: Jul 13&ndash;19
       total_km_html: "~55&ndash;58km"
-      template: HM Build / Threshold Strength
-      notes_html: Proper HM-build week after the canceled July 12 race window. Keep Saturday easy so the block does not turn into a grind.
+      template: HM Build / Threshold Strength (Adjusted)
+      notes_html: Monday's upper-body lift plus light treadmill intervals replaces the planned rest. Keep Tuesday genuinely easy, move threshold to Wednesday, and retain Friday as full rest before the long run. Thursday's steady finish is optional and capped at 10 min only if it feels smooth.
       days:
-      - type: rest
-        tags: [recovery]
-        content_html: Rest
+      - type: rec
+        tags: [cross-training, strength, easy]
+        content_html: "Completed: upper-body strength + light treadmill intervals"
+      - type: easy
+        tags: [easy, recovery]
+        content_html: Easy 30&ndash;40 min. Keep it genuinely relaxed.
       - type: thr
         tags: [threshold]
         pace_html: 4:50&ndash;4:58/km
-        content_html: 3 x 12 min threshold @ 4:50&ndash;4:58/km, 3 min jog between reps
-      - type: easy
-        tags: [easy]
-        content_html: Easy 45&ndash;50 min
+        content_html: 3 x 12 min threshold @ 4:50&ndash;4:58/km, 3 min jog between reps. Controlled, not a test.
       - type: med
         tags: [medium-long, steady]
-        pace_html: Optional last 10&ndash;15 min light steady only if smooth
-        content_html: Medium-long 80 min easy; last 10&ndash;15 min light steady only if smooth
+        pace_html: Optional final 10 min light steady @ ~5:35&ndash;5:50/km only if smooth
+        content_html: Medium-long 80 min easy; optional final 10 min light steady @ ~5:35&ndash;5:50/km only if smooth
       - type: rest
         tags: [recovery]
         content_html: Rest

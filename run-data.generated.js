@@ -729,43 +729,46 @@ window.RUN_PLAN_WEEKS = [
     "km": 56.5,
     "kmLabel": "~55–58km",
     "phase": "hm-build",
-    "template": "HM Build / Threshold Strength",
-    "notes": "Proper HM-build week after the canceled July 12 race window. Keep Saturday easy so the block does not turn into a grind.",
+    "template": "HM Build / Threshold Strength (Adjusted)",
+    "notes": "Monday's upper-body lift plus light treadmill intervals replaces the planned rest. Keep Tuesday genuinely easy, move threshold to Wednesday, and retain Friday as full rest before the long run. Thursday's steady finish is optional and capped at 10 min only if it feels smooth.",
     "days": [
       {
-        "t": "rest",
-        "s": "Rest",
-        "l": "Rest",
+        "t": "rec",
+        "s": "Completed: upper-body strength + light treadmill intervals",
+        "l": "Completed: upper-body strength + light treadmill intervals",
         "tags": [
+          "cross-training",
+          "strength",
+          "easy"
+        ]
+      },
+      {
+        "t": "easy",
+        "s": "Easy 30-40 min. Keep it genuinely relaxed.",
+        "l": "Easy 30&ndash;40 min. Keep it genuinely relaxed.",
+        "tags": [
+          "easy",
           "recovery"
         ]
       },
       {
         "t": "thr",
         "s": "3 x 12 min threshold",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 12 min threshold @ 4:50&ndash;4:58/km, 3 min jog between reps<br>CD: 10&ndash;15 min easy.",
+        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 12 min threshold @ 4:50&ndash;4:58/km, 3 min jog between reps. Controlled, not a test.<br>CD: 10&ndash;15 min easy.",
         "tags": [
           "threshold"
         ],
         "pace": "4:50&ndash;4:58/km"
       },
       {
-        "t": "easy",
-        "s": "Easy 45-50 min",
-        "l": "Easy 45&ndash;50 min",
-        "tags": [
-          "easy"
-        ]
-      },
-      {
         "t": "med",
-        "s": "Medium-long 80 min easy; last 10-15 min light steady only if smooth",
-        "l": "WU: 15&ndash;20 min easy before progressing into the steady work.<br>Session: Medium-long 80 min easy; last 10&ndash;15 min light steady only if smooth<br>CD: 5&ndash;10 min easy at the end.",
+        "s": "Medium-long 80 min easy; optional final 10 min light steady",
+        "l": "WU: 15&ndash;20 min easy before progressing into the steady work.<br>Session: Medium-long 80 min easy; optional final 10 min light steady @ ~5:35&ndash;5:50/km only if smooth<br>CD: 5&ndash;10 min easy at the end.",
         "tags": [
           "medium-long",
           "steady"
         ],
-        "pace": "Optional last 10&ndash;15 min light steady only if smooth"
+        "pace": "Optional final 10 min light steady @ ~5:35&ndash;5:50/km only if smooth"
       },
       {
         "t": "rest",
