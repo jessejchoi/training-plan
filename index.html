@@ -776,7 +776,6 @@ function AlternativeDayPlans({ alternatives, dayIndex }) {
       {dayAlternatives.map(({ alternative, day }, index) => {
         const meta = DAY_TYPES[day.t] || DAY_TYPES.easy;
         const { structured, extra, note } = parseDayContent(day.l || day.s);
-        const tags = day.tags || [];
         return (
         <div key={`${alternative.label}-${index}`} style={{marginTop:index ? 12 : 0}}>
           <div style={{
@@ -809,31 +808,17 @@ function AlternativeDayPlans({ alternatives, dayIndex }) {
             }}>
               {day.t === 'rest' ? 'Rest Day' : day.s}
             </div>
-            {tags.length || day.pace ? (
+            {day.pace ? (
               <div style={{display:'flex',gap:6,flexWrap:'wrap',marginBottom:8}}>
-                {tags.map(tag => (
-                  <span key={tag} style={{
-                    border:`1px solid ${meta.color}55`,
-                    borderRadius:3,
-                    padding:'3px 6px',
-                    fontFamily:'var(--mono)',
-                    fontSize:9,
-                    letterSpacing:1,
-                    color:meta.color,
-                    textTransform:'uppercase',
-                  }}>{tag}</span>
-                ))}
-                {day.pace ? (
-                  <span style={{
-                    border:'1px solid var(--border2)',
-                    borderRadius:3,
-                    padding:'3px 6px',
-                    fontFamily:'var(--mono)',
-                    fontSize:9,
-                    letterSpacing:1,
-                    color:'var(--muted)',
-                  }}>PACE · {decodeHtml(day.pace)}</span>
-                ) : null}
+                <span style={{
+                  border:'1px solid var(--border2)',
+                  borderRadius:3,
+                  padding:'3px 6px',
+                  fontFamily:'var(--mono)',
+                  fontSize:9,
+                  letterSpacing:1,
+                  color:'var(--muted)',
+                }}>PACE · {decodeHtml(day.pace)}</span>
               </div>
             ) : null}
             <div style={{display:'flex',flexDirection:'column',gap:5}}>
@@ -887,7 +872,6 @@ function DayDetailCard({ selectedKey, completed, setCompleted, onGoToToday, card
   const { structured, extra, note } = parseDayContent(detailHtml);
   const label = isToday ? 'TODAY' : 'SELECTED';
   const title = session.day.t === 'rest' ? 'Rest Day' : session.day.s;
-  const tags = session.day.tags || [];
 
   return (
     <div style={{
@@ -909,7 +893,7 @@ function DayDetailCard({ selectedKey, completed, setCompleted, onGoToToday, card
         letterSpacing:1.5,
       }}>
         <span style={{color:session.meta.color}}>▸ {DAY_ABBR[session.dayIndex]} · {label}</span>
-        <span style={{color:'var(--muted)'}}>W{session.week.id} · {session.meta.label}{session.day.priority ? ` · ${session.day.priority}-RACE` : ''}</span>
+        <span style={{color:'var(--muted)'}}>W{session.week.id}{session.day.priority ? ` · ${session.day.priority}-RACE` : ''}</span>
       </div>
 
       <div style={{
@@ -927,31 +911,17 @@ function DayDetailCard({ selectedKey, completed, setCompleted, onGoToToday, card
         {session.week.dates}{session.week.template ? ` · Template ${session.week.template}` : ''}
       </div>
 
-      {tags.length || session.day.pace ? (
+      {session.day.pace ? (
         <div style={{display:'flex',gap:6,flexWrap:'wrap',marginBottom:12}}>
-          {tags.map(tag => (
-            <span key={tag} style={{
-              border:`1px solid ${session.meta.color}55`,
-              borderRadius:3,
-              padding:'3px 6px',
-              fontFamily:'var(--mono)',
-              fontSize:9,
-              letterSpacing:1,
-              color:session.meta.color,
-              textTransform:'uppercase',
-            }}>{tag}</span>
-          ))}
-          {session.day.pace ? (
-            <span style={{
-              border:'1px solid var(--border2)',
-              borderRadius:3,
-              padding:'3px 6px',
-              fontFamily:'var(--mono)',
-              fontSize:9,
-              letterSpacing:1,
-              color:'var(--muted)',
-            }}>PACE · {decodeHtml(session.day.pace)}</span>
-          ) : null}
+          <span style={{
+            border:'1px solid var(--border2)',
+            borderRadius:3,
+            padding:'3px 6px',
+            fontFamily:'var(--mono)',
+            fontSize:9,
+            letterSpacing:1,
+            color:'var(--muted)',
+          }}>PACE · {decodeHtml(session.day.pace)}</span>
         </div>
       ) : null}
 
@@ -1021,7 +991,7 @@ function DayDetailCard({ selectedKey, completed, setCompleted, onGoToToday, card
 function Countdowns({ compact = false }) {
   const races = [
     { label:'MAY 10K', date:'May 24', tgt:'FINISH TIME', metric:'49:45', unit:null, c:'var(--race)' },
-    { label:'AUG HM', date:'Aug 23', tgt:'B · Controlled tune-up', n:DAYS_TO_HM, c:'var(--str)' },
+    { label:'AUG HM', date:'Aug 23', tgt:'FINISH TIME', metric:'1:54', unit:null, c:'var(--str)' },
     { label:'OCT HM', date:'Oct 25', tgt:'A · Sub 1:45 stretch', n:DAYS_TO_OCT_HM, c:'var(--intv)' },
   ];
 
