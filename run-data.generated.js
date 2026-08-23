@@ -1441,10 +1441,10 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "21",
     "dates": "Sep 21–27",
-    "km": 49,
-    "kmLabel": "~49km",
+    "km": 52,
+    "kmLabel": "~52km",
     "phase": "oct-hm-peak",
-    "template": "Cutback",
+    "template": "Cutback + HM",
     "days": [
       {
         "t": "rest",
@@ -1455,13 +1455,13 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
-        "t": "thr",
-        "s": "9 km threshold",
-        "l": "9 km total &mdash; 2 km easy + 20 min threshold + easy to 9 km",
+        "t": "hm",
+        "s": "12 km HM",
+        "l": "2 km easy + 8 km HM + 2 km easy",
         "tags": [
-          "threshold"
+          "hm-specific"
         ],
-        "pace": "4:50&ndash;4:55/km"
+        "pace": "5:03&ndash;5:08/km"
       },
       {
         "t": "easy",
@@ -1511,8 +1511,8 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "22",
     "dates": "Sep 28–Oct 4",
-    "km": 59,
-    "kmLabel": "~59km",
+    "km": 61,
+    "kmLabel": "~61km",
     "phase": "oct-hm-peak",
     "template": "Peak Specific",
     "days": [
@@ -1535,16 +1535,16 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "easy",
-        "s": "9 km easy",
-        "l": "9 km easy",
+        "s": "10 km easy",
+        "l": "10 km easy",
         "tags": [
           "easy"
         ]
       },
       {
         "t": "med",
-        "s": "12 km easy",
-        "l": "12 km easy",
+        "s": "13 km easy",
+        "l": "13 km easy",
         "tags": [
           "medium-long",
           "easy"

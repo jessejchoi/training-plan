@@ -591,17 +591,17 @@ blocks:
         content_html: 7 km recovery
     - week_html: '21'
       dates_html: Sep 21&ndash;27
-      total_km_html: "~49km"
-      template: Cutback
+      total_km_html: "~52km"
+      template: Cutback + HM
       days:
       - type: rest
         tags: [recovery]
         content_html: Rest
-      - type: thr
-        tags: [threshold]
-        label_html: 9 km threshold
-        pace_html: 4:50&ndash;4:55/km
-        content_html: 9 km total &mdash; 2 km easy + 20 min threshold + easy to 9 km
+      - type: hm
+        tags: [hm-specific]
+        label_html: 12 km HM
+        pace_html: 5:03&ndash;5:08/km
+        content_html: 2 km easy + 8 km HM + 2 km easy
       - type: easy
         tags: [easy]
         content_html: 8 km easy
@@ -620,7 +620,7 @@ blocks:
         content_html: 7 km recovery
     - week_html: '22'
       dates_html: Sep 28&ndash;Oct 4
-      total_km_html: "~59km"
+      total_km_html: "~61km"
       template: Peak Specific
       days:
       - type: rest
@@ -633,10 +633,10 @@ blocks:
         content_html: 9 km total &mdash; 2 km easy + 3 x (6 min threshold / 90 sec jog) + easy to 9 km
       - type: easy
         tags: [easy]
-        content_html: 9 km easy
+        content_html: 10 km easy
       - type: med
         tags: [medium-long, easy]
-        content_html: 12 km easy
+        content_html: 13 km easy
       - type: rest
         tags: [recovery]
         content_html: Rest

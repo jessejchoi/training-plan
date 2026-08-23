@@ -693,13 +693,15 @@ const STRENGTH_B = [
 ];
 
 const STRENGTH_TIMING = [
-  ['Monday', 'Rest. Keep it fully restorative unless you only need mobility.'],
-  ['Tuesday', 'Quality run only if using the Thursday/Sunday setup. If the week makes Tuesday the better lift slot, place Workout A after this run.'],
-  ['Wednesday', 'Easy run. No default strength; protect the space between Tuesday quality and Thursday medium-long work.'],
-  ['Thursday', 'Quality or medium-long → Workout A. This is the heavier full-body lift, done after the run and kept clean.'],
-  ['Friday', 'Rest. Keep it free so Saturday long-run quality stays protected.'],
-  ['Saturday', 'Long run only. No strength.'],
-  ['Sunday', 'Recovery run or rest → Workout B. Lighter full-body durability, no grinding, and no soreness chasing.'],
+  ['W17 · Aug 24–30', 'No strength. Post-race recovery and mobility only.'],
+  ['W18 · Aug 31–Sep 6', 'Tuesday: Workout A after threshold, with two sets per lower-body exercise. Sunday: light Workout B after recovery.'],
+  ['W19 · Sep 7–13', 'Tuesday: Workout A after the HM session. Sunday: Workout B after recovery.'],
+  ['W20 · Sep 14–20', 'Tuesday: Workout A after threshold. Sunday: Workout B after recovery.'],
+  ['W21 · Sep 21–27', 'Tuesday: Workout A after the continuous HM session. Sunday: Workout B after recovery.'],
+  ['W22 · Sep 28–Oct 4', 'Tuesday: Workout A after threshold, with lower-body volume reduced 25–30%. Sunday: upper body and core only after the peak long-run weekend.'],
+  ['W23 · Oct 5–11', 'Thursday: Workout A after threshold, with reduced lower-body volume. Sunday: light Workout B after recovery.'],
+  ['W24 · Oct 12–18', 'Tuesday: one short Workout A at 50–60% of normal volume. No Workout B.'],
+  ['W25 · Oct 19–25', 'No strength. Race-week running and recovery only.'],
 ];
 
 function ModeBar({ mode, setMode }) {
@@ -1384,8 +1386,8 @@ function StrengthView() {
 
       <ContentSection
         label="WORKOUT A — HEAVIER FULL BODY"
-        meta="after quality · Thursday default"
-        intro="Heavier full-body strength after quality or controlled medium-long work. Keep the focus on clean force production, low junk volume, and leaving with one to three reps in reserve."
+        meta="after quality · Tuesday default"
+        intro="Heavier full-body strength after the key run. Keep the focus on clean force production, low junk volume, and leaving with one to three reps in reserve."
         accent="var(--str)"
         items={STRENGTH_A}
       />
@@ -1399,12 +1401,12 @@ function StrengthView() {
       />
 
       <TimingSection
-        label="WEEKLY INTEGRATION"
-        meta="fitting strength into the run week"
-        intro="Use Thursday and Sunday as the default pairing: Workout A after the week's quality or controlled medium-long run, Workout B after recovery. If Thursday is too close to a race-specific long run, reduce A or move it to Tuesday."
+        label="BLOCK SCHEDULE"
+        meta="Weeks 17–25 · exact placement"
+        intro="Use Tuesday and Sunday as the default pairing. Run first and lift afterward; separate them by 4–6 hours when practical. Recovery, peak, and taper weeks deliberately reduce strength volume."
         accent="var(--str)"
         rows={STRENGTH_TIMING}
-        footnote="Taper note: in race weeks, keep one short early-week session at most. In the final two weeks before the Oct 25 A race, reduce volume aggressively and avoid heavy lower-body work."
+        footnote="Monday and Friday remain full rest days. Saturday is long-run only. Never force the second lift when soreness would compromise the next key run."
       />
     </div>
   );
