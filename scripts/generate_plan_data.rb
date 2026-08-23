@@ -126,6 +126,7 @@ def serialize_day(day, race_notes = nil)
     "l" => day.fetch("content_html"),
     "tags" => day["tags"],
     "pace" => day["pace_html"],
+    "strength" => day["strength_html"],
     "priority" => day["priority"],
     "raceNotes" => type == "race" ? race_notes : nil
   }.compact

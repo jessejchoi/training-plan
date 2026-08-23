@@ -1249,7 +1249,8 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "threshold"
         ],
-        "pace": "4:50&ndash;4:55/km"
+        "pace": "4:50&ndash;4:55/km",
+        "strength": "Workout A &middot; 2 lower-body sets"
       },
       {
         "t": "easy",
@@ -1292,7 +1293,8 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "easy",
           "recovery"
-        ]
+        ],
+        "strength": "Light Workout B"
       }
     ]
   },
@@ -1319,7 +1321,8 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "hm-specific"
         ],
-        "pace": "5:05&ndash;5:08/km"
+        "pace": "5:05&ndash;5:08/km",
+        "strength": "Workout A"
       },
       {
         "t": "easy",
@@ -1363,7 +1366,8 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "easy",
           "recovery"
-        ]
+        ],
+        "strength": "Workout B"
       }
     ]
   },
@@ -1390,7 +1394,8 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "threshold"
         ],
-        "pace": "4:46&ndash;4:52/km"
+        "pace": "4:46&ndash;4:52/km",
+        "strength": "Workout A"
       },
       {
         "t": "easy",
@@ -1434,7 +1439,8 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "easy",
           "recovery"
-        ]
+        ],
+        "strength": "Workout B"
       }
     ]
   },
@@ -1461,7 +1467,8 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "hm-specific"
         ],
-        "pace": "5:03&ndash;5:08/km"
+        "pace": "5:03&ndash;5:08/km",
+        "strength": "Workout A"
       },
       {
         "t": "easy",
@@ -1504,7 +1511,8 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "easy",
           "recovery"
-        ]
+        ],
+        "strength": "Workout B"
       }
     ]
   },
@@ -1531,7 +1539,8 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "threshold"
         ],
-        "pace": "4:48&ndash;4:53/km"
+        "pace": "4:48&ndash;4:53/km",
+        "strength": "Workout A &middot; reduce lower-body volume 25&ndash;30%"
       },
       {
         "t": "easy",
@@ -1575,7 +1584,8 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "easy",
           "recovery"
-        ]
+        ],
+        "strength": "Workout B &middot; upper body + core only"
       }
     ]
   },
@@ -1618,7 +1628,8 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "threshold"
         ],
-        "pace": "4:46&ndash;4:52/km"
+        "pace": "4:46&ndash;4:52/km",
+        "strength": "Workout A &middot; reduced lower-body volume"
       },
       {
         "t": "rest",
@@ -1645,7 +1656,8 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "easy",
           "recovery"
-        ]
+        ],
+        "strength": "Light Workout B"
       }
     ]
   },
@@ -1672,7 +1684,8 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "hm-specific"
         ],
-        "pace": "Selected race pace"
+        "pace": "Selected race pace",
+        "strength": "Workout A &middot; 50&ndash;60% normal volume"
       },
       {
         "t": "easy",

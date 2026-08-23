@@ -86,3 +86,4 @@
 | 2026-03-18 | Initial design system created | Created by /design-consultation for training-website. Previous design: warm editorial, DM Serif/DM Mono/DM Sans, cream paper. |
 | 2026-08-23 | Deeper cobalt for quality long runs | Separates long runs with faster work from standard easy long runs without introducing another warm intensity color. |
 | 2026-08-23 | Active-block-only run dashboard | Keeps Weeks 17–25 in view, moves race results beneath volume context, and removes the completed phase timeline. |
+| 2026-08-23 | Strength timing lives in the run calendar | A blue grid marker and compact detail badge show combined run-and-lift days; the Strength tab remains the exercise reference. |

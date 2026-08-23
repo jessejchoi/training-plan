@@ -692,18 +692,6 @@ const STRENGTH_B = [
   { name:'Side Plank or Loaded Carry', dose:'2–3 sets', detail:'Finish with lateral trunk control. Keep the body stacked and stop the set before the position starts leaking.', focus:'Lateral core · Hip and trunk control' },
 ];
 
-const STRENGTH_TIMING = [
-  ['W17 · Aug 24–30', 'No strength. Post-race recovery and mobility only.'],
-  ['W18 · Aug 31–Sep 6', 'Tuesday: Workout A after threshold, with two sets per lower-body exercise. Sunday: light Workout B after recovery.'],
-  ['W19 · Sep 7–13', 'Tuesday: Workout A after the HM session. Sunday: Workout B after recovery.'],
-  ['W20 · Sep 14–20', 'Tuesday: Workout A after threshold. Sunday: Workout B after recovery.'],
-  ['W21 · Sep 21–27', 'Tuesday: Workout A after the continuous HM session. Sunday: Workout B after recovery.'],
-  ['W22 · Sep 28–Oct 4', 'Tuesday: Workout A after threshold, with lower-body volume reduced 25–30%. Sunday: upper body and core only after the peak long-run weekend.'],
-  ['W23 · Oct 5–11', 'Thursday: Workout A after threshold, with reduced lower-body volume. Sunday: light Workout B after recovery.'],
-  ['W24 · Oct 12–18', 'Tuesday: one short Workout A at 50–60% of normal volume. No Workout B.'],
-  ['W25 · Oct 19–25', 'No strength. Race-week running and recovery only.'],
-];
-
 function ModeBar({ mode, setMode }) {
   const modes = [
     { k: 'run', label: 'RUN PLAN', c: 'var(--run)' },
@@ -750,6 +738,38 @@ function SectionHead({ label, meta }) {
     }}>
       <span style={{fontFamily:'var(--mono)',fontSize:10,letterSpacing:2,color:'var(--muted)'}}>{label}</span>
       {meta ? <span style={{fontFamily:'var(--mono)',fontSize:9,color:'var(--muted2)'}}>{meta}</span> : null}
+    </div>
+  );
+}
+
+function SessionBadges({ day, marginBottom = 12 }) {
+  if (!day.pace && !day.strength) return null;
+
+  return (
+    <div style={{display:'flex',gap:6,flexWrap:'wrap',marginBottom}}>
+      {day.pace ? (
+        <span style={{
+          border:'1px solid var(--border2)',
+          borderRadius:3,
+          padding:'3px 6px',
+          fontFamily:'var(--mono)',
+          fontSize:9,
+          letterSpacing:1,
+          color:'var(--muted)',
+        }}>PACE · {decodeHtml(day.pace)}</span>
+      ) : null}
+      {day.strength ? (
+        <span style={{
+          border:'1px solid var(--str)',
+          borderRadius:3,
+          padding:'3px 6px',
+          background:'var(--strBg)',
+          fontFamily:'var(--mono)',
+          fontSize:9,
+          letterSpacing:1,
+          color:'var(--str)',
+        }}>STRENGTH · {decodeHtml(day.strength)}</span>
+      ) : null}
     </div>
   );
 }
@@ -812,19 +832,7 @@ function AlternativeDayPlans({ alternatives, dayIndex }) {
             }}>
               {day.t === 'rest' ? 'Rest Day' : day.s}
             </div>
-            {day.pace ? (
-              <div style={{display:'flex',gap:6,flexWrap:'wrap',marginBottom:8}}>
-                <span style={{
-                  border:'1px solid var(--border2)',
-                  borderRadius:3,
-                  padding:'3px 6px',
-                  fontFamily:'var(--mono)',
-                  fontSize:9,
-                  letterSpacing:1,
-                  color:'var(--muted)',
-                }}>PACE · {decodeHtml(day.pace)}</span>
-              </div>
-            ) : null}
+            <SessionBadges day={day} marginBottom={8}/>
             <div style={{display:'flex',flexDirection:'column',gap:5}}>
               {structured.map(item => (
                 <div key={item.label} style={{display:'flex',gap:8,alignItems:'baseline',fontSize:12.5,color:'var(--muted)',lineHeight:1.5}}>
@@ -915,19 +923,7 @@ function DayDetailCard({ selectedKey, completed, setCompleted, onGoToToday, card
         {session.week.dates}{session.week.template ? ` · Template ${session.week.template}` : ''}
       </div>
 
-      {session.day.pace ? (
-        <div style={{display:'flex',gap:6,flexWrap:'wrap',marginBottom:12}}>
-          <span style={{
-            border:'1px solid var(--border2)',
-            borderRadius:3,
-            padding:'3px 6px',
-            fontFamily:'var(--mono)',
-            fontSize:9,
-            letterSpacing:1,
-            color:'var(--muted)',
-          }}>PACE · {decodeHtml(session.day.pace)}</span>
-        </div>
-      ) : null}
+      <SessionBadges day={session.day}/>
 
       <div style={{display:'flex',flexDirection:'column',gap:6,marginBottom:14}}>
         {structured.map(item => (
@@ -1164,7 +1160,7 @@ function WeeklyGrid({ completed, selectedKey, setSelectedKey, isWide }) {
   };
   return (
     <div>
-      <SectionHead label="WEEKS 17–25 · 9 WEEKS × 7 DAYS" meta="tap a day to load the detail card"/>
+      <SectionHead label="WEEKS 17–25 · 9 WEEKS × 7 DAYS" meta="tap a day · blue dot = strength"/>
       <div style={{
         display:'grid',
         gridTemplateColumns:columns,
@@ -1224,9 +1220,10 @@ function WeeklyGrid({ completed, selectedKey, setSelectedKey, isWide }) {
                 const isDone = !!completed[key];
                 const dayOpacity = day.t === 'rest' ? 1 : (isDone ? 0.35 : 0.88);
                 return (
-                  <button key={key} onClick={() => setSelectedKey(key)} title={`${DAY_ABBR[dayIndex]}: ${day.s}`} style={{
+                  <button key={key} onClick={() => setSelectedKey(key)} title={`${DAY_ABBR[dayIndex]}: ${day.s}${day.strength ? ` + ${decodeHtml(day.strength)}` : ''}`} style={{
                     height:20,
                     padding:0,
+                    position:'relative',
                     background:day.t === 'rest' ? 'var(--surf)' : meta.color,
                     opacity:dayOpacity * rowOpacity,
                     border:isSelected ? '2px solid var(--text)' : '1px solid var(--border2)',
@@ -1238,6 +1235,18 @@ function WeeklyGrid({ completed, selectedKey, setSelectedKey, isWide }) {
                     lineHeight:1,
                   }}>
                     {isDone ? '✓' : GLYPH[day.t]}
+                    {day.strength ? (
+                      <span aria-hidden="true" style={{
+                        position:'absolute',
+                        top:1,
+                        right:1,
+                        width:4,
+                        height:4,
+                        borderRadius:'50%',
+                        background:'var(--str)',
+                        boxShadow:'0 0 0 1px var(--bg)',
+                      }}/>
+                    ) : null}
                   </button>
                 );
               })}
@@ -1386,7 +1395,7 @@ function StrengthView() {
 
       <ContentSection
         label="WORKOUT A — HEAVIER FULL BODY"
-        meta="after quality · Tuesday default"
+        meta="scheduled in run calendar"
         intro="Heavier full-body strength after the key run. Keep the focus on clean force production, low junk volume, and leaving with one to three reps in reserve."
         accent="var(--str)"
         items={STRENGTH_A}
@@ -1394,20 +1403,12 @@ function StrengthView() {
 
       <ContentSection
         label="WORKOUT B — LIGHTER FULL BODY"
-        meta="after rest or recovery · Sunday default"
+        meta="scheduled in run calendar"
         intro="Lighter full-body durability after a rest or recovery day. Move well, keep the legs springy, and skip lower-body compounds when Saturday carried a hard steady or HM-specific finish."
         accent="var(--str)"
         items={STRENGTH_B}
       />
 
-      <TimingSection
-        label="BLOCK SCHEDULE"
-        meta="Weeks 17–25 · exact placement"
-        intro="Use Tuesday and Sunday as the default pairing. Run first and lift afterward; separate them by 4–6 hours when practical. Recovery, peak, and taper weeks deliberately reduce strength volume."
-        accent="var(--str)"
-        rows={STRENGTH_TIMING}
-        footnote="Monday and Friday remain full rest days. Saturday is long-run only. Never force the second lift when soreness would compromise the next key run."
-      />
     </div>
   );
 }
