@@ -1723,7 +1723,7 @@ window.RUN_PLAN_WEEKS = [
     "id": "25",
     "dates": "Oct 19–25",
     "km": 42,
-    "kmLabel": "~42km incl. race",
+    "kmLabel": "~42km",
     "phase": "oct-hm-peak",
     "template": "Race",
     "race": true,

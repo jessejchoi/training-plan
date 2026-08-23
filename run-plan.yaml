@@ -709,7 +709,7 @@ blocks:
         content_html: 5 km recovery
     - week_html: '25'
       dates_html: Oct 19&ndash;25
-      total_km_html: "~42km incl. race"
+      total_km_html: "~42km"
       template: Race
       race_notes_html: "Km 1&ndash;3: selected pace + 3&ndash;5 sec/km. Km 4&ndash;15: selected pace. Km 16&ndash;finish: race by effort."
       days:
