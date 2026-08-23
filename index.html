@@ -15,6 +15,7 @@
     --med:#67e8f9; --medBg:#071b1f;
     --mob:#ffa94d; --mobBg:#1e1408; --mobDim:#4a3010;
     --str:#5ab0f5; --strBg:#0a1824; --strDim:#0e2840;
+    --longQ:#4f7fd6; --longQBg:#0a1324;
     --rec:#a99bff; --recBg:#0f0e1f;
     --thr:#ffa94d;
     --race:#ff6b6b; --raceBg:#1f0a0a;
@@ -44,7 +45,7 @@ const { WEEKS, PHASES, DAY_TYPES, DAY_ABBR, TODAY_WEEK_ID, TODAY_DAY_INDEX,
         DAYS_TO_MAY_10K, DAYS_TO_HM, DAYS_TO_OCT_HM, getTodayWeek, getTodayDay } = window;
 
 const TODAY_KEY = `${TODAY_WEEK_ID}-${TODAY_DAY_INDEX}`;
-const GLYPH = { rest:'·', easy:'E', rec:'R', intv:'I', thr:'T', med:'M', steady:'M', hm:'H', shake:'R', lng:'L', race:'★' };
+const GLYPH = { rest:'·', easy:'E', rec:'R', intv:'I', thr:'T', med:'M', steady:'M', hm:'H', shake:'R', lng:'L', qlng:'L+', race:'★' };
 const MAX_WEEK_KM = Math.ceil(Math.max(1, ...WEEKS.map(w => w.km)));
 const DEFAULT_WEIGHT_KG = '75';
 

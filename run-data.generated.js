@@ -490,7 +490,7 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
-        "t": "lng",
+        "t": "qlng",
         "s": "Long 105-110 min with last 20-25 min steady",
         "l": "Long 105&ndash;110 min with last 20&ndash;25 min steady @ 5:25&ndash;5:50/km",
         "tags": [
@@ -703,7 +703,7 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
-        "t": "lng",
+        "t": "qlng",
         "s": "Long 100-105 min easy; optional last 15-20 min steady only if smooth",
         "l": "Long 100&ndash;105 min easy; optional last 15&ndash;20 min steady only if smooth",
         "tags": [
@@ -850,7 +850,7 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
-        "t": "lng",
+        "t": "qlng",
         "s": "Long 110 min, last 30 min steady",
         "l": "Long 110 min, last 30 min steady @ 5:25&ndash;5:50/km",
         "tags": [
@@ -992,7 +992,7 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
-        "t": "lng",
+        "t": "qlng",
         "s": "Long 18-19 km with last 8-10 km continuous",
         "l": "Long 18&ndash;19 km with last 8&ndash;10 km continuous @ 5:03&ndash;5:10/km. Use effort if heat is heavy.",
         "tags": [
@@ -1245,7 +1245,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "thr",
         "s": "10 km threshold",
-        "l": "2 km easy + 3 x (1.6 km threshold / 400 m jog) + 2 km easy",
+        "l": "10 km total &mdash; 2 km easy + 3 x (8 min threshold / 2 min jog) + easy to 10 km",
         "tags": [
           "threshold"
         ],
@@ -1386,7 +1386,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "thr",
         "s": "11 km threshold",
-        "l": "2.5 km easy + 3 x (1.6 km threshold / 400 m jog) + 2.5 km easy",
+        "l": "11 km total &mdash; 2.5 km easy + 3 x (8 min threshold / 2 min jog) + easy to 11 km",
         "tags": [
           "threshold"
         ],
@@ -1418,7 +1418,7 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
-        "t": "lng",
+        "t": "qlng",
         "s": "17 km HM finish",
         "l": "12 km easy + 5 km HM",
         "tags": [
@@ -1457,7 +1457,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "thr",
         "s": "9 km threshold",
-        "l": "2 km easy + 4 km threshold + 3 km easy",
+        "l": "9 km total &mdash; 2 km easy + 20 min threshold + easy to 9 km",
         "tags": [
           "threshold"
         ],
@@ -1527,7 +1527,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "thr",
         "s": "9 km threshold",
-        "l": "2 km easy + 3 x (1.2 km threshold / 300 m jog) + 2.5 km easy",
+        "l": "9 km total &mdash; 2 km easy + 3 x (6 min threshold / 90 sec jog) + easy to 9 km",
         "tags": [
           "threshold"
         ],
@@ -1559,7 +1559,7 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
-        "t": "lng",
+        "t": "qlng",
         "s": "22 km HM finish",
         "l": "12 km easy + 10 km HM",
         "tags": [
@@ -1614,7 +1614,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "thr",
         "s": "12 km threshold",
-        "l": "3 km easy + 3 x (1.6 km threshold / 400 m jog) + 3 km easy",
+        "l": "12 km total &mdash; 3 km easy + 3 x (8 min threshold / 2 min jog) + easy to 12 km",
         "tags": [
           "threshold"
         ],
@@ -1629,7 +1629,7 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
-        "t": "lng",
+        "t": "qlng",
         "s": "18 km steady finish",
         "l": "14.5 km easy + 3.5 km steady",
         "tags": [

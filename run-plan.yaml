@@ -511,7 +511,7 @@ blocks:
         tags: [threshold]
         label_html: 10 km threshold
         pace_html: 4:50&ndash;4:55/km
-        content_html: 2 km easy + 3 x (1.6 km threshold / 400 m jog) + 2 km easy
+        content_html: 10 km total &mdash; 2 km easy + 3 x (8 min threshold / 2 min jog) + easy to 10 km
       - type: easy
         tags: [easy]
         content_html: 8 km easy
@@ -570,7 +570,7 @@ blocks:
         tags: [threshold]
         label_html: 11 km threshold
         pace_html: 4:46&ndash;4:52/km
-        content_html: 2.5 km easy + 3 x (1.6 km threshold / 400 m jog) + 2.5 km easy
+        content_html: 11 km total &mdash; 2.5 km easy + 3 x (8 min threshold / 2 min jog) + easy to 11 km
       - type: easy
         tags: [easy]
         content_html: 9 km easy
@@ -601,7 +601,7 @@ blocks:
         tags: [threshold]
         label_html: 9 km threshold
         pace_html: 4:50&ndash;4:55/km
-        content_html: 2 km easy + 4 km threshold + 3 km easy
+        content_html: 9 km total &mdash; 2 km easy + 20 min threshold + easy to 9 km
       - type: easy
         tags: [easy]
         content_html: 8 km easy
@@ -630,7 +630,7 @@ blocks:
         tags: [threshold]
         label_html: 9 km threshold
         pace_html: 4:48&ndash;4:53/km
-        content_html: 2 km easy + 3 x (1.2 km threshold / 300 m jog) + 2.5 km easy
+        content_html: 9 km total &mdash; 2 km easy + 3 x (6 min threshold / 90 sec jog) + easy to 9 km
       - type: easy
         tags: [easy]
         content_html: 9 km easy
@@ -666,7 +666,7 @@ blocks:
         tags: [threshold]
         label_html: 12 km threshold
         pace_html: 4:46&ndash;4:52/km
-        content_html: 3 km easy + 3 x (1.6 km threshold / 400 m jog) + 3 km easy
+        content_html: 12 km total &mdash; 3 km easy + 3 x (8 min threshold / 2 min jog) + easy to 12 km
       - type: rest
         tags: [recovery]
         content_html: Rest

@@ -28,6 +28,8 @@ const T = {
   str: '#5ab0f5',
   strBg: '#0a1824',
   strDim: '#0e2840',
+  longQ: '#4f7fd6',
+  longQBg: '#0a1324',
   rec: '#a99bff',
   recBg: '#0f0e1f',
   thr: '#ffa94d',
@@ -51,6 +53,7 @@ const DAY_TYPES = {
   hm:   { label: 'HM-SPECIFIC', color: T.hm, bg: T.raceBg },
   shake: { label: 'RECOVERY', color: T.rec, bg: T.recBg },
   lng:  { label: 'LONG', color: T.str, bg: T.strBg },
+  qlng: { label: 'QUALITY LONG', color: T.longQ, bg: T.longQBg },
   race: { label: 'RACE', color: T.race, bg: T.raceBg },
 };
 

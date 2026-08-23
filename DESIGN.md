@@ -42,6 +42,7 @@
 - **Run / Green:** `#4eff91` — electric green, codes as GPS lock / race-day visibility. Backgrounds: `#0e1f14`. Dim: `#1a4a2e`.
 - **Mobility / Amber:** `#ffa94d` — warm amber, kept from original but sharpened. Backgrounds: `#1e1408`. Dim: `#4a3010`.
 - **Strength / Blue:** `#5ab0f5` — steel blue, kept from original but cooled. Backgrounds: `#0a1824`. Dim: `#0e2840`.
+- **Quality long / Cobalt:** `#4f7fd6` — deeper blue reserved for long runs containing HM-pace, steady, or threshold work. Background: `#0a1324`.
 
 ### Semantic
 - **Success:** `#4eff91` (same as run accent)
@@ -83,3 +84,4 @@
 | 2026-03-18 | Electric green (#4eff91) as run accent | Codes as GPS signal / race-day visibility gear. Not a lifestyle brand color. |
 | 2026-03-18 | Small border radius (3–6px) | Sharp edges suit the terminal aesthetic. Rounded cards would fight the precision of the design. |
 | 2026-03-18 | Initial design system created | Created by /design-consultation for training-website. Previous design: warm editorial, DM Serif/DM Mono/DM Sans, cream paper. |
+| 2026-08-23 | Deeper cobalt for quality long runs | Separates long runs with faster work from standard easy long runs without introducing another warm intensity color. |

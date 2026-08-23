@@ -24,6 +24,7 @@ TYPE_SUFFIX = {
   "rec" => "rec",
   "easy" => "",
   "lng" => "long",
+  "qlng" => "long+",
   "med" => "med",
   "steady" => "med",
   "hm" => "HM",
@@ -31,6 +32,8 @@ TYPE_SUFFIX = {
   "rest" => "",
   "race" => ""
 }.freeze
+
+QUALITY_LONG_TAGS = %w[hm-specific steady threshold].freeze
 
 def plain_html(value)
   value.to_s
@@ -110,14 +113,21 @@ def race_label(text)
 end
 
 def serialize_day(day, race_notes = nil)
+  type = day.fetch("type")
+  display_type = if type == "lng" && (Array(day["tags"]) & QUALITY_LONG_TAGS).any?
+                   "qlng"
+                 else
+                   type
+                 end
+
   {
-    "t" => day.fetch("type"),
+    "t" => display_type,
     "s" => short_label(day),
     "l" => day.fetch("content_html"),
     "tags" => day["tags"],
     "pace" => day["pace_html"],
     "priority" => day["priority"],
-    "raceNotes" => day.fetch("type") == "race" ? race_notes : nil
+    "raceNotes" => type == "race" ? race_notes : nil
   }.compact
 end
 
