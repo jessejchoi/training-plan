@@ -32,9 +32,6 @@ TYPE_SUFFIX = {
   "race" => ""
 }.freeze
 
-QUALITY_TAGS = %w[threshold 10k-specific hm-specific steady].freeze
-QUALITY_TYPES = %w[intv thr hm steady].freeze
-
 def plain_html(value)
   value.to_s
        .gsub(/<br\s*\/?>/i, "\n")
@@ -66,6 +63,7 @@ def short_label(day)
   text = plain_html(day.fetch("content_html"))
   first_line = plain_html(day.fetch("content_html").to_s.split(/<br\s*\/?>/i).first)
 
+  return plain_html(day["label_html"]) if day["label_html"]
   return "Rest" if type == "rest"
   return race_label(text) if type == "race"
 
@@ -111,53 +109,11 @@ def race_label(text)
   "Race"
 end
 
-def quality_day?(day)
-  return false if %w[race rest easy rec shake].include?(day.fetch("type"))
-
-  tags = Array(day["tags"])
-  QUALITY_TYPES.include?(day.fetch("type")) || (tags & QUALITY_TAGS).any?
-end
-
-def warmup_for(day)
-  type = day.fetch("type")
-  tags = Array(day["tags"])
-
-  return "First 20&ndash;30 min easy before the prescribed long-run quality." if type == "lng"
-  return "15&ndash;20 min easy before progressing into the steady work." if type == "med" || type == "steady"
-  return "15&ndash;20 min easy + drills + 4 relaxed strides." if type == "intv" || tags.include?("10k-specific")
-
-  "15&ndash;20 min easy + 3&ndash;4 relaxed strides."
-end
-
-def cooldown_for(day)
-  type = day.fetch("type")
-  text = plain_html(day.fetch("content_html"))
-
-  if type == "lng" && text.match?(/\b(last|final)\b/i)
-    return "Optional 5&ndash;10 min very easy after the prescribed time if you need to downshift."
-  end
-
-  return "5&ndash;10 min easy at the end." if type == "med" || type == "steady"
-
-  "10&ndash;15 min easy."
-end
-
-def detail_html(day)
-  return day.fetch("content_html") unless quality_day?(day)
-  return day.fetch("content_html") if day.fetch("content_html").match?(/\AWU:/i)
-
-  [
-    "WU: #{warmup_for(day)}",
-    "Session: #{day.fetch("content_html")}",
-    "CD: #{cooldown_for(day)}"
-  ].join("<br>")
-end
-
 def serialize_day(day, race_notes = nil)
   {
     "t" => day.fetch("type"),
     "s" => short_label(day),
-    "l" => detail_html(day),
+    "l" => day.fetch("content_html"),
     "tags" => day["tags"],
     "pace" => day["pace_html"],
     "priority" => day["priority"],

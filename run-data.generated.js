@@ -1,7 +1,7 @@
 // Generated from run-plan.yaml by scripts/generate_plan_data.rb.
 // Do not edit by hand.
 window.RUN_PLAN_META = {
-  "planNote": "Weeks 6&ndash;25 use five runs per week by default with Monday and Friday fixed as rest days, Tuesday as the main quality day, Thursday as medium-long or second controlled quality, Saturday as long run or pre-race shakeout, and Sunday as recovery except fixed Sunday race dates. The July 12 10K is confirmed off the calendar, so that window now stays on the smoother HM-building path. The Aug 23 half marathon is a controlled B-race tune-up. Oct 25 is the A half marathon, with 1:48 as the primary target. The post-Aug 23 block adds steady-finish long runs in Weeks 19 and 20, keeps Week 22 as the only peak HM-specific continuous-finish long run, and uses heat-aware effort first in Jakarta conditions."
+  "planNote": "Weeks 18&ndash;25 use five runs with Monday and Friday rest. Week 17 is a four-run recovery week. AQI above 100: quality and long runs indoors. AQI above 150: all runs indoors."
 };
 window.RUN_PLAN_WEEKS = [
   {
@@ -48,7 +48,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "thr",
         "s": "3 x 10 min threshold",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 10 min threshold @ ~4:50&ndash;4:58/km, 3 min jog recovery<br>CD: 10&ndash;15 min easy.",
+        "l": "3 x 10 min threshold @ ~4:50&ndash;4:58/km, 3 min jog recovery",
         "tags": [
           "threshold"
         ],
@@ -96,7 +96,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "med",
         "s": "Medium-long 60-70 min, mostly easy; optional last 15-20 min steady if legs feel good",
-        "l": "WU: 15&ndash;20 min easy before progressing into the steady work.<br>Session: Medium-long 60&ndash;70 min, mostly easy; optional last 15&ndash;20 min steady if legs feel good<br>CD: 5&ndash;10 min easy at the end.",
+        "l": "Medium-long 60&ndash;70 min, mostly easy; optional last 15&ndash;20 min steady if legs feel good",
         "tags": [
           "medium-long",
           "steady"
@@ -170,7 +170,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "intv",
         "s": "3 x 1 km",
-        "l": "WU: 15&ndash;20 min easy + drills + 4 relaxed strides.<br>Session: 3 x 1 km @ controlled 10K effort, ~4:43&ndash;4:50/km, 2&ndash;3 min jog. Optional 4 x 200m relaxed-fast if springy; stop while it still feels repeatable.<br>CD: 10&ndash;15 min easy.",
+        "l": "3 x 1 km @ controlled 10K effort, ~4:43&ndash;4:50/km, 2&ndash;3 min jog. Optional 4 x 200m relaxed-fast if springy; stop while it still feels repeatable.",
         "tags": [
           "10k-specific",
           "strides"
@@ -263,7 +263,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "thr",
         "s": "3 x 2 km threshold",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 2 km threshold @ 4:50&ndash;4:58/km, 2&ndash;3 min jog<br>CD: 10&ndash;15 min easy.",
+        "l": "3 x 2 km threshold @ 4:50&ndash;4:58/km, 2&ndash;3 min jog",
         "tags": [
           "threshold"
         ],
@@ -316,7 +316,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "thr",
         "s": "25-30 min continuous threshold",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 25&ndash;30 min continuous threshold @ 4:55&ndash;5:03/km<br>CD: 10&ndash;15 min easy.",
+        "l": "25&ndash;30 min continuous threshold @ 4:55&ndash;5:03/km",
         "tags": [
           "threshold"
         ],
@@ -386,7 +386,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "thr",
         "s": "3 x 12 min threshold",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 12 min threshold @ 4:50&ndash;4:58/km, 3 min jog between reps<br>CD: 10&ndash;15 min easy.",
+        "l": "3 x 12 min threshold @ 4:50&ndash;4:58/km, 3 min jog between reps",
         "tags": [
           "threshold"
         ],
@@ -403,7 +403,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "med",
         "s": "Medium-long 80 min easy; last 15-20 min light steady only if smooth",
-        "l": "WU: 15&ndash;20 min easy before progressing into the steady work.<br>Session: Medium-long 80 min easy; last 15&ndash;20 min light steady only if smooth<br>CD: 5&ndash;10 min easy at the end.",
+        "l": "Medium-long 80 min easy; last 15&ndash;20 min light steady only if smooth",
         "tags": [
           "medium-long",
           "steady"
@@ -458,7 +458,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "intv",
         "s": "5 x 3 min",
-        "l": "WU: 15&ndash;20 min easy + drills + 4 relaxed strides.<br>Session: 5 x 3 min @ ~4:28&ndash;4:38/km effort, 2.5&ndash;3 min easy jog; smooth and capped<br>CD: 10&ndash;15 min easy.",
+        "l": "5 x 3 min @ ~4:28&ndash;4:38/km effort, 2.5&ndash;3 min easy jog; smooth and capped",
         "tags": [
           "vo2max"
         ],
@@ -492,7 +492,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "lng",
         "s": "Long 105-110 min with last 20-25 min steady",
-        "l": "WU: First 20&ndash;30 min easy before the prescribed long-run quality.<br>Session: Long 105&ndash;110 min with last 20&ndash;25 min steady @ 5:25&ndash;5:50/km<br>CD: Optional 5&ndash;10 min very easy after the prescribed time if you need to downshift.",
+        "l": "Long 105&ndash;110 min with last 20&ndash;25 min steady @ 5:25&ndash;5:50/km",
         "tags": [
           "long-run",
           "steady"
@@ -600,7 +600,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "intv",
         "s": "5 x 1 km",
-        "l": "WU: 15&ndash;20 min easy + drills + 4 relaxed strides.<br>Session: 5 x 1 km @ 4:43&ndash;4:50/km, 2 min jog<br>CD: 10&ndash;15 min easy.",
+        "l": "5 x 1 km @ 4:43&ndash;4:50/km, 2 min jog",
         "tags": [
           "10k-specific"
         ],
@@ -617,7 +617,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "thr",
         "s": "3 x 10 min threshold",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 10 min threshold @ 4:50&ndash;4:58/km<br>CD: 10&ndash;15 min easy.",
+        "l": "3 x 10 min threshold @ 4:50&ndash;4:58/km",
         "tags": [
           "threshold"
         ],
@@ -671,7 +671,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "thr",
         "s": "4 x 8 min threshold",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 4 x 8 min threshold @ 4:50&ndash;4:58/km, controlled<br>CD: 10&ndash;15 min easy.",
+        "l": "4 x 8 min threshold @ 4:50&ndash;4:58/km, controlled",
         "tags": [
           "threshold"
         ],
@@ -705,7 +705,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "lng",
         "s": "Long 100-105 min easy; optional last 15-20 min steady only if smooth",
-        "l": "WU: First 20&ndash;30 min easy before the prescribed long-run quality.<br>Session: Long 100&ndash;105 min easy; optional last 15&ndash;20 min steady only if smooth<br>CD: Optional 5&ndash;10 min very easy after the prescribed time if you need to downshift.",
+        "l": "Long 100&ndash;105 min easy; optional last 15&ndash;20 min steady only if smooth",
         "tags": [
           "long-run",
           "steady"
@@ -754,7 +754,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "thr",
         "s": "3 x 12 min threshold",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 12 min threshold @ 4:50&ndash;4:58/km, 3 min jog between reps. Controlled, not a test.<br>CD: 10&ndash;15 min easy.",
+        "l": "3 x 12 min threshold @ 4:50&ndash;4:58/km, 3 min jog between reps. Controlled, not a test.",
         "tags": [
           "threshold"
         ],
@@ -763,7 +763,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "med",
         "s": "Medium-long 80 min easy; optional final 10 min light steady",
-        "l": "WU: 15&ndash;20 min easy before progressing into the steady work.<br>Session: Medium-long 80 min easy; optional final 10 min light steady @ ~5:35&ndash;5:50/km only if smooth<br>CD: 5&ndash;10 min easy at the end.",
+        "l": "Medium-long 80 min easy; optional final 10 min light steady @ ~5:35&ndash;5:50/km only if smooth",
         "tags": [
           "medium-long",
           "steady"
@@ -817,7 +817,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "thr",
         "s": "45 min progression",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 45 min progression @ 15 min steady 5:25&ndash;5:50/km, 15 min strong steady 5:15&ndash;5:30/km, 15 min controlled threshold 4:55&ndash;5:03/km<br>CD: 10&ndash;15 min easy.",
+        "l": "45 min progression @ 15 min steady 5:25&ndash;5:50/km, 15 min strong steady 5:15&ndash;5:30/km, 15 min controlled threshold 4:55&ndash;5:03/km",
         "tags": [
           "threshold",
           "steady"
@@ -852,7 +852,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "lng",
         "s": "Long 110 min, last 30 min steady",
-        "l": "WU: First 20&ndash;30 min easy before the prescribed long-run quality.<br>Session: Long 110 min, last 30 min steady @ 5:25&ndash;5:50/km<br>CD: Optional 5&ndash;10 min very easy after the prescribed time if you need to downshift.",
+        "l": "Long 110 min, last 30 min steady @ 5:25&ndash;5:50/km",
         "tags": [
           "long-run",
           "steady"
@@ -889,7 +889,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "intv",
         "s": "5 x 1 km",
-        "l": "WU: 15&ndash;20 min easy + drills + 4 relaxed strides.<br>Session: 5 x 1 km @ 4:43&ndash;4:50/km, controlled, 2 min jog<br>CD: 10&ndash;15 min easy.",
+        "l": "5 x 1 km @ 4:43&ndash;4:50/km, controlled, 2 min jog",
         "tags": [
           "10k-specific"
         ],
@@ -906,7 +906,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "hm",
         "s": "2 x 20 min HM/threshold",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 20 min HM/threshold @ 12 min HM rhythm 5:03&ndash;5:10/km, then 8 min controlled threshold 4:50&ndash;4:58/km; 4 min jog between reps<br>CD: 10&ndash;15 min easy.",
+        "l": "2 x 20 min HM/threshold @ 12 min HM rhythm 5:03&ndash;5:10/km, then 8 min controlled threshold 4:50&ndash;4:58/km; 4 min jog between reps",
         "tags": [
           "hm-specific"
         ],
@@ -960,7 +960,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "hm",
         "s": "2 x 3 km HM effort",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 3 km HM effort @ 5:03&ndash;5:10/km, 3 min jog<br>CD: 10&ndash;15 min easy.",
+        "l": "2 x 3 km HM effort @ 5:03&ndash;5:10/km, 3 min jog",
         "tags": [
           "hm-specific"
         ],
@@ -994,7 +994,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "lng",
         "s": "Long 18-19 km with last 8-10 km continuous",
-        "l": "WU: First 20&ndash;30 min easy before the prescribed long-run quality.<br>Session: Long 18&ndash;19 km with last 8&ndash;10 km continuous @ 5:03&ndash;5:10/km. Use effort if heat is heavy.<br>CD: Optional 5&ndash;10 min very easy after the prescribed time if you need to downshift.",
+        "l": "Long 18&ndash;19 km with last 8&ndash;10 km continuous @ 5:03&ndash;5:10/km. Use effort if heat is heavy.",
         "tags": [
           "long-run",
           "hm-specific"
@@ -1032,7 +1032,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "hm",
         "s": "2 x 4 km HM work",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 4 km HM work @ 5:03&ndash;5:10/km, 5 min easy between<br>CD: 10&ndash;15 min easy.",
+        "l": "2 x 4 km HM work @ 5:03&ndash;5:10/km, 5 min easy between",
         "tags": [
           "hm-specific"
         ],
@@ -1103,7 +1103,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "hm",
         "s": "3 x 2 km",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 2 km @ 5:03&ndash;5:10/km, 3 min jog; should feel controlled, not like a test<br>CD: 10&ndash;15 min easy.",
+        "l": "3 x 2 km @ 5:03&ndash;5:10/km, 3 min jog; should feel controlled, not like a test",
         "tags": [
           "hm-specific"
         ],
@@ -1160,11 +1160,10 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "17",
     "dates": "Aug 24–30",
-    "km": 37,
-    "kmLabel": "~34–40km",
+    "km": 27,
+    "kmLabel": "~27km",
     "phase": "oct-hm-peak",
-    "template": "Post-HM Recovery",
-    "notes": "Keep the five-day rhythm after the Aug 23 HM, but remove all workouts. Drop Sunday if the HM was harder than planned or soreness changes mechanics.",
+    "template": "Recovery",
     "days": [
       {
         "t": "rest",
@@ -1175,28 +1174,28 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
-        "t": "easy",
-        "s": "Easy 35-45 min",
-        "l": "Easy 35&ndash;45 min",
+        "t": "rest",
+        "s": "Rest",
+        "l": "Rest",
         "tags": [
-          "easy"
+          "recovery"
         ]
       },
       {
-        "t": "easy",
-        "s": "Easy 40-45 min",
-        "l": "Easy 40&ndash;45 min",
-        "tags": [
-          "easy"
-        ]
-      },
-      {
-        "t": "easy",
-        "s": "Easy 45 min + 4 relaxed strides",
-        "l": "Easy 45 min + 4 relaxed strides",
+        "t": "rec",
+        "s": "5 km recovery",
+        "l": "5 km recovery",
         "tags": [
           "easy",
-          "strides"
+          "recovery"
+        ]
+      },
+      {
+        "t": "easy",
+        "s": "7 km easy",
+        "l": "7 km easy",
+        "tags": [
+          "easy"
         ]
       },
       {
@@ -1209,8 +1208,8 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "lng",
-        "s": "Long 75-85 min easy",
-        "l": "Long 75&ndash;85 min easy",
+        "s": "10 km easy",
+        "l": "10 km easy",
         "tags": [
           "long-run",
           "easy"
@@ -1218,8 +1217,8 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "rec",
-        "s": "Recovery 30-40 min",
-        "l": "Recovery 30&ndash;40 min",
+        "s": "5 km recovery",
+        "l": "5 km recovery",
         "tags": [
           "easy",
           "recovery"
@@ -1230,11 +1229,10 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "18",
     "dates": "Aug 31–Sep 6",
-    "km": 47.5,
-    "kmLabel": "~45–50km",
+    "km": 48,
+    "kmLabel": "~48km",
     "phase": "oct-hm-peak",
-    "template": "HM Re-Entry",
-    "notes": "Full rest Monday after the post-HM recovery week. Re-enter the Oct HM build with one controlled threshold session, not two quality days.",
+    "template": "Re-entry",
     "days": [
       {
         "t": "rest",
@@ -1245,29 +1243,30 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
-        "t": "easy",
-        "s": "Easy 45 min",
-        "l": "Easy 45 min",
-        "tags": [
-          "easy"
-        ]
-      },
-      {
-        "t": "easy",
-        "s": "Easy 45-50 min",
-        "l": "Easy 45&ndash;50 min",
-        "tags": [
-          "easy"
-        ]
-      },
-      {
         "t": "thr",
-        "s": "3 x 10 min threshold",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 10 min threshold @ 4:50&ndash;4:58/km, controlled<br>CD: 10&ndash;15 min easy.",
+        "s": "10 km threshold",
+        "l": "2 km easy + 3 x (1.6 km threshold / 400 m jog) + 2 km easy",
         "tags": [
           "threshold"
         ],
-        "pace": "4:50&ndash;4:58/km"
+        "pace": "4:50&ndash;4:55/km"
+      },
+      {
+        "t": "easy",
+        "s": "8 km easy",
+        "l": "8 km easy",
+        "tags": [
+          "easy"
+        ]
+      },
+      {
+        "t": "easy",
+        "s": "10 km + strides",
+        "l": "8 km easy + 4 x (100 m stride / 100 m jog) + 1.2 km easy",
+        "tags": [
+          "easy",
+          "strides"
+        ]
       },
       {
         "t": "rest",
@@ -1279,8 +1278,8 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "lng",
-        "s": "Long 90-95 min easy",
-        "l": "Long 90&ndash;95 min easy",
+        "s": "14 km easy",
+        "l": "14 km easy",
         "tags": [
           "long-run",
           "easy"
@@ -1288,8 +1287,8 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "rec",
-        "s": "Recovery 35-45 min",
-        "l": "Recovery 35&ndash;45 min",
+        "s": "6 km recovery",
+        "l": "6 km recovery",
         "tags": [
           "easy",
           "recovery"
@@ -1300,11 +1299,10 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "19",
     "dates": "Sep 7–13",
-    "km": 56,
-    "kmLabel": "~54–58km",
+    "km": 52,
+    "kmLabel": "~52km",
     "phase": "oct-hm-peak",
-    "template": "VO2 + Steady Finish",
-    "notes": "Second and final VO2 touch of the plan, paired with a steady-finish long run instead of a second formal workout. If Aug 23 was harder than planned, downgrade Saturday to easy.",
+    "template": "HM Rhythm",
     "days": [
       {
         "t": "rest",
@@ -1315,30 +1313,31 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
-        "t": "intv",
-        "s": "4 x 1 km",
-        "l": "WU: 15&ndash;20 min easy + drills + 4 relaxed strides.<br>Session: 4 x 1 km @ ~4:28&ndash;4:38/km, 3 min easy jog; controlled, not a time trial<br>CD: 10&ndash;15 min easy.",
+        "t": "hm",
+        "s": "12 km HM",
+        "l": "3 km easy + 6 km HM + 3 km easy",
         "tags": [
-          "vo2max"
+          "hm-specific"
         ],
-        "pace": "4:28&ndash;4:38/km effort, full recovery"
+        "pace": "5:05&ndash;5:08/km"
       },
       {
         "t": "easy",
-        "s": "Easy 45 min",
-        "l": "Easy 45 min",
+        "s": "8 km easy",
+        "l": "8 km easy",
         "tags": [
           "easy"
         ]
       },
       {
         "t": "med",
-        "s": "Medium-long 70-75 min easy",
-        "l": "Medium-long 70&ndash;75 min easy",
+        "s": "11 km steady",
+        "l": "7.5 km easy + 3.5 km steady",
         "tags": [
           "medium-long",
-          "easy"
-        ]
+          "steady"
+        ],
+        "pace": "Steady 5:25&ndash;5:40/km"
       },
       {
         "t": "rest",
@@ -1350,18 +1349,17 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "lng",
-        "s": "Long 105-110 min with last 20-25 min steady",
-        "l": "WU: First 20&ndash;30 min easy before the prescribed long-run quality.<br>Session: Long 105&ndash;110 min with last 20&ndash;25 min steady @ ~5:25&ndash;5:50/km<br>CD: Optional 5&ndash;10 min very easy after the prescribed time if you need to downshift.",
+        "s": "15 km easy",
+        "l": "15 km easy",
         "tags": [
           "long-run",
-          "steady"
-        ],
-        "pace": "Last 20&ndash;25 min steady @ ~5:25&ndash;5:50/km"
+          "easy"
+        ]
       },
       {
         "t": "rec",
-        "s": "Recovery 30-40 min",
-        "l": "Recovery 30&ndash;40 min",
+        "s": "6 km recovery",
+        "l": "6 km recovery",
         "tags": [
           "easy",
           "recovery"
@@ -1372,11 +1370,10 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "20",
     "dates": "Sep 14–20",
-    "km": 62,
-    "kmLabel": "~60–64km",
+    "km": 56,
+    "kmLabel": "~56km",
     "phase": "oct-hm-peak",
-    "template": "HM Aerobic Strength / Threshold Floats",
-    "notes": "This is the aerobic-strength long-run progression before the cutback. Keep the finish effort-first in Jakarta heat, not a forced pace chase.",
+    "template": "Threshold + HM Finish",
     "days": [
       {
         "t": "rest",
@@ -1388,28 +1385,28 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "thr",
-        "s": "2 x 20 min threshold floats",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 20 min threshold floats @ repeat 4 min threshold 4:48&ndash;4:55/km + 1 min float 5:15&ndash;5:30/km; 4 min jog between sets<br>CD: 10&ndash;15 min easy.",
+        "s": "11 km threshold",
+        "l": "2.5 km easy + 3 x (1.6 km threshold / 400 m jog) + 2.5 km easy",
         "tags": [
           "threshold"
         ],
-        "pace": "Threshold 4:48&ndash;4:55/km; float 5:15&ndash;5:30/km"
+        "pace": "4:46&ndash;4:52/km"
       },
       {
         "t": "easy",
-        "s": "Easy 45 min",
-        "l": "Easy 45 min",
+        "s": "9 km easy",
+        "l": "9 km easy",
         "tags": [
           "easy"
         ]
       },
       {
-        "t": "med",
-        "s": "Medium-long 75-80 min easy",
-        "l": "Medium-long 75&ndash;80 min easy",
+        "t": "easy",
+        "s": "12 km + strides",
+        "l": "10 km easy + 4 x (100 m stride / 100 m jog) + 1.2 km easy",
         "tags": [
-          "medium-long",
-          "easy"
+          "easy",
+          "strides"
         ]
       },
       {
@@ -1422,18 +1419,18 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "lng",
-        "s": "Long 120-130 min / ~19-21 km with last 30-35 min steady to moderate, roughly 5:25-5:50/km by feel",
-        "l": "WU: First 20&ndash;30 min easy before the prescribed long-run quality.<br>Session: Long 120&ndash;130 min / ~19&ndash;21 km with last 30&ndash;35 min steady to moderate, roughly 5:25&ndash;5:50/km by feel<br>CD: Optional 5&ndash;10 min very easy after the prescribed time if you need to downshift.",
+        "s": "17 km HM finish",
+        "l": "12 km easy + 5 km HM",
         "tags": [
           "long-run",
-          "steady"
+          "hm-specific"
         ],
-        "pace": "Last 30&ndash;35 min steady to moderate, roughly 5:25&ndash;5:50/km by feel"
+        "pace": "HM 5:03&ndash;5:08/km"
       },
       {
         "t": "rec",
-        "s": "Recovery 30-40 min",
-        "l": "Recovery 30&ndash;40 min",
+        "s": "7 km recovery",
+        "l": "7 km recovery",
         "tags": [
           "easy",
           "recovery"
@@ -1444,11 +1441,10 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "21",
     "dates": "Sep 21–27",
-    "km": 48.5,
-    "kmLabel": "~46–51km",
+    "km": 49,
+    "kmLabel": "~49km",
     "phase": "oct-hm-peak",
-    "template": "Cutback / Absorb",
-    "notes": "Deliberate recovery before the Oct peak-specific long run. Keep one controlled quality day and arrive ready for the Week 22 rehearsal.",
+    "template": "Cutback",
     "days": [
       {
         "t": "rest",
@@ -1459,31 +1455,30 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
-        "t": "easy",
-        "s": "Easy 40-45 min + 6 relaxed strides",
-        "l": "Easy 40&ndash;45 min + 6 relaxed strides",
+        "t": "thr",
+        "s": "9 km threshold",
+        "l": "2 km easy + 4 km threshold + 3 km easy",
         "tags": [
-          "easy",
-          "strides"
-        ]
+          "threshold"
+        ],
+        "pace": "4:50&ndash;4:55/km"
       },
       {
         "t": "easy",
-        "s": "Easy 45 min",
-        "l": "Easy 45 min",
+        "s": "8 km easy",
+        "l": "8 km easy",
         "tags": [
           "easy"
         ]
       },
       {
-        "t": "thr",
-        "s": "2 x 15 min HM/threshold progression; start 5:03-5:10/km and finish near 4:50-4:58/km only if smooth",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 15 min HM/threshold progression; start 5:03&ndash;5:10/km and finish near 4:50&ndash;4:58/km only if smooth<br>CD: 10&ndash;15 min easy.",
+        "t": "easy",
+        "s": "10 km + strides",
+        "l": "8 km easy + 6 x (100 m stride / 100 m jog) + 800 m easy",
         "tags": [
-          "threshold",
-          "hm-specific"
-        ],
-        "pace": "HM into threshold feel"
+          "easy",
+          "strides"
+        ]
       },
       {
         "t": "rest",
@@ -1495,8 +1490,8 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "lng",
-        "s": "Long 85-95 min easy",
-        "l": "Long 85&ndash;95 min easy",
+        "s": "15 km easy",
+        "l": "15 km easy",
         "tags": [
           "long-run",
           "easy"
@@ -1504,8 +1499,8 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "rec",
-        "s": "Recovery 30-40 min",
-        "l": "Recovery 30&ndash;40 min",
+        "s": "7 km recovery",
+        "l": "7 km recovery",
         "tags": [
           "easy",
           "recovery"
@@ -1516,11 +1511,10 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "22",
     "dates": "Sep 28–Oct 4",
-    "km": 64,
-    "kmLabel": "~62–66km",
+    "km": 59,
+    "kmLabel": "~59km",
     "phase": "oct-hm-peak",
-    "template": "Peak Continuous HM Finish",
-    "notes": "Main Oct race-specific long run. Tuesday is supportive, not another peak session.",
+    "template": "Peak Specific",
     "days": [
       {
         "t": "rest",
@@ -1531,26 +1525,26 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
-        "t": "hm",
-        "s": "2 x 4 km HM effort",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 4 km HM effort @ 5:03&ndash;5:10/km, 4 min easy<br>CD: 10&ndash;15 min easy.",
+        "t": "thr",
+        "s": "9 km threshold",
+        "l": "2 km easy + 3 x (1.2 km threshold / 300 m jog) + 2.5 km easy",
         "tags": [
-          "hm-specific"
+          "threshold"
         ],
-        "pace": "5:03&ndash;5:10/km"
+        "pace": "4:48&ndash;4:53/km"
       },
       {
         "t": "easy",
-        "s": "Easy 45-50 min",
-        "l": "Easy 45&ndash;50 min",
+        "s": "9 km easy",
+        "l": "9 km easy",
         "tags": [
           "easy"
         ]
       },
       {
         "t": "med",
-        "s": "Medium-long 75-80 min easy",
-        "l": "Medium-long 75&ndash;80 min easy",
+        "s": "12 km easy",
+        "l": "12 km easy",
         "tags": [
           "medium-long",
           "easy"
@@ -1566,18 +1560,18 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "lng",
-        "s": "Long 20-22 km with last 10-12 km continuous",
-        "l": "WU: First 20&ndash;30 min easy before the prescribed long-run quality.<br>Session: Long 20&ndash;22 km with last 10&ndash;12 km continuous @ 5:03&ndash;5:10/km. Use a treadmill portion or cooler route if heat load is high.<br>CD: Optional 5&ndash;10 min very easy after the prescribed time if you need to downshift.",
+        "s": "22 km HM finish",
+        "l": "12 km easy + 10 km HM",
         "tags": [
           "long-run",
           "hm-specific"
         ],
-        "pace": "Last 10&ndash;12 km continuous @ 5:03&ndash;5:10/km"
+        "pace": "HM 5:00&ndash;5:05/km"
       },
       {
         "t": "rec",
-        "s": "Recovery 30-40 min",
-        "l": "Recovery 30&ndash;40 min",
+        "s": "7 km recovery",
+        "l": "7 km recovery",
         "tags": [
           "easy",
           "recovery"
@@ -1588,11 +1582,10 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "23",
     "dates": "Oct 5–11",
-    "km": 54.5,
-    "kmLabel": "~52–57km",
+    "km": 55,
+    "kmLabel": "~55km",
     "phase": "oct-hm-peak",
     "template": "Consolidate",
-    "notes": "Consolidate the week 22 peak long run. Keep the rhythm work controlled and skip extra leg-speed work.",
     "days": [
       {
         "t": "rest",
@@ -1604,30 +1597,28 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "easy",
-        "s": "Easy 40-45 min + 6 relaxed strides",
-        "l": "Easy 40&ndash;45 min + 6 relaxed strides",
+        "s": "9 km easy",
+        "l": "9 km easy",
         "tags": [
-          "easy",
-          "strides"
-        ]
-      },
-      {
-        "t": "med",
-        "s": "Medium-long 70 min easy",
-        "l": "Medium-long 70 min easy",
-        "tags": [
-          "medium-long",
           "easy"
         ]
       },
       {
-        "t": "hm",
-        "s": "2 x 4 km HM rhythm",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 4 km HM rhythm @ 5:03&ndash;5:10/km, 5 min easy<br>CD: 10&ndash;15 min easy.",
+        "t": "easy",
+        "s": "9 km easy",
+        "l": "9 km easy",
         "tags": [
-          "hm-specific"
+          "easy"
+        ]
+      },
+      {
+        "t": "thr",
+        "s": "12 km threshold",
+        "l": "3 km easy + 3 x (1.6 km threshold / 400 m jog) + 3 km easy",
+        "tags": [
+          "threshold"
         ],
-        "pace": "5:03&ndash;5:10/km"
+        "pace": "4:46&ndash;4:52/km"
       },
       {
         "t": "rest",
@@ -1639,17 +1630,18 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "lng",
-        "s": "Long 95-105 min easy",
-        "l": "Long 95&ndash;105 min easy",
+        "s": "18 km steady finish",
+        "l": "14.5 km easy + 3.5 km steady",
         "tags": [
           "long-run",
-          "easy"
-        ]
+          "steady"
+        ],
+        "pace": "Steady 5:25&ndash;5:40/km"
       },
       {
         "t": "rec",
-        "s": "Recovery 30-40 min",
-        "l": "Recovery 30&ndash;40 min",
+        "s": "7 km recovery",
+        "l": "7 km recovery",
         "tags": [
           "easy",
           "recovery"
@@ -1660,11 +1652,10 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "24",
     "dates": "Oct 12–18",
-    "km": 48.5,
-    "kmLabel": "~45–52km",
+    "km": 44,
+    "kmLabel": "~44km",
     "phase": "oct-hm-peak",
-    "template": "HM Taper Begins",
-    "notes": "Keep only optional light steady work so the taper does not go flat. Skip the Saturday uptick unless the legs feel fresh.",
+    "template": "Taper",
     "days": [
       {
         "t": "rest",
@@ -1676,25 +1667,25 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "hm",
-        "s": "2 x 4 km HM effort",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 2 x 4 km HM effort @ 5:03&ndash;5:10/km, 5 min easy jog between reps, controlled<br>CD: 10&ndash;15 min easy.",
+        "s": "10 km HM",
+        "l": "2.5 km easy + 5 km HM + 2.5 km easy",
         "tags": [
           "hm-specific"
         ],
-        "pace": "5:03&ndash;5:10/km"
+        "pace": "Selected race pace"
       },
       {
         "t": "easy",
-        "s": "Easy 45 min",
-        "l": "Easy 45 min",
+        "s": "7 km easy",
+        "l": "7 km easy",
         "tags": [
           "easy"
         ]
       },
       {
         "t": "easy",
-        "s": "Easy 60-65 min + 4-6 strides",
-        "l": "Easy 60&ndash;65 min + 4&ndash;6 strides",
+        "s": "9 km + strides",
+        "l": "7 km easy + 4 x (100 m stride / 100 m jog) + 1.2 km easy",
         "tags": [
           "easy",
           "strides"
@@ -1710,19 +1701,17 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "lng",
-        "s": "Long 80-90 min easy, optional last 10-15 min light steady only if fresh",
-        "l": "WU: First 20&ndash;30 min easy before the prescribed long-run quality.<br>Session: Long 80&ndash;90 min easy, optional last 10&ndash;15 min light steady only if fresh<br>CD: Optional 5&ndash;10 min very easy after the prescribed time if you need to downshift.",
+        "s": "13 km easy",
+        "l": "13 km easy",
         "tags": [
           "long-run",
-          "easy",
-          "steady"
-        ],
-        "pace": "Optional last 10&ndash;15 min light steady only if fresh"
+          "easy"
+        ]
       },
       {
         "t": "rec",
-        "s": "Recovery 25-35 min",
-        "l": "Recovery 25&ndash;35 min",
+        "s": "5 km recovery",
+        "l": "5 km recovery",
         "tags": [
           "easy",
           "recovery"
@@ -1733,10 +1722,10 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "25",
     "dates": "Oct 19–25",
-    "km": 41.5,
-    "kmLabel": "~38–45km",
+    "km": 42,
+    "kmLabel": "~42km incl. race",
     "phase": "oct-hm-peak",
-    "template": "HM Taper And Race",
+    "template": "Race",
     "race": true,
     "days": [
       {
@@ -1749,26 +1738,25 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "hm",
-        "s": "3 x 2 km HM rhythm",
-        "l": "WU: 15&ndash;20 min easy + 3&ndash;4 relaxed strides.<br>Session: 3 x 2 km HM rhythm @ 5:03&ndash;5:10/km, 3 min easy jog between reps, full control<br>CD: 10&ndash;15 min easy.",
+        "s": "8 km HM",
+        "l": "2 km easy + 3 x (1 km HM / 400 m jog) + 1.8 km easy",
         "tags": [
-          "hm-specific",
-          "strides"
+          "hm-specific"
         ],
-        "pace": "5:03&ndash;5:10/km"
+        "pace": "Selected race pace"
       },
       {
         "t": "easy",
-        "s": "Easy 35-40 min",
-        "l": "Easy 35&ndash;40 min",
+        "s": "5 km easy",
+        "l": "5 km easy",
         "tags": [
           "easy"
         ]
       },
       {
         "t": "easy",
-        "s": "Easy 30-35 min + 4 strides",
-        "l": "Easy 30&ndash;35 min + 4 strides",
+        "s": "5 km + strides",
+        "l": "3 km easy + 4 x (100 m stride / 100 m jog) + 1.2 km easy",
         "tags": [
           "easy",
           "strides"
@@ -1783,9 +1771,9 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
-        "t": "rec",
-        "s": "Easy 20-25 min shakeout + 4 short strides",
-        "l": "Easy 20&ndash;25 min shakeout + 4 short strides",
+        "t": "shake",
+        "s": "3 km shakeout",
+        "l": "1 km easy + 4 x (100 m stride / 100 m jog) + 1.2 km easy",
         "tags": [
           "easy",
           "recovery",
@@ -1795,14 +1783,14 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "race",
         "s": "OCT HM",
-        "l": "Oct 25 Half Marathon A race &mdash; 1:48 target",
+        "l": "Oct 25 Half Marathon &mdash; A race",
         "tags": [
           "race",
           "hm-specific"
         ],
-        "pace": "Start 5:08&ndash;5:10/km, settle 5:03&ndash;5:08/km, press late if controlled",
+        "pace": "Set after Oct 3 rehearsal",
         "priority": "A",
-        "raceNotes": "Oct 25 HM A-race: first 5 km at 5:08&ndash;5:10/km, settle around 5:03&ndash;5:08/km from 5&ndash;15 km, then press toward 4:58&ndash;5:03/km from 16 km only if controlled. 1:48 is the primary target."
+        "raceNotes": "Km 1&ndash;3: selected pace + 3&ndash;5 sec/km. Km 4&ndash;15: selected pace. Km 16&ndash;finish: race by effort."
       }
     ]
   }
