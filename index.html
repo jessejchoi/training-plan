@@ -41,12 +41,14 @@
 <script type="text/babel" src="shared-data.jsx"></script>
 
 <script type="text/babel">
-const { WEEKS, PHASES, DAY_TYPES, DAY_ABBR, TODAY_WEEK_ID, TODAY_DAY_INDEX,
-        DAYS_TO_MAY_10K, DAYS_TO_HM, DAYS_TO_OCT_HM, getTodayWeek, getTodayDay } = window;
+const { WEEKS, DAY_TYPES, DAY_ABBR, TODAY_WEEK_ID, TODAY_DAY_INDEX, DAYS_TO_OCT_HM } = window;
 
 const TODAY_KEY = `${TODAY_WEEK_ID}-${TODAY_DAY_INDEX}`;
+const ACTIVE_WEEKS = WEEKS.filter(week => Number(week.id) >= 17);
+const ACTIVE_TODAY_KEY = ACTIVE_WEEKS.some(week => week.id === TODAY_WEEK_ID) ? TODAY_KEY : null;
+const DEFAULT_SELECTED_KEY = ACTIVE_TODAY_KEY || `${ACTIVE_WEEKS[0].id}-0`;
 const GLYPH = { rest:'·', easy:'E', rec:'R', intv:'I', thr:'T', med:'M', steady:'M', hm:'H', shake:'R', lng:'L', qlng:'L+', race:'★' };
-const MAX_WEEK_KM = Math.ceil(Math.max(1, ...WEEKS.map(w => w.km)));
+const MAX_WEEK_KM = Math.ceil(Math.max(1, ...ACTIVE_WEEKS.map(w => w.km)));
 const DEFAULT_WEIGHT_KG = '75';
 
 const useLocal = (key, init) => {
@@ -865,8 +867,8 @@ function AlternativeDayPlans({ alternatives, dayIndex }) {
 }
 
 function DayDetailCard({ selectedKey, completed, setCompleted, onGoToToday, cardRef }) {
-  const session = getSessionByKey(selectedKey) || getSessionByKey(TODAY_KEY);
-  const isToday = session.key === TODAY_KEY;
+  const session = getSessionByKey(selectedKey) || getSessionByKey(DEFAULT_SELECTED_KEY);
+  const isToday = session.key === ACTIVE_TODAY_KEY;
   const done = !!completed[session.key];
   const detailHtml = session.day.l || session.day.s;
   const { structured, extra, note } = parseDayContent(detailHtml);
@@ -978,7 +980,7 @@ function DayDetailCard({ selectedKey, completed, setCompleted, onGoToToday, card
         <button onClick={() => setCompleted({ ...completed, [session.key]: !done })} style={cardButtonStyle(session.meta.color, done)}>
           {done ? '✓ DONE' : 'MARK COMPLETE'}
         </button>
-        {!isToday ? (
+        {!isToday && onGoToToday ? (
           <button onClick={onGoToToday} style={cardButtonStyle(session.meta.color, true)}>
             GO TO TODAY
           </button>
@@ -1081,79 +1083,12 @@ function Countdowns({ compact = false }) {
   );
 }
 
-function PhaseTimeline() {
-  const todayIdx = WEEKS.findIndex(w => w.id === TODAY_WEEK_ID);
-  return (
-    <div>
-      <SectionHead label="PHASE TIMELINE" meta="25 weeks · May → Oct"/>
-      <div>
-        {PHASES.map((phase, pi) => {
-          const phaseWeeks = WEEKS.filter(w => w.phase === phase.id);
-          if (!phaseWeeks.length) return null;
-          const isActive = phaseWeeks.some(w => w.id === TODAY_WEEK_ID);
-          const isPast = phaseWeeks.every(w => WEEKS.indexOf(w) < todayIdx);
-          const totalKm = phaseWeeks.reduce((s, w) => s + w.km, 0);
-          const doneKm = phaseWeeks.reduce((s, w) => s + (WEEKS.indexOf(w) < todayIdx ? w.km : 0), 0);
-          const pct = totalKm ? (doneKm / totalKm) * 100 : 0;
-          return (
-            <div key={phase.id} style={{
-              display:'grid',
-              gridTemplateColumns:'18px 1fr',
-              gap:10,
-              padding:'10px 0',
-              borderTop: pi > 0 ? '1px solid var(--border)' : 'none',
-              opacity: isPast ? 0.45 : 1,
-            }}>
-              <div style={{position:'relative'}}>
-                <div style={{
-                  position:'absolute',
-                  left:6,
-                  top:5,
-                  width:8,
-                  height:8,
-                  borderRadius:'50%',
-                  background: isActive ? 'var(--run)' : isPast ? 'var(--muted2)' : 'var(--bg)',
-                  border:`2px solid ${isActive ? 'var(--run)' : isPast ? 'var(--muted2)' : 'var(--dim)'}`,
-                }}/>
-                {pi < PHASES.length - 1 ? <div style={{
-                  position:'absolute',
-                  left:9,
-                  top:18,
-                  bottom:-10,
-                  width:1,
-                  background:'var(--border2)',
-                }}/> : null}
-              </div>
-              <div>
-                <div style={{display:'flex',justifyContent:'space-between',alignItems:'baseline',gap:8,flexWrap:'wrap'}}>
-                  <div>
-                    <span style={{fontFamily:'var(--mono)',fontSize:9,letterSpacing:1.5,color:isActive ? 'var(--run)' : 'var(--muted2)'}}>
-                      {isActive ? 'NOW' : isPast ? 'DONE' : 'UPCOMING'}
-                    </span>
-                    <span style={{fontSize:13,fontWeight:500,color:'var(--text)',marginLeft:10}}>{phase.name}</span>
-                  </div>
-                  <span style={{fontFamily:'var(--mono)',fontSize:10,color:'var(--muted)'}}>Wk {phase.startWk}–{phase.endWk} · {totalKm}km</span>
-                </div>
-                {(isActive || isPast) ? (
-                  <div style={{height:2,background:'var(--surf2)',borderRadius:1,marginTop:6,overflow:'hidden'}}>
-                    <div style={{height:'100%',width:`${pct}%`,background:isActive ? 'var(--run)' : 'var(--muted2)'}}/>
-                  </div>
-                ) : null}
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    </div>
-  );
-}
-
 function VolumeChart() {
-  const todayIdx = WEEKS.findIndex(w => w.id === TODAY_WEEK_ID);
+  const todayIdx = ACTIVE_WEEKS.findIndex(w => w.id === TODAY_WEEK_ID);
   const maxKm = MAX_WEEK_KM;
   const height = 120;
-  const [activeWeekId, setActiveWeekId] = React.useState(TODAY_WEEK_ID);
-  const activeWeek = WEEKS.find(w => w.id === activeWeekId) || getTodayWeek();
+  const [activeWeekId, setActiveWeekId] = React.useState(ACTIVE_TODAY_KEY ? TODAY_WEEK_ID : ACTIVE_WEEKS[0].id);
+  const activeWeek = ACTIVE_WEEKS.find(w => w.id === activeWeekId) || ACTIVE_WEEKS[0];
   return (
     <div>
       <SectionHead
@@ -1161,9 +1096,9 @@ function VolumeChart() {
         meta={`Wk ${activeWeek.id} · ${activeWeek.kmLabel || `${activeWeek.km}km`} · ${activeWeek.dates}`}
       />
       <div style={{display:'flex',alignItems:'flex-end',gap:2,height,marginBottom:6}}>
-        {WEEKS.map((w, index) => {
+        {ACTIVE_WEEKS.map((w, index) => {
           const isToday = w.id === TODAY_WEEK_ID;
-          const past = index < todayIdx;
+          const past = todayIdx >= 0 && index < todayIdx;
           const isActive = w.id === activeWeekId;
           const barHeight = Math.max(2, (w.km / maxKm) * height);
           let color = 'var(--muted)';
@@ -1208,14 +1143,14 @@ function VolumeChart() {
 }
 
 function WeeklyGrid({ completed, selectedKey, setSelectedKey, isWide }) {
-  const todayIdx = WEEKS.findIndex(w => w.id === TODAY_WEEK_ID);
+  const todayIdx = ACTIVE_WEEKS.findIndex(w => w.id === TODAY_WEEK_ID);
   const maxKm = MAX_WEEK_KM;
   const columns = isWide
     ? 'minmax(36px,auto) minmax(74px,auto) minmax(74px,auto) minmax(32px,auto) repeat(7, minmax(28px,1fr)) minmax(42px,auto)'
     : 'minmax(30px,auto) minmax(64px,auto) minmax(28px,auto) repeat(7, minmax(22px,1fr))';
   return (
     <div>
-      <SectionHead label="FULL GRID · 25 WEEKS × 7 DAYS" meta="tap a day to load the detail card"/>
+      <SectionHead label="WEEKS 17–25 · 9 WEEKS × 7 DAYS" meta="tap a day to load the detail card"/>
       <div style={{
         display:'grid',
         gridTemplateColumns:columns,
@@ -1232,94 +1167,74 @@ function WeeklyGrid({ completed, selectedKey, setSelectedKey, isWide }) {
         {isWide ? <div style={{textAlign:'right'}}>VOL</div> : null}
       </div>
 
-      {PHASES.map(phase => {
-        const phaseWeeks = WEEKS.filter(w => w.phase === phase.id);
-        if (!phaseWeeks.length) return null;
+      {ACTIVE_WEEKS.map((week, weekIndex) => {
+        const isTodayWeek = week.id === TODAY_WEEK_ID;
+        const isPast = todayIdx >= 0 && weekIndex < todayIdx;
         return (
-          <React.Fragment key={phase.id}>
-            <div style={{
-              fontFamily:'var(--mono)',
-              fontSize:9,
-              letterSpacing:1.5,
-              color:'var(--muted)',
-              padding:'8px 0 5px',
-              borderBottom:'1px solid var(--border)',
-              marginBottom:4,
-              marginTop:4,
-              textTransform:'uppercase',
-            }}>{phase.name}</div>
-            {phaseWeeks.map(week => {
-              const weekIndex = WEEKS.indexOf(week);
-              const isTodayWeek = week.id === TODAY_WEEK_ID;
-              const isPast = weekIndex < todayIdx;
+          <div key={week.id} style={{
+            display:'grid',
+            gridTemplateColumns:columns,
+            gap:3,
+            alignItems:'center',
+            padding:'2px 0',
+            opacity:isPast ? 0.4 : 1,
+          }}>
+            <div style={{fontFamily:'var(--mono)',fontSize:12,fontWeight:600,color:isTodayWeek ? 'var(--run)' : 'var(--text)'}}>
+              {week.id}{week.cutback ? <span style={{color:'var(--muted)',fontWeight:400}}>↓</span> : null}
+            </div>
+            <div style={{fontFamily:'var(--mono)',fontSize:9.5,color:'var(--muted2)'}}>{week.dates}</div>
+            {isWide ? (
+              <div title={week.template || ''} style={{
+                fontFamily:'var(--mono)',
+                fontSize:8.5,
+                color:'var(--muted)',
+                whiteSpace:'nowrap',
+                overflow:'hidden',
+                textOverflow:'ellipsis',
+              }}>{week.template || ''}</div>
+            ) : null}
+            <div title={week.kmLabel || `${week.km}km`} style={{fontFamily:'var(--mono)',fontSize:10,color:isTodayWeek ? 'var(--run)' : 'var(--muted)',textAlign:'right'}}>
+              {week.kmLabel ? week.kmLabel.replace(/^~/, '').replace(/km$/, '') : week.km}
+            </div>
+
+            {week.days.map((day, dayIndex) => {
+              const meta = DAY_TYPES[day.t];
+              const key = `${week.id}-${dayIndex}`;
+              const isSelected = key === selectedKey;
+              const isDone = !!completed[key];
               return (
-                <div key={week.id} style={{
-                  display:'grid',
-                  gridTemplateColumns:columns,
-                  gap:3,
-                  alignItems:'center',
-                  padding:'2px 0',
-                  opacity:isPast ? 0.4 : 1,
+                <button key={key} onClick={() => setSelectedKey(key)} title={`${DAY_ABBR[dayIndex]}: ${day.s}`} style={{
+                  height:20,
+                  padding:0,
+                  background:day.t === 'rest' ? 'var(--surf)' : meta.color,
+                  opacity:day.t === 'rest' ? 1 : (isDone ? 0.35 : 0.88),
+                  border:isSelected ? '2px solid var(--text)' : '1px solid var(--border2)',
+                  borderRadius:2,
+                  fontFamily:'var(--mono)',
+                  fontSize:8.5,
+                  fontWeight:600,
+                  color:day.t === 'rest' ? 'var(--muted2)' : 'var(--bg)',
+                  lineHeight:1,
                 }}>
-                  <div style={{fontFamily:'var(--mono)',fontSize:12,fontWeight:600,color:isTodayWeek ? 'var(--run)' : 'var(--text)'}}>
-                    {week.id}{week.cutback ? <span style={{color:'var(--muted)',fontWeight:400}}>↓</span> : null}
-                  </div>
-                  <div style={{fontFamily:'var(--mono)',fontSize:9.5,color:'var(--muted2)'}}>{week.dates}</div>
-                  {isWide ? (
-                    <div title={week.template || ''} style={{
-                      fontFamily:'var(--mono)',
-                      fontSize:8.5,
-                      color:'var(--muted)',
-                      whiteSpace:'nowrap',
-                      overflow:'hidden',
-                      textOverflow:'ellipsis',
-                    }}>{week.template || ''}</div>
-                  ) : null}
-                  <div title={week.kmLabel || `${week.km}km`} style={{fontFamily:'var(--mono)',fontSize:10,color:isTodayWeek ? 'var(--run)' : 'var(--muted)',textAlign:'right'}}>
-                    {week.kmLabel ? week.kmLabel.replace(/^~/, '').replace(/km$/, '') : week.km}
-                  </div>
-
-                  {week.days.map((day, dayIndex) => {
-                    const meta = DAY_TYPES[day.t];
-                    const key = `${week.id}-${dayIndex}`;
-                    const isSelected = key === selectedKey;
-                    const isDone = !!completed[key];
-                    return (
-                      <button key={key} onClick={() => setSelectedKey(key)} title={`${DAY_ABBR[dayIndex]}: ${day.s}`} style={{
-                        height:20,
-                        padding:0,
-                        background:day.t === 'rest' ? 'var(--surf)' : meta.color,
-                        opacity:day.t === 'rest' ? 1 : (isDone ? 0.35 : 0.88),
-                        border:isSelected ? '2px solid var(--text)' : '1px solid var(--border2)',
-                        borderRadius:2,
-                        fontFamily:'var(--mono)',
-                        fontSize:8.5,
-                        fontWeight:600,
-                        color:day.t === 'rest' ? 'var(--muted2)' : 'var(--bg)',
-                        lineHeight:1,
-                      }}>
-                        {isDone ? '✓' : GLYPH[day.t]}
-                      </button>
-                    );
-                  })}
-
-                  {isWide ? (
-                    <div style={{height:10,background:'var(--surf)',borderRadius:1,position:'relative',overflow:'hidden'}}>
-                      <div style={{
-                        position:'absolute',
-                        left:0,
-                        top:0,
-                        bottom:0,
-                        width:`${(week.km / maxKm) * 100}%`,
-                        background:week.race ? 'var(--race)' : isTodayWeek ? 'var(--run)' : 'var(--muted)',
-                        opacity:isPast ? 0.55 : 1,
-                      }}/>
-                    </div>
-                  ) : null}
-                </div>
+                  {isDone ? '✓' : GLYPH[day.t]}
+                </button>
               );
             })}
-          </React.Fragment>
+
+            {isWide ? (
+              <div style={{height:10,background:'var(--surf)',borderRadius:1,position:'relative',overflow:'hidden'}}>
+                <div style={{
+                  position:'absolute',
+                  left:0,
+                  top:0,
+                  bottom:0,
+                  width:`${(week.km / maxKm) * 100}%`,
+                  background:week.race ? 'var(--race)' : isTodayWeek ? 'var(--run)' : 'var(--muted)',
+                  opacity:isPast ? 0.55 : 1,
+                }}/>
+              </div>
+            ) : null}
+          </div>
         );
       })}
     </div>
@@ -1479,7 +1394,7 @@ function StrengthView() {
 function App() {
   const [mode, setMode] = useLocal('tp-mode', 'run');
   const [completed, setCompleted] = useLocal('tp-completed', {});
-  const [selectedKey, setSelectedKey] = React.useState(TODAY_KEY);
+  const [selectedKey, setSelectedKey] = React.useState(DEFAULT_SELECTED_KEY);
   const [isWide, setIsWide] = React.useState(typeof window !== 'undefined' && window.innerWidth >= 900);
   const cardRef = React.useRef(null);
   const modeAccent = mode === 'mob' ? 'var(--mob)' : mode === 'str' ? 'var(--str)' : mode === 'health' ? 'var(--med)' : 'var(--run)';
@@ -1488,10 +1403,10 @@ function App() {
     : <>HM Build → <em style={{fontStyle:'italic',color:modeAccent}}>Oct HM Peak</em></>;
   const headerMeta = mode === 'health'
     ? 'JAKARTA RUNNER · J. CHOI · HEALTH LOG'
-    : 'JAKARTA RUNNER · J. CHOI · MAY 2026';
+    : 'JAKARTA RUNNER · J. CHOI · AUG–OCT 2026';
 
   React.useEffect(() => {
-    setSelectedKey(TODAY_KEY);
+    setSelectedKey(DEFAULT_SELECTED_KEY);
   }, []);
 
   React.useEffect(() => {
@@ -1538,10 +1453,9 @@ function App() {
                 overflowY:'auto',
                 paddingRight:4,
               }}>
-                <DayDetailCard selectedKey={selectedKey} completed={completed} setCompleted={setCompleted} onGoToToday={() => setSelectedKey(TODAY_KEY)} cardRef={cardRef}/>
-                <Countdowns compact/>
+                <DayDetailCard selectedKey={selectedKey} completed={completed} setCompleted={setCompleted} onGoToToday={ACTIVE_TODAY_KEY ? () => setSelectedKey(ACTIVE_TODAY_KEY) : null} cardRef={cardRef}/>
                 <VolumeChart/>
-                <PhaseTimeline/>
+                <Countdowns compact/>
               </div>
               <WeeklyGrid completed={completed} selectedKey={selectedKey} setSelectedKey={setSelectedKey} isWide={isWide}/>
             </div>
@@ -1554,12 +1468,11 @@ function App() {
                 background:'var(--bg)',
                 paddingBottom:10,
               }}>
-                <DayDetailCard selectedKey={selectedKey} completed={completed} setCompleted={setCompleted} onGoToToday={() => setSelectedKey(TODAY_KEY)} cardRef={cardRef}/>
+                <DayDetailCard selectedKey={selectedKey} completed={completed} setCompleted={setCompleted} onGoToToday={ACTIVE_TODAY_KEY ? () => setSelectedKey(ACTIVE_TODAY_KEY) : null} cardRef={cardRef}/>
               </div>
-              <Countdowns/>
               <WeeklyGrid completed={completed} selectedKey={selectedKey} setSelectedKey={setSelectedKey} isWide={isWide}/>
               <VolumeChart/>
-              <PhaseTimeline/>
+              <Countdowns/>
             </div>
           )}
         </div>
@@ -1574,7 +1487,7 @@ function App() {
         color:'var(--muted2)',
         borderTop:'1px solid var(--border)',
       }}>
-        JAKARTA RUNNER · MAY 24 10K MINI-TAPER · JUL 12 10K BENCHMARK · AUG 23 HM TUNE-UP · OCT 25 HM A-RACE
+        JAKARTA RUNNER · WEEKS 17–25 · AUG 24–OCT 25 · OCT HM A-RACE
       </footer>
     </div>
   );

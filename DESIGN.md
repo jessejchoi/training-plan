@@ -1,7 +1,7 @@
 # Design System — Jakarta Runner Training Reference
 
 ## Product Context
-- **What this is:** A personal training reference page for a 2026 half-marathon-focused plan after the canceled July 12 10K
+- **What this is:** A personal training reference page for the active Weeks 17–25 build toward the October 2026 half marathon
 - **Who it's for:** Personal use only — Jesse Choi
 - **Space/industry:** Running / endurance sports / personal training tools
 - **Project type:** Single-page reference tool, data-dense, consulted daily
@@ -85,3 +85,4 @@
 | 2026-03-18 | Small border radius (3–6px) | Sharp edges suit the terminal aesthetic. Rounded cards would fight the precision of the design. |
 | 2026-03-18 | Initial design system created | Created by /design-consultation for training-website. Previous design: warm editorial, DM Serif/DM Mono/DM Sans, cream paper. |
 | 2026-08-23 | Deeper cobalt for quality long runs | Separates long runs with faster work from standard easy long runs without introducing another warm intensity color. |
+| 2026-08-23 | Active-block-only run dashboard | Keeps Weeks 17–25 in view, moves race results beneath volume context, and removes the completed phase timeline. |
