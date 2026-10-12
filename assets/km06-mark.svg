@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">KM 06</title>
+  <desc id="desc">A latitude line crossing an open lap with a square GPS position marker.</desc>
+  <path d="M18.8 11.1A25 25 0 1 1 9.4 22" fill="none" stroke="#4eff91" stroke-width="5" stroke-linecap="square"/>
+  <path d="M4 38h56" fill="none" stroke="#4eff91" stroke-width="5" stroke-linecap="square"/>
+  <path d="M45 33h10v10H45z" fill="#4eff91"/>
+</svg>

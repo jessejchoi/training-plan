@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<title>Jakarta Runner — Training Plan</title>
+<title>KM 06 — Training System</title>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#0d0f0e"/>
+<meta name="description" content="KM 06 — a personal running, strength, mobility, and health training system built in Jakarta."/>
+<link rel="icon" href="assets/km06-mark.svg" type="image/svg+xml"/>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
@@ -1424,8 +1427,8 @@ function App() {
     ? <>Weight + <em style={{fontStyle:'italic',color:modeAccent}}>Blood Pressure</em></>
     : <>HM Build → <em style={{fontStyle:'italic',color:modeAccent}}>Oct HM Peak</em></>;
   const headerMeta = mode === 'health'
-    ? 'JAKARTA RUNNER · J. CHOI · HEALTH LOG'
-    : 'JAKARTA RUNNER · J. CHOI · AUG–OCT 2026';
+    ? 'J. CHOI · HEALTH LOG'
+    : 'J. CHOI · AUG–OCT 2026';
 
   React.useEffect(() => {
     setSelectedKey(DEFAULT_SELECTED_KEY);
@@ -1442,8 +1445,21 @@ function App() {
       <ModeBar mode={mode} setMode={setMode}/>
 
       <header style={{padding:'22px 18px 16px',borderBottom:'1px solid var(--border)'}}>
-        <div style={{fontFamily:'var(--mono)',fontSize:10,letterSpacing:1.8,color:modeAccent,marginBottom:8}}>
-          {headerMeta}
+        <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',gap:16,flexWrap:'wrap',marginBottom:14}}>
+          <div style={{display:'flex',alignItems:'center',gap:10}}>
+            <img src="assets/km06-mark.svg" width="34" height="34" alt="" aria-hidden="true"/>
+            <div>
+              <div style={{fontFamily:'var(--mono)',fontSize:17,fontWeight:600,letterSpacing:-0.5,lineHeight:1,color:'var(--text)'}}>
+                KM <span style={{color:'var(--run)'}}>06</span><span style={{fontSize:9,color:'var(--muted)',verticalAlign:'top',marginLeft:2}}>°S</span>
+              </div>
+              <div style={{fontFamily:'var(--mono)',fontSize:7.5,fontWeight:500,letterSpacing:1.9,color:'var(--muted)',marginTop:5}}>
+                TRAINING SYSTEM · JAKARTA
+              </div>
+            </div>
+          </div>
+          <div style={{fontFamily:'var(--mono)',fontSize:10,letterSpacing:1.8,color:modeAccent}}>
+            {headerMeta}
+          </div>
         </div>
         <h1 style={{
           fontFamily:'var(--serif)',
@@ -1509,7 +1525,7 @@ function App() {
         color:'var(--muted2)',
         borderTop:'1px solid var(--border)',
       }}>
-        JAKARTA RUNNER · WEEKS 17–25 · AUG 24–OCT 25 · OCT HM A-RACE
+        KM 06 · 6° SOUTH · WEEKS 17–25 · AUG 24–OCT 25 · OCT HM A-RACE
       </footer>
     </div>
   );

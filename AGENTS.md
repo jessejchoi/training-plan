@@ -1,4 +1,4 @@
-# AGENTS.md — Jakarta Runner Training Website
+# AGENTS.md — KM 06 Training Website
 
 ## Git Workflow
 After each completed code or content change, commit and push the result unless the user explicitly says not to.
