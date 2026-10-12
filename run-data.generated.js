@@ -11,7 +11,7 @@ window.RUN_PLAN_WEEKS = [
     "kmLabel": "~53km",
     "phase": "dec-5k",
     "template": "Threshold + Aerobic Volume",
-    "notes": "Resume the established five-run rhythm. One quality session this week; keep the long run fully easy.",
+    "notes": "Resume the established five-run rhythm. The manually selected 3 x 8 min threshold session stays in place; keep the long run fully easy.",
     "days": [
       {
         "t": "rest",
@@ -23,12 +23,12 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "thr",
-        "s": "10 km · 4 x 6 min",
-        "l": "10 km total &mdash; 2 km easy + 4 x (6 min threshold / 75&ndash;90 sec easy jog) + easy to 10 km",
+        "s": "10 km · 3 x 8 min",
+        "l": "10 km total &mdash; 2 km easy + 3 x (8 min threshold / 2 min easy jog) + easy to 10 km",
         "tags": [
           "threshold"
         ],
-        "pace": "Threshold 4:48&ndash;5:03/km",
+        "pace": "Threshold 4:45&ndash;5:05/km",
         "strength": "Workout A"
       },
       {
@@ -38,7 +38,7 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "easy"
         ],
-        "pace": "6:15&ndash;7:00/km, effort first"
+        "pace": "5:45&ndash;7:30/km, effort first"
       },
       {
         "t": "easy",
@@ -48,7 +48,7 @@ window.RUN_PLAN_WEEKS = [
           "easy",
           "strides"
         ],
-        "pace": "Easy 6:15&ndash;7:00/km; strides relaxed-fast"
+        "pace": "Easy 5:45&ndash;7:30/km; strides relaxed-fast"
       },
       {
         "t": "rest",
@@ -66,7 +66,7 @@ window.RUN_PLAN_WEEKS = [
           "long-run",
           "easy"
         ],
-        "pace": "6:15&ndash;7:00/km, effort first"
+        "pace": "5:45&ndash;7:30/km, effort first"
       },
       {
         "t": "rec",
@@ -76,7 +76,7 @@ window.RUN_PLAN_WEEKS = [
           "easy",
           "recovery"
         ],
-        "pace": "6:30&ndash;7:15/km, effort first",
+        "pace": "5:45&ndash;7:30/km, effort first",
         "strength": "Workout B"
       }
     ]
@@ -105,7 +105,7 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "threshold"
         ],
-        "pace": "Threshold 4:48&ndash;5:03/km",
+        "pace": "Threshold 4:45&ndash;5:05/km",
         "strength": "Workout A &middot; reduce lower-body volume 25%"
       },
       {
@@ -115,7 +115,7 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "easy"
         ],
-        "pace": "6:15&ndash;7:00/km, effort first"
+        "pace": "5:45&ndash;7:30/km, effort first"
       },
       {
         "t": "intv",
@@ -125,7 +125,7 @@ window.RUN_PLAN_WEEKS = [
           "vo2max",
           "5k-specific"
         ],
-        "pace": "4:15&ndash;4:35/km"
+        "pace": "4:05&ndash;4:30/km"
       },
       {
         "t": "rest",
@@ -143,7 +143,7 @@ window.RUN_PLAN_WEEKS = [
           "long-run",
           "easy"
         ],
-        "pace": "6:15&ndash;7:00/km, effort first"
+        "pace": "5:45&ndash;7:30/km, effort first"
       },
       {
         "t": "rec",
@@ -153,7 +153,7 @@ window.RUN_PLAN_WEEKS = [
           "easy",
           "recovery"
         ],
-        "pace": "6:30&ndash;7:15/km, effort first",
+        "pace": "5:45&ndash;7:30/km, effort first",
         "strength": "Workout B"
       }
     ]
@@ -183,7 +183,7 @@ window.RUN_PLAN_WEEKS = [
           "vo2max",
           "5k-specific"
         ],
-        "pace": "4:22&ndash;4:42/km",
+        "pace": "4:10&ndash;4:35/km",
         "strength": "Workout A"
       },
       {
@@ -193,7 +193,7 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "easy"
         ],
-        "pace": "6:15&ndash;7:00/km, effort first"
+        "pace": "5:45&ndash;7:30/km, effort first"
       },
       {
         "t": "easy",
@@ -203,7 +203,7 @@ window.RUN_PLAN_WEEKS = [
           "easy",
           "strides"
         ],
-        "pace": "Easy 6:15&ndash;7:00/km; strides relaxed-fast"
+        "pace": "Easy 5:45&ndash;7:30/km; strides relaxed-fast"
       },
       {
         "t": "rest",
@@ -221,7 +221,7 @@ window.RUN_PLAN_WEEKS = [
           "long-run",
           "steady"
         ],
-        "pace": "Easy 6:15&ndash;7:00/km; steady 5:25&ndash;5:45/km"
+        "pace": "Easy 5:45&ndash;7:30/km; steady 5:25&ndash;5:45/km"
       },
       {
         "t": "rec",
@@ -231,7 +231,7 @@ window.RUN_PLAN_WEEKS = [
           "easy",
           "recovery"
         ],
-        "pace": "6:30&ndash;7:15/km, effort first",
+        "pace": "5:45&ndash;7:30/km, effort first",
         "strength": "Workout B &middot; light lower body"
       }
     ]
@@ -261,7 +261,7 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "threshold"
         ],
-        "pace": "Threshold 4:48&ndash;5:03/km",
+        "pace": "Threshold 4:45&ndash;5:05/km",
         "strength": "Workout A"
       },
       {
@@ -271,7 +271,7 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "easy"
         ],
-        "pace": "6:15&ndash;7:00/km, effort first"
+        "pace": "5:45&ndash;7:30/km, effort first"
       },
       {
         "t": "easy",
@@ -281,7 +281,7 @@ window.RUN_PLAN_WEEKS = [
           "easy",
           "strides"
         ],
-        "pace": "Easy 6:15&ndash;7:00/km; strides relaxed-fast"
+        "pace": "Easy 5:45&ndash;7:30/km; strides relaxed-fast"
       },
       {
         "t": "rest",
@@ -299,7 +299,7 @@ window.RUN_PLAN_WEEKS = [
           "long-run",
           "easy"
         ],
-        "pace": "6:15&ndash;7:00/km, effort first"
+        "pace": "5:45&ndash;7:30/km, effort first"
       },
       {
         "t": "rec",
@@ -309,7 +309,7 @@ window.RUN_PLAN_WEEKS = [
           "easy",
           "recovery"
         ],
-        "pace": "6:30&ndash;7:15/km, effort first",
+        "pace": "5:45&ndash;7:30/km, effort first",
         "strength": "Workout B"
       }
     ]
@@ -338,7 +338,7 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "threshold"
         ],
-        "pace": "Threshold 4:48&ndash;5:03/km",
+        "pace": "Threshold 4:45&ndash;5:05/km",
         "strength": "Workout A &middot; reduce lower-body volume 25%"
       },
       {
@@ -348,7 +348,7 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "easy"
         ],
-        "pace": "6:15&ndash;7:00/km, effort first"
+        "pace": "5:45&ndash;7:30/km, effort first"
       },
       {
         "t": "intv",
@@ -358,7 +358,7 @@ window.RUN_PLAN_WEEKS = [
           "vo2max",
           "5k-specific"
         ],
-        "pace": "4:20&ndash;4:40/km"
+        "pace": "4:05&ndash;4:30/km"
       },
       {
         "t": "rest",
@@ -376,7 +376,7 @@ window.RUN_PLAN_WEEKS = [
           "long-run",
           "easy"
         ],
-        "pace": "6:15&ndash;7:00/km, effort first"
+        "pace": "5:45&ndash;7:30/km, effort first"
       },
       {
         "t": "rec",
@@ -386,7 +386,7 @@ window.RUN_PLAN_WEEKS = [
           "easy",
           "recovery"
         ],
-        "pace": "6:30&ndash;7:15/km, effort first",
+        "pace": "5:45&ndash;7:30/km, effort first",
         "strength": "Workout B"
       }
     ]
@@ -398,7 +398,7 @@ window.RUN_PLAN_WEEKS = [
     "kmLabel": "~56km",
     "phase": "dec-5k",
     "template": "800s + Steady Long Finish",
-    "notes": "One weekday workout. Keep the 800s at current 5K effort rather than forcing goal pace.",
+    "notes": "One weekday workout. Keep the 800s controlled and use the full pace range instead of forcing every rep to goal pace.",
     "days": [
       {
         "t": "rest",
@@ -411,12 +411,12 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "intv",
         "s": "10 km · 6 x 800 m",
-        "l": "10 km total &mdash; 2 km easy + drills + 6 x (800 m at current 5K effort / 2 min easy jog) + easy to 10 km",
+        "l": "10 km total &mdash; 2 km easy + drills + 6 x (800 m at controlled 5K effort / 2 min easy jog) + easy to 10 km",
         "tags": [
           "vo2max",
           "5k-specific"
         ],
-        "pace": "4:32&ndash;4:47/km",
+        "pace": "4:15&ndash;4:35/km",
         "strength": "Workout A"
       },
       {
@@ -426,7 +426,7 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "easy"
         ],
-        "pace": "6:15&ndash;7:00/km, effort first"
+        "pace": "5:45&ndash;7:30/km, effort first"
       },
       {
         "t": "easy",
@@ -436,7 +436,7 @@ window.RUN_PLAN_WEEKS = [
           "easy",
           "strides"
         ],
-        "pace": "Easy 6:15&ndash;7:00/km; strides relaxed-fast"
+        "pace": "Easy 5:45&ndash;7:30/km; strides relaxed-fast"
       },
       {
         "t": "rest",
@@ -454,7 +454,7 @@ window.RUN_PLAN_WEEKS = [
           "long-run",
           "steady"
         ],
-        "pace": "Easy 6:15&ndash;7:00/km; steady 5:25&ndash;5:45/km"
+        "pace": "Easy 5:45&ndash;7:30/km; steady 5:25&ndash;5:45/km"
       },
       {
         "t": "rec",
@@ -464,7 +464,7 @@ window.RUN_PLAN_WEEKS = [
           "easy",
           "recovery"
         ],
-        "pace": "6:30&ndash;7:15/km, effort first",
+        "pace": "5:45&ndash;7:30/km, effort first",
         "strength": "Workout B &middot; light lower body"
       }
     ]
@@ -493,7 +493,7 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "threshold"
         ],
-        "pace": "Threshold 4:48&ndash;5:03/km",
+        "pace": "Threshold 4:45&ndash;5:05/km",
         "strength": "Workout A &middot; reduce lower-body volume 25%"
       },
       {
@@ -503,7 +503,7 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "easy"
         ],
-        "pace": "6:15&ndash;7:00/km, effort first"
+        "pace": "5:45&ndash;7:30/km, effort first"
       },
       {
         "t": "intv",
@@ -513,7 +513,7 @@ window.RUN_PLAN_WEEKS = [
           "vo2max",
           "5k-specific"
         ],
-        "pace": "4:20&ndash;4:40/km"
+        "pace": "4:05&ndash;4:30/km"
       },
       {
         "t": "rest",
@@ -531,7 +531,7 @@ window.RUN_PLAN_WEEKS = [
           "long-run",
           "easy"
         ],
-        "pace": "6:15&ndash;7:00/km, effort first"
+        "pace": "5:45&ndash;7:30/km, effort first"
       },
       {
         "t": "rec",
@@ -541,7 +541,7 @@ window.RUN_PLAN_WEEKS = [
           "easy",
           "recovery"
         ],
-        "pace": "6:30&ndash;7:15/km, effort first",
+        "pace": "5:45&ndash;7:30/km, effort first",
         "strength": "Workout B"
       }
     ]
@@ -571,7 +571,7 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "threshold"
         ],
-        "pace": "Threshold 4:48&ndash;5:03/km",
+        "pace": "Threshold 4:45&ndash;5:05/km",
         "strength": "Workout A"
       },
       {
@@ -581,7 +581,7 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "easy"
         ],
-        "pace": "6:15&ndash;7:00/km, effort first"
+        "pace": "5:45&ndash;7:30/km, effort first"
       },
       {
         "t": "easy",
@@ -591,7 +591,7 @@ window.RUN_PLAN_WEEKS = [
           "easy",
           "strides"
         ],
-        "pace": "Easy 6:15&ndash;7:00/km; strides relaxed-fast"
+        "pace": "Easy 5:45&ndash;7:30/km; strides relaxed-fast"
       },
       {
         "t": "rest",
@@ -609,7 +609,7 @@ window.RUN_PLAN_WEEKS = [
           "long-run",
           "easy"
         ],
-        "pace": "6:15&ndash;7:00/km, effort first"
+        "pace": "5:45&ndash;7:30/km, effort first"
       },
       {
         "t": "rec",
@@ -619,7 +619,7 @@ window.RUN_PLAN_WEEKS = [
           "easy",
           "recovery"
         ],
-        "pace": "6:30&ndash;7:15/km, effort first",
+        "pace": "5:45&ndash;7:30/km, effort first",
         "strength": "Workout B"
       }
     ]
@@ -631,7 +631,7 @@ window.RUN_PLAN_WEEKS = [
     "kmLabel": "~54km",
     "phase": "dec-5k",
     "template": "Threshold + 1K Repeats",
-    "notes": "Key two-quality week. Thursday is the first sustained session at current 5K effort.",
+    "notes": "Key two-quality week. Thursday is the first sustained session around 21:30 goal pace.",
     "days": [
       {
         "t": "rest",
@@ -648,7 +648,7 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "threshold"
         ],
-        "pace": "Threshold 4:48&ndash;5:03/km",
+        "pace": "Threshold 4:35&ndash;4:55/km",
         "strength": "Workout A &middot; reduce lower-body volume 25%"
       },
       {
@@ -658,17 +658,17 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "easy"
         ],
-        "pace": "6:15&ndash;7:00/km, effort first"
+        "pace": "5:45&ndash;7:30/km, effort first"
       },
       {
         "t": "intv",
         "s": "10 km · 5 x 1 km",
-        "l": "10 km total &mdash; 2 km easy + drills + 5 x (1 km at current 5K effort / 2 min 30 sec easy jog) + easy to 10 km",
+        "l": "10 km total &mdash; 2 km easy + drills + 5 x (1 km around goal 5K pace / 2 min 30 sec easy jog) + easy to 10 km",
         "tags": [
           "vo2max",
           "5k-specific"
         ],
-        "pace": "4:32&ndash;4:47/km"
+        "pace": "4:13&ndash;4:28/km"
       },
       {
         "t": "rest",
@@ -686,7 +686,7 @@ window.RUN_PLAN_WEEKS = [
           "long-run",
           "easy"
         ],
-        "pace": "6:15&ndash;7:00/km, effort first"
+        "pace": "5:45&ndash;7:30/km, effort first"
       },
       {
         "t": "rec",
@@ -696,7 +696,7 @@ window.RUN_PLAN_WEEKS = [
           "easy",
           "recovery"
         ],
-        "pace": "6:30&ndash;7:15/km, effort first",
+        "pace": "5:45&ndash;7:30/km, effort first",
         "strength": "Workout B"
       }
     ]
@@ -721,12 +721,12 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "intv",
         "s": "10 km · 6 x 800 m",
-        "l": "10 km total &mdash; 2 km easy + drills + 6 x (800 m slightly quicker than current 5K pace / 2 min easy jog) + easy to 10 km",
+        "l": "10 km total &mdash; 2 km easy + drills + 6 x (800 m around or slightly quicker than goal 5K pace / 2 min easy jog) + easy to 10 km",
         "tags": [
           "vo2max",
           "5k-specific"
         ],
-        "pace": "4:25&ndash;4:42/km",
+        "pace": "4:05&ndash;4:25/km",
         "strength": "Workout A"
       },
       {
@@ -736,7 +736,7 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "easy"
         ],
-        "pace": "6:15&ndash;7:00/km, effort first"
+        "pace": "5:45&ndash;7:30/km, effort first"
       },
       {
         "t": "easy",
@@ -746,7 +746,7 @@ window.RUN_PLAN_WEEKS = [
           "easy",
           "strides"
         ],
-        "pace": "Easy 6:15&ndash;7:00/km; strides relaxed-fast"
+        "pace": "Easy 5:45&ndash;7:30/km; strides relaxed-fast"
       },
       {
         "t": "rest",
@@ -765,7 +765,7 @@ window.RUN_PLAN_WEEKS = [
           "easy",
           "steady"
         ],
-        "pace": "Easy 6:15&ndash;7:00/km; optional steady 5:25&ndash;5:45/km"
+        "pace": "Easy 5:45&ndash;7:30/km; optional steady 5:25&ndash;5:45/km"
       },
       {
         "t": "rec",
@@ -775,7 +775,7 @@ window.RUN_PLAN_WEEKS = [
           "easy",
           "recovery"
         ],
-        "pace": "6:30&ndash;7:15/km, effort first",
+        "pace": "5:45&ndash;7:30/km, effort first",
         "strength": "Workout B &middot; light lower body"
       }
     ]
@@ -805,7 +805,7 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "threshold"
         ],
-        "pace": "Threshold 4:48&ndash;5:03/km",
+        "pace": "Threshold 4:35&ndash;4:55/km",
         "strength": "Workout A &middot; 50% lower-body volume"
       },
       {
@@ -815,7 +815,7 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "easy"
         ],
-        "pace": "6:15&ndash;7:00/km, effort first"
+        "pace": "5:45&ndash;7:30/km, effort first"
       },
       {
         "t": "intv",
@@ -825,7 +825,7 @@ window.RUN_PLAN_WEEKS = [
           "5k-specific",
           "sharpening"
         ],
-        "pace": "4:25&ndash;4:45/km"
+        "pace": "3:55&ndash;4:20/km"
       },
       {
         "t": "rest",
@@ -843,7 +843,7 @@ window.RUN_PLAN_WEEKS = [
           "long-run",
           "easy"
         ],
-        "pace": "6:15&ndash;7:00/km, effort first"
+        "pace": "5:45&ndash;7:30/km, effort first"
       },
       {
         "t": "rec",
@@ -853,7 +853,7 @@ window.RUN_PLAN_WEEKS = [
           "easy",
           "recovery"
         ],
-        "pace": "6:30&ndash;7:15/km, effort first",
+        "pace": "5:45&ndash;7:30/km, effort first",
         "strength": "Workout B &middot; upper body + core only"
       }
     ]
@@ -884,7 +884,7 @@ window.RUN_PLAN_WEEKS = [
           "easy",
           "strides"
         ],
-        "pace": "Easy 6:15&ndash;7:00/km; strides relaxed-fast"
+        "pace": "Easy 5:45&ndash;7:30/km; strides relaxed-fast"
       },
       {
         "t": "rest",

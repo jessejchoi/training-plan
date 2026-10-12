@@ -13,20 +13,20 @@ blocks:
       dates_html: Oct 12&ndash;18
       total_km_html: "~53km"
       template: Threshold + Aerobic Volume
-      notes_html: Resume the established five-run rhythm. One quality session this week; keep the long run fully easy.
+      notes_html: Resume the established five-run rhythm. The manually selected 3 x 8 min threshold session stays in place; keep the long run fully easy.
       days:
       - {type: rest, tags: [recovery], content_html: Rest}
       - type: thr
         tags: [threshold]
-        label_html: 10 km &middot; 4 x 6 min
-        pace_html: Threshold 4:48&ndash;5:03/km
-        content_html: 10 km total &mdash; 2 km easy + 4 x (6 min threshold / 75&ndash;90 sec easy jog) + easy to 10 km
+        label_html: 10 km &middot; 3 x 8 min
+        pace_html: Threshold 4:45&ndash;5:05/km
+        content_html: 10 km total &mdash; 2 km easy + 3 x (8 min threshold / 2 min easy jog) + easy to 10 km
         strength_html: Workout A
-      - {type: easy, tags: [easy], pace_html: "6:15&ndash;7:00/km, effort first", content_html: 9 km easy}
-      - {type: easy, tags: [easy, strides], label_html: 10 km + strides, pace_html: "Easy 6:15&ndash;7:00/km; strides relaxed-fast", content_html: 10 km easy + 6 x 20 sec relaxed strides with full easy recovery}
+      - {type: easy, tags: [easy], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 9 km easy}
+      - {type: easy, tags: [easy, strides], label_html: 10 km + strides, pace_html: "Easy 5:45&ndash;7:30/km; strides relaxed-fast", content_html: 10 km easy + 6 x 20 sec relaxed strides with full easy recovery}
       - {type: rest, tags: [recovery], content_html: Rest}
-      - {type: lng, tags: [long-run, easy], pace_html: "6:15&ndash;7:00/km, effort first", content_html: 17 km easy}
-      - {type: rec, tags: [easy, recovery], pace_html: "6:30&ndash;7:15/km, effort first", content_html: 7 km recovery, strength_html: Workout B}
+      - {type: lng, tags: [long-run, easy], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 17 km easy}
+      - {type: rec, tags: [easy, recovery], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 7 km recovery, strength_html: Workout B}
 
     - week_html: '2'
       dates_html: Oct 19&ndash;25
@@ -38,18 +38,18 @@ blocks:
       - type: thr
         tags: [threshold]
         label_html: 10 km &middot; 3 x 8 min
-        pace_html: Threshold 4:48&ndash;5:03/km
+        pace_html: Threshold 4:45&ndash;5:05/km
         content_html: 10 km total &mdash; 2 km easy + 3 x (8 min threshold / 90 sec easy jog) + easy to 10 km
         strength_html: Workout A &middot; reduce lower-body volume 25%
-      - {type: easy, tags: [easy], pace_html: "6:15&ndash;7:00/km, effort first", content_html: 9 km easy}
+      - {type: easy, tags: [easy], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 9 km easy}
       - type: intv
         tags: [vo2max, 5k-specific]
         label_html: 9 km &middot; 10 x 400 m
-        pace_html: 4:15&ndash;4:35/km
+        pace_html: 4:05&ndash;4:30/km
         content_html: 9 km total &mdash; 2 km easy + drills + 10 x (400 m controlled fast / 200 m easy jog) + easy to 9 km
       - {type: rest, tags: [recovery], content_html: Rest}
-      - {type: lng, tags: [long-run, easy], pace_html: "6:15&ndash;7:00/km, effort first", content_html: 18 km easy}
-      - {type: rec, tags: [easy, recovery], pace_html: "6:30&ndash;7:15/km, effort first", content_html: 7 km recovery, strength_html: Workout B}
+      - {type: lng, tags: [long-run, easy], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 18 km easy}
+      - {type: rec, tags: [easy, recovery], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 7 km recovery, strength_html: Workout B}
 
     - week_html: '3'
       dates_html: Oct 26&ndash;Nov 1
@@ -61,14 +61,14 @@ blocks:
       - type: intv
         tags: [vo2max, 5k-specific]
         label_html: 10 km &middot; 5 x 3 min
-        pace_html: 4:22&ndash;4:42/km
+        pace_html: 4:10&ndash;4:35/km
         content_html: 10 km total &mdash; 2 km easy + drills + 5 x (3 min VO2 effort / 2 min easy jog) + easy to 10 km
         strength_html: Workout A
-      - {type: easy, tags: [easy], pace_html: "6:15&ndash;7:00/km, effort first", content_html: 9 km easy}
-      - {type: easy, tags: [easy, strides], label_html: 11 km + strides, pace_html: "Easy 6:15&ndash;7:00/km; strides relaxed-fast", content_html: 11 km easy + 6 x 20 sec relaxed strides with full easy recovery}
+      - {type: easy, tags: [easy], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 9 km easy}
+      - {type: easy, tags: [easy, strides], label_html: 11 km + strides, pace_html: "Easy 5:45&ndash;7:30/km; strides relaxed-fast", content_html: 11 km easy + 6 x 20 sec relaxed strides with full easy recovery}
       - {type: rest, tags: [recovery], content_html: Rest}
-      - {type: lng, tags: [long-run, steady], label_html: 19 km steady finish, pace_html: "Easy 6:15&ndash;7:00/km; steady 5:25&ndash;5:45/km", content_html: 14 km easy + 5 km steady}
-      - {type: rec, tags: [easy, recovery], pace_html: "6:30&ndash;7:15/km, effort first", content_html: 7 km recovery, strength_html: Workout B &middot; light lower body}
+      - {type: lng, tags: [long-run, steady], label_html: 19 km steady finish, pace_html: "Easy 5:45&ndash;7:30/km; steady 5:25&ndash;5:45/km", content_html: 14 km easy + 5 km steady}
+      - {type: rec, tags: [easy, recovery], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 7 km recovery, strength_html: Workout B &middot; light lower body}
 
     - week_html: '4↓'
       dates_html: Nov 2&ndash;8
@@ -80,14 +80,14 @@ blocks:
       - type: thr
         tags: [threshold]
         label_html: 9 km &middot; 3 x 6 min
-        pace_html: Threshold 4:48&ndash;5:03/km
+        pace_html: Threshold 4:45&ndash;5:05/km
         content_html: 9 km total &mdash; 2 km easy + 3 x (6 min threshold / 75&ndash;90 sec easy jog) + easy to 9 km
         strength_html: Workout A
-      - {type: easy, tags: [easy], pace_html: "6:15&ndash;7:00/km, effort first", content_html: 8 km easy}
-      - {type: easy, tags: [easy, strides], label_html: 9 km + strides, pace_html: "Easy 6:15&ndash;7:00/km; strides relaxed-fast", content_html: 9 km easy + 4 x 20 sec relaxed strides with full easy recovery}
+      - {type: easy, tags: [easy], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 8 km easy}
+      - {type: easy, tags: [easy, strides], label_html: 9 km + strides, pace_html: "Easy 5:45&ndash;7:30/km; strides relaxed-fast", content_html: 9 km easy + 4 x 20 sec relaxed strides with full easy recovery}
       - {type: rest, tags: [recovery], content_html: Rest}
-      - {type: lng, tags: [long-run, easy], pace_html: "6:15&ndash;7:00/km, effort first", content_html: 16 km easy}
-      - {type: rec, tags: [easy, recovery], pace_html: "6:30&ndash;7:15/km, effort first", content_html: 6 km recovery, strength_html: Workout B}
+      - {type: lng, tags: [long-run, easy], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 16 km easy}
+      - {type: rec, tags: [easy, recovery], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 6 km recovery, strength_html: Workout B}
 
     - week_html: '5'
       dates_html: Nov 9&ndash;15
@@ -99,37 +99,37 @@ blocks:
       - type: thr
         tags: [threshold]
         label_html: 10 km &middot; 4 x 7 min
-        pace_html: Threshold 4:48&ndash;5:03/km
+        pace_html: Threshold 4:45&ndash;5:05/km
         content_html: 10 km total &mdash; 2 km easy + 4 x (7 min threshold / 75&ndash;90 sec easy jog) + easy to 10 km
         strength_html: Workout A &middot; reduce lower-body volume 25%
-      - {type: easy, tags: [easy], pace_html: "6:15&ndash;7:00/km, effort first", content_html: 9 km easy}
+      - {type: easy, tags: [easy], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 9 km easy}
       - type: intv
         tags: [vo2max, 5k-specific]
         label_html: 10 km &middot; 7 x 600 m
-        pace_html: 4:20&ndash;4:40/km
+        pace_html: 4:05&ndash;4:30/km
         content_html: 10 km total &mdash; 2 km easy + drills + 7 x (600 m at 3K&ndash;5K effort / 90 sec easy jog) + easy to 10 km
       - {type: rest, tags: [recovery], content_html: Rest}
-      - {type: lng, tags: [long-run, easy], pace_html: "6:15&ndash;7:00/km, effort first", content_html: 18 km easy}
-      - {type: rec, tags: [easy, recovery], pace_html: "6:30&ndash;7:15/km, effort first", content_html: 7 km recovery, strength_html: Workout B}
+      - {type: lng, tags: [long-run, easy], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 18 km easy}
+      - {type: rec, tags: [easy, recovery], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 7 km recovery, strength_html: Workout B}
 
     - week_html: '6'
       dates_html: Nov 16&ndash;22
       total_km_html: "~56km"
       template: 800s + Steady Long Finish
-      notes_html: One weekday workout. Keep the 800s at current 5K effort rather than forcing goal pace.
+      notes_html: One weekday workout. Keep the 800s controlled and use the full pace range instead of forcing every rep to goal pace.
       days:
       - {type: rest, tags: [recovery], content_html: Rest}
       - type: intv
         tags: [vo2max, 5k-specific]
         label_html: 10 km &middot; 6 x 800 m
-        pace_html: 4:32&ndash;4:47/km
-        content_html: 10 km total &mdash; 2 km easy + drills + 6 x (800 m at current 5K effort / 2 min easy jog) + easy to 10 km
+        pace_html: 4:15&ndash;4:35/km
+        content_html: 10 km total &mdash; 2 km easy + drills + 6 x (800 m at controlled 5K effort / 2 min easy jog) + easy to 10 km
         strength_html: Workout A
-      - {type: easy, tags: [easy], pace_html: "6:15&ndash;7:00/km, effort first", content_html: 9 km easy}
-      - {type: easy, tags: [easy, strides], label_html: 11 km + strides, pace_html: "Easy 6:15&ndash;7:00/km; strides relaxed-fast", content_html: 11 km easy + 6 x 20 sec relaxed strides with full easy recovery}
+      - {type: easy, tags: [easy], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 9 km easy}
+      - {type: easy, tags: [easy, strides], label_html: 11 km + strides, pace_html: "Easy 5:45&ndash;7:30/km; strides relaxed-fast", content_html: 11 km easy + 6 x 20 sec relaxed strides with full easy recovery}
       - {type: rest, tags: [recovery], content_html: Rest}
-      - {type: lng, tags: [long-run, steady], label_html: 19 km steady finish, pace_html: "Easy 6:15&ndash;7:00/km; steady 5:25&ndash;5:45/km", content_html: 15 km easy + final 25 min steady, stopping at 19 km}
-      - {type: rec, tags: [easy, recovery], pace_html: "6:30&ndash;7:15/km, effort first", content_html: 7 km recovery, strength_html: Workout B &middot; light lower body}
+      - {type: lng, tags: [long-run, steady], label_html: 19 km steady finish, pace_html: "Easy 5:45&ndash;7:30/km; steady 5:25&ndash;5:45/km", content_html: 15 km easy + final 25 min steady, stopping at 19 km}
+      - {type: rec, tags: [easy, recovery], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 7 km recovery, strength_html: Workout B &middot; light lower body}
 
     - week_html: '7'
       dates_html: Nov 23&ndash;29
@@ -141,18 +141,18 @@ blocks:
       - type: thr
         tags: [threshold]
         label_html: 10 km &middot; 4 x 6 min
-        pace_html: Threshold 4:48&ndash;5:03/km
+        pace_html: Threshold 4:45&ndash;5:05/km
         content_html: 10 km total &mdash; 2 km easy + 4 x (6 min threshold / 75&ndash;90 sec easy jog) + easy to 10 km
         strength_html: Workout A &middot; reduce lower-body volume 25%
-      - {type: easy, tags: [easy], pace_html: "6:15&ndash;7:00/km, effort first", content_html: 9 km easy}
+      - {type: easy, tags: [easy], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 9 km easy}
       - type: intv
         tags: [vo2max, 5k-specific]
         label_html: 10 km &middot; 6 x 3 min
-        pace_html: 4:20&ndash;4:40/km
+        pace_html: 4:05&ndash;4:30/km
         content_html: 10 km total &mdash; 2 km easy + drills + 6 x (3 min VO2 effort / 2 min easy jog) + easy to 10 km
       - {type: rest, tags: [recovery], content_html: Rest}
-      - {type: lng, tags: [long-run, easy], pace_html: "6:15&ndash;7:00/km, effort first", content_html: 20 km easy}
-      - {type: rec, tags: [easy, recovery], pace_html: "6:30&ndash;7:15/km, effort first", content_html: 7 km recovery, strength_html: Workout B}
+      - {type: lng, tags: [long-run, easy], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 20 km easy}
+      - {type: rec, tags: [easy, recovery], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 7 km recovery, strength_html: Workout B}
 
     - week_html: '8↓'
       dates_html: Nov 30&ndash;Dec 6
@@ -164,37 +164,37 @@ blocks:
       - type: thr
         tags: [threshold]
         label_html: 9 km &middot; 20 min
-        pace_html: Threshold 4:48&ndash;5:03/km
+        pace_html: Threshold 4:45&ndash;5:05/km
         content_html: 9 km total &mdash; 2 km easy + 20 min continuous threshold + easy to 9 km
         strength_html: Workout A
-      - {type: easy, tags: [easy], pace_html: "6:15&ndash;7:00/km, effort first", content_html: 8 km easy}
-      - {type: easy, tags: [easy, strides], label_html: 10 km + strides, pace_html: "Easy 6:15&ndash;7:00/km; strides relaxed-fast", content_html: 10 km easy + 4 x 20 sec relaxed strides with full easy recovery}
+      - {type: easy, tags: [easy], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 8 km easy}
+      - {type: easy, tags: [easy, strides], label_html: 10 km + strides, pace_html: "Easy 5:45&ndash;7:30/km; strides relaxed-fast", content_html: 10 km easy + 4 x 20 sec relaxed strides with full easy recovery}
       - {type: rest, tags: [recovery], content_html: Rest}
-      - {type: lng, tags: [long-run, easy], pace_html: "6:15&ndash;7:00/km, effort first", content_html: 16 km easy}
-      - {type: rec, tags: [easy, recovery], pace_html: "6:30&ndash;7:15/km, effort first", content_html: 6 km recovery, strength_html: Workout B}
+      - {type: lng, tags: [long-run, easy], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 16 km easy}
+      - {type: rec, tags: [easy, recovery], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 6 km recovery, strength_html: Workout B}
 
     - week_html: '9'
       dates_html: Dec 7&ndash;13
       total_km_html: "~54km"
       template: Threshold + 1K Repeats
-      notes_html: Key two-quality week. Thursday is the first sustained session at current 5K effort.
+      notes_html: Key two-quality week. Thursday is the first sustained session around 21:30 goal pace.
       days:
       - {type: rest, tags: [recovery], content_html: Rest}
       - type: thr
         tags: [threshold]
         label_html: 10 km &middot; 3 x 8 min
-        pace_html: Threshold 4:48&ndash;5:03/km
+        pace_html: Threshold 4:35&ndash;4:55/km
         content_html: 10 km total &mdash; 2 km easy + 3 x (8 min threshold / 90 sec easy jog) + easy to 10 km
         strength_html: Workout A &middot; reduce lower-body volume 25%
-      - {type: easy, tags: [easy], pace_html: "6:15&ndash;7:00/km, effort first", content_html: 9 km easy}
+      - {type: easy, tags: [easy], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 9 km easy}
       - type: intv
         tags: [vo2max, 5k-specific]
         label_html: 10 km &middot; 5 x 1 km
-        pace_html: 4:32&ndash;4:47/km
-        content_html: 10 km total &mdash; 2 km easy + drills + 5 x (1 km at current 5K effort / 2 min 30 sec easy jog) + easy to 10 km
+        pace_html: 4:13&ndash;4:28/km
+        content_html: 10 km total &mdash; 2 km easy + drills + 5 x (1 km around goal 5K pace / 2 min 30 sec easy jog) + easy to 10 km
       - {type: rest, tags: [recovery], content_html: Rest}
-      - {type: lng, tags: [long-run, easy], pace_html: "6:15&ndash;7:00/km, effort first", content_html: 18 km easy}
-      - {type: rec, tags: [easy, recovery], pace_html: "6:30&ndash;7:15/km, effort first", content_html: 7 km recovery, strength_html: Workout B}
+      - {type: lng, tags: [long-run, easy], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 18 km easy}
+      - {type: rec, tags: [easy, recovery], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 7 km recovery, strength_html: Workout B}
 
     - week_html: '10'
       dates_html: Dec 14&ndash;20
@@ -206,14 +206,14 @@ blocks:
       - type: intv
         tags: [vo2max, 5k-specific]
         label_html: 10 km &middot; 6 x 800 m
-        pace_html: 4:25&ndash;4:42/km
-        content_html: 10 km total &mdash; 2 km easy + drills + 6 x (800 m slightly quicker than current 5K pace / 2 min easy jog) + easy to 10 km
+        pace_html: 4:05&ndash;4:25/km
+        content_html: 10 km total &mdash; 2 km easy + drills + 6 x (800 m around or slightly quicker than goal 5K pace / 2 min easy jog) + easy to 10 km
         strength_html: Workout A
-      - {type: easy, tags: [easy], pace_html: "6:15&ndash;7:00/km, effort first", content_html: 9 km easy}
-      - {type: easy, tags: [easy, strides], label_html: 11 km + strides, pace_html: "Easy 6:15&ndash;7:00/km; strides relaxed-fast", content_html: 11 km easy + 6 x 20 sec relaxed strides with full easy recovery}
+      - {type: easy, tags: [easy], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 9 km easy}
+      - {type: easy, tags: [easy, strides], label_html: 11 km + strides, pace_html: "Easy 5:45&ndash;7:30/km; strides relaxed-fast", content_html: 11 km easy + 6 x 20 sec relaxed strides with full easy recovery}
       - {type: rest, tags: [recovery], content_html: Rest}
-      - {type: lng, tags: [long-run, easy, steady], label_html: 19 km optional steady, pace_html: "Easy 6:15&ndash;7:00/km; optional steady 5:25&ndash;5:45/km", content_html: 19 km easy; if fresh, run only the final 20 min steady}
-      - {type: rec, tags: [easy, recovery], pace_html: "6:30&ndash;7:15/km, effort first", content_html: 7 km recovery, strength_html: Workout B &middot; light lower body}
+      - {type: lng, tags: [long-run, easy, steady], label_html: 19 km optional steady, pace_html: "Easy 5:45&ndash;7:30/km; optional steady 5:25&ndash;5:45/km", content_html: 19 km easy; if fresh, run only the final 20 min steady}
+      - {type: rec, tags: [easy, recovery], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 7 km recovery, strength_html: Workout B &middot; light lower body}
 
     - week_html: '11↓'
       dates_html: Dec 21&ndash;27
@@ -225,18 +225,18 @@ blocks:
       - type: thr
         tags: [threshold]
         label_html: 9 km &middot; 3 x 6 min
-        pace_html: Threshold 4:48&ndash;5:03/km
+        pace_html: Threshold 4:35&ndash;4:55/km
         content_html: 9 km total &mdash; 2 km easy + 3 x (6 min threshold / 90 sec easy jog) + easy to 9 km
         strength_html: Workout A &middot; 50% lower-body volume
-      - {type: easy, tags: [easy], pace_html: "6:15&ndash;7:00/km, effort first", content_html: 8 km easy}
+      - {type: easy, tags: [easy], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 8 km easy}
       - type: intv
         tags: [5k-specific, sharpening]
         label_html: 8 km &middot; 6 x 400 m
-        pace_html: 4:25&ndash;4:45/km
+        pace_html: 3:55&ndash;4:20/km
         content_html: 8 km total &mdash; 2 km easy + drills + 6 x (400 m at controlled 5K effort / 200 m easy jog) + easy to 8 km
       - {type: rest, tags: [recovery], content_html: Rest}
-      - {type: lng, tags: [long-run, easy], pace_html: "6:15&ndash;7:00/km, effort first", content_html: 15 km easy}
-      - {type: rec, tags: [easy, recovery], pace_html: "6:30&ndash;7:15/km, effort first", content_html: 6 km recovery, strength_html: Workout B &middot; upper body + core only}
+      - {type: lng, tags: [long-run, easy], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 15 km easy}
+      - {type: rec, tags: [easy, recovery], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 6 km recovery, strength_html: Workout B &middot; upper body + core only}
 
     - week_html: '12'
       dates_html: Dec 28&ndash;Jan 3
@@ -246,11 +246,11 @@ blocks:
       race_notes_html: "Target: 21:30, averaging 4:18/km. Warm up 2.5 km, add drills and 4 strides, then open the first kilometre around 4:18&ndash;4:33/km. Settle near target effort through 3 km and race the final 2 km. Cool down 1.5&ndash;2 km."
       days:
       - {type: rest, tags: [recovery], content_html: Rest}
-      - {type: easy, tags: [easy, strides], label_html: 6 km + strides, pace_html: "Easy 6:15&ndash;7:00/km; strides relaxed-fast", content_html: 6 km easy + 4 x 20 sec relaxed strides with full easy recovery}
+      - {type: easy, tags: [easy, strides], label_html: 6 km + strides, pace_html: "Easy 5:45&ndash;7:30/km; strides relaxed-fast", content_html: 6 km easy + 4 x 20 sec relaxed strides with full easy recovery}
       - {type: rest, tags: [recovery], content_html: Rest}
       - {type: race, tags: [race, 5k-specific], priority: A, label_html: 5K TIME TRIAL, pace_html: "21:30 target &middot; 4:18/km average", content_html: 2.5 km easy + drills + 4 strides + 5K time trial + 1.5&ndash;2 km easy cool-down}
       - {type: rest, tags: [recovery], content_html: Rest}
       - {type: rest, tags: [recovery], content_html: Rest or easy walking}
       - {type: rest, tags: [recovery], content_html: Rest or easy walking}
-  pace_guide_html: "<strong>Easy:</strong> effort-first, usually 6:15&ndash;7:00/km &nbsp;&middot;&nbsp; <strong>Recovery:</strong> 6:30&ndash;7:15/km &nbsp;&middot;&nbsp; <strong>Steady:</strong> 5:25&ndash;5:45/km &nbsp;&middot;&nbsp; <strong>Threshold:</strong> 4:48&ndash;5:03/km &nbsp;&middot;&nbsp; <strong>VO2 / 5K work:</strong> varies by repetition length from 4:15&ndash;4:47/km."
+  pace_guide_html: "<strong>Easy / recovery:</strong> effort-first, 5:45&ndash;7:30/km &nbsp;&middot;&nbsp; <strong>Steady:</strong> 5:25&ndash;5:45/km &nbsp;&middot;&nbsp; <strong>Threshold:</strong> 4:45&ndash;5:05/km, progressing to 4:35&ndash;4:55/km in December &nbsp;&middot;&nbsp; <strong>VO2 / 5K work:</strong> 3:55&ndash;4:35/km depending on repetition length &nbsp;&middot;&nbsp; <strong>5K target:</strong> 21:30 / 4:18 per km."
   plan_note_html: "Five runs per week with Monday and Friday rest. Two weekday quality sessions appear selectively; long runs stay easy in those weeks. AQI above 100: quality and long runs indoors. AQI above 150: all runs indoors. Pace ranges are intentionally at least 15 sec/km wide."
