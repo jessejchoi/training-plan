@@ -9,13 +9,9 @@ YAML_PATH = File.join(ROOT, "run-plan.yaml")
 OUTPUT_PATH = File.join(ROOT, "run-data.generated.js")
 
 PHASE_BY_WEEK = {
-  "1" => "hm-build", "2" => "hm-build", "3" => "hm-build", "4" => "hm-build",
-  "5" => "hm-build", "6" => "hm-build", "7" => "hm-build", "8" => "hm-build",
-  "9" => "hm-build", "10" => "hm-build", "11" => "hm-build", "12" => "hm-build",
-  "13" => "hm-peak", "14" => "hm-peak", "15" => "hm-peak", "16" => "hm-peak",
-  "17" => "oct-hm-peak", "18" => "oct-hm-peak", "19" => "oct-hm-peak",
-  "20" => "oct-hm-peak", "21" => "oct-hm-peak", "22" => "oct-hm-peak",
-  "23" => "oct-hm-peak", "24" => "oct-hm-peak", "25" => "oct-hm-peak"
+  "1" => "dec-5k", "2" => "dec-5k", "3" => "dec-5k", "4" => "dec-5k",
+  "5" => "dec-5k", "6" => "dec-5k", "7" => "dec-5k", "8" => "dec-5k",
+  "9" => "dec-5k", "10" => "dec-5k", "11" => "dec-5k", "12" => "dec-5k"
 }.freeze
 
 TYPE_SUFFIX = {
@@ -103,6 +99,7 @@ def short_label(day)
 end
 
 def race_label(text)
+  return "5K TIME TRIAL" if text.match?(/5K time trial/i)
   return "MAY 10K" if text.match?(/May 24 10K/i)
   return "AUG HM" if text.match?(/Aug 23/i)
   return "OCT HM" if text.match?(/Oct 25.*(?:HM|Half Marathon)/i)

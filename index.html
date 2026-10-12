@@ -44,10 +44,10 @@
 <script type="text/babel" src="shared-data.jsx"></script>
 
 <script type="text/babel">
-const { WEEKS, DAY_TYPES, DAY_ABBR, TODAY_WEEK_ID, TODAY_DAY_INDEX, DAYS_TO_OCT_HM } = window;
+const { WEEKS, DAY_TYPES, DAY_ABBR, TODAY_WEEK_ID, TODAY_DAY_INDEX, DAYS_TO_DEC_5K } = window;
 
 const TODAY_KEY = `${TODAY_WEEK_ID}-${TODAY_DAY_INDEX}`;
-const ACTIVE_WEEKS = WEEKS.filter(week => Number(week.id) >= 17);
+const ACTIVE_WEEKS = WEEKS;
 const ACTIVE_TODAY_KEY = ACTIVE_WEEKS.some(week => week.id === TODAY_WEEK_ID) ? TODAY_KEY : null;
 const DEFAULT_SELECTED_KEY = ACTIVE_TODAY_KEY || `${ACTIVE_WEEKS[0].id}-0`;
 const GLYPH = { rest:'·', easy:'E', rec:'R', intv:'I', thr:'T', med:'M', steady:'M', hm:'H', shake:'R', lng:'L', qlng:'L+', race:'★' };
@@ -993,9 +993,7 @@ function DayDetailCard({ selectedKey, completed, setCompleted, onGoToToday, card
 
 function Countdowns({ compact = false }) {
   const races = [
-    { label:'MAY 10K', date:'May 24', tgt:'FINISH TIME', metric:'49:45', unit:null, c:'var(--race)' },
-    { label:'AUG HM', date:'Aug 23', tgt:'FINISH TIME', metric:'1:54', unit:null, c:'var(--str)' },
-    { label:'OCT HM', date:'Oct 25', tgt:'A · Sub 1:45 stretch', n:DAYS_TO_OCT_HM, c:'var(--intv)' },
+    { label:'DEC 5K TT', date:'Dec 31', tgt:'TIME TRIAL', n:DAYS_TO_DEC_5K, c:'var(--intv)' },
   ];
 
   if (compact) {
@@ -1163,7 +1161,7 @@ function WeeklyGrid({ completed, selectedKey, setSelectedKey, isWide }) {
   };
   return (
     <div>
-      <SectionHead label="WEEKS 17–25 · 9 WEEKS × 7 DAYS" meta="tap a day · blue dot = strength"/>
+      <SectionHead label="WEEKS 1–12 · 12 WEEKS × 7 DAYS" meta="tap a day · blue dot = strength"/>
       <div style={{
         display:'grid',
         gridTemplateColumns:columns,
@@ -1425,10 +1423,10 @@ function App() {
   const modeAccent = mode === 'mob' ? 'var(--mob)' : mode === 'str' ? 'var(--str)' : mode === 'health' ? 'var(--med)' : 'var(--run)';
   const headerTitle = mode === 'health'
     ? <>Weight + <em style={{fontStyle:'italic',color:modeAccent}}>Blood Pressure</em></>
-    : <>HM Build → <em style={{fontStyle:'italic',color:modeAccent}}>Oct HM Peak</em></>;
+    : <>Aerobic Base → <em style={{fontStyle:'italic',color:modeAccent}}>5K Time Trial</em></>;
   const headerMeta = mode === 'health'
     ? 'J. CHOI · HEALTH LOG'
-    : 'J. CHOI · AUG–OCT 2026';
+    : 'J. CHOI · OCT–DEC 2026';
 
   React.useEffect(() => {
     setSelectedKey(DEFAULT_SELECTED_KEY);
@@ -1525,7 +1523,7 @@ function App() {
         color:'var(--muted2)',
         borderTop:'1px solid var(--border)',
       }}>
-        KM 06 · 6° SOUTH · WEEKS 17–25 · AUG 24–OCT 25 · OCT HM A-RACE
+        KM 06 · 6° SOUTH · WEEKS 1–12 · OCT 12–JAN 3 · DEC 31 5K TIME TRIAL
       </footer>
     </div>
   );

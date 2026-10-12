@@ -61,9 +61,7 @@ const DAY_ABBR = ['MON','TUE','WED','THU','FRI','SAT','SUN'];
 
 // Phase structure
 const PHASES = [
-  { id: 'hm-build', name: 'HM-first build with July 10K benchmark', startWk: '1', endWk: '12', color: T.run },
-  { id: 'hm-peak', name: 'HM tune-up block', startWk: '13', endWk: '16', color: T.str },
-  { id: 'oct-hm-peak', name: 'Recover, rebuild, and Oct HM peak', startWk: '17', endWk: '25', color: T.intv },
+  { id: 'dec-5k', name: 'December 5K time-trial build', startWk: '1', endWk: '12', color: T.intv },
 ];
 
 // Generated from run-plan.yaml by scripts/generate_plan_data.rb.
@@ -96,7 +94,7 @@ function diffWholeDays(fromUtc, toUtc) {
 
 const PLAN_TIME_ZONE = 'Asia/Jakarta';
 const LOCAL_TODAY = zonedDateParts(PLAN_TIME_ZONE);
-const PLAN_START = { year: 2026, month: 5, day: 4 };
+const PLAN_START = { year: 2026, month: 10, day: 12 };
 const planStartUtc = utcDateFromParts(PLAN_START);
 const todayUtc = utcDateFromParts(LOCAL_TODAY);
 const planDayOffset = diffWholeDays(planStartUtc, todayUtc);
@@ -112,13 +110,11 @@ function getTodayDay() {
   return w.days[TODAY_DAY_INDEX];
 }
 
-const DAYS_TO_MAY_10K = Math.max(0, diffWholeDays(todayUtc, utcDateFromParts({ year: 2026, month: 5, day: 24 })));
-const DAYS_TO_HM = Math.max(0, diffWholeDays(todayUtc, utcDateFromParts({ year: 2026, month: 8, day: 23 })));
-const DAYS_TO_OCT_HM = Math.max(0, diffWholeDays(todayUtc, utcDateFromParts({ year: 2026, month: 10, day: 25 })));
+const DAYS_TO_DEC_5K = Math.max(0, diffWholeDays(todayUtc, utcDateFromParts({ year: 2026, month: 12, day: 31 })));
 
 Object.assign(window, {
   T, DAY_TYPES, DAY_ABBR, PHASES, WEEKS, PLAN_META, PLAN_TIME_ZONE,
   TODAY_WEEK_ID, TODAY_DAY_INDEX,
   getWeek, getTodayWeek, getTodayDay,
-  DAYS_TO_MAY_10K, DAYS_TO_HM, DAYS_TO_OCT_HM,
+  DAYS_TO_DEC_5K,
 });

@@ -1,7 +1,7 @@
 # Design System — KM 06 Training System
 
 ## Product Context
-- **What this is:** A personal training reference page for the active Weeks 17–25 build toward the October 2026 half marathon
+- **What this is:** A personal training reference page for the active 12-week build toward a December 31, 2026 5K time trial
 - **Who it's for:** Personal use only — Jesse Choi
 - **Space/industry:** Running / endurance sports / personal training tools
 - **Project type:** Single-page reference tool, data-dense, consulted daily
@@ -88,3 +88,4 @@
 | 2026-08-23 | Active-block-only run dashboard | Keeps Weeks 17–25 in view, moves race results beneath volume context, and removes the completed phase timeline. |
 | 2026-08-23 | Strength timing lives in the run calendar | A blue grid marker and compact detail badge show combined run-and-lift days; the Strength tab remains the exercise reference. |
 | 2026-10-12 | KM 06 brand identity | KM signals metric running; 06 references Jakarta at roughly 6° south. The latitude/lap mark uses the established electric green and terminal geometry. |
+| 2026-10-12 | December 5K block replaces October HM peak | The dashboard now shows the complete Oct 12–Jan 3 plan, selective two-quality weeks, maintained long-run volume, and the Dec 31 time trial. |
