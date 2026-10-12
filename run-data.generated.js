@@ -23,7 +23,7 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "thr",
-        "s": "10 km &middot; 4 x 6 min",
+        "s": "10 km · 4 x 6 min",
         "l": "10 km total &mdash; 2 km easy + 4 x (6 min threshold / 75&ndash;90 sec easy jog) + easy to 10 km",
         "tags": [
           "threshold"
@@ -100,7 +100,7 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "thr",
-        "s": "10 km &middot; 3 x 8 min",
+        "s": "10 km · 3 x 8 min",
         "l": "10 km total &mdash; 2 km easy + 3 x (8 min threshold / 90 sec easy jog) + easy to 10 km",
         "tags": [
           "threshold"
@@ -119,7 +119,7 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "intv",
-        "s": "9 km &middot; 10 x 400 m",
+        "s": "9 km · 10 x 400 m",
         "l": "9 km total &mdash; 2 km easy + drills + 10 x (400 m controlled fast / 200 m easy jog) + easy to 9 km",
         "tags": [
           "vo2max",
@@ -177,7 +177,7 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "intv",
-        "s": "10 km &middot; 5 x 3 min",
+        "s": "10 km · 5 x 3 min",
         "l": "10 km total &mdash; 2 km easy + drills + 5 x (3 min VO2 effort / 2 min easy jog) + easy to 10 km",
         "tags": [
           "vo2max",
@@ -256,7 +256,7 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "thr",
-        "s": "9 km &middot; 3 x 6 min",
+        "s": "9 km · 3 x 6 min",
         "l": "9 km total &mdash; 2 km easy + 3 x (6 min threshold / 75&ndash;90 sec easy jog) + easy to 9 km",
         "tags": [
           "threshold"
@@ -333,7 +333,7 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "thr",
-        "s": "10 km &middot; 4 x 7 min",
+        "s": "10 km · 4 x 7 min",
         "l": "10 km total &mdash; 2 km easy + 4 x (7 min threshold / 75&ndash;90 sec easy jog) + easy to 10 km",
         "tags": [
           "threshold"
@@ -352,7 +352,7 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "intv",
-        "s": "10 km &middot; 7 x 600 m",
+        "s": "10 km · 7 x 600 m",
         "l": "10 km total &mdash; 2 km easy + drills + 7 x (600 m at 3K&ndash;5K effort / 90 sec easy jog) + easy to 10 km",
         "tags": [
           "vo2max",
@@ -410,7 +410,7 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "intv",
-        "s": "10 km &middot; 6 x 800 m",
+        "s": "10 km · 6 x 800 m",
         "l": "10 km total &mdash; 2 km easy + drills + 6 x (800 m at current 5K effort / 2 min easy jog) + easy to 10 km",
         "tags": [
           "vo2max",
@@ -488,7 +488,7 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "thr",
-        "s": "10 km &middot; 4 x 6 min",
+        "s": "10 km · 4 x 6 min",
         "l": "10 km total &mdash; 2 km easy + 4 x (6 min threshold / 75&ndash;90 sec easy jog) + easy to 10 km",
         "tags": [
           "threshold"
@@ -507,7 +507,7 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "intv",
-        "s": "10 km &middot; 6 x 3 min",
+        "s": "10 km · 6 x 3 min",
         "l": "10 km total &mdash; 2 km easy + drills + 6 x (3 min VO2 effort / 2 min easy jog) + easy to 10 km",
         "tags": [
           "vo2max",
@@ -566,7 +566,7 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "thr",
-        "s": "9 km &middot; 20 min",
+        "s": "9 km · 20 min",
         "l": "9 km total &mdash; 2 km easy + 20 min continuous threshold + easy to 9 km",
         "tags": [
           "threshold"
@@ -643,7 +643,7 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "thr",
-        "s": "10 km &middot; 3 x 8 min",
+        "s": "10 km · 3 x 8 min",
         "l": "10 km total &mdash; 2 km easy + 3 x (8 min threshold / 90 sec easy jog) + easy to 10 km",
         "tags": [
           "threshold"
@@ -662,7 +662,7 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "intv",
-        "s": "10 km &middot; 5 x 1 km",
+        "s": "10 km · 5 x 1 km",
         "l": "10 km total &mdash; 2 km easy + drills + 5 x (1 km at current 5K effort / 2 min 30 sec easy jog) + easy to 10 km",
         "tags": [
           "vo2max",
@@ -720,7 +720,7 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "intv",
-        "s": "10 km &middot; 6 x 800 m",
+        "s": "10 km · 6 x 800 m",
         "l": "10 km total &mdash; 2 km easy + drills + 6 x (800 m slightly quicker than current 5K pace / 2 min easy jog) + easy to 10 km",
         "tags": [
           "vo2max",
@@ -800,7 +800,7 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "thr",
-        "s": "9 km &middot; 3 x 6 min",
+        "s": "9 km · 3 x 6 min",
         "l": "9 km total &mdash; 2 km easy + 3 x (6 min threshold / 90 sec easy jog) + easy to 9 km",
         "tags": [
           "threshold"
@@ -819,7 +819,7 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "intv",
-        "s": "8 km &middot; 6 x 400 m",
+        "s": "8 km · 6 x 400 m",
         "l": "8 km total &mdash; 2 km easy + drills + 6 x (400 m at controlled 5K effort / 200 m easy jog) + easy to 8 km",
         "tags": [
           "5k-specific",
@@ -902,9 +902,9 @@ window.RUN_PLAN_WEEKS = [
           "race",
           "5k-specific"
         ],
-        "pace": "Open 4:40&ndash;4:55/km, then race by effort",
+        "pace": "21:30 target &middot; 4:18/km average",
         "priority": "A",
-        "raceNotes": "Warm up 2.5 km, add drills and 4 strides, then start the first kilometre around 4:40&ndash;4:55/km. Settle by feel through 3 km and race the final 2 km. Cool down 1.5&ndash;2 km."
+        "raceNotes": "Target: 21:30, averaging 4:18/km. Warm up 2.5 km, add drills and 4 strides, then open the first kilometre around 4:18&ndash;4:33/km. Settle near target effort through 3 km and race the final 2 km. Cool down 1.5&ndash;2 km."
       },
       {
         "t": "rest",

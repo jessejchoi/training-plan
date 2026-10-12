@@ -243,12 +243,12 @@ blocks:
       total_km_html: "~15&ndash;16km"
       template: 5K Time Trial
       notes_html: Stay fresh, then run an evenly paced time trial. The first kilometre should feel controlled enough to protect the final two.
-      race_notes_html: "Warm up 2.5 km, add drills and 4 strides, then start the first kilometre around 4:40&ndash;4:55/km. Settle by feel through 3 km and race the final 2 km. Cool down 1.5&ndash;2 km."
+      race_notes_html: "Target: 21:30, averaging 4:18/km. Warm up 2.5 km, add drills and 4 strides, then open the first kilometre around 4:18&ndash;4:33/km. Settle near target effort through 3 km and race the final 2 km. Cool down 1.5&ndash;2 km."
       days:
       - {type: rest, tags: [recovery], content_html: Rest}
       - {type: easy, tags: [easy, strides], label_html: 6 km + strides, pace_html: "Easy 6:15&ndash;7:00/km; strides relaxed-fast", content_html: 6 km easy + 4 x 20 sec relaxed strides with full easy recovery}
       - {type: rest, tags: [recovery], content_html: Rest}
-      - {type: race, tags: [race, 5k-specific], priority: A, label_html: 5K TIME TRIAL, pace_html: "Open 4:40&ndash;4:55/km, then race by effort", content_html: 2.5 km easy + drills + 4 strides + 5K time trial + 1.5&ndash;2 km easy cool-down}
+      - {type: race, tags: [race, 5k-specific], priority: A, label_html: 5K TIME TRIAL, pace_html: "21:30 target &middot; 4:18/km average", content_html: 2.5 km easy + drills + 4 strides + 5K time trial + 1.5&ndash;2 km easy cool-down}
       - {type: rest, tags: [recovery], content_html: Rest}
       - {type: rest, tags: [recovery], content_html: Rest or easy walking}
       - {type: rest, tags: [recovery], content_html: Rest or easy walking}
