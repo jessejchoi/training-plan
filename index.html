@@ -59,6 +59,22 @@ const useLocal = (key, init) => {
   return [v, setV];
 };
 
+// One-time cleanup: keep completion ticks only on sessions before today.
+(() => {
+  try {
+    const flagKey = 'tp-completed-future-reset-v1';
+    if (localStorage.getItem(flagKey)) return;
+    const saved = JSON.parse(localStorage.getItem('tp-completed') || '{}');
+    const todayWeek = Number(TODAY_WEEK_ID);
+    const kept = Object.fromEntries(Object.entries(saved).filter(([key]) => {
+      const [weekId, dayIndex] = key.split('-').map(Number);
+      return weekId < todayWeek || (weekId === todayWeek && dayIndex < TODAY_DAY_INDEX);
+    }));
+    localStorage.setItem('tp-completed', JSON.stringify(kept));
+    localStorage.setItem(flagKey, '1');
+  } catch (e) {}
+})();
+
 function getSessionByKey(key) {
   const [weekId, dayIndexString] = String(key).split('-');
   const week = WEEKS.find(w => w.id === weekId);
