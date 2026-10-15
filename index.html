@@ -62,16 +62,17 @@ const useLocal = (key, init) => {
   return [v, setV];
 };
 
-// One-time cleanup: keep completion ticks only on sessions before today.
+// One-time cleanup: keep completion ticks only on this plan's sessions before today.
 (() => {
   try {
     const flagKey = 'tp-completed-future-reset-v1';
     if (localStorage.getItem(flagKey)) return;
     const saved = JSON.parse(localStorage.getItem('tp-completed') || '{}');
-    const todayWeek = Number(TODAY_WEEK_ID);
+    const todayOffset = WEEKS.findIndex(week => week.id === TODAY_WEEK_ID) * 7 + TODAY_DAY_INDEX;
     const kept = Object.fromEntries(Object.entries(saved).filter(([key]) => {
-      const [weekId, dayIndex] = key.split('-').map(Number);
-      return weekId < todayWeek || (weekId === todayWeek && dayIndex < TODAY_DAY_INDEX);
+      const [weekId, dayIndex] = key.split('-');
+      const weekIndex = WEEKS.findIndex(week => week.id === weekId);
+      return weekIndex >= 0 && weekIndex * 7 + Number(dayIndex) < todayOffset;
     }));
     localStorage.setItem('tp-completed', JSON.stringify(kept));
     localStorage.setItem(flagKey, '1');
