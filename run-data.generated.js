@@ -125,7 +125,7 @@ window.RUN_PLAN_WEEKS = [
           "vo2max",
           "5k-specific"
         ],
-        "pace": "4:05&ndash;4:30/km"
+        "pace": "4:15&ndash;4:35/km"
       },
       {
         "t": "rest",
@@ -183,7 +183,7 @@ window.RUN_PLAN_WEEKS = [
           "vo2max",
           "5k-specific"
         ],
-        "pace": "4:10&ndash;4:35/km",
+        "pace": "4:20&ndash;4:40/km",
         "strength": "Workout A"
       },
       {
@@ -358,7 +358,7 @@ window.RUN_PLAN_WEEKS = [
           "vo2max",
           "5k-specific"
         ],
-        "pace": "4:05&ndash;4:30/km"
+        "pace": "4:15&ndash;4:35/km"
       },
       {
         "t": "rest",
@@ -416,7 +416,7 @@ window.RUN_PLAN_WEEKS = [
           "vo2max",
           "5k-specific"
         ],
-        "pace": "4:15&ndash;4:35/km",
+        "pace": "4:25&ndash;4:45/km",
         "strength": "Workout A"
       },
       {
@@ -513,7 +513,7 @@ window.RUN_PLAN_WEEKS = [
           "vo2max",
           "5k-specific"
         ],
-        "pace": "4:05&ndash;4:30/km"
+        "pace": "4:15&ndash;4:35/km"
       },
       {
         "t": "rest",
@@ -631,7 +631,7 @@ window.RUN_PLAN_WEEKS = [
     "kmLabel": "~54km",
     "phase": "dec-5k",
     "template": "Threshold + 1K Repeats",
-    "notes": "Key two-quality week. Thursday is the first sustained session around 21:30 goal pace.",
+    "notes": "Key two-quality week. Thursday is the first sustained session around 22:30 goal pace.",
     "days": [
       {
         "t": "rest",
@@ -648,7 +648,7 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "threshold"
         ],
-        "pace": "Threshold 4:35&ndash;4:55/km",
+        "pace": "Threshold 4:40&ndash;5:00/km",
         "strength": "Workout A &middot; reduce lower-body volume 25%"
       },
       {
@@ -668,7 +668,7 @@ window.RUN_PLAN_WEEKS = [
           "vo2max",
           "5k-specific"
         ],
-        "pace": "4:13&ndash;4:28/km"
+        "pace": "4:23&ndash;4:38/km"
       },
       {
         "t": "rest",
@@ -726,7 +726,7 @@ window.RUN_PLAN_WEEKS = [
           "vo2max",
           "5k-specific"
         ],
-        "pace": "4:05&ndash;4:25/km",
+        "pace": "4:15&ndash;4:35/km",
         "strength": "Workout A"
       },
       {
@@ -805,7 +805,7 @@ window.RUN_PLAN_WEEKS = [
         "tags": [
           "threshold"
         ],
-        "pace": "Threshold 4:35&ndash;4:55/km",
+        "pace": "Threshold 4:40&ndash;5:00/km",
         "strength": "Workout A &middot; 50% lower-body volume"
       },
       {
@@ -825,7 +825,7 @@ window.RUN_PLAN_WEEKS = [
           "5k-specific",
           "sharpening"
         ],
-        "pace": "3:55&ndash;4:20/km"
+        "pace": "4:05&ndash;4:30/km"
       },
       {
         "t": "rest",
@@ -902,9 +902,9 @@ window.RUN_PLAN_WEEKS = [
           "race",
           "5k-specific"
         ],
-        "pace": "21:30 target &middot; 4:18/km average",
+        "pace": "22:30 target &middot; 4:30/km average",
         "priority": "A",
-        "raceNotes": "Target: 21:30, averaging 4:18/km. Warm up 2.5 km, add drills and 4 strides, then open the first kilometre around 4:18&ndash;4:33/km. Settle near target effort through 3 km and race the final 2 km. Cool down 1.5&ndash;2 km."
+        "raceNotes": "Target: 22:30, averaging 4:30/km. Warm up 2.5 km, add drills and 4 strides, then open the first kilometre around 4:30&ndash;4:45/km. Settle near target effort through 3 km and race the final 2 km. Cool down 1.5&ndash;2 km."
       },
       {
         "t": "rest",

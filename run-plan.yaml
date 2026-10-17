@@ -45,7 +45,7 @@ blocks:
       - type: intv
         tags: [vo2max, 5k-specific]
         label_html: 9 km &middot; 10 x 400 m
-        pace_html: 4:05&ndash;4:30/km
+        pace_html: 4:15&ndash;4:35/km
         content_html: 9 km total &mdash; 2 km easy + drills + 10 x (400 m controlled fast / 200 m easy jog) + easy to 9 km
       - {type: rest, tags: [recovery], content_html: Rest}
       - {type: lng, tags: [long-run, easy], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 18 km easy}
@@ -61,7 +61,7 @@ blocks:
       - type: intv
         tags: [vo2max, 5k-specific]
         label_html: 10 km &middot; 5 x 3 min
-        pace_html: 4:10&ndash;4:35/km
+        pace_html: 4:20&ndash;4:40/km
         content_html: 10 km total &mdash; 2 km easy + drills + 5 x (3 min VO2 effort / 2 min easy jog) + easy to 10 km
         strength_html: Workout A
       - {type: easy, tags: [easy], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 9 km easy}
@@ -106,7 +106,7 @@ blocks:
       - type: intv
         tags: [vo2max, 5k-specific]
         label_html: 10 km &middot; 7 x 600 m
-        pace_html: 4:05&ndash;4:30/km
+        pace_html: 4:15&ndash;4:35/km
         content_html: 10 km total &mdash; 2 km easy + drills + 7 x (600 m at 3K&ndash;5K effort / 90 sec easy jog) + easy to 10 km
       - {type: rest, tags: [recovery], content_html: Rest}
       - {type: lng, tags: [long-run, easy], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 18 km easy}
@@ -122,7 +122,7 @@ blocks:
       - type: intv
         tags: [vo2max, 5k-specific]
         label_html: 10 km &middot; 6 x 800 m
-        pace_html: 4:15&ndash;4:35/km
+        pace_html: 4:25&ndash;4:45/km
         content_html: 10 km total &mdash; 2 km easy + drills + 6 x (800 m at controlled 5K effort / 2 min easy jog) + easy to 10 km
         strength_html: Workout A
       - {type: easy, tags: [easy], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 9 km easy}
@@ -148,7 +148,7 @@ blocks:
       - type: intv
         tags: [vo2max, 5k-specific]
         label_html: 10 km &middot; 6 x 3 min
-        pace_html: 4:05&ndash;4:30/km
+        pace_html: 4:15&ndash;4:35/km
         content_html: 10 km total &mdash; 2 km easy + drills + 6 x (3 min VO2 effort / 2 min easy jog) + easy to 10 km
       - {type: rest, tags: [recovery], content_html: Rest}
       - {type: lng, tags: [long-run, easy], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 20 km easy}
@@ -177,20 +177,20 @@ blocks:
       dates_html: Dec 7&ndash;13
       total_km_html: "~54km"
       template: Threshold + 1K Repeats
-      notes_html: Key two-quality week. Thursday is the first sustained session around 21:30 goal pace.
+      notes_html: Key two-quality week. Thursday is the first sustained session around 22:30 goal pace.
       days:
       - {type: rest, tags: [recovery], content_html: Rest}
       - type: thr
         tags: [threshold]
         label_html: 10 km &middot; 3 x 8 min
-        pace_html: Threshold 4:35&ndash;4:55/km
+        pace_html: Threshold 4:40&ndash;5:00/km
         content_html: 10 km total &mdash; 2 km easy + 3 x (8 min threshold / 90 sec easy jog) + easy to 10 km
         strength_html: Workout A &middot; reduce lower-body volume 25%
       - {type: easy, tags: [easy], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 9 km easy}
       - type: intv
         tags: [vo2max, 5k-specific]
         label_html: 10 km &middot; 5 x 1 km
-        pace_html: 4:13&ndash;4:28/km
+        pace_html: 4:23&ndash;4:38/km
         content_html: 10 km total &mdash; 2 km easy + drills + 5 x (1 km around goal 5K pace / 2 min 30 sec easy jog) + easy to 10 km
       - {type: rest, tags: [recovery], content_html: Rest}
       - {type: lng, tags: [long-run, easy], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 18 km easy}
@@ -206,7 +206,7 @@ blocks:
       - type: intv
         tags: [vo2max, 5k-specific]
         label_html: 10 km &middot; 6 x 800 m
-        pace_html: 4:05&ndash;4:25/km
+        pace_html: 4:15&ndash;4:35/km
         content_html: 10 km total &mdash; 2 km easy + drills + 6 x (800 m around or slightly quicker than goal 5K pace / 2 min easy jog) + easy to 10 km
         strength_html: Workout A
       - {type: easy, tags: [easy], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 9 km easy}
@@ -225,14 +225,14 @@ blocks:
       - type: thr
         tags: [threshold]
         label_html: 9 km &middot; 3 x 6 min
-        pace_html: Threshold 4:35&ndash;4:55/km
+        pace_html: Threshold 4:40&ndash;5:00/km
         content_html: 9 km total &mdash; 2 km easy + 3 x (6 min threshold / 90 sec easy jog) + easy to 9 km
         strength_html: Workout A &middot; 50% lower-body volume
       - {type: easy, tags: [easy], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 8 km easy}
       - type: intv
         tags: [5k-specific, sharpening]
         label_html: 8 km &middot; 6 x 400 m
-        pace_html: 3:55&ndash;4:20/km
+        pace_html: 4:05&ndash;4:30/km
         content_html: 8 km total &mdash; 2 km easy + drills + 6 x (400 m at controlled 5K effort / 200 m easy jog) + easy to 8 km
       - {type: rest, tags: [recovery], content_html: Rest}
       - {type: lng, tags: [long-run, easy], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 15 km easy}
@@ -243,14 +243,14 @@ blocks:
       total_km_html: "~15&ndash;16km"
       template: 5K Time Trial
       notes_html: Stay fresh, then run an evenly paced time trial. The first kilometre should feel controlled enough to protect the final two.
-      race_notes_html: "Target: 21:30, averaging 4:18/km. Warm up 2.5 km, add drills and 4 strides, then open the first kilometre around 4:18&ndash;4:33/km. Settle near target effort through 3 km and race the final 2 km. Cool down 1.5&ndash;2 km."
+      race_notes_html: "Target: 22:30, averaging 4:30/km. Warm up 2.5 km, add drills and 4 strides, then open the first kilometre around 4:30&ndash;4:45/km. Settle near target effort through 3 km and race the final 2 km. Cool down 1.5&ndash;2 km."
       days:
       - {type: rest, tags: [recovery], content_html: Rest}
       - {type: easy, tags: [easy, strides], label_html: 6 km + strides, pace_html: "Easy 5:45&ndash;7:30/km; strides relaxed-fast", content_html: 6 km easy + 4 x 20 sec relaxed strides with full easy recovery}
       - {type: rest, tags: [recovery], content_html: Rest}
-      - {type: race, tags: [race, 5k-specific], priority: A, label_html: 5K TIME TRIAL, pace_html: "21:30 target &middot; 4:18/km average", content_html: 2.5 km easy + drills + 4 strides + 5K time trial + 1.5&ndash;2 km easy cool-down}
+      - {type: race, tags: [race, 5k-specific], priority: A, label_html: 5K TIME TRIAL, pace_html: "22:30 target &middot; 4:30/km average", content_html: 2.5 km easy + drills + 4 strides + 5K time trial + 1.5&ndash;2 km easy cool-down}
       - {type: rest, tags: [recovery], content_html: Rest}
       - {type: rest, tags: [recovery], content_html: Rest or easy walking}
       - {type: rest, tags: [recovery], content_html: Rest or easy walking}
-  pace_guide_html: "<strong>Easy / recovery:</strong> effort-first, 5:45&ndash;7:30/km &nbsp;&middot;&nbsp; <strong>Steady:</strong> 5:25&ndash;5:45/km &nbsp;&middot;&nbsp; <strong>Threshold:</strong> 4:45&ndash;5:05/km, progressing to 4:35&ndash;4:55/km in December &nbsp;&middot;&nbsp; <strong>VO2 / 5K work:</strong> 3:55&ndash;4:35/km depending on repetition length &nbsp;&middot;&nbsp; <strong>5K target:</strong> 21:30 / 4:18 per km."
+  pace_guide_html: "<strong>Easy / recovery:</strong> effort-first, 5:45&ndash;7:30/km &nbsp;&middot;&nbsp; <strong>Steady:</strong> 5:25&ndash;5:45/km &nbsp;&middot;&nbsp; <strong>Threshold:</strong> 4:45&ndash;5:05/km, progressing to 4:40&ndash;5:00/km in December &nbsp;&middot;&nbsp; <strong>VO2 / 5K work:</strong> 4:05&ndash;4:45/km depending on repetition length &nbsp;&middot;&nbsp; <strong>5K target:</strong> 22:30 / 4:30 per km."
   plan_note_html: "Five runs per week with Monday and Friday rest. Two weekday quality sessions appear selectively; long runs stay easy in those weeks. AQI above 100: quality and long runs indoors. AQI above 150: all runs indoors. Pace ranges are intentionally at least 15 sec/km wide."
