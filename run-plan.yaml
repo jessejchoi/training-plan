@@ -134,15 +134,15 @@ blocks:
     - week_html: '7'
       dates_html: Nov 23&ndash;29
       total_km_html: "~56km"
-      template: Threshold + 3-Minute VO2
-      notes_html: Two-quality week with the longest easy run of the block. Do not add a fast finish Saturday.
+      template: Threshold + 200s + 3-Minute VO2
+      notes_html: Two-quality week with the longest easy run of the block. Tuesday's 200s train form at speed on tired legs; keep them crisp, not all-out. Recoveries can be jogged at 6:30&ndash;8:30/km or walked; keep their length fixed. Do not add a fast finish Saturday.
       days:
       - {type: rest, tags: [recovery], content_html: Rest}
       - type: thr
-        tags: [threshold]
-        label_html: 10 km &middot; 4 x 6 min
-        pace_html: Threshold 4:45&ndash;5:05/km
-        content_html: 10 km total &mdash; 2 km easy + 4 x (6 min threshold / 75&ndash;90 sec easy jog) + easy to 10 km
+        tags: [threshold, durability]
+        label_html: 10 km &middot; 4 x 6 min + 4 x 200 m
+        pace_html: Threshold 4:45&ndash;5:05/km; 200s 4:10&ndash;4:25/km
+        content_html: 10 km total &mdash; 2 km easy + 4 x (6 min threshold / 75&ndash;90 sec jog or walk) + 3 min jog or walk + 4 x (200 m / 200 m walk or jog), reps 1&ndash;2 ~53 sec and reps 3&ndash;4 ~51 sec + easy to 10 km
         strength_html: Workout A &middot; reduce lower-body volume 25%
       - {type: easy, tags: [easy], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 9 km easy}
       - type: intv
@@ -177,7 +177,7 @@ blocks:
       dates_html: Dec 7&ndash;13
       total_km_html: "~54km"
       template: Threshold + 1K Repeats
-      notes_html: Key two-quality week. Thursday is the first sustained session around 22:30 goal pace.
+      notes_html: Key two-quality week. Thursday is the first sustained session around 22:30 goal pace, with recoveries trimmed to 2 min so the later reps come on accumulating fatigue. Aim for rep 5 to be the quickest. Recoveries can be jogged at 6:30&ndash;8:30/km or walked; keep their length fixed.
       days:
       - {type: rest, tags: [recovery], content_html: Rest}
       - type: thr
@@ -188,10 +188,10 @@ blocks:
         strength_html: Workout A &middot; reduce lower-body volume 25%
       - {type: easy, tags: [easy], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 9 km easy}
       - type: intv
-        tags: [vo2max, 5k-specific]
+        tags: [vo2max, 5k-specific, durability]
         label_html: 10 km &middot; 5 x 1 km
         pace_html: 4:23&ndash;4:38/km
-        content_html: 10 km total &mdash; 2 km easy + drills + 5 x (1 km around goal 5K pace / 2 min 30 sec easy jog) + easy to 10 km
+        content_html: 10 km total &mdash; 2 km easy + drills + 5 x (1 km around goal 5K pace / 2 min jog or walk), rep targets 4:35 &middot; 4:33 &middot; 4:30 &middot; 4:30 &middot; 4:27 + easy to 10 km
       - {type: rest, tags: [recovery], content_html: Rest}
       - {type: lng, tags: [long-run, easy], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 18 km easy}
       - {type: rec, tags: [easy, recovery], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 7 km recovery, strength_html: Workout B}
@@ -199,15 +199,15 @@ blocks:
     - week_html: '10'
       dates_html: Dec 14&ndash;20
       total_km_html: "~56km"
-      template: Faster 800s + Aerobic Support
-      notes_html: One weekday workout. Run the 800s evenly; the Saturday steady finish is optional and should remain controlled.
+      template: Goal-Pace Ladder + Aerobic Support
+      notes_html: One weekday workout. The ladder adds up to a full 5K at goal pace and finishes fastest, rehearsing the back half of the race; the shorter 90 sec recovery before the 500 m is the durability stimulus. Recoveries can be jogged at 6:30&ndash;8:30/km or walked; keep their length fixed. The Saturday steady finish is optional and should remain controlled.
       days:
       - {type: rest, tags: [recovery], content_html: Rest}
       - type: intv
-        tags: [vo2max, 5k-specific]
-        label_html: 10 km &middot; 6 x 800 m
-        pace_html: 4:15&ndash;4:35/km
-        content_html: 10 km total &mdash; 2 km easy + drills + 6 x (800 m around or slightly quicker than goal 5K pace / 2 min easy jog) + easy to 10 km
+        tags: [5k-specific, durability]
+        label_html: 10 km &middot; 2K-1.5K-1K-500 ladder
+        pace_html: 4:28&ndash;4:38/km; final 500 m 4:15&ndash;4:28/km
+        content_html: 10 km total &mdash; 2 km easy + drills + 2 km at 4:35/km (9:10) / 2 min jog or walk / 1.5 km at 4:32/km (6:48) / 2 min / 1 km at 4:30 / 90 sec / 500 m at 4:22/km (2:11) + easy to 10 km
         strength_html: Workout A
       - {type: easy, tags: [easy], pace_html: "5:45&ndash;7:30/km, effort first", content_html: 9 km easy}
       - {type: easy, tags: [easy, strides], label_html: 11 km + strides, pace_html: "Easy 5:45&ndash;7:30/km; strides relaxed-fast", content_html: 11 km easy + 6 x 20 sec relaxed strides with full easy recovery}

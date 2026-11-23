@@ -475,8 +475,8 @@ window.RUN_PLAN_WEEKS = [
     "km": 56,
     "kmLabel": "~56km",
     "phase": "dec-5k",
-    "template": "Threshold + 3-Minute VO2",
-    "notes": "Two-quality week with the longest easy run of the block. Do not add a fast finish Saturday.",
+    "template": "Threshold + 200s + 3-Minute VO2",
+    "notes": "Two-quality week with the longest easy run of the block. Tuesday's 200s train form at speed on tired legs; keep them crisp, not all-out. Recoveries can be jogged at 6:30&ndash;8:30/km or walked; keep their length fixed. Do not add a fast finish Saturday.",
     "days": [
       {
         "t": "rest",
@@ -488,12 +488,13 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "thr",
-        "s": "10 km · 4 x 6 min",
-        "l": "10 km total &mdash; 2 km easy + 4 x (6 min threshold / 75&ndash;90 sec easy jog) + easy to 10 km",
+        "s": "10 km · 4 x 6 min + 4 x 200 m",
+        "l": "10 km total &mdash; 2 km easy + 4 x (6 min threshold / 75&ndash;90 sec jog or walk) + 3 min jog or walk + 4 x (200 m / 200 m walk or jog), reps 1&ndash;2 ~53 sec and reps 3&ndash;4 ~51 sec + easy to 10 km",
         "tags": [
-          "threshold"
+          "threshold",
+          "durability"
         ],
-        "pace": "Threshold 4:45&ndash;5:05/km",
+        "pace": "Threshold 4:45&ndash;5:05/km; 200s 4:10&ndash;4:25/km",
         "strength": "Workout A &middot; reduce lower-body volume 25%"
       },
       {
@@ -631,7 +632,7 @@ window.RUN_PLAN_WEEKS = [
     "kmLabel": "~54km",
     "phase": "dec-5k",
     "template": "Threshold + 1K Repeats",
-    "notes": "Key two-quality week. Thursday is the first sustained session around 22:30 goal pace.",
+    "notes": "Key two-quality week. Thursday is the first sustained session around 22:30 goal pace, with recoveries trimmed to 2 min so the later reps come on accumulating fatigue. Aim for rep 5 to be the quickest. Recoveries can be jogged at 6:30&ndash;8:30/km or walked; keep their length fixed.",
     "days": [
       {
         "t": "rest",
@@ -663,10 +664,11 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "intv",
         "s": "10 km · 5 x 1 km",
-        "l": "10 km total &mdash; 2 km easy + drills + 5 x (1 km around goal 5K pace / 2 min 30 sec easy jog) + easy to 10 km",
+        "l": "10 km total &mdash; 2 km easy + drills + 5 x (1 km around goal 5K pace / 2 min jog or walk), rep targets 4:35 &middot; 4:33 &middot; 4:30 &middot; 4:30 &middot; 4:27 + easy to 10 km",
         "tags": [
           "vo2max",
-          "5k-specific"
+          "5k-specific",
+          "durability"
         ],
         "pace": "4:23&ndash;4:38/km"
       },
@@ -707,8 +709,8 @@ window.RUN_PLAN_WEEKS = [
     "km": 56,
     "kmLabel": "~56km",
     "phase": "dec-5k",
-    "template": "Faster 800s + Aerobic Support",
-    "notes": "One weekday workout. Run the 800s evenly; the Saturday steady finish is optional and should remain controlled.",
+    "template": "Goal-Pace Ladder + Aerobic Support",
+    "notes": "One weekday workout. The ladder adds up to a full 5K at goal pace and finishes fastest, rehearsing the back half of the race; the shorter 90 sec recovery before the 500 m is the durability stimulus. Recoveries can be jogged at 6:30&ndash;8:30/km or walked; keep their length fixed. The Saturday steady finish is optional and should remain controlled.",
     "days": [
       {
         "t": "rest",
@@ -720,13 +722,13 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "intv",
-        "s": "10 km · 6 x 800 m",
-        "l": "10 km total &mdash; 2 km easy + drills + 6 x (800 m around or slightly quicker than goal 5K pace / 2 min easy jog) + easy to 10 km",
+        "s": "10 km · 2K-1.5K-1K-500 ladder",
+        "l": "10 km total &mdash; 2 km easy + drills + 2 km at 4:35/km (9:10) / 2 min jog or walk / 1.5 km at 4:32/km (6:48) / 2 min / 1 km at 4:30 / 90 sec / 500 m at 4:22/km (2:11) + easy to 10 km",
         "tags": [
-          "vo2max",
-          "5k-specific"
+          "5k-specific",
+          "durability"
         ],
-        "pace": "4:15&ndash;4:35/km",
+        "pace": "4:28&ndash;4:38/km; final 500 m 4:15&ndash;4:28/km",
         "strength": "Workout A"
       },
       {
