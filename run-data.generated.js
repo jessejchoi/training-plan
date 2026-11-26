@@ -472,11 +472,11 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "7",
     "dates": "Nov 23–29",
-    "km": 56,
-    "kmLabel": "~56km",
+    "km": 46,
+    "kmLabel": "~46km",
     "phase": "dec-5k",
-    "template": "Threshold + 200s + 3-Minute VO2",
-    "notes": "Two-quality week with the longest easy run of the block. Tuesday's 200s train form at speed on tired legs; keep them crisp, not all-out. Recoveries can be jogged at 6:30&ndash;8:30/km or walked; keep their length fixed. Do not add a fast finish Saturday.",
+    "template": "Threshold + 200s + Threshold Long Run",
+    "notes": "Adjusted for tennis Thursday and golf Sunday. The VO2 session moves to next Tuesday. Friday's long run carries the week's second quality as one continuous threshold block, so you practise holding pace on fatigue without recovery breaks. Saturday stays fully easy. Tuesday's 200s train form at speed on tired legs; keep them crisp, not all-out. Recoveries can be jogged at 6:30&ndash;8:30/km or walked; keep their length fixed.",
     "days": [
       {
         "t": "rest",
@@ -507,42 +507,43 @@ window.RUN_PLAN_WEEKS = [
         "pace": "5:45&ndash;7:30/km, effort first"
       },
       {
-        "t": "intv",
-        "s": "10 km · 6 x 3 min",
-        "l": "10 km total &mdash; 2 km easy + drills + 6 x (3 min VO2 effort / 2 min easy jog) + easy to 10 km",
+        "t": "rest",
+        "s": "Rest",
+        "l": "Tennis &mdash; no run. Optional 4 x 20 sec relaxed strides afterwards; skip them if calves or ankles feel beaten up.",
         "tags": [
-          "vo2max",
-          "5k-specific"
+          "recovery",
+          "cross-training"
+        ]
+      },
+      {
+        "t": "qlng",
+        "s": "17 km · 5 km continuous threshold",
+        "l": "17 km total &mdash; 10 km easy + 5 km continuous threshold + 2 km easy. Open the threshold block at 5:00&ndash;5:05/km and settle toward 5:00 only if controlled. In heat, run it by effort: comfortably hard, short phrases only.",
+        "tags": [
+          "long-run",
+          "threshold",
+          "durability"
         ],
-        "pace": "4:15&ndash;4:35/km"
+        "pace": "Easy 5:45&ndash;7:30/km; threshold ~5:00/km (4:50&ndash;5:05)"
+      },
+      {
+        "t": "easy",
+        "s": "8-10 km + strides",
+        "l": "8&ndash;10 km easy + 6 x 20 sec relaxed strides with full easy recovery",
+        "tags": [
+          "easy",
+          "strides"
+        ],
+        "pace": "Easy 5:45&ndash;7:30/km; strides relaxed-fast"
       },
       {
         "t": "rest",
         "s": "Rest",
-        "l": "Rest",
+        "l": "Golf &mdash; no run.",
         "tags": [
-          "recovery"
-        ]
-      },
-      {
-        "t": "lng",
-        "s": "20 km easy",
-        "l": "20 km easy",
-        "tags": [
-          "long-run",
-          "easy"
+          "recovery",
+          "cross-training"
         ],
-        "pace": "5:45&ndash;7:30/km, effort first"
-      },
-      {
-        "t": "rec",
-        "s": "7 km recovery",
-        "l": "7 km recovery",
-        "tags": [
-          "easy",
-          "recovery"
-        ],
-        "pace": "5:45&ndash;7:30/km, effort first",
         "strength": "Workout B"
       }
     ]
@@ -550,12 +551,11 @@ window.RUN_PLAN_WEEKS = [
   {
     "id": "8",
     "dates": "Nov 30–Dec 6",
-    "km": 49,
-    "kmLabel": "~49km",
+    "km": 53,
+    "kmLabel": "~53km",
     "phase": "dec-5k",
-    "template": "Absorb",
-    "notes": "Cutback week before the most 5K-specific part of the block.",
-    "cutback": true,
+    "template": "VO2 + Aerobic Support",
+    "notes": "No cutback this week. Recent weeks have run around 45 km, below the planned cutback volume, and training load has stayed flat. Tuesday brings back last week's VO2 session; the long run stays easy so you reach the key week 9 fresh. If easy runs feel heavy or resting HR rises, swap a day for rest. Week 11 remains the real down week.",
     "days": [
       {
         "t": "rest",
@@ -566,19 +566,20 @@ window.RUN_PLAN_WEEKS = [
         ]
       },
       {
-        "t": "thr",
-        "s": "9 km · 20 min",
-        "l": "9 km total &mdash; 2 km easy + 20 min continuous threshold + easy to 9 km",
+        "t": "intv",
+        "s": "10 km · 6 x 3 min",
+        "l": "10 km total &mdash; 2 km easy + drills + 6 x (3 min VO2 effort / 2 min jog or walk) + easy to 10 km",
         "tags": [
-          "threshold"
+          "vo2max",
+          "5k-specific"
         ],
-        "pace": "Threshold 4:45&ndash;5:05/km",
+        "pace": "4:15&ndash;4:35/km",
         "strength": "Workout A"
       },
       {
         "t": "easy",
-        "s": "8 km easy",
-        "l": "8 km easy",
+        "s": "9 km easy",
+        "l": "9 km easy",
         "tags": [
           "easy"
         ],
@@ -587,7 +588,7 @@ window.RUN_PLAN_WEEKS = [
       {
         "t": "easy",
         "s": "10 km + strides",
-        "l": "10 km easy + 4 x 20 sec relaxed strides with full easy recovery",
+        "l": "10 km easy + 6 x 20 sec relaxed strides with full easy recovery",
         "tags": [
           "easy",
           "strides"
@@ -604,8 +605,8 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "lng",
-        "s": "16 km easy",
-        "l": "16 km easy",
+        "s": "17 km easy",
+        "l": "17 km easy",
         "tags": [
           "long-run",
           "easy"
@@ -614,8 +615,8 @@ window.RUN_PLAN_WEEKS = [
       },
       {
         "t": "rec",
-        "s": "6 km recovery",
-        "l": "6 km recovery",
+        "s": "7 km recovery",
+        "l": "7 km recovery",
         "tags": [
           "easy",
           "recovery"
